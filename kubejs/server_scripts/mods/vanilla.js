@@ -9,5 +9,11 @@ ServerEvents.recipes((event) => {
     ], {
         A: "#forge:cobblestone",
         B: "minecraft:coal"
-    })
+    });
+
+    // Bucket
+    event.replaceInput({ output: "minecraft:bucket" }, "minecraft:iron_ingot", "#forge:plates/iron");
+
+    // Cauldron
+    event.replaceInput({ output: "minecraft:cauldron" }, "minecraft:iron_ingot", "#forge:plates/iron");
 });
