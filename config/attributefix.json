@@ -176,17 +176,6 @@
         "value": 1024
       }
     },
-    "ars_nouveau:ars_nouveau.perk.max_mana": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 10000,
-        "value": 10000
-      }
-    },
     "estrogen:boob_initial_size": {
       "enabled": false,
       "min": {
@@ -198,15 +187,15 @@
         "value": 1
       }
     },
-    "botania:pixie_spawn_chance": {
+    "ars_nouveau:ars_nouveau.perk.max_mana": {
       "enabled": false,
       "min": {
         "default": 0,
         "value": 0
       },
       "max": {
-        "default": 1,
-        "value": 1
+        "default": 10000,
+        "value": 10000
       }
     },
     "estrogen:fall_damage_resistance": {
@@ -218,6 +207,17 @@
       "max": {
         "default": 100,
         "value": 100
+      }
+    },
+    "botania:pixie_spawn_chance": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1,
+        "value": 1
       }
     },
     "minecraft:generic.max_health": {

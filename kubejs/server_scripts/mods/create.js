@@ -1,6 +1,8 @@
 ServerEvents.recipes((event) => {
     // Remove andesite alloy recipe with iron
     event.remove({ output: "create:andesite_alloy", input: "#forge:nuggets/iron" });
+	event.remove({ output: "create:andesite_alloy", type: "minecraft:crafting_shaped" });
+	event.remove({ id: "tconstruct:compat/create/andesite_alloy_iron" });
 
     // Replace andesite alloy in induction smelter
     event.recipes.thermal.smelter("create:andesite_alloy", ["minecraft:andesite", "#forge:nuggets/zinc"], 0, 3200);
@@ -42,11 +44,74 @@ ServerEvents.recipes((event) => {
         B: "minecraft:cauldron"
     });
 
-    // Whisk
-    event.remove({ output: "create:whisk" });
+    // Rose quartz
+    event.remove({ output: "create:rose_quartz" });
 
-    event.recipes.createCompacting("create:whisk", [
-        "5x #forge:plates/iron",
-        "2x create:andesite_alloy"
-    ]);
+    event.recipes.createFilling("create:rose_quartz", ["minecraft:quartz", Fluid.of("thermal:redstone", 200)]);
+
+    // Blaze burner
+    event.remove({ output: "create:empty_blaze_burner" });
+
+    event.shaped("create:empty_blaze_burner", [
+        " A ",
+        "ABA",
+        " A "
+    ], {
+        A: "#forge:plates/cobalt",
+        B: "minecraft:netherrack"
+    });
+
+    // Mechanical crafter
+    event.remove({ output: "create:mechanical_crafter" });
+
+    event.shaped("3x create:mechanical_crafter", [
+        "ABA",
+        "CDC",
+        "AEA"
+    ], {
+        A: "#forge:plates/brass",
+        B: "create:electron_tube",
+        C: "minecraft:crafting_table",
+        D: "create:brass_casing",
+        E: "create:precision_mechanism"
+    });
+
+    // Brass casing
+    event.remove({ output: "create:brass_casing" });
+
+    event.recipes.createDeploying("create:brass_casing", ["#forge:treated_wood", "#forge:plates/brass"]);
+
+    event.custom({
+        type: "create:item_application",
+        ingredients: [
+            {
+                tag: "forge:treated_wood"
+            },
+
+            {
+                tag: "forge:plates/brass"
+            }
+        ],
+        results: [
+            {
+                item: "create:brass_casing"
+            }
+        ]
+    });
+
+    // Crushing wheels
+    event.remove({ output: "create:crushing_wheel" });
+
+    event.recipes.createMechanicalCrafting("2x create:crushing_wheel", [
+        " AAA ",
+        "ABCBA",
+        "ACDCA",
+        "ABCBA",
+        " AAA "
+    ], {
+        A: "create:sturdy_sheet",
+        B: "create:andesite_alloy",
+        C: "create:brass_casing",
+        D: "#forge:storage_blocks/andesite_alloy"
+    });
 });

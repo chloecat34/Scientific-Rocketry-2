@@ -19,77 +19,15 @@
 		}
 		{
 			dependencies: ["35441B6C5335D3F9"]
-			id: "70A3400720B63378"
+			description: ["Vanilla tools below Netherite tier are nerfed, so you will need Tinkers' Construct's tools."]
+			id: "0C79935D194244E3"
 			tasks: [{
-				id: "5FA66634BEA54BD4"
-				item: "minecraft:furnace"
+				id: "257595867BB7FBA3"
+				item: "tconstruct:tinker_station"
 				type: "item"
 			}]
 			x: -2.5d
 			y: -2.0d
-		}
-		{
-			dependencies: ["70A3400720B63378"]
-			id: "7D605654ADAFD669"
-			tasks: [{
-				id: "7C233C5F9E0A53D7"
-				item: "create:andesite_alloy"
-				type: "item"
-			}]
-			x: -2.5d
-			y: -1.0d
-		}
-		{
-			dependencies: ["7D605654ADAFD669"]
-			id: "747FFB827729979F"
-			tasks: [
-				{
-					id: "2DCF9378682E458E"
-					item: "create:mechanical_press"
-					type: "item"
-				}
-				{
-					id: "45CD97A5B3F445C8"
-					item: "create:depot"
-					type: "item"
-				}
-				{
-					id: "15DC1CEE5D6A910B"
-					item: "create:hand_crank"
-					type: "item"
-				}
-			]
-			x: -2.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["747FFB827729979F"]
-			id: "6D7E747E0BC42293"
-			tasks: [{
-				id: "07585C4B8E9D7E5C"
-				item: "create:water_wheel"
-				type: "item"
-			}]
-			x: -2.5d
-			y: 1.0d
-		}
-		{
-			dependencies: ["6D7E747E0BC42293"]
-			id: "010908378195797A"
-			tasks: [
-				{
-					id: "2A8EC96308992010"
-					item: "create:mechanical_mixer"
-					type: "item"
-				}
-				{
-					id: "26D9DF660EF31A77"
-					item: "create:basin"
-					type: "item"
-				}
-			]
-			x: -2.5d
-			y: 2.0d
 		}
 	]
 	title: "Progression Chapter 1"
