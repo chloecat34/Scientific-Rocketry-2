@@ -19,7 +19,7 @@
 		}
 		{
 			dependencies: ["35441B6C5335D3F9"]
-			description: ["Vanilla tools below Netherite tier are nerfed, so you will need Tinkers' Construct's tools."]
+			description: ["Vanilla tools below Netherite tier are disabled, so you will need Tinkers' Construct's tools."]
 			id: "0C79935D194244E3"
 			tasks: [{
 				id: "257595867BB7FBA3"
