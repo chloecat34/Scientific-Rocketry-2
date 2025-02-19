@@ -29,6 +29,35 @@
 			x: -2.5d
 			y: -2.0d
 		}
+		{
+			dependencies: ["0C79935D194244E3"]
+			description: [
+				"If you haven't noticed already, you can't process your ores by conventional means. You will need to construct a Seared Melter. For now, you will need to power it with a Seared Heater."
+				""
+				"The Melter and Smeltery do not ore double, but you will unlock better ore processing methods later."
+			]
+			id: "306C19107D8BE5F5"
+			rewards: [{
+				count: 8
+				id: "36C5251CFB78C978"
+				item: "tconstruct:ingot_sand_cast"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "41E9FD1C80F6922E"
+					item: "tconstruct:seared_melter"
+					type: "item"
+				}
+				{
+					id: "2B98170FA6EA87F7"
+					item: "tconstruct:seared_heater"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -1.0d
+		}
 	]
 	title: "Progression Chapter 1"
 }

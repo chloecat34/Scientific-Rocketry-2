@@ -1,13 +1,32 @@
 JEIEvents.hideItems((event) => {
-    event.hide("ad_astra:compressor");
-    event.hide("ad_astra:etrionic_blast_furnace");
-    event.hide("thermal:lapis_gear");
-    event.hide("thermal:diamond_gear");
-    event.hide("thermal:emerald_gear");
-    event.hide("thermal:quartz_gear");
-    event.hide("thermal:ruby_gear");
-    event.hide("thermal:sapphire_gear");
-	event.hide("tconstruct:crafting_station");
+	const itemsToRemove = [
+		"ad_astra:compressor",
+		"ad_astra:etrionic_blast_furnace",
+		"thermal:lapis_gear",
+		"thermal:diamond_gear",
+		"thermal:emerald_gear",
+		"thermal:quartz_gear",
+		"thermal:ruby_gear",
+		"thermal:sapphire_gear",
+		"tconstruct:crafting_station",
+		"integrateddynamics:squeezer",
+		"integrateddynamics:drying_basin",
+		"integrateddynamics:mechanical_squeezer",
+		"integrateddynamics:mechanical_drying_basin",
+		"immersiveengineering:alloybrick",
+		"immersiveengineering:slab_alloybrick",
+		"ae2:facade",
+		"tconstruct:rose_gold_ingot",
+		"tconstruct:rose_gold_nugget",
+		"tconstruct:rose_gold_block",
+		"industrialforegoing:fluid_sieving_machine",
+		"industrialforegoing:fermentation_station",
+		"industrialforegoing:washing_factory",
+		"mekanism:dust_quartz",
+		"ae2:ender_dust"
+	];
+    
+	itemsToRemove.forEach(item => event.hide(item));
 
     	// Vanilla tools (besides pickaxes, because of Breaker Modules)
 	for (const toolType of ["shovel", "axe", "sword", "hoe"]) {

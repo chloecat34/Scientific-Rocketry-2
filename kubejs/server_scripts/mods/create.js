@@ -2,7 +2,6 @@ ServerEvents.recipes((event) => {
     // Remove andesite alloy recipe with iron
     event.remove({ output: "create:andesite_alloy", input: "#forge:nuggets/iron" });
 	event.remove({ output: "create:andesite_alloy", type: "minecraft:crafting_shaped" });
-	event.remove({ id: "tconstruct:compat/create/andesite_alloy_iron" });
 
     // Replace andesite alloy in induction smelter
     event.recipes.thermal.smelter("create:andesite_alloy", ["minecraft:andesite", "#forge:nuggets/zinc"], 0, 3200);
@@ -47,7 +46,7 @@ ServerEvents.recipes((event) => {
     // Rose quartz
     event.remove({ output: "create:rose_quartz" });
 
-    event.recipes.createFilling("create:rose_quartz", ["minecraft:quartz", Fluid.of("thermal:redstone", 200)]);
+    event.recipes.createFilling("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 200)]);
 
     // Blaze burner
     event.remove({ output: "create:empty_blaze_burner" });
@@ -78,8 +77,6 @@ ServerEvents.recipes((event) => {
 
     // Brass casing
     event.remove({ output: "create:brass_casing" });
-
-    event.recipes.createDeploying("create:brass_casing", ["#forge:treated_wood", "#forge:plates/brass"]);
 
     event.custom({
         type: "create:item_application",

@@ -50,14 +50,14 @@ ServerEvents.recipes((event) => {
         "silver",
         "nickel",
         "steel",
-        "rose_gold",
         "bronze",
         "electrum",
         "invar",
         "constantan",
         "signalum",
         "lumium",
-        "enderium"
+        "enderium",
+        "rose_gold"
     ].forEach((ingot) => standardizeGears(ingot, `thermal:${ingot}_gear`));
 
     // Thermal endergy
