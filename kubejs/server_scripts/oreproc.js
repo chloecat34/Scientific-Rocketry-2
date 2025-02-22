@@ -95,21 +95,25 @@ ServerEvents.recipes((event) => {
         event.recipes.thermal.crucible(Fluid.of(fluid, fluidAmount), item).energy(energy);
     }
 
-    const meltOre = (rawOre, rawOreBlock, ore, molten, time, temperature) => {
-        addTinkersMelterRecipe(rawOre.split("#")[1], molten, 90, time, temperature);
-        addTinkersMelterRecipe(rawOreBlock.split("#")[1], molten, 810, time * 4, temperature);
-        addTinkersMelterRecipe(ore.split("#")[1], molten, 180, time, temperature);
-        addCrucibleRecipe(rawOre, molten, 90, 8000);
-        addCrucibleRecipe(rawOreBlock, molten, 810, 72000);
-        addCrucibleRecipe(ore, molten, 180, 8000);
+    const meltOre = (material, molten, time, temperature) => {
+        addTinkersMelterRecipe(`forge:raw_materials/${material}`, molten, 90, time, temperature);
+        addTinkersMelterRecipe(`forge:storage_blocks/raw_${material}`, molten, 810, time * 4, temperature);
+        addTinkersMelterRecipe(`forge:ores/${material}`, molten, 180, time * 2, temperature);
+        addCrucibleRecipe(`#forge:raw_materials/${material}`, molten, 90, 8000);
+        addCrucibleRecipe(`#forge:storage_blocks/raw_${material}`, molten, 810, 72000);
+        addCrucibleRecipe(`#forge:ores/${material}`, molten, 180, 8000);
     }
 
     // Add these ores to melting
-    meltOre("#forge:raw_materials/iron", "#forge:storage_blocks/raw_iron", "#forge:ores/iron", "tconstruct:molten_iron", 90, IRON_TEMPERATURE);
+    meltOre("iron", "tconstruct:molten_iron", 90, IRON_TEMPERATURE);
+    meltOre("gold", "tconstruct:molten_gold", 85, GOLD_TEMPERATURE);
+    meltOre("copper", "tconstruct:molten_copper", 75, COPPER_TEMPERATURE);
 
     // Standard crushing recipes
     [
-        ["#forge:raw_materials/iron", "#forge:ores/iron", "thermal:iron_dust", "thermal:nickel_dust"]
+        ["#forge:raw_materials/iron", "#forge:ores/iron", "thermal:iron_dust", "thermal:nickel_dust"],
+        ["#forge:raw_materials/gold", "#forge:ores/gold", "thermal:gold_dust", "thermal:copper_dust"],
+        ["#forge:raw_materials/copper", "#forge:ores/copper", "thermal:copper_dust", "thermal:nickel_dust"]
     ].forEach(entry => {
         const [rawOre, ore, dust, byproduct] = entry;
         
