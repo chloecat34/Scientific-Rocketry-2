@@ -23,7 +23,27 @@ JEIEvents.hideItems((event) => {
 		"industrialforegoing:fermentation_station",
 		"industrialforegoing:washing_factory",
 		"mekanism:dust_quartz",
-		"ae2:ender_dust"
+		"ae2:ender_dust",
+		"tconstruct:foundry_controller",
+		"tconstruct:scorched_drain",
+		"tconstruct:scorched_duct",
+		"tconstruct:scorched_chute",
+		"tconstruct:scorched_fuel_tank",
+		"tconstruct:scorched_fuel_gauge",
+		"tconstruct:scorched_table",
+		"tconstruct:scorched_basin",
+		"tconstruct:scorched_alloyer",
+		"create:crushed_raw_iron",
+		"create:crushed_raw_gold",
+		"create:crushed_raw_copper",
+		"create:crushed_raw_zinc",
+		"create:crushed_raw_osmium",
+		"create:crushed_raw_silver",
+		"create:crushed_raw_tin",
+		"create:crushed_raw_lead",
+		"create:crushed_raw_aluminum",
+		"create:crushed_raw_uranium",
+		"create:crushed_raw_nickel"
 	];
     
 	itemsToRemove.forEach(item => event.hide(item));

@@ -1,0 +1,16 @@
+{
+	"filters": [
+        {
+            "category": "tconstruct:foundry"
+        },
+        {
+            "category": "industrialforegoing:ore_washer"
+        },
+        {
+            "category": "industrialforegoing:fermenter"
+        },
+        {
+            "category": "industrialforegoing:ore_sieve"
+        }
+	]
+}
