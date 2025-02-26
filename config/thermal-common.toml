@@ -29,7 +29,7 @@
 
 		[World.Features.Cinnabar]
 			#Whether this feature should naturally spawn in the world.
-			Enable = true
+			Enable = false
 
 		[World.Features.Sulfur]
 			#Whether this feature should naturally spawn in the world.
@@ -41,5 +41,5 @@
 
 		[World.Features.Niter]
 			#Whether this feature should naturally spawn in the world.
-			Enable = true
+			Enable = false
 

@@ -43,7 +43,9 @@ JEIEvents.hideItems((event) => {
 		"create:crushed_raw_lead",
 		"create:crushed_raw_aluminum",
 		"create:crushed_raw_uranium",
-		"create:crushed_raw_nickel"
+		"create:crushed_raw_nickel",
+		"thermal:sulfur_ore",
+		"thermal:deepslate_sulfur_ore"
 	];
     
 	itemsToRemove.forEach(item => event.hide(item));
