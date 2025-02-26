@@ -70,6 +70,9 @@ ServerEvents.recipes((event) => {
         standardizeGears(ingot, `thermal_extra:${ingot}_gear`)
     );
 
+    // Kubejs
+    ["platinum"].forEach(ingot => standardizeGears(ingot, `kubejs:${ingot}_gear`));
+
     // Get rid of the gem gears
     ["lapis", "diamond", "emerald", "quartz"].forEach((gem) =>
         event.remove({
