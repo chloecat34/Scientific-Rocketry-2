@@ -15,6 +15,10 @@ ItemEvents.tooltip(event => {
         "thermal:sulfur_ore",
         "thermal:deepslate_sulfur_ore",
         "thermal:niter_ore",
-        "thermal:cinnabar_ore"
+        "thermal:deepslate_niter_ore",
+        "thermal:cinnabar_ore",
+        "thermal:deepslate_cinnabar_ore",
+        "thermal:nickel_ore",
+        "thermal:deepslate_nickel_ore"
     ].forEach(item => addRedTooltip(item, "Removed from worldgen"));
 });

@@ -6,6 +6,7 @@
 const COPPER_TEMPERATURE = 500;
 const IRON_TEMPERATURE = 800;
 const GOLD_TEMPERATURE = 700;
+const TIN_TEMPERATURE = 225;
 
 // For these functions, you can create your own version using the captured event value
 const makeTinkersMeltingRecipe = event => (itemTag, fluidTag, fluidAmount, time, temperature) => {

@@ -2,7 +2,7 @@ ServerEvents.recipes((event) => {
     // Multiservo press packing/unpacking
     function addPacking(ingot, block) {
 		// Check if there is any 3x3 crafting recipe
-		if (!(event.containsRecipe({output: block, type: "minecraft:crafting_shapeless"}) || event.containsRecipe({output: block, type: "minecraft:crafting_shaped"}))) {
+		if (!(event.containsRecipe({output: block, input: ingot, type: "minecraft:crafting_shapeless"}) || event.containsRecipe({output: block, input: ingot, type: "minecraft:crafting_shaped"}))) {
 			event.shapeless(block, [`9x ${ingot}`]);
 			event.shapeless(`9x ${ingot}`, [block]);
 		}
@@ -70,4 +70,8 @@ ServerEvents.recipes((event) => {
 	});
 	
 	addPacking("avaritia:neutronium_nugget", "avaritia:neutronium_ingot");
+
+	addPacking("kubejs:platinum_nugget", "kubejs:platinum_ingot");
+	addPacking("kubejs:platinum_ingot", "kubejs:platinum_block");
+	addPacking("kubejs:compressed_iron_nugget", "pneumaticcraft:ingot_iron_compressed");
 });

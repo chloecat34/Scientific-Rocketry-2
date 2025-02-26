@@ -76,4 +76,59 @@ ServerEvents.recipes((event) => {
             output: `thermal:${gem}_gear`
         })
     );
+
+    // Stone gears
+    event.shaped("kubejs:stone_gear", [
+        "ABA",
+        "BCB",
+        "ABA"
+    ], {
+        "A": "#forge:rods/wooden",
+        "B": "#minecraft:stone_crafting_materials",
+        "C": "#forge:nuggets/iron"
+    });
+
+    // Custom gear recipes (designed to not be used long-term)
+    function handcraftGears(gear, nugget, plate) {
+        event.shaped(gear, [
+            "ABA",
+            "BCB",
+            "ABA"
+        ], {
+            "A": nugget,
+            "B": plate,
+            "C": "kubejs:stone_gear"
+        });
+    }
+
+    [
+        "compressed_iron",
+        "netherite",
+        "tin",
+        "lead",
+        "silver",
+        "nickel",
+        "steel",
+        "rose_gold",
+        "bronze",
+        "electrum",
+        "invar",
+        "constantan",
+        "signalum",
+        "lumium",
+        "enderium",
+        "prismalium",
+        "melodium",
+        "stellarium",
+        "soul_infused",
+        "shellite",
+        "twinite",
+        "dragonsteel",
+        "platinum"
+    ].forEach(ingot => {
+        handcraftGears(`#forge:gears/${ingot}`, `#forge:nuggets/${ingot}`, `#forge:plates/${ingot}`)
+    });
+
+    handcraftGears("thermal:iron_gear", "minecraft:iron_nugget", "#forge:plates/iron");
+    handcraftGears("thermal:gold_gear", "minecraft:gold_nugget", "#forge:plates/gold");
 });

@@ -107,9 +107,6 @@
   "modularrouters": {
     "router": true
   },
-  "ars_nouveau": {
-    "mob_jar": true
-  },
   "jadeaddons": {
     "equipment_requirement": ""
   },
@@ -133,5 +130,8 @@
     "crafting_blueprint": true,
     "goggles.detailed": false,
     "placard": true
+  },
+  "gravestone": {
+    "grave": true
   }
 }

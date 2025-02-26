@@ -83,4 +83,10 @@ ServerEvents.recipes((event) => {
 
     standardizePlates("brass", "create:brass_sheet");
     standardizePlates("zinc", "createaddition:zinc_sheet");
+
+    // Kubejs metals
+    [
+        "platinum",
+        "compressed_iron"
+    ].forEach(ingot => standardizePlates(ingot, `kubejs:${ingot}_plate`));
 });

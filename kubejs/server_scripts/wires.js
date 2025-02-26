@@ -12,13 +12,13 @@ ServerEvents.recipes((event) => {
 
     // Add press recipes
     [
-        ["#forge:ingots/copper", "immersiveengineering:wire_copper"],
-        ["#forge:ingots/electrum", "immersiveengineering:wire_electrum"],
-        ["#forge:ingots/aluminum", "immersiveengineering:wire_aluminum"],
-        ["#forge:ingots/steel", "immersiveengineering:wire_steel"],
-        ["#forge:ingots/lead", "immersiveengineering:wire_lead"],
-        ["#forge:ingots/iron", "createaddition:iron_wire"],
-        ["#forge:ingots/gold", "createaddition:gold_wire"]
+        ["#forge:plates/copper", "immersiveengineering:wire_copper"],
+        ["#forge:plates/electrum", "immersiveengineering:wire_electrum"],
+        ["#forge:plates/aluminum", "immersiveengineering:wire_aluminum"],
+        ["#forge:plates/steel", "immersiveengineering:wire_steel"],
+        ["#forge:plates/lead", "immersiveengineering:wire_lead"],
+        ["#forge:plates/iron", "createaddition:iron_wire"],
+        ["#forge:plates/gold", "createaddition:gold_wire"]
     ].forEach(entry => {
         const [ingot, wire] = entry;
 

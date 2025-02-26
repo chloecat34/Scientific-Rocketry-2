@@ -65,7 +65,8 @@ ServerEvents.recipes((event) => {
         "#forge:storage_blocks/raw_calorite",
         "#forge:storage_blocks/raw_zinc",
         "#forge:storage_blocks/raw_aluminum",
-        "#forge:storage_blocks/raw_cobalt"
+        "#forge:storage_blocks/raw_cobalt",
+        "#forge:storage_blocks/raw_uranium"
     ].forEach(rawOre => {
         event.remove({
             input: rawOre,
@@ -108,12 +109,14 @@ ServerEvents.recipes((event) => {
     meltOre("iron", "tconstruct:molten_iron", 90, IRON_TEMPERATURE);
     meltOre("gold", "tconstruct:molten_gold", 85, GOLD_TEMPERATURE);
     meltOre("copper", "tconstruct:molten_copper", 75, COPPER_TEMPERATURE);
+    meltOre("tin", "tconstruct:molten_tin", 59, TIN_TEMPERATURE);
 
     // Standard crushing recipes
     [
         ["#forge:raw_materials/iron", "#forge:ores/iron", "thermal:iron_dust", "thermal:nickel_dust"],
         ["#forge:raw_materials/gold", "#forge:ores/gold", "thermal:gold_dust", "thermal:copper_dust"],
-        ["#forge:raw_materials/copper", "#forge:ores/copper", "thermal:copper_dust", "thermal:nickel_dust"]
+        ["#forge:raw_materials/copper", "#forge:ores/copper", "thermal:copper_dust", "thermal:nickel_dust"],
+        ["#forge:raw_materials/tin", "#forge:ores/tin", "thermal:tin_dust", "kubejs:zinc_dust"]
     ].forEach(entry => {
         const [rawOre, ore, dust, byproduct] = entry;
         
@@ -171,4 +174,11 @@ ServerEvents.recipes((event) => {
         event.recipes.thermal.pulverizer([Item.of(dust).withChance(2.0), Item.of(byproduct).withChance(0.25)], rawOre);
         event.recipes.thermal.pulverizer([Item.of(dust).withChance(4.0), Item.of(byproduct).withChance(0.5)], ore).energy(8000);
     });
+
+    // Disable combining recipes for ores
+    ["minecraft:redstone_ore", "minecraft:emerald_ore", "minecraft:deepslate_lapis_ore", "minecraft:coal_ore", "minecraft:deepslate_coal_ore", "mekanism:fluorite_ore", "minecraft:ancient_debris", "minecraft:deepslate_redstone_ore", "mekanism:deepslate_fluorite_ore",
+        "minecraft:nether_quartz_ore", "minecraft:deepslate_emerald_ore", "minecraft:deepslate_diamond_ore", "minecraft:lapis_ore", "minecraft:diamond_ore"
+    ].forEach(ore => {
+        event.remove ({ output: ore, type: "mekanism:combining" })
+    })
 });

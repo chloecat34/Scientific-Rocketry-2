@@ -4,9 +4,20 @@ StartupEvents.registry("block", event => {
         .material("stone")
         .hardness(3.0)
         .resistance(3.0)
-        .tagBlock("forge:ores")
-        .tagBlock("forge:ores/sulfur")
+        .tag("forge:ores")
+        .tag("forge:ores/sulfur")
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_stone_tool");
+
+    event.create("platinum_block")
+        .displayName("Platinum Block")
+        .material("metal")
+        .hardness(5.0)
+        .resistance(30.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/platinum")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
 });
