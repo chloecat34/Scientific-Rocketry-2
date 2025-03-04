@@ -110,13 +110,17 @@ ServerEvents.recipes((event) => {
     meltOre("gold", "tconstruct:molten_gold", 85, GOLD_TEMPERATURE);
     meltOre("copper", "tconstruct:molten_copper", 75, COPPER_TEMPERATURE);
     meltOre("tin", "tconstruct:molten_tin", 59, TIN_TEMPERATURE);
+    meltOre("lead", "tconstruct:molten_lead", 65, LEAD_TEMPERATURE);
+    meltOre("silver", "tconstruct:molten_silver", 90, SILVER_TEMPERATURE);
 
     // Standard crushing recipes
     [
         ["#forge:raw_materials/iron", "#forge:ores/iron", "thermal:iron_dust", "thermal:nickel_dust"],
         ["#forge:raw_materials/gold", "#forge:ores/gold", "thermal:gold_dust", "thermal:copper_dust"],
         ["#forge:raw_materials/copper", "#forge:ores/copper", "thermal:copper_dust", "thermal:nickel_dust"],
-        ["#forge:raw_materials/tin", "#forge:ores/tin", "thermal:tin_dust", "kubejs:zinc_dust"]
+        ["#forge:raw_materials/tin", "#forge:ores/tin", "thermal:tin_dust", "kubejs:zinc_dust"],
+        ["#forge:raw_materials/silver", "#forge:ores/silver", "thermal:silver_dust", "thermal:lead_dust"],
+        ["#forge:raw_materials/lead", "#forge:ores/lead", "thermal:lead_dust", "thermal:silver_dust"]
     ].forEach(entry => {
         const [rawOre, ore, dust, byproduct] = entry;
         
@@ -179,6 +183,12 @@ ServerEvents.recipes((event) => {
     ["minecraft:redstone_ore", "minecraft:emerald_ore", "minecraft:deepslate_lapis_ore", "minecraft:coal_ore", "minecraft:deepslate_coal_ore", "mekanism:fluorite_ore", "minecraft:ancient_debris", "minecraft:deepslate_redstone_ore", "mekanism:deepslate_fluorite_ore",
         "minecraft:nether_quartz_ore", "minecraft:deepslate_emerald_ore", "minecraft:deepslate_diamond_ore", "minecraft:lapis_ore", "minecraft:diamond_ore"
     ].forEach(ore => {
-        event.remove ({ output: ore, type: "mekanism:combining" })
-    })
+        event.remove({ output: ore, type: "mekanism:combining" })
+    });
+
+    // Remove smelting raw ore bricks
+    ["quark:raw_iron_bricks", "quark:raw_gold_bricks", "quark:raw_copper_bricks"].forEach(ore => {
+        event.remove({ input: ore, type: "smelting"});
+        event.remove({ input: ore, type: "blasting"});
+    });
 });
