@@ -10,6 +10,11 @@ StartupEvents.registry("item", event => {
         .tag("forge:dusts")
         .tag("forge:dusts/zinc");
 
+    event.create("cobalt_dust")
+        .displayName("Cobalt Dust")
+        .tag("forge:dusts")
+        .tag("forge:dusts/cobalt");
+
     event.create("platinum_dust")
         .displayName("Platinum Dust")
         .tag("forge:dusts")

@@ -57,7 +57,8 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/uranium", "immersiveengineering:dust_uranium"],
         ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
         ["#forge:ingots/zinc", "kubejs:zinc_dust"],
-        ["#forge:ingots/platinum", "kubejs:platinum_dust"]
+        ["#forge:ingots/platinum", "kubejs:platinum_dust"],
+        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"]
     ].forEach(entry => {
         event.recipes.createCrushing(entry[1], entry[0]);
     });
@@ -89,7 +90,8 @@ ServerEvents.recipes((event) => {
         ["forge:ingots/dragonsteel", "thermal_extra:dragonsteel_dust"],
         ["forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
         ["forge:gems/certus_quartz", "ae2:certus_quartz_dust"],
-        ["forge:gems/fluix", "ae2:fluix_dust"]
+        ["forge:gems/fluix", "ae2:fluix_dust"],
+        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"]
     ].forEach(entry => {
         event.custom({
             type: "immersiveengineering:crusher",
@@ -185,7 +187,8 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/aluminum", "immersiveengineering:dust_aluminum"],
         ["estrogen:testosterone_chunk", "3x estrogen:testosterone_powder"],
         ["#forge:ingots/zinc", "kubejs:zinc_dust"],
-        ["#forge:ingots/platinum", "kubejs:platinum_dust"]
+        ["#forge:ingots/platinum", "kubejs:platinum_dust"],
+        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"]
     ].forEach(entry => {
         event.recipes.mekanismCrushing(entry[1], entry[0]);
     });
@@ -213,7 +216,8 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/osmium", "mekanism:dust_osmium"],
         ["#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
         ["#forge:ingots/zinc", "kubejs:zinc_dust"],
-        ["#forge:ingots/platinum", "kubejs:platinum_dust"]
+        ["#forge:ingots/platinum", "kubejs:platinum_dust"],
+        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"]
     ].forEach(entry => {
         event.recipes.thermal.pulverizer(entry[1], entry[0]).energy(2000);
     });
@@ -313,11 +317,12 @@ ServerEvents.recipes((event) => {
 
     // Smelting recipes for dusts
     [
-        ["#forge:dusts/zinc", "create:zinc_ingot"]
+        ["#forge:dusts/zinc", "create:zinc_ingot"],
+        ["#forge:dusts/cobalt", "tconstruct:cobalt_ingot"]
     ].forEach(entry => {
         const [dust, ingot] = entry;
 
         event.smelting(ingot, dust);
         event.blasting(ingot, dust)
-    })
+    });
 });
