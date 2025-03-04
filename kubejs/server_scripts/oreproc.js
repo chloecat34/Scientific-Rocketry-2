@@ -124,7 +124,8 @@ ServerEvents.recipes((event) => {
         ["#forge:raw_materials/lead", "#forge:ores/lead", "thermal:lead_dust", "thermal:silver_dust", 1],
         ["#forge:raw_materials/zinc", "#forge:ores/zinc", "kubejs:zinc_dust", "thermal:tin_dust", 1],
         ["#forge:raw_materials/cobalt", "#forge:ores/cobalt", "kubejs:cobalt_dust", "thermal:lead_dust", 2],
-        ["#forge:raw_materials/nickel", "#forge:ores/nickel", "thermal:nickel_dust", "kubejs:platinum_dust", 2]
+        ["#forge:raw_materials/nickel", "#forge:ores/nickel", "thermal:nickel_dust", "kubejs:platinum_dust", 2],
+        ["#forge:raw_materials/desh", "#forge:ores/desh", "kubejs:desh_dust", "thermal:copper_dust", 2]
     ].forEach(entry => {
         const [rawOre, ore, dust, byproduct, tier] = entry;
         
@@ -239,4 +240,25 @@ ServerEvents.recipes((event) => {
         event.remove({ input: dust, output: ingot, type: "blasting" });
         event.remove({ input: dust, output: ingot, type: "thermal:smelter" });
     });
+
+    // Add arc furnace recipes
+    [
+        ["#forge:dusts/desh", "ad_astra:desh_ingot"]
+    ].forEach(entry => {
+        const [dust, ingot] = entry;
+
+        event.custom({
+            type: "immersiveengineering:arc_furnace",
+            additives: [],
+            energy: 51200,
+            input: {
+                tag: dust.slice(1, dust.length)
+            },
+            results: [{
+                item: ingot,
+                count: 1
+            }],
+            time: 100
+        });
+    })
 });

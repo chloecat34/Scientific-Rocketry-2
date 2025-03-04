@@ -58,7 +58,8 @@ ServerEvents.recipes((event) => {
         ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
         ["#forge:ingots/zinc", "kubejs:zinc_dust"],
         ["#forge:ingots/platinum", "kubejs:platinum_dust"],
-        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"]
+        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
+        ["#forge:ingots/desh", "kubejs:desh_dust"]
     ].forEach(entry => {
         event.recipes.createCrushing(entry[1], entry[0]);
     });
@@ -91,7 +92,7 @@ ServerEvents.recipes((event) => {
         ["forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
         ["forge:gems/certus_quartz", "ae2:certus_quartz_dust"],
         ["forge:gems/fluix", "ae2:fluix_dust"],
-        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"]
+        ["forge:ingots/desh", "kubejs:desh_dust"]
     ].forEach(entry => {
         event.custom({
             type: "immersiveengineering:crusher",
@@ -188,7 +189,8 @@ ServerEvents.recipes((event) => {
         ["estrogen:testosterone_chunk", "3x estrogen:testosterone_powder"],
         ["#forge:ingots/zinc", "kubejs:zinc_dust"],
         ["#forge:ingots/platinum", "kubejs:platinum_dust"],
-        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"]
+        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
+        ["#forge:ingots/desh", "kubejs:desh_dust"]
     ].forEach(entry => {
         event.recipes.mekanismCrushing(entry[1], entry[0]);
     });
@@ -217,7 +219,8 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
         ["#forge:ingots/zinc", "kubejs:zinc_dust"],
         ["#forge:ingots/platinum", "kubejs:platinum_dust"],
-        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"]
+        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
+        ["#forge:ingots/desh", "kubejs:desh_dust"]
     ].forEach(entry => {
         event.recipes.thermal.pulverizer(entry[1], entry[0]).energy(2000);
     });
