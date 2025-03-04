@@ -83,12 +83,11 @@ ServerEvents.recipes((event) => {
     // Stone gears
     event.shaped("kubejs:stone_gear", [
         "ABA",
-        "BCB",
+        "B B",
         "ABA"
     ], {
         "A": "#forge:rods/wooden",
-        "B": "#minecraft:stone_crafting_materials",
-        "C": "#forge:nuggets/iron"
+        "B": "#minecraft:stone_crafting_materials"
     });
 
     // Custom gear recipes (designed to not be used long-term)

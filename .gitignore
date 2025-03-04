@@ -19,3 +19,6 @@ rhino.local.properties
 TrashSlotSaveState.json
 usercache.json
 usernamecache.json
+resourcepacks
+hs_err_pid*.log
+.qmenu_opened.marker
