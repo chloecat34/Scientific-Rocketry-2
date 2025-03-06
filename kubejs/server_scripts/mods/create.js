@@ -111,4 +111,15 @@ ServerEvents.recipes((event) => {
         C: "create:brass_casing",
         D: "#forge:storage_blocks/andesite_alloy"
     });
+
+    // Precision mechanism
+    event.remove({ output: "create:precision_mechanism" });
+
+    event.recipes.createSequencedAssembly([
+        Item.of("create:precision_mechanism")
+    ], "#forge:plates/electrum", [
+        event.recipes.createDeploying("create:incomplete_precision_mechanism", ["create:incomplete_precision_mechanism", "create:cogwheel"]),
+        event.recipes.createDeploying("create:incomplete_precision_mechanism", ["create:incomplete_precision_mechanism", "create:large_cogwheel"]),
+        event.recipes.createDeploying("create:incomplete_precision_mechanism", ["create:incomplete_precision_mechanism", "minecraft:iron_nugget"])
+    ]).transitionalItem("create:incomplete_precision_mechanism").loops(3);
 });

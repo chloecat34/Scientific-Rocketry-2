@@ -80,27 +80,15 @@ ServerEvents.recipes((event) => {
         })
     );
 
-    // Stone gears
-    event.shaped("kubejs:stone_gear", [
-        "ABA",
-        "BCB",
-        "ABA"
-    ], {
-        "A": "#forge:rods/wooden",
-        "B": "#minecraft:stone_crafting_materials",
-        "C": "#forge:nuggets/iron"
-    });
-
     // Custom gear recipes (designed to not be used long-term)
-    function handcraftGears(gear, nugget, plate) {
-        event.shaped(gear, [
+    function mechcraftGears(gear, plate) {
+        event.recipes.createMechanicalCrafting(gear, [
+            " A ",
             "ABA",
-            "BCB",
-            "ABA"
+            " A "
         ], {
-            "A": nugget,
-            "B": plate,
-            "C": "kubejs:stone_gear"
+            A: plate,
+            B: "#forge:rods/iron"
         });
     }
 
@@ -127,11 +115,12 @@ ServerEvents.recipes((event) => {
         "shellite",
         "twinite",
         "dragonsteel",
-        "platinum"
+        "platinum",
+        "copper"
     ].forEach(ingot => {
-        handcraftGears(`#forge:gears/${ingot}`, `#forge:nuggets/${ingot}`, `#forge:plates/${ingot}`)
+        mechcraftGears(`#forge:gears/${ingot}`, `#forge:plates/${ingot}`)
     });
 
-    handcraftGears("thermal:iron_gear", "minecraft:iron_nugget", "#forge:plates/iron");
-    handcraftGears("thermal:gold_gear", "minecraft:gold_nugget", "#forge:plates/gold");
+    mechcraftGears("thermal:iron_gear", "#forge:plates/iron");
+    mechcraftGears("thermal:gold_gear", "#forge:plates/gold");
 });

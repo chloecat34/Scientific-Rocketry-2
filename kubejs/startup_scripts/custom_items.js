@@ -46,16 +46,6 @@ StartupEvents.registry("item", event => {
         .tag("forge:gears")
         .tag("forge:gears/platinum");
 
-    event.create("stone_gear")
-        .displayName("Stone Gear")
-        .tag("forge:gears")
-        .tag("forge:gears/stone");
-
-    event.create("compressed_iron_nugget")
-        .displayName("Compressed Iron Nugget")
-        .tag("forge:nuggets")
-        .tag("forge:nuggets/compressed_iron");
-
     event.create("compressed_iron_plate")
         .displayName("Compressed Iron Plate")
         .tag("forge:plates")

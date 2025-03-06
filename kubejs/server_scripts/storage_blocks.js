@@ -73,5 +73,4 @@ ServerEvents.recipes((event) => {
 
 	addPacking("kubejs:platinum_nugget", "kubejs:platinum_ingot");
 	addPacking("kubejs:platinum_ingot", "kubejs:platinum_block");
-	addPacking("kubejs:compressed_iron_nugget", "pneumaticcraft:ingot_iron_compressed");
 });

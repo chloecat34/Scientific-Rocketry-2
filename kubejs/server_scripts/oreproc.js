@@ -66,7 +66,8 @@ ServerEvents.recipes((event) => {
         "#forge:storage_blocks/raw_zinc",
         "#forge:storage_blocks/raw_aluminum",
         "#forge:storage_blocks/raw_cobalt",
-        "#forge:storage_blocks/raw_uranium"
+        "#forge:storage_blocks/raw_uranium",
+        "ad_astra:moon_cheese_ore"
     ].forEach(rawOre => {
         event.remove({
             input: rawOre,
@@ -137,7 +138,9 @@ ServerEvents.recipes((event) => {
         if (tier <= 2) {
             event.recipes.createCrushing([dust, Item.of(dust).withChance(0.5)], rawOre);
             event.recipes.createCrushing([Item.of(dust, 3)], ore);
+        }
 
+        if (tier <= 3) {
             event.custom({
                 type: "immersiveengineering:crusher",
                 energy: 3000,
@@ -160,30 +163,30 @@ ServerEvents.recipes((event) => {
                     count: 1
                 }
             });
-        }
 
-        event.custom({
-            type: "immersiveengineering:crusher",
-            energy: 6000,
-            input: {
-                tag: ore.slice(1, ore.length)
-            },
-            secondaries: [{
-                chance: 0.5,
-                output: {
-                    item: dust
+            event.custom({
+                type: "immersiveengineering:crusher",
+                energy: 6000,
+                input: {
+                    tag: ore.slice(1, ore.length)
+                },
+                secondaries: [{
+                    chance: 0.5,
+                    output: {
+                        item: dust
+                    }
+                }, {
+                    chance: 0.3,
+                    output: {
+                        item: byproduct
+                    }
+                }],
+                result: {
+                    item: dust,
+                    count: 3
                 }
-            }, {
-                chance: 0.3,
-                output: {
-                    item: byproduct
-                }
-            }],
-            result: {
-                item: dust,
-                count: 3
-            }
-        });
+            });
+        }
 
         event.recipes.thermal.pulverizer([Item.of(dust).withChance(2.0), Item.of(byproduct).withChance(0.25)], rawOre);
         event.recipes.thermal.pulverizer([Item.of(dust).withChance(4.0), Item.of(byproduct).withChance(0.5)], ore).energy(8000);
@@ -260,5 +263,59 @@ ServerEvents.recipes((event) => {
             }],
             time: 100
         });
-    })
+    });
+
+    // Set up gem ore crushing recipes
+    [
+        // ore, primary, IE byproduct, Thermal byproduct, Base amount, Tier
+        ["#forge:ores/coal", "minecraft:coal", "thermal:sulfur_dust", "thermal:sulfur", 1, 1],
+        ["#forge:ores/redstone", "minecraft:redstone", "thermal:cinnabar", "thermal:cinnabar", 3, 1],
+        ["#forge:ores/emerald", "minecraft:emerald", "minecraft:emerald", "minecraft:emerald", 1, 1],
+        ["#forge:ores/diamond", "minecraft:diamond", "minecraft:diamond", "minecraft:diamond", 1, 1],
+        ["#forge:ores/lapis", "minecraft:lapis_lazuli", "thermal:sulfur_dust", "thermal:sulfur", 3, 1],
+        ["#forge:ores/quartz", "minecraft:quartz", "thermal:sulfur_dust", "thermal:sulfur", 1, 1],
+        ["#forge:ores/fluorite", "mekanism:fluorite_gem", "thermal:blitz_powder", "thermal:blitz_powder", 2, 4],
+        ["#forge:ores/ice_shard", "ad_astra:ice_shard", "thermal:blizz_powder", "thermal:blizz_powder", 1, 3],
+        ["#forge:ores/sulfur", "thermal:sulfur", "minecraft:blaze_powder", "minecraft:blaze_powder", 2, 1],
+        ["#forge:ores/dimensional_shard", "rftoolsbase:dimensionalshard", "thermal:ender_pearl_dust", "minecraft:ender_pearl", 2, 3],
+        ["#forge:ores/apatite", "thermal:apatite", "minecraft:lapis_lazuli", "minecraft:lapis_lazuli", 3, 1],
+        ["#forge:ores/cinnabar", "thermal:cinnabar", "thermal:ruby_dust", "thermal:ruby", 1, 1],
+        ["#forge:ores/niter", "thermal:niter", "thermal:niter", "thermal:niter", 2, 1],
+        ["#forge:ores/ruby", "thermal:ruby", "thermal:cinnabar", "thermal:cinnabar", 1, 1],
+        ["#forge:ores/sapphire", "thermal:sapphire", "thermal:apatite", "thermal:apatite", 1, 1],
+        ["#forge:ores/cheese", "ad_astra:cheese", "ad_astra:cheese", "ad_astra:cheese", 1, 3]
+    ].forEach(entry => {
+        const [ore, primary, byproduct1, byproduct2, baseAmount, tier] = entry;
+
+        if (tier === 1) {
+            event.recipes.createMilling([Item.of(primary, baseAmount)], ore);
+        }
+
+        if (tier <= 2) {
+            event.recipes.createCrushing([Item.of(primary, baseAmount * 2)], ore);
+        }
+
+        if (tier <= 3) {
+            event.custom({
+                type: "immersiveengineering:crusher",
+                energy: 3000,
+                input: {
+                    tag: ore.slice(1, ore.length)
+                },
+                secondaries: [{
+                    chance: 0.25,
+                    output: {
+                        item: byproduct1
+                    }
+                }],
+                result: {
+                    item: primary,
+                    count: baseAmount * 3
+                }
+            });
+        }
+        
+        event.recipes.thermal.pulverizer([Item.of(primary).withChance(baseAmount * 4), Item.of(byproduct2).withChance(0.5)], ore).energy(8000);
+        event.recipes.mekanismEnriching(`${baseAmount * 4}x ${primary}`, ore);
+    });
 });
