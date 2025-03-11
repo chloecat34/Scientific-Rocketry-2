@@ -19,4 +19,8 @@ ServerEvents.recipes((event) => {
 
     // Remove extra gunpowder recipe
     event.remove({ id: "immersiveengineering:crafting/gunpowder_from_dusts" });
+
+    // Remove mek paper recipe, use sugar cane or the IE one instead
+    event.remove({ id: "mekanism:paper" });
+    event.recipes.createMixing("minecraft:paper", ["2x #forge:sawdust", Fluid.of("minecraft:water", 500)]);
 });
