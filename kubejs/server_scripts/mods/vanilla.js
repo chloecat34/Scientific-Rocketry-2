@@ -16,4 +16,7 @@ ServerEvents.recipes((event) => {
 
     // Cauldron
     event.replaceInput({ output: "minecraft:cauldron" }, "minecraft:iron_ingot", "#forge:plates/iron");
+
+    // Remove extra gunpowder recipe
+    event.remove({ id: "immersiveengineering:crafting/gunpowder_from_dusts" });
 });

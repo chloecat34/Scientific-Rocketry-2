@@ -7,5 +7,9 @@ ServerEvents.tags("item", event => {
     event.add("forge:sandstone/venus_sandstone", "ad_astra:venus_sandstone");
 
     // Cheese ore
-    event.add("forge:ores/cheese", "ad_astra:moon_cheese_ore")
-})
+    event.add("forge:ores/cheese", "ad_astra:moon_cheese_ore");
+
+    // Nitrate
+    event.add("forge:dusts/niter", "immersiveengineering:dust_saltpeter");
+    event.add("forge:dusts/saltpeter", "thermal:niter_dust");
+});

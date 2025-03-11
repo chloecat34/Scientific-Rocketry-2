@@ -291,7 +291,7 @@ ServerEvents.recipes((event) => {
         secondaries: [{
             chance: 0.5,
             output: {
-                item: "immersiveengineering:dust_saltpeter"
+                item: "thermal:niter_dust"
             }
         }],
         result: {
