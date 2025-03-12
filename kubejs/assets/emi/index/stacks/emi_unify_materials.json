@@ -38,7 +38,8 @@
         "/immersiveengineering:raw_(lead|silver|nickel)/",
         "ae2:ender_dust",
         "thermal:sulfur_ore",
-        "thermal:deepslate_sulfur_ore"
+        "thermal:deepslate_sulfur_ore",
+        "immersiveengineering:dust_saltpeter"
 	],
 	"disable": true
 }

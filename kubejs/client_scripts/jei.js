@@ -93,7 +93,9 @@ JEIEvents.hideItems((event) => {
 		"mekanism:basic_purifying_factory",
 		"mekanism:advanced_purifying_factory",
 		"mekanism:elite_purifying_factory",
-		"mekanism:ultimate_purifying_factory"
+		"mekanism:ultimate_purifying_factory",
+		"estrogen:molten_slime_bucket",
+		"estrogen:molten_amethyst_bucket"
 	];
     
 	itemsToRemove.forEach(item => event.hide(item));
@@ -116,4 +118,11 @@ JEIEvents.hideItems((event) => {
 	for (const toolType of ["pickaxe", "shovel", "axe", "hoe", "sword"]) {
 		event.hide(`immersiveengineering:${toolType}_steel`);
 	}
+});
+
+JEIEvents.hideFluids((event) => {
+	[
+		"estrogen:molten_slime",
+		"estrogen:molten_amethyst"
+	].forEach(item => event.hide(item));
 });
