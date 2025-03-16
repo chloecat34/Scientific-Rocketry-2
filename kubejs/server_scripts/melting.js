@@ -12,6 +12,12 @@ ServerEvents.recipes((event) => {
         event.recipes.thermal.chiller(item, Fluid.of(fluid, amount)).energy(energy);
     }
 
+    function crucibleMelting(item, fluid, fluidAmount, energy) {
+        energy = energy === undefined ? 8000 : energy;
+
+        event.recipes.thermal.crucible(Fluid.of(fluid, fluidAmount), item).energy(energy);
+    }
+
     // Remove molten slime + amethyst
     event.remove({ output: "minecraft:slime_ball", type: "create:compacting" });
     event.remove({ output: Fluid.of("estrogen:molten_amethyst", 250) });
@@ -20,13 +26,21 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal.chiller("pneumaticcraft:plastic", Fluid.of("pneumaticcraft:plastic", 500)).energy(2400);
 
     // Molten clay
-    event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_clay", 250), "minecraft:clay_ball").energy(2000);
-    event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_clay", 1000), "minecraft:clay").energy(8000);
-    event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_clay", 250), "#minecraft:decorated_pot_ingredients").energy(2000);
-    event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_clay", 250), "minecraft:bricks").energy(8000);
-    event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_clay", 500), "minecraft:brick_slab").energy(4000);
-    event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_clay", 750), "minecraft:flower_pot").energy(6000);
-    event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_clay", 1000), "#minecraft:terracotta").energy(8000);
+    crucibleMelting("minecraft:clay_ball", "tconstruct:molten_clay", 250, 2000);
+    crucibleMelting("minecraft:clay", "tconstruct:molten_clay", 1000, 8000);
+    crucibleMelting("#minecraft:decorated_pot_ingredients", "tconstruct:molten_clay", 250, 2000);
+    crucibleMelting("minecraft:bricks", "tconstruct:molten_clay", 1000, 8000);
+    crucibleMelting("minecraft:brick_slab", "tconstruct:molten_clay", 500, 4000);
+    crucibleMelting("minecraft:flower_pot", "tconstruct:molten_clay", 750, 6000);
+    crucibleMelting("#minecraft:terracotta", "tconstruct:molten_clay", 1000, 8000);
     chillerIngotCasting("minecraft:brick", "tconstruct:molten_clay", 250);
     chillerBlockCasting("minecraft:terracotta", "tconstruct:molten_clay", 1000, 8000);
+
+    // Molten glass
+    crucibleMelting("#forge:glass/silica", "tconstruct:molten_glass", 1000, 2000);
+    crucibleMelting("minecraft:glass_bottle", "tconstruct:molten_glass", 1000, 2000);
+    crucibleMelting("#forge:glass_panes/silica", "tconstruct:molten_glass", 250, 1000);
+    crucibleMelting("#minecraft:smelts_to_glass", "tconstruct:molten_glass", 1000, 4000);
+    crucibleMelting("#tconstruct:casts/single_use/blank", "tconstruct:molten_glass", 250, 2000);
+    chillerBlockCasting("tconstruct:clear_glass", "tconstruct:molten_glass", 1000, 4000);
 });
