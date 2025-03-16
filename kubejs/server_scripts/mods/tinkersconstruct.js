@@ -19,4 +19,8 @@ ServerEvents.recipes((event) => {
 		"tconstruct:scorched_basin",
 		"tconstruct:scorched_alloyer"
 	].forEach(item => event.remove({ output: item }));
+
+	// Extra recipe for ingot casts (to replace the thermal ones)
+	event.replaceInput({}, "thermal:chiller_ingot_cast", "tconstruct:ingot_cast");
+	event.remove({ output: "thermal:chiller_ingot_cast" });
 });

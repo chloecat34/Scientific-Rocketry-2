@@ -65,11 +65,6 @@ ServerEvents.recipes((event) => {
         standardizeGears(ingot, `thermalendergy:${ingot}_gear`)
     );
 
-    // Thermal extra
-    ["soul_infused", "shellite", "twinite", "dragonsteel"].forEach((ingot) =>
-        standardizeGears(ingot, `thermal_extra:${ingot}_gear`)
-    );
-
     // Kubejs
     ["platinum"].forEach(ingot => standardizeGears(ingot, `kubejs:${ingot}_gear`));
 
@@ -111,10 +106,6 @@ ServerEvents.recipes((event) => {
         "prismalium",
         "melodium",
         "stellarium",
-        "soul_infused",
-        "shellite",
-        "twinite",
-        "dragonsteel",
         "platinum",
         "copper"
     ].forEach(ingot => {

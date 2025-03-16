@@ -66,11 +66,6 @@ ServerEvents.recipes((event) => {
         standardizePlates(ingot, `thermalendergy:${ingot}_plate`)
     );
 
-    // Thermal extra plates
-    ["soul_infused", "shellite", "twinite", "dragonsteel"].forEach((ingot) =>
-        standardizePlates(ingot, `thermal_extra:${ingot}_plate`)
-    );
-
     // IE plates
     ["aluminum", "uranium"].forEach((ingot) =>
         standardizePlates(ingot, `immersiveengineering:plate_${ingot}`)

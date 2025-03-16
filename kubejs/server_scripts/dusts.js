@@ -46,12 +46,6 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/prismalium", "thermalendergy:prismalium_dust"],
         ["#forge:ingots/melodium", "thermalendergy:melodium_dust"],
         ["#forge:ingots/stellarium", "thermalendergy:stellarium_dust"],
-        ["#forge:gems/amethyst", "thermal_extra:amethyst_dust"],
-        ["minecraft:soul_sand", "thermal_extra:soul_sand_dust"],
-        ["#forge:ingots/soul_infused", "thermal_extra:soul_infused_dust"],
-        ["#forge:ingots/shellite", "thermal_extra:shellite_dust"],
-        ["#forge:ingots/twinite", "thermal_extra:twinite_dust"],
-        ["#forge:ingots/dragonsteel", "thermal_extra:dragonsteel_dust"],
         ["#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
         ["#forge:ingots/aluminum", "immersiveengineering:dust_aluminum"],
         ["#forge:ingots/uranium", "immersiveengineering:dust_uranium"],
@@ -84,11 +78,6 @@ ServerEvents.recipes((event) => {
         ["forge:ingots/prismalium", "thermalendergy:prismalium_dust"],
         ["forge:ingots/melodium", "thermalendergy:melodium_dust"],
         ["forge:ingots/stellarium", "thermalendergy:stellarium_dust"],
-        ["forge:gems/amethyst", "thermal_extra:amethyst_dust"],
-        ["forge:ingots/soul_infused", "thermal_extra:soul_infused_dust"],
-        ["forge:ingots/shellite", "thermal_extra:shellite_dust"],
-        ["forge:ingots/twinite", "thermal_extra:twinite_dust"],
-        ["forge:ingots/dragonsteel", "thermal_extra:dragonsteel_dust"],
         ["forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
         ["forge:gems/certus_quartz", "ae2:certus_quartz_dust"],
         ["forge:gems/fluix", "ae2:fluix_dust"],
@@ -111,7 +100,6 @@ ServerEvents.recipes((event) => {
     [
         ["minecraft:charcoal", "mekanism:dust_charcoal"],
         ["minecraft:quartz", "thermal:quartz_dust"],
-        ["minecraft:soul_sand", "thermal_extra:soul_sand_dust"],
         ["ae2:sky_stone_block", "ae2:sky_dust"],
         ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"]
     ].forEach(entry => {
@@ -177,12 +165,6 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/prismalium", "thermalendergy:prismalium_dust"],
         ["#forge:ingots/melodium", "thermalendergy:melodium_dust"],
         ["#forge:ingots/stellarium", "thermalendergy:stellarium_dust"],
-        ["#forge:gems/amethyst", "thermal_extra:amethyst_dust"],
-        ["minecraft:soul_sand", "thermal_extra:soul_sand_dust"],
-        ["#forge:ingots/soul_infused", "thermal_extra:soul_infused_dust"],
-        ["#forge:ingots/shellite", "thermal_extra:shellite_dust"],
-        ["#forge:ingots/twinite", "thermal_extra:twinite_dust"],
-        ["#forge:ingots/dragonsteel", "thermal_extra:dragonsteel_dust"],
         ["#forge:coal_coke", "immersiveengineering:dust_coke"],
         ["#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
         ["#forge:ingots/aluminum", "immersiveengineering:dust_aluminum"],
@@ -243,11 +225,7 @@ ServerEvents.recipes((event) => {
         "thermal:constantan_dust", 
         "thermal:signalum_dust", 
         "thermal:enderium_dust", 
-        "thermal:lumium_dust",
-        "thermal_extra:soul_infused_dust",
-        "thermal_extra:shellite_dust",
-        "thermal_extra:twinite_dust",
-        "thermal_extra:dragonsteel_dust",
+        "thermal:lumium_dust"
     ].forEach(dust => {
         event.remove({ output: dust, type: "minecraft:crafting_shapeless" });
     });

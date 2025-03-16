@@ -1,9 +1,11 @@
 StartupEvents.registry("item", event => {
     event.create("rod_die")
-        .displayName("Rod Die");
+        .displayName("Rod Die")
+        .tag("thermal:crafting/dies");
 
     event.create("wire_die")
-        .displayName("Wire Die");
+        .displayName("Wire Die")
+        .tag("thermal:crafting/dies");
 
     event.create("zinc_dust")
         .displayName("Zinc Dust")

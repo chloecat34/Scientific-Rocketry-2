@@ -14,11 +14,7 @@ ServerEvents.recipes((event) => {
         "thermal:constantan_ingot",
         "thermal:signalum_ingot",
         "thermal:lumium_ingot",
-        "thermal:enderium_ingot",
-        "thermal_extra:soul_infused_glass",
-        "thermal_extra:shellite_glass",
-        "thermal_extra:twinite_glass",
-        "thermal_extra:dragonsteel_glass"
+        "thermal:enderium_ingot"
     ].forEach(item => 
         event.remove({ input: "minecraft:fire_charge", output: item })
     );

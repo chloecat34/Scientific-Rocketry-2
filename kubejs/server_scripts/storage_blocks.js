@@ -48,10 +48,6 @@ ServerEvents.recipes((event) => {
 	addPacking("biomeswevegone:white_allium", "biomeswevegone:white_allium_petal_block");
 	addPacking("biomeswevegone:rose", "biomeswevegone:rose_petal_block");
 	addPacking("create:experience_nugget", "create:experience_block");
-	addPacking("#forge:ingots/soul_infused", "#forge:storage_blocks/soul_infused");
-	addPacking("#forge:ingots/shellite", "#forge:storage_blocks/shellite");
-	addPacking("#forge:ingots/twinite", "#forge:storage_blocks/twinite");
-	addPacking("#forge:ingots/dragonsteel", "#forge:storage_blocks/dragonsteel");
 	addPacking2x2("tconstruct:cheese_ingot", "tconstruct:cheese_block");
 	addPacking("#forge:raw_materials/cobalt", "#forge:storage_blocks/raw_cobalt");
 	addPacking2x2("tconstruct:earth_slime_crystal", "tconstruct:earth_slime_crystal_block");
@@ -65,7 +61,7 @@ ServerEvents.recipes((event) => {
 	addPacking("advanced_ae:quantum_alloy", "advanced_ae:quantum_alloy_block");
 	addPacking("createaddition:biomass_pellet", "createaddition:biomass_pellet_block");
 	
-	["desh", "ostrum", "calorite", "prismalium", "melodium", "stellarium", "soul_infused", "shellite", "twinite", "dragonsteel"].forEach(material => {
+	["desh", "ostrum", "calorite", "prismalium", "melodium", "stellarium"].forEach(material => {
 		addPacking(`#forge:nuggets/${material}`, `#forge:ingots/${material}`);
 	});
 	

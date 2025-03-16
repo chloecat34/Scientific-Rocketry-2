@@ -12,4 +12,7 @@ ServerEvents.tags("item", event => {
     // Nitrate
     event.add("forge:dusts/niter", "immersiveengineering:dust_saltpeter");
     event.add("forge:dusts/saltpeter", "thermal:niter_dust");
+
+    // Ingot cast works in blast chiller
+    event.add("thermal:crafting/casts", "tconstruct:ingot_cast");
 });

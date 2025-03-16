@@ -95,7 +95,8 @@ JEIEvents.hideItems((event) => {
 		"mekanism:elite_purifying_factory",
 		"mekanism:ultimate_purifying_factory",
 		"estrogen:molten_slime_bucket",
-		"estrogen:molten_amethyst_bucket"
+		"estrogen:molten_amethyst_bucket",
+		"thermal:chiller_ingot_cast"
 	];
     
 	itemsToRemove.forEach(item => event.hide(item));
