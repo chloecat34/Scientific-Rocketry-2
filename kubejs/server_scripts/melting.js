@@ -74,4 +74,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:storage_blocks/diamond", "tconstruct:molten_diamond", 900, 4800 * 9);
     chillerGemCasting("minecraft:diamond", "tconstruct:molten_diamond", 100, 4800);
     chillerBlockCasting("minecraft:diamond_block", "tconstruct:molten_diamond", 900, 4800 * 9);
+
+    // Molten debris
+    crucibleMelting("minecraft:netherite_scrap", "tconstruct:molten_debris", 90, 4800);
+    crucibleMelting("tconstruct:debris_nugget", "tconstruct:molten_debris", 10, 600);
 });
