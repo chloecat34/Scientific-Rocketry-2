@@ -43,4 +43,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#minecraft:smelts_to_glass", "tconstruct:molten_glass", 1000, 4000);
     crucibleMelting("#tconstruct:casts/single_use/blank", "tconstruct:molten_glass", 250, 2000);
     chillerBlockCasting("tconstruct:clear_glass", "tconstruct:molten_glass", 1000, 4000);
+
+    // Molten obsidian (can't melt obsidian bc it turns into lava)
+    chillerBlockCasting("minecraft:obsidian", "tconstruct:molten_obsidian", 1000, 8000);
 });
