@@ -41,4 +41,8 @@ ServerEvents.recipes((event) => {
 
     // Gearworking die
     event.replaceInput({ output: "thermal:press_gear_die" }, "#forge:gears/diamond", "#forge:gears/constantan");
+
+    // Remove rod cast
+    event.remove({ output: "thermal:chiller_rod_cast" });
+    event.remove({ input: "thermal:chiller_rod_cast" });
 });

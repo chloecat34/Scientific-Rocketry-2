@@ -96,7 +96,20 @@ JEIEvents.hideItems((event) => {
 		"mekanism:ultimate_purifying_factory",
 		"estrogen:molten_slime_bucket",
 		"estrogen:molten_amethyst_bucket",
-		"thermal:chiller_ingot_cast"
+		"thermal:chiller_ingot_cast",
+		"thermal:chiller_rod_cast",
+		"tconstruct:coin_cast",
+		"tconstruct:coin_sand_cast",
+		"tconstruct:coin_red_sand_cast",
+		"tconstruct:gear_cast",
+		"tconstruct:gear_sand_cast",
+		"tconstruct:gear_red_sand_cast",
+		"tconstruct:plate_cast",
+		"tconstruct:plate_sand_cast",
+		"tconstruct:plate_red_sand_cast",
+		"tconstruct:wire_cast",
+		"tconstruct:wire_sand_cast",
+		"tconstruct:wire_red_sand_cast"
 	];
     
 	itemsToRemove.forEach(item => event.hide(item));

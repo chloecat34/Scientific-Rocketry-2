@@ -23,4 +23,13 @@ ServerEvents.recipes((event) => {
     // Remove mek paper recipe, use sugar cane or the IE one instead
     event.remove({ id: "mekanism:paper" });
     event.recipes.createMixing("minecraft:paper", ["2x #forge:sawdust", Fluid.of("minecraft:water", 500)]);
+
+    // Iron bars
+    event.remove({ id: "minecraft:iron_bars" });
+    event.shaped("8x minecraft:iron_bars", [
+        "AAA",
+        "AAA"
+    ], {
+        A: "#forge:rods/iron"
+    });
 });

@@ -78,4 +78,15 @@ ServerEvents.recipes((event) => {
     // Molten debris
     crucibleMelting("minecraft:netherite_scrap", "tconstruct:molten_debris", 90, 4800);
     crucibleMelting("tconstruct:debris_nugget", "tconstruct:molten_debris", 10, 600);
+
+    // Molten iron
+    crucibleMelting("#forge:ingots/iron", "tconstruct:molten_iron", 90, 4800);
+    crucibleMelting("#forge:storage_blocks/iron", "tconstruct:molten_iron", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/iron", "tconstruct:molten_iron", 30, 1600);
+    crucibleMelting("#forge:gears/iron", "tconstruct:molten_iron", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/iron", "tconstruct:molten_iron", 90, 4800);
+    crucibleMelting("#forge:rods/iron", "tconstruct:molten_iron", 45, 2400);
+    crucibleMelting("#forge:wires/iron", "tconstruct:molten_iron", 45, 2400);
+    crucibleMelting("#forge:sheetmetals/iron", "tconstruct:molten_iron", 90, 4800);
+    chillerBlockCasting("minecraft:iron_block", "tconstruct:molten_iron", 810, 4800 * 9);
 });
