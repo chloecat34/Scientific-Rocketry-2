@@ -46,4 +46,6 @@ ServerEvents.recipes((event) => {
 
     // Molten obsidian (can't melt obsidian bc it turns into lava)
     chillerBlockCasting("minecraft:obsidian", "tconstruct:molten_obsidian", 1000, 8000);
+
+    // Replace molten ender w/ resonant ender
 });

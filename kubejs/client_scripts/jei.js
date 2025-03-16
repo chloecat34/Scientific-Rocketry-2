@@ -124,6 +124,7 @@ JEIEvents.hideItems((event) => {
 JEIEvents.hideFluids((event) => {
 	[
 		"estrogen:molten_slime",
-		"estrogen:molten_amethyst"
+		"estrogen:molten_amethyst",
+		"tconstruct:molten_ender"
 	].forEach(item => event.hide(item));
 });
