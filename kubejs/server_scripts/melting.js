@@ -81,6 +81,7 @@ ServerEvents.recipes((event) => {
 
     // Molten iron
     crucibleMelting("#forge:ingots/iron", "tconstruct:molten_iron", 90, 4800);
+    crucibleMelting("#forge:nuggets/iron", "tconstruct:molten_iron", 10, 600);
     crucibleMelting("#forge:storage_blocks/iron", "tconstruct:molten_iron", 810, 4800 * 9);
     crucibleMelting("#forge:coins/iron", "tconstruct:molten_iron", 30, 1600);
     crucibleMelting("#forge:gears/iron", "tconstruct:molten_iron", 360, 4800 * 4);
