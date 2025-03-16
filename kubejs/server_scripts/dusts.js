@@ -306,4 +306,7 @@ ServerEvents.recipes((event) => {
         event.smelting(ingot, dust);
         event.blasting(ingot, dust)
     });
+
+    // Millstone recipe for first obsidian dust
+    event.recipes.createMilling("create:powdered_obsidian", "minecraft:obsidian");
 });

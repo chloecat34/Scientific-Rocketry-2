@@ -36,8 +36,6 @@ ServerEvents.recipes((event) => {
     crucibleMelting("minecraft:clay", "tconstruct:molten_clay", 1000, 8000);
     crucibleMelting("#minecraft:decorated_pot_ingredients", "tconstruct:molten_clay", 250, 2000);
     crucibleMelting("minecraft:bricks", "tconstruct:molten_clay", 1000, 8000);
-    crucibleMelting("minecraft:brick_slab", "tconstruct:molten_clay", 500, 4000);
-    crucibleMelting("minecraft:flower_pot", "tconstruct:molten_clay", 750, 6000);
     crucibleMelting("#minecraft:terracotta", "tconstruct:molten_clay", 1000, 8000);
     chillerIngotCasting("minecraft:brick", "tconstruct:molten_clay", 250);
     chillerBlockCasting("minecraft:terracotta", "tconstruct:molten_clay", 1000, 8000);
@@ -58,4 +56,10 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:storage_blocks/emerald", "tconstruct:molten_emerald", 900, 4800 * 9);
     chillerGemCasting("minecraft:emerald", "tconstruct:molten_emerald", 100, 4800);
     chillerBlockCasting("minecraft:emerald_block", "tconstruct:molten_emerald", 900, 4800 * 9);
+
+    // Molten quartz
+    crucibleMelting("minecraft:quartz", "tconstruct:molten_quartz", 100, 4800);
+    crucibleMelting("#forge:storage_blocks/quartz", "tconstruct:molten_quartz", 400, 4800 * 4);
+    chillerGemCasting("minecraft:quartz", "tconstruct:molten_quartz", 100, 4800);
+    chillerBlockCasting("minecraft:quartz_block", "tconstruct:molten_quartz", 400, 4800 * 4);
 });

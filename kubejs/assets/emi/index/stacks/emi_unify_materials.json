@@ -39,7 +39,8 @@
         "ae2:ender_dust",
         "thermal:sulfur_ore",
         "thermal:deepslate_sulfur_ore",
-        "immersiveengineering:dust_saltpeter"
+        "immersiveengineering:dust_saltpeter",
+        "mekanism:dust_obsidian"
 	],
 	"disable": true
 }
