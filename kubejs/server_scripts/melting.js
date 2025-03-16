@@ -5,6 +5,12 @@ ServerEvents.recipes((event) => {
 
         event.recipes.thermal.chiller(item, [Fluid.of(fluid, amount), "tconstruct:ingot_cast"]).energy(energy);
     }
+    
+    function chillerGemCasting(item, fluid, amount, energy) {
+        energy = energy === undefined ? 4800 : energy;
+
+        event.recipes.thermal.chiller(item, [Fluid.of(fluid, amount), "tconstruct:gem_cast"]).energy(energy);
+    }
 
     function chillerBlockCasting(item, fluid, amount, energy) {
         energy = energy === undefined ? 4800 * 9 : energy;
@@ -47,5 +53,9 @@ ServerEvents.recipes((event) => {
     // Molten obsidian (can't melt obsidian bc it turns into lava)
     chillerBlockCasting("minecraft:obsidian", "tconstruct:molten_obsidian", 1000, 8000);
 
-    // Replace molten ender w/ resonant ender
+    // Molten emerald
+    crucibleMelting("minecraft:emerald", "tconstruct:molten_emerald", 100, 4800);
+    crucibleMelting("#forge:storage_blocks/emerald", "tconstruct:molten_emerald", 900, 4800 * 9);
+    chillerGemCasting("minecraft:emerald", "tconstruct:molten_emerald", 100, 4800);
+    chillerBlockCasting("minecraft:emerald_block", "tconstruct:molten_emerald", 900, 4800 * 9);
 });
