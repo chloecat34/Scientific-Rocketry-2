@@ -68,4 +68,10 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:storage_blocks/amethyst", "tconstruct:molten_amethyst", 400, 4800 * 4);
     chillerGemCasting("minecraft:amethyst_shard", "tconstruct:molten_amethyst", 100, 4800);
     chillerBlockCasting("minecraft:amethyst_block", "tconstruct:molten_amethyst", 400, 4800 * 4);
+
+    // Molten diamond
+    crucibleMelting("minecraft:diamond", "tconstruct:molten_diamond", 100, 4800);
+    crucibleMelting("#forge:storage_blocks/diamond", "tconstruct:molten_diamond", 900, 4800 * 9);
+    chillerGemCasting("minecraft:diamond", "tconstruct:molten_diamond", 100, 4800);
+    chillerBlockCasting("minecraft:diamond_block", "tconstruct:molten_diamond", 900, 4800 * 9);
 });
