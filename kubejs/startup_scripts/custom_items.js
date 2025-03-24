@@ -52,4 +52,14 @@ StartupEvents.registry("item", event => {
         .displayName("Compressed Iron Plate")
         .tag("forge:plates")
         .tag("forge:plates/compressed_iron");
+
+    event.create("cobalt_plate")
+        .displayName("Cobalt Plate")
+        .tag("forge:plates")
+        .tag("forge:plates/cobalt");
+
+    event.create("cobalt_gear")
+        .displayName("Cobalt Gear")
+        .tag("forge:gears")
+        .tag("forge:gears/cobalt");
 });

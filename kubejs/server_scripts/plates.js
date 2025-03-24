@@ -82,6 +82,7 @@ ServerEvents.recipes((event) => {
     // Kubejs metals
     [
         "platinum",
-        "compressed_iron"
+        "compressed_iron",
+        "cobalt"
     ].forEach(ingot => standardizePlates(ingot, `kubejs:${ingot}_plate`));
 });
