@@ -114,4 +114,10 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:wires/copper", "tconstruct:molten_copper", 45, 2400);
     crucibleMelting("#forge:sheetmetals/copper", "tconstruct:molten_copper", 90, 4800);
     chillerBlockCasting("minecraft:copper_block", "tconstruct:molten_copper", 810, 4800 * 9);
+
+    // Molten cobalt
+    crucibleMelting("#forge:ingots/cobalt", "tconstruct:molten_cobalt", 90, 4800);
+    crucibleMelting("#forge:nuggets/cobalt", "tconstruct:molten_cobalt", 10, 600);
+    crucibleMelting("#forge:storage_blocks/cobalt", "tconstruct:molten_cobalt", 810, 4800 * 9);
+    chillerBlockCasting("tconstruct:cobalt_block", "tconstruct:molten_cobalt", 810, 4800 * 9);
 });
