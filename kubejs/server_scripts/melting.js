@@ -276,4 +276,171 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:wires/aluminum", "tconstruct:molten_aluminum", 45, 2400);
     crucibleMelting("#forge:sheetmetals/aluminum", "tconstruct:molten_aluminum", 90, 4800);
     chillerBlockCasting("immersiveengineering:storage_aluminum", "tconstruct:molten_aluminum", 810, 4800 * 9);
+
+    // Molten lead
+    crucibleMelting("#forge:ingots/lead", "tconstruct:molten_lead", 90, 4800);
+    crucibleMelting("#forge:nuggets/lead", "tconstruct:molten_lead", 10, 600);
+    crucibleMelting("#forge:storage_blocks/lead", "tconstruct:molten_lead", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/lead", "tconstruct:molten_lead", 30, 1600);
+    crucibleMelting("#forge:gears/lead", "tconstruct:molten_lead", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/lead", "tconstruct:molten_lead", 90, 4800);
+    crucibleMelting("#forge:wires/lead", "tconstruct:molten_lead", 45, 2400);
+    crucibleMelting("#forge:sheetmetals/lead", "tconstruct:molten_lead", 90, 4800);
+    chillerBlockCasting("thermal:lead_block", "tconstruct:molten_lead", 810, 4800 * 9);
+
+    // Molten silver
+    crucibleMelting("#forge:ingots/silver", "tconstruct:molten_silver", 90, 4800);
+    crucibleMelting("#forge:nuggets/silver", "tconstruct:molten_silver", 10, 600);
+    crucibleMelting("#forge:storage_blocks/silver", "tconstruct:molten_silver", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/silver", "tconstruct:molten_silver", 30, 1600);
+    crucibleMelting("#forge:gears/silver", "tconstruct:molten_silver", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/silver", "tconstruct:molten_silver", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/silver", "tconstruct:molten_silver", 90, 4800);
+    chillerBlockCasting("thermal:silver_block", "tconstruct:molten_silver", 810, 4800 * 9);
+
+    // Molten nickel
+    crucibleMelting("#forge:ingots/nickel", "tconstruct:molten_nickel", 90, 4800);
+    crucibleMelting("#forge:nuggets/nickel", "tconstruct:molten_nickel", 10, 600);
+    crucibleMelting("#forge:storage_blocks/nickel", "tconstruct:molten_nickel", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/nickel", "tconstruct:molten_nickel", 30, 1600);
+    crucibleMelting("#forge:gears/nickel", "tconstruct:molten_nickel", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/nickel", "tconstruct:molten_nickel", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/nickel", "tconstruct:molten_nickel", 90, 4800);
+    chillerBlockCasting("thermal:nickel_block", "tconstruct:molten_nickel", 810, 4800 * 9);
+
+    // Molten zinc
+    crucibleMelting("#forge:ingots/zinc", "tconstruct:molten_zinc", 90, 4800);
+    crucibleMelting("#forge:nuggets/zinc", "tconstruct:molten_zinc", 10, 600);
+    crucibleMelting("#forge:storage_blocks/zinc", "tconstruct:molten_zinc", 810, 4800 * 9);
+    crucibleMelting("#forge:plates/zinc", "tconstruct:molten_zinc", 90, 4800);
+    chillerIngotCasting("#forge:ingots/zinc", "tconstruct:molten_zinc", 90, 4800);
+    chillerBlockCasting("create:zinc_block", "tconstruct:molten_zinc", 810, 4800 * 9);
+
+    // Molten osmium
+    crucibleMelting("#forge:ingots/osmium", "tconstruct:molten_osmium", 90, 4800);
+    crucibleMelting("#forge:nuggets/osmium", "tconstruct:molten_osmium", 10, 600);
+    crucibleMelting("#forge:storage_blocks/osmium", "tconstruct:molten_osmium", 810, 4800 * 9);
+    chillerIngotCasting("#forge:ingots/osmium", "tconstruct:molten_osmium", 90, 4800);
+    chillerBlockCasting("mekanism:block_osmium", "tconstruct:molten_osmium", 810, 4800 * 9);
+
+    // Molten uranium
+    crucibleMelting("#forge:ingots/uranium", "tconstruct:molten_uranium", 90, 4800);
+    crucibleMelting("#forge:nuggets/uranium", "tconstruct:molten_uranium", 10, 600);
+    crucibleMelting("#forge:storage_blocks/uranium", "tconstruct:molten_uranium", 810, 4800 * 9);
+    crucibleMelting("#forge:plates/uranium", "tconstruct:molten_uranium", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/uranium", "tconstruct:molten_uranium", 90, 4800);
+    chillerIngotCasting("immersiveengineering:ingot_uranium", "tconstruct:molten_uranium", 90, 4800);
+    chillerBlockCasting("immersiveengineering:storage_uranium", "tconstruct:molten_uranium", 810, 4800 * 9);
+
+    // Molten brass
+    crucibleMelting("#forge:ingots/brass", "tconstruct:molten_brass", 90, 4800);
+    crucibleMelting("#forge:nuggets/brass", "tconstruct:molten_brass", 10, 600);
+    crucibleMelting("#forge:storage_blocks/brass", "tconstruct:molten_brass", 810, 4800 * 9);
+    crucibleMelting("#forge:rods/brass", "tconstruct:molten_brass", 45, 2400);
+    crucibleMelting("#forge:plates/brass", "tconstruct:molten_brass", 90, 4800);
+    chillerIngotCasting("#forge:ingots/brass", "tconstruct:molten_brass", 90, 4800);
+    chillerBlockCasting("create:brass_block", "tconstruct:molten_brass", 810, 4800 * 9);
+
+    // Molten electrum
+    crucibleMelting("#forge:ingots/electrum", "tconstruct:molten_electrum", 90, 4800);
+    crucibleMelting("#forge:nuggets/electrum", "tconstruct:molten_electrum", 10, 600);
+    crucibleMelting("#forge:storage_blocks/electrum", "tconstruct:molten_electrum", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/electrum", "tconstruct:molten_electrum", 30, 1600);
+    crucibleMelting("#forge:gears/electrum", "tconstruct:molten_electrum", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/electrum", "tconstruct:molten_electrum", 90, 4800);
+    crucibleMelting("#forge:wires/electrum", "tconstruct:molten_electrum", 45, 2400);
+    crucibleMelting("#forge:sheetmetals/electrum", "tconstruct:molten_electrum", 90, 4800);
+    chillerBlockCasting("thermal:electrum_block", "tconstruct:molten_electrum", 810, 4800 * 9);
+
+    // Molten invar
+    crucibleMelting("#forge:ingots/invar", "tconstruct:molten_invar", 90, 4800);
+    crucibleMelting("#forge:nuggets/invar", "tconstruct:molten_invar", 10, 600);
+    crucibleMelting("#forge:storage_blocks/invar", "tconstruct:molten_invar", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/invar", "tconstruct:molten_invar", 30, 1600);
+    crucibleMelting("#forge:gears/invar", "tconstruct:molten_invar", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/invar", "tconstruct:molten_invar", 90, 4800);
+    chillerBlockCasting("thermal:invar_block", "tconstruct:molten_invar", 810, 4800 * 9);
+
+    // Molten constantan
+    crucibleMelting("#forge:ingots/constantan", "tconstruct:molten_constantan", 90, 4800);
+    crucibleMelting("#forge:nuggets/constantan", "tconstruct:molten_constantan", 10, 600);
+    crucibleMelting("#forge:storage_blocks/constantan", "tconstruct:molten_constantan", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/constantan", "tconstruct:molten_constantan", 30, 1600);
+    crucibleMelting("#forge:gears/constantan", "tconstruct:molten_constantan", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/constantan", "tconstruct:molten_constantan", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/constantan", "tconstruct:molten_constantan", 90, 4800);
+    chillerBlockCasting("thermal:constantan_block", "tconstruct:molten_constantan", 810, 4800 * 9);
+
+    // Molten steel
+    crucibleMelting("#forge:ingots/steel", "tconstruct:molten_steel", 90, 4800);
+    crucibleMelting("#forge:nuggets/steel", "tconstruct:molten_steel", 10, 600);
+    crucibleMelting("#forge:storage_blocks/steel", "tconstruct:molten_steel", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/steel", "tconstruct:molten_steel", 30, 1600);
+    crucibleMelting("#forge:gears/steel", "tconstruct:molten_steel", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/steel", "tconstruct:molten_steel", 90, 4800);
+    crucibleMelting("#forge:wires/steel", "tconstruct:molten_steel", 45, 2400);
+    crucibleMelting("#forge:sheetmetals/steel", "tconstruct:molten_steel", 90, 4800);
+    chillerBlockCasting("thermal:steel_block", "tconstruct:molten_steel", 810, 4800 * 9);
+
+    // Molten enderium
+    crucibleMelting("#forge:ingots/enderium", "tconstruct:molten_enderium", 90, 4800);
+    crucibleMelting("#forge:nuggets/enderium", "tconstruct:molten_enderium", 10, 600);
+    crucibleMelting("#forge:storage_blocks/enderium", "tconstruct:molten_enderium", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/enderium", "tconstruct:molten_enderium", 30, 1600);
+    crucibleMelting("#forge:gears/enderium", "tconstruct:molten_enderium", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/enderium", "tconstruct:molten_enderium", 90, 4800);
+    chillerIngotCasting("#forge:ingots/enderium", "tconstruct:molten_enderium", 90, 4800);
+    chillerBlockCasting("thermal:enderium_block", "tconstruct:molten_enderium", 810, 4800 * 9);
+
+    // Enderium recipes
+    event.remove({ output: "thermal:enderium_ingot", input: "thermal:diamond_dust", type: "thermal:smelter" });
+
+    // Molten lumium
+    crucibleMelting("#forge:ingots/lumium", "tconstruct:molten_lumium", 90, 4800);
+    crucibleMelting("#forge:nuggets/lumium", "tconstruct:molten_lumium", 10, 600);
+    crucibleMelting("#forge:storage_blocks/lumium", "tconstruct:molten_lumium", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/lumium", "tconstruct:molten_lumium", 30, 1600);
+    crucibleMelting("#forge:gears/lumium", "tconstruct:molten_lumium", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/lumium", "tconstruct:molten_lumium", 90, 4800);
+    chillerIngotCasting("#forge:ingots/lumium", "tconstruct:molten_lumium", 90, 4800);
+    chillerBlockCasting("thermal:lumium_block", "tconstruct:molten_lumium", 810, 4800 * 9);
+
+    // Lumium recipes
+    event.remove({ output: "thermal:lumium_ingot", input: "#forge:dusts/glowstone", type: "thermal:smelter" });
+
+    // Molten signalum
+    crucibleMelting("#forge:ingots/signalum", "tconstruct:molten_signalum", 90, 4800);
+    crucibleMelting("#forge:nuggets/signalum", "tconstruct:molten_signalum", 10, 600);
+    crucibleMelting("#forge:storage_blocks/signalum", "tconstruct:molten_signalum", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/signalum", "tconstruct:molten_signalum", 30, 1600);
+    crucibleMelting("#forge:gears/signalum", "tconstruct:molten_signalum", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/signalum", "tconstruct:molten_signalum", 90, 4800);
+    chillerIngotCasting("#forge:ingots/signalum", "tconstruct:molten_signalum", 90, 4800);
+    chillerBlockCasting("thermal:signalum_block", "tconstruct:molten_signalum", 810, 4800 * 9);
+
+    // Signalum recipes
+    event.remove({ output: "thermal:signalum_ingot", input: "#forge:dusts/redstone", type: "thermal:smelter" });
+
+    // Molten bronze
+    crucibleMelting("#forge:ingots/bronze", "tconstruct:molten_bronze", 90, 4800);
+    crucibleMelting("#forge:nuggets/bronze", "tconstruct:molten_bronze", 10, 600);
+    crucibleMelting("#forge:storage_blocks/bronze", "tconstruct:molten_bronze", 810, 4800 * 9);
+    crucibleMelting("#forge:coins/bronze", "tconstruct:molten_bronze", 30, 1600);
+    crucibleMelting("#forge:gears/bronze", "tconstruct:molten_bronze", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/bronze", "tconstruct:molten_bronze", 90, 4800);
+    chillerBlockCasting("thermal:bronze_block", "tconstruct:molten_bronze", 810, 4800 * 9);
+
+    // Molten refined glowstone
+    crucibleMelting("#forge:ingots/refined_glowstone", "tconstruct:molten_refined_glowstone", 90, 4800);
+    crucibleMelting("#forge:nuggets/refined_glowstone", "tconstruct:molten_refined_glowstone", 10, 600);
+    crucibleMelting("#forge:storage_blocks/refined_glowstone", "tconstruct:molten_refined_glowstone", 810, 4800 * 9);
+    chillerIngotCasting("#forge:ingots/refined_glowstone", "tconstruct:molten_refined_glowstone", 90, 4800);
+    chillerBlockCasting("mekanism:block_refined_glowstone", "tconstruct:molten_refined_glowstone", 810, 4800 * 9);
+
+    // Molten refined obsidian
+    crucibleMelting("#forge:ingots/refined_obsidian", "tconstruct:molten_refined_obsidian", 90, 4800);
+    crucibleMelting("#forge:nuggets/refined_obsidian", "tconstruct:molten_refined_obsidian", 10, 600);
+    crucibleMelting("#forge:storage_blocks/refined_obsidian", "tconstruct:molten_refined_obsidian", 810, 4800 * 9);
+    chillerIngotCasting("#forge:ingots/refined_obsidian", "tconstruct:molten_refined_obsidian", 90, 4800);
+    chillerBlockCasting("mekanism:block_refined_obsidian", "tconstruct:molten_refined_obsidian", 810, 4800 * 9);
 });

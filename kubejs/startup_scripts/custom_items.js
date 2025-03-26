@@ -78,4 +78,9 @@ StartupEvents.registry("item", event => {
         .displayName("Knightslime Nugget")
         .tag("forge:nuggets")
         .tag("forge:nuggets/knightslime");
+
+    event.create("bauxite_dust")
+        .displayName("Bauxite Dust")
+        .tag("forge:dusts")
+        .tag("forge:dusts/bauxite");
 });

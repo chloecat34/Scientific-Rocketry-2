@@ -126,7 +126,8 @@ ServerEvents.recipes((event) => {
         ["#forge:raw_materials/zinc", "#forge:ores/zinc", "kubejs:zinc_dust", "thermal:tin_dust", 1],
         ["#forge:raw_materials/cobalt", "#forge:ores/cobalt", "kubejs:cobalt_dust", "thermal:lead_dust", 2],
         ["#forge:raw_materials/nickel", "#forge:ores/nickel", "thermal:nickel_dust", "kubejs:platinum_dust", 2],
-        ["#forge:raw_materials/desh", "#forge:ores/desh", "kubejs:desh_dust", "thermal:copper_dust", 2]
+        ["#forge:raw_materials/desh", "#forge:ores/desh", "kubejs:desh_dust", "thermal:copper_dust", 2],
+        ["#forge:raw_materials/aluminum", "#forge:ores/aluminum", "kubejs:bauxite_dust", "thermal:iron_dust", 3]
     ].forEach(entry => {
         const [rawOre, ore, dust, byproduct, tier] = entry;
         
@@ -235,7 +236,12 @@ ServerEvents.recipes((event) => {
 
     // Disable smelting recipes for some ingots
     [
-        ["#forge:dusts/aluminum", "immersiveengineering:ingot_aluminum"]
+        ["#forge:dusts/aluminum", "immersiveengineering:ingot_aluminum"],
+        ["#forge:dusts/osmium", "mekanism:ingot_osmium"],
+        ["#forge:dusts/uranium", "immersiveengineering:ingot_uranium"],
+        ["#forge:dusts/signalum", "thermal:signalum_ingot"],
+        ["#forge:dusts/lumium", "thermal:lumium_ingot"],
+        ["#forge:dusts/enderium", "thermal:enderium_ingot"],
     ].forEach(entry => {
         const [dust, ingot] = entry;
 
