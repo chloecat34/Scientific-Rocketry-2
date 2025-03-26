@@ -20,4 +20,15 @@ StartupEvents.registry("block", event => {
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_diamond_tool");
+
+    event.create("knightslime_block")
+        .displayName("Knightslime Block")
+        .material("metal")
+        .hardness(5.0)
+        .resistance(30.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/knightslime")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
 });

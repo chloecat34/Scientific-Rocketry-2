@@ -69,4 +69,6 @@ ServerEvents.recipes((event) => {
 
 	addPacking("kubejs:platinum_nugget", "kubejs:platinum_ingot");
 	addPacking("kubejs:platinum_ingot", "kubejs:platinum_block");
+	addPacking("kubejs:knightslime_nugget", "kubejs:knightslime_ingot");
+	addPacking("kubejs:knightslime_ingot", "kubejs:knightslime_block");
 });

@@ -62,4 +62,20 @@ StartupEvents.registry("item", event => {
         .displayName("Cobalt Gear")
         .tag("forge:gears")
         .tag("forge:gears/cobalt");
+
+    event.create("coagulated_blood")
+        .displayName("Coagulated Blood")
+        .tag("forge:slimeballs")
+        .tag("forge:slimeball/blood");
+
+    event.create("knightslime_ingot")
+        .displayName("Knightslime Ingot")
+        .tag("forge:ingots")
+        .tag("ae2:metal_ingots")
+        .tag("forge:ingots/knightslime");
+
+    event.create("knightslime_nugget")
+        .displayName("Knightslime Nugget")
+        .tag("forge:nuggets")
+        .tag("forge:nuggets/knightslime");
 });

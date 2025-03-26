@@ -122,4 +122,10 @@ ServerEvents.recipes((event) => {
         event.recipes.createDeploying("create:incomplete_precision_mechanism", ["create:incomplete_precision_mechanism", "create:large_cogwheel"]),
         event.recipes.createDeploying("create:incomplete_precision_mechanism", ["create:incomplete_precision_mechanism", "minecraft:iron_nugget"])
     ]).transitionalItem("create:incomplete_precision_mechanism").loops(3);
+
+    // Blaze cake
+    event.remove({ output: "create:blaze_cake" });
+
+    event.recipes.createFilling("create:blaze_cake", ["create:blaze_cake_base", Fluid.of("tconstruct:blazing_blood", 250)]);
+    event.recipes.thermal.bottler("create:blaze_cake", ["create:blaze_cake_base", Fluid.of("tconstruct:blazing_blood", 250)]).energy(4800);
 });

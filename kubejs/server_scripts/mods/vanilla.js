@@ -32,4 +32,16 @@ ServerEvents.recipes((event) => {
     ], {
         A: "#forge:rods/iron"
     });
+
+    // Hopper recipe
+    event.remove({ output: "minecraft:hopper" });
+
+    event.shaped("minecraft:hopper", [
+        "A A",
+        "ABA",
+        " A "
+    ], {
+        A: "#forge:plates/iron",
+        B: "#forge:chests/wooden"
+    });
 });
