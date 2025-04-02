@@ -15,7 +15,7 @@ ServerEvents.recipes((event) => {
         "thermal:signalum_ingot",
         "thermal:lumium_ingot",
         "thermal:enderium_ingot"
-    ].forEach(item => 
+    ].forEach(item =>
         event.remove({ input: "minecraft:fire_charge", output: item })
     );
 
@@ -45,4 +45,14 @@ ServerEvents.recipes((event) => {
     // Remove rod cast
     event.remove({ output: "thermal:chiller_rod_cast" });
     event.remove({ input: "thermal:chiller_rod_cast" });
+
+    // Custom casts
+    event.shaped("kubejs:chiller_plate_cast", [
+        " A ",
+        "ABA",
+        " A "
+    ], {
+        "A": "#forge:plates/bronze",
+        "B": "#forge:plates/steel"
+    });
 });

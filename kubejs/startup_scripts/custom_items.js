@@ -7,6 +7,10 @@ StartupEvents.registry("item", event => {
         .displayName("Wire Die")
         .tag("thermal:crafting/dies");
 
+    event.create("chiller_plate_cast")
+        .displayName("Plate Cast")
+        .tag("thermal:crafting/casts");
+
     event.create("zinc_dust")
         .displayName("Zinc Dust")
         .tag("forge:dusts")

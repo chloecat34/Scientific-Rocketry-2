@@ -5,7 +5,7 @@ ServerEvents.recipes((event) => {
 
         event.recipes.thermal.chiller(item, [Fluid.of(fluid, amount), "tconstruct:ingot_cast"]).energy(energy);
     }
-    
+
     function chillerGemCasting(item, fluid, amount, energy) {
         energy = energy === undefined ? 4800 : energy;
 
@@ -22,6 +22,26 @@ ServerEvents.recipes((event) => {
         energy = energy === undefined ? 8000 : energy;
 
         event.recipes.thermal.crucible(Fluid.of(fluid, fluidAmount), item).energy(energy);
+    }
+
+    const addTinkersMelterRecipe = (item, fluid, fluidAmount, time, temperature) => {
+        event.custom({
+            type: "tconstruct:melting",
+            ingredient: {
+                item: item
+            },
+            result: {
+                amount: fluidAmount,
+                fluid: fluid
+            },
+            temperature: temperature,
+            time: time
+        });
+    }
+
+    const addBothMelterRecipes = (item, fluid, fluidAmount, time, temperature, energy) => {
+        addTinkersMelterRecipe(item, fluid, fluidAmount, time, temperature);
+        crucibleMelting(item, fluid, fluidAmount, energy);
     }
 
     // Remove molten slime + amethyst
@@ -183,6 +203,11 @@ ServerEvents.recipes((event) => {
     });
 
     event.recipes.thermal.chiller("kubejs:coagulated_blood", [Fluid.of("tconstruct:meat_soup", 250), "thermal:chiller_ball_cast"]).energy(4800);
+
+    crucibleMelting("kubejs:coagulated_blood", "tconstruct:meat_soup", 250, 4800);
+
+    addTinkersMelterRecipe("minecraft:rotten_flesh", "tconstruct:meat_soup", 50, 20, 200);
+    crucibleMelting("minecraft:rotten_flesh", "tconstruct:meat_soup", 50, 4800);
 
     // Molten manyullyn
     crucibleMelting("#forge:ingots/manyullyn", "tconstruct:molten_manyullyn", 90, 4800);
@@ -443,4 +468,114 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:storage_blocks/refined_obsidian", "tconstruct:molten_refined_obsidian", 810, 4800 * 9);
     chillerIngotCasting("#forge:ingots/refined_obsidian", "tconstruct:molten_refined_obsidian", 90, 4800);
     chillerBlockCasting("mekanism:block_refined_obsidian", "tconstruct:molten_refined_obsidian", 810, 4800 * 9);
+
+    // Venom
+    crucibleMelting("tconstruct:spider_head", "tconstruct:venom", 500, 9600);
+    crucibleMelting("tconstruct:cave_spider_head", "tconstruct:venom", 500, 9600);
+    crucibleMelting("minecraft:spider_eye", "tconstruct:venom", 50, 4800);
+    crucibleMelting("minecraft:fermented_spider_eye", "tconstruct:venom", 100, 4800);
+
+    // Slime
+    crucibleMelting("minecraft:slime_ball", "tconstruct:earth_slime", 250, 4800);
+    crucibleMelting("minecraft:slime_block", "tconstruct:earth_slime", 2250, 4800 * 9);
+    crucibleMelting("tconstruct:earth_congealed_slime", "tconstruct:earth_slime", 1000, 4800 * 4);
+    crucibleMelting("tconstruct:earth_slime_crystal", "tconstruct:earth_slime", 250, 4800);
+    crucibleMelting("tconstruct:earth_slime_crystal_block", "tconstruct:earth_slime", 1000, 4800 * 4);
+    crucibleMelting("tconstruct:earth_slime_sapling", "tconstruct:earth_slime", 250, 4800);
+    event.recipes.thermal.chiller("minecraft:slime_ball", [Fluid.of("tconstruct:earth_slime", 250), "thermal:chiller_ball_cast"]).energy(4800);
+    event.recipes.thermal.chiller("tconstruct:earth_congealed_slime", [Fluid.of("tconstruct:earth_slime", 1000)]).energy(4800 * 4);
+
+    // Skyslime
+    crucibleMelting("tconstruct:sky_slime_ball", "tconstruct:sky_slime", 250, 4800);
+    crucibleMelting("tconstruct:sky_slime", "tconstruct:sky_slime", 2250, 4800 * 9);
+    crucibleMelting("tconstruct:sky_congealed_slime", "tconstruct:sky_slime", 1000, 4800 * 4);
+    crucibleMelting("tconstruct:sky_slime_crystal", "tconstruct:sky_slime", 250, 4800);
+    crucibleMelting("tconstruct:sky_slime_crystal_block", "tconstruct:sky_slime", 1000, 4800 * 4);
+    crucibleMelting("tconstruct:sky_slime_sapling", "tconstruct:sky_slime", 250, 4800);
+    event.recipes.thermal.chiller("tconstruct:sky_slime_ball", [Fluid.of("tconstruct:sky_slime", 250), "thermal:chiller_ball_cast"]).energy(4800);
+    event.recipes.thermal.chiller("tconstruct:sky_congealed_slime", [Fluid.of("tconstruct:sky_slime", 1000)]).energy(4800 * 4);
+
+    // Enderslime
+    crucibleMelting("tconstruct:ender_slime_ball", "tconstruct:ender_slime", 250, 4800);
+    crucibleMelting("tconstruct:ender_slime", "tconstruct:ender_slime", 2250, 4800 * 9);
+    crucibleMelting("tconstruct:ender_congealed_slime", "tconstruct:ender_slime", 1000, 4800 * 4);
+    crucibleMelting("tconstruct:ender_slime_crystal", "tconstruct:ender_slime", 250, 4800);
+    crucibleMelting("tconstruct:ender_slime_crystal_block", "tconstruct:ender_slime", 1000, 4800 * 4);
+    crucibleMelting("tconstruct:ender_slime_sapling", "tconstruct:ender_slime", 250, 4800);
+    event.recipes.thermal.chiller("tconstruct:ender_slime_ball", [Fluid.of("tconstruct:ender_slime", 250), "thermal:chiller_ball_cast"]).energy(4800);
+    event.recipes.thermal.chiller("tconstruct:ender_congealed_slime", [Fluid.of("tconstruct:ender_slime", 1000)]).energy(4800 * 4);
+
+    // Magma
+    event.recipes.remove({ output: "minecraft:lava", input: "minecraft:magma_block" });
+    crucibleMelting("minecraft:magma_cream", "tconstruct:magma", 250, 4800);
+    crucibleMelting("minecraft:magma_block", "tconstruct:magma", 1000, 4800 * 4);
+    event.recipes.thermal.chiller("minecraft:magma_cream", [Fluid.of("tconstruct:magma", 250), "thermal:chiller_ball_cast"]).energy(4800);
+    event.recipes.thermal.chiller("minecraft:magma_block", [Fluid.of("tconstruct:magma", 1000)]).energy(4800 * 4);
+
+    // Seared stone
+    crucibleMelting("tconstruct:seared_brick", "tconstruct:seared_stone", 250, 4800);
+    crucibleMelting("tconstruct:seared_bricks", "tconstruct:seared_stone", 1000, 4800 * 4);
+    crucibleMelting("tconstruct:seared_stone", "tconstruct:seared_stone", 1000, 4800 * 4);
+    crucibleMelting("tconstruct:grout", "tconstruct:seared_stone", 500, 4800);
+
+    chillerIngotCasting("tconstruct:seared_brick", "tconstruct:seared_stone", 250, 4800);
+    chillerBlockCasting("tconstruct:seared_stone", "tconstruct:seared_stone", 1000, 4800 * 4);
+
+    // Scorched stone
+    crucibleMelting("tconstruct:scorched_brick", "tconstruct:scorched_stone", 250, 4800);
+    crucibleMelting("tconstruct:scorched_bricks", "tconstruct:scorched_stone", 1000, 4800 * 4);
+    crucibleMelting("tconstruct:scorched_stone", "tconstruct:scorched_stone", 1000, 4800 * 4);
+    crucibleMelting("tconstruct:nether_grout", "tconstruct:scorched_stone", 500, 4800);
+
+    chillerIngotCasting("tconstruct:scorched_brick", "tconstruct:scorched_stone", 250, 4800);
+    chillerBlockCasting("tconstruct:scorched_stone", "tconstruct:scorched_stone", 1000, 4800 * 4);
+
+    // Liquid soul
+    crucibleMelting("minecraft:soul_sand", "tconstruct:liquid_soul", 1000, 4000);
+    crucibleMelting("minecraft:soul_soil", "tconstruct:liquid_soul", 1000, 4000);
+    crucibleMelting("tconstruct:soul_glass", "tconstruct:liquid_soul", 1000, 4000);
+    crucibleMelting("tconstruct:soul_glass_pane", "tconstruct:liquid_soul", 250, 1000);
+    chillerBlockCasting("tconstruct:soul_glass", "tconstruct:liquid_soul", 1000, 4000);
+
+    // Blazing blood
+    addBothMelterRecipes("minecraft:blaze_rod", "tconstruct:blazing_blood", 100, 40, 1000, 4800);
+
+    // Destabilized redstone
+    addTinkersMelterRecipe("minecraft:redstone", "thermal:redstone", 100, 80, 900);
+    addTinkersMelterRecipe("minecraft:redstone_block", "thermal:redstone", 900, 3200, 900);
+
+    // Energized glowstone
+    addTinkersMelterRecipe("minecraft:glowstone_dust", "thermal:glowstone", 250, 80, 900);
+    addTinkersMelterRecipe("minecraft:glowstone", "thermal:glowstone", 1000, 3200, 900);
+
+    // Resonant ender
+    crucibleMelting("minecraft:ender_eye", "thermal:ender", 250, 20000);
+    crucibleMelting("tconstruct:enderman_head", "thermal:ender", 500, 40000);
+    crucibleMelting("minecraft:dragon_head", "thermal:ender", 1000, 80000);
+
+    // Phenolic resin
+    event.recipes.thermal.chiller("immersiveengineering:plate_duroplast", [Fluid.of("immersiveengineering:phenolic_resin", 250), "kubejs:chiller_plate_cast"]).energy(2400);
+    event.recipes.thermal.chiller("immersiveengineering:duroplast", [Fluid.of("immersiveengineering:phenolic_resin", 1000)]).energy(4800);
+
+    // Molten platinum
+    crucibleMelting("#forge:ingots/platinum", "tconstruct:molten_platinum", 90, 4800);
+    crucibleMelting("#forge:nuggets/platinum", "tconstruct:molten_platinum", 10, 600);
+    crucibleMelting("#forge:storage_blocks/platinum", "tconstruct:molten_platinum", 810, 4800 * 9);
+    crucibleMelting("#forge:gears/platinum", "tconstruct:molten_platinum", 360, 4800 * 4);
+    crucibleMelting("#forge:plates/platinum", "tconstruct:molten_platinum", 90, 4800);
+    chillerIngotCasting("#forge:ingots/platinum", "tconstruct:molten_platinum", 90, 4800);
+    chillerBlockCasting("kubejs:platinum_block", "tconstruct:molten_platinum", 810, 4800 * 9);
+
+    // Ichorslime
+    addBothMelterRecipes("tconstruct:ichor_slime_ball", "kubejs:ichorslime", 250, 16, 70, 4800);
+    addBothMelterRecipes("tconstruct:ichor_slime", "kubejs:ichorslime", 2250, 92, 70, 4800 * 9);
+    addBothMelterRecipes("tconstruct:ichor_congealed_slime", "kubejs:ichorslime", 1000, 64, 70, 4800 * 4);
+    addBothMelterRecipes("tconstruct:ichor_slime_crystal", "kubejs:ichorslime", 250, 32, 70, 4800);
+    addBothMelterRecipes("tconstruct:ichor_slime_crystal_block", "kubejs:ichorslime", 1000, 64, 70, 4800 * 4);
+    addTinkersMelterRecipe("tconstruct:ichor_slime_crystal_cluster", "kubejs:ichorslime", 1000, 78, 70);
+    addTinkersMelterRecipe("tconstruct:large_ichor_slime_crystal_bud", "kubejs:ichorslime", 750, 64, 70);
+    addTinkersMelterRecipe("tconstruct:medium_ichor_slime_crystal_bud", "kubejs:ichorslime", 500, 48, 70);
+    addTinkersMelterRecipe("tconstruct:small_ichor_slime_crystal_bud", "kubejs:ichorslime", 250, 32, 70);
+    event.recipes.thermal.chiller("tconstruct:ichor_slime_ball", [Fluid.of("kubejs:ichorslime", 250), "thermal:chiller_ball_cast"]).energy(4800);
+    event.recipes.thermal.chiller("tconstruct:ichor_congealed_slime", [Fluid.of("kubejs:ichorslime", 1000)]).energy(4800 * 4);
 });
