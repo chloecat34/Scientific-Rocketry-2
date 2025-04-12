@@ -213,6 +213,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:ingots/manyullyn", "tconstruct:molten_manyullyn", 90, 4800);
     crucibleMelting("#forge:nuggets/manyullyn", "tconstruct:molten_manyullyn", 10, 600);
     crucibleMelting("#forge:storage_blocks/manyullyn", "tconstruct:molten_manyullyn", 810, 4800 * 9);
+    crucibleMelting("#forge:plates/manyullyn", "tconstruct:molten_manyullyn", 90, 4800);
+    crucibleMelting("#forge:gears/manyullyn", "tconstruct:molten_manyullyn", 360, 4800 * 4);
     chillerBlockCasting("tconstruct:manyullyn_block", "tconstruct:molten_manyullyn", 810, 4800 * 9);
 
     // Molten hepatizon
@@ -266,7 +268,7 @@ ServerEvents.recipes((event) => {
             },
 
             {
-                "item": "kubejs:knightslime_ingot"
+                "item": "tconstruct:knightslime_ingot"
             }
         ],
         "energy": 102400,
@@ -280,8 +282,13 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "#forge:dusts/netherite", input: "minecraft:netherite_scrap" });
 
     // Knightslime recipes
-    event.recipes.createMixing("2x kubejs:knightslime_ingot", ["#forge:ingots/steel", "#forge:ingots/netherite_scrap", Fluid.of("tconstruct:ender_slime", 250)]).superheated();
-    event.recipes.thermal.smelter("2x kubejs:knightslime_ingot", ["#forge:ingots/steel", "#forge:ingots/netherite_scrap", "tconstruct:ender_slime_ball"]).energy(16000);
+    addBothMelterRecipes("tconstruct:knightslime_ingot", "tconstruct:molten_knightslime", 90, 72, 1200, 4800);
+    addBothMelterRecipes("tconstruct:knightslime_block", "tconstruct:molten_knightslime", 810, 216, 1200, 4800 * 9);
+    addBothMelterRecipes("tconstruct:knightslime_nugget", "tconstruct:molten_knightslime", 10, 24, 1200, 600);
+    chillerBlockCasting("tconstruct:knightslime_block", "tconstruct:molten_knightslime", 810, 4800 * 9);
+
+    event.recipes.createMixing("2x tconstruct:knightslime_ingot", ["#forge:ingots/steel", "#forge:ingots/netherite_scrap", Fluid.of("tconstruct:ender_slime", 250)]).superheated();
+    event.recipes.thermal.smelter("2x tconstruct:knightslime_ingot", ["#forge:ingots/steel", "#forge:ingots/netherite_scrap", "tconstruct:ender_slime_ball"]).energy(16000);
 
     // Molten tin
     crucibleMelting("#forge:ingots/tin", "tconstruct:molten_tin", 90, 4800);
@@ -386,6 +393,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:plates/invar", "tconstruct:molten_invar", 90, 4800);
     chillerBlockCasting("thermal:invar_block", "tconstruct:molten_invar", 810, 4800 * 9);
 
+    event.recipes.createMixing("3x thermal:invar_ingot", ["2x #forge:ingots/iron", "#forge:ingots/nickel"]).heated();
+
     // Molten constantan
     crucibleMelting("#forge:ingots/constantan", "tconstruct:molten_constantan", 90, 4800);
     crucibleMelting("#forge:nuggets/constantan", "tconstruct:molten_constantan", 10, 600);
@@ -454,6 +463,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:gears/bronze", "tconstruct:molten_bronze", 360, 4800 * 4);
     crucibleMelting("#forge:plates/bronze", "tconstruct:molten_bronze", 90, 4800);
     chillerBlockCasting("thermal:bronze_block", "tconstruct:molten_bronze", 810, 4800 * 9);
+
+    event.recipes.createMixing("4x thermal:bronze_ingot", ["3x #forge:ingots/copper", "#forge:ingots/tin"]).heated();
 
     // Molten refined glowstone
     crucibleMelting("#forge:ingots/refined_glowstone", "tconstruct:molten_refined_glowstone", 90, 4800);
@@ -567,7 +578,7 @@ ServerEvents.recipes((event) => {
     chillerBlockCasting("kubejs:platinum_block", "tconstruct:molten_platinum", 810, 4800 * 9);
 
     // Ichorslime
-    addBothMelterRecipes("tconstruct:ichor_slime_ball", "kubejs:ichorslime", 250, 16, 70, 4800);
+    addBothMelterRecipes("tconstruct:ichor_slime_ball", "kubejs:ichorslime", 250, 32, 70, 4800);
     addBothMelterRecipes("tconstruct:ichor_slime", "kubejs:ichorslime", 2250, 92, 70, 4800 * 9);
     addBothMelterRecipes("tconstruct:ichor_congealed_slime", "kubejs:ichorslime", 1000, 64, 70, 4800 * 4);
     addBothMelterRecipes("tconstruct:ichor_slime_crystal", "kubejs:ichorslime", 250, 32, 70, 4800);
@@ -578,4 +589,9 @@ ServerEvents.recipes((event) => {
     addTinkersMelterRecipe("tconstruct:small_ichor_slime_crystal_bud", "kubejs:ichorslime", 250, 32, 70);
     event.recipes.thermal.chiller("tconstruct:ichor_slime_ball", [Fluid.of("kubejs:ichorslime", 250), "thermal:chiller_ball_cast"]).energy(4800);
     event.recipes.thermal.chiller("tconstruct:ichor_congealed_slime", [Fluid.of("kubejs:ichorslime", 1000)]).energy(4800 * 4);
+
+    // Molten sulfur
+    addBothMelterRecipes("thermal:sulfur", "kubejs:molten_sulfur", 250, 40, 300, 4800);
+    addBothMelterRecipes("thermal:sulfur_dust", "kubejs:molten_sulfur", 250, 40, 300, 4800);
+    addBothMelterRecipes("thermal:sulfur_block", "kubejs:molten_sulfur", 2250, 160, 300, 4800 * 9);
 });

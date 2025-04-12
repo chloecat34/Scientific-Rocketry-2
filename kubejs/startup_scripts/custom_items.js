@@ -72,19 +72,36 @@ StartupEvents.registry("item", event => {
         .tag("forge:slimeballs")
         .tag("forge:slimeball/blood");
 
-    event.create("knightslime_ingot")
-        .displayName("Knightslime Ingot")
-        .tag("forge:ingots")
-        .tag("ae2:metal_ingots")
-        .tag("forge:ingots/knightslime");
-
-    event.create("knightslime_nugget")
-        .displayName("Knightslime Nugget")
-        .tag("forge:nuggets")
-        .tag("forge:nuggets/knightslime");
-
     event.create("bauxite_dust")
         .displayName("Bauxite Dust")
         .tag("forge:dusts")
         .tag("forge:dusts/bauxite");
+
+    event.create("coke_brick_blend")
+        .displayName("Coke Brick Blend");
+
+    event.create("coke_brick")
+        .displayName("Coke Brick");
+
+    event.create("blast_brick_blend")
+        .displayName("Blast Brick Blend");
+
+    event.create("blast_brick")
+        .displayName("Blast Brick");
+
+    event.create("manyullyn_plate")
+        .displayName("Manyullyn Plate")
+        .tag("forge:plates")
+        .tag("forge:plates/manyullyn");
+
+    event.create("manyullyn_gear")
+        .displayName("Manyullyn Gear")
+        .tag("forge:gears")
+        .tag("forge:gears/manyullyn");
+
+    event.create("heat_mechanism")
+        .displayName("Heat Mechanism");
+
+    event.create("incomplete_heat_mechanism")
+        .displayName("Incomplete Heat Mechanism");
 });

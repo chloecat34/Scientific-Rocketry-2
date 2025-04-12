@@ -109,9 +109,13 @@ JEIEvents.hideItems((event) => {
 		"tconstruct:plate_red_sand_cast",
 		"tconstruct:wire_cast",
 		"tconstruct:wire_sand_cast",
-		"tconstruct:wire_red_sand_cast"
+		"tconstruct:wire_red_sand_cast",
+        "industrialforegoing:latex_processing_unit",
+        "industrialforegoing:plastic",
+        "industrialforegoing:dryrubber",
+		"kubejs:incomplete_heat_mechanism"
 	];
-    
+
 	itemsToRemove.forEach(item => event.hide(item));
 
     	// Vanilla tools (besides pickaxes, because of Breaker Modules)
@@ -127,7 +131,7 @@ JEIEvents.hideItems((event) => {
 			event.hide(`ae2:${toolMat}_${toolType}`);
 		}
 	}
-	
+
 	// IE tools
 	for (const toolType of ["pickaxe", "shovel", "axe", "hoe", "sword"]) {
 		event.hide(`immersiveengineering:${toolType}_steel`);
@@ -139,5 +143,19 @@ JEIEvents.hideFluids((event) => {
 		"estrogen:molten_slime",
 		"estrogen:molten_amethyst",
 		"tconstruct:molten_ender"
-	].forEach(item => event.hide(item));
+	].forEach(fluid => event.hide(fluid));
 });
+
+JEIEvents.addItems(event => {
+	[
+		"tconstruct:knightslime_nugget",
+		"tconstruct:knightslime_ingot",
+		"tconstruct:knightslime_block"
+	].forEach(item => event.add(Item.of(item)));
+});
+
+JEIEvents.addFluids(event => {
+	[
+		"tconstruct:molten_knightslime"
+	].forEach(fluid => event.add(fluid))
+})

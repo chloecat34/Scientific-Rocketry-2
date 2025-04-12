@@ -66,7 +66,7 @@ ServerEvents.recipes((event) => {
     );
 
     // Kubejs
-    ["platinum", "cobalt"].forEach(ingot => standardizeGears(ingot, `kubejs:${ingot}_gear`));
+    ["platinum", "cobalt", "manyullyn"].forEach(ingot => standardizeGears(ingot, `kubejs:${ingot}_gear`));
 
     // Get rid of the gem gears
     ["lapis", "diamond", "emerald", "quartz"].forEach((gem) =>
@@ -108,7 +108,8 @@ ServerEvents.recipes((event) => {
         "stellarium",
         "platinum",
         "copper",
-        "cobalt"
+        "cobalt",
+        "manyullyn"
     ].forEach(ingot => {
         mechcraftGears(`#forge:gears/${ingot}`, `#forge:plates/${ingot}`)
     });

@@ -17,3 +17,7 @@ ServerEvents.tags("item", event => {
     event.add("thermal:crafting/casts", "tconstruct:ingot_cast");
     event.add("thermal:crafting/casts", "tconstruct:gem_cast");
 });
+
+ServerEvents.tags("fluid", event => {
+    event.remove("c:hidden_from_recipe_viewers", "tconstruct:molten_knightslime");
+});

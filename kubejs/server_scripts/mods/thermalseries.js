@@ -55,4 +55,35 @@ ServerEvents.recipes((event) => {
         "A": "#forge:plates/bronze",
         "B": "#forge:plates/steel"
     });
+
+    // Rubber
+    event.remove({ id: "thermal:rubber_from_dandelion" });
+    event.remove({ id: "thermal:rubber_from_vine" });
+    event.remove({ id: "thermal:rubber_3" });
+
+    event.recipes.createMixing
+
+    event.recipes.createCompacting("thermal:rubber", [Fluid.of("thermal:latex", 250)]);
+    event.recipes.createCompacting("thermal:rubber", [Fluid.of("thermal:resin", 500)]);
+    event.recipes.thermal.chiller("thermal:rubber", Fluid.of("thermal:latex", 250)).energy(2400);
+    event.recipes.thermal.chiller("thermal:rubber", Fluid.of("thermal:resin", 500)).energy(2400);
+
+    event.remove({ output: "thermal:cured_rubber", type: "minecraft:smelting" });
+
+    event.recipes.createMixing("thermal:cured_rubber", [Fluid.of("kubejs:molten_sulfur", 125), "thermal:rubber"]);
+
+    // Arboreal extractor
+    event.remove({ output: "thermal:device_tree_extractor" });
+
+    event.shaped("thermal:device_tree_extractor", [
+        "ABA",
+        "CDC",
+        "AEA"
+    ], {
+        "A": "#forge:treated_wood",
+        "B": "create:brass_hand",
+        "C": "#forge:glass",
+        "D": "minecraft:bucket",
+        "E": "#forge:gears/bronze"
+    })
 });

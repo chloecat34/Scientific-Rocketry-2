@@ -12,7 +12,10 @@ ItemEvents.tooltip(event => {
     [
         "industrialforegoing:washing_factory",
         "industrialforegoing:fermentation_station",
-        "industrialforegoing:fluid_sieving_machine"
+        "industrialforegoing:fluid_sieving_machine",
+        "industrialforegoing:latex_processing_unit",
+        "industrialforegoing:plastic",
+        "industrialforegoing:dryrubber"
     ].forEach(item => addRedTooltip(item, "Disabled", 1));
 
     [
@@ -39,15 +42,15 @@ ItemEvents.tooltip(event => {
     function t1OreTooltip(item, idx) {
         addTooltip(item, "Tier 1 Ore", Text.blue, idx);
     }
-    
+
     function t2OreTooltip(item, idx) {
         addTooltip(item, "Tier 2 Ore", Text.darkAqua, idx);
     }
-    
+
     function t3OreTooltip(item, idx) {
         addTooltip(item, "Tier 3 Ore", Text.green, idx);
     }
-    
+
     function t4OreTooltip(item, idx) {
         addTooltip(item, "Tier 4 Ore", Text.aqua, idx);
     }

@@ -44,9 +44,10 @@ ServerEvents.recipes((event) => {
     });
 
     // Rose quartz
-    event.remove({ output: "create:rose_quartz" });
+    event.remove({ output: "create:rose_quartz", type: "minecraft:crafting_shapeless" });
 
-    event.recipes.createFilling("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 200)]);
+    event.recipes.createFilling("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 400)]);
+    event.recipes.thermal.bottler("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 400)]).energy(8000);
 
     // Blaze burner
     event.remove({ output: "create:empty_blaze_burner" });
@@ -96,6 +97,27 @@ ServerEvents.recipes((event) => {
         ]
     });
 
+    // Copper casing
+    event.remove({ output: "create:copper_casing" });
+
+    event.custom({
+        type: "create:item_application",
+        ingredients: [
+            {
+                tag: "forge:stripped_logs"
+            },
+
+            {
+                tag: "forge:plates/copper"
+            }
+        ],
+        results: [
+            {
+                item: "create:copper_casing"
+            }
+        ]
+    });
+
     // Crushing wheels
     event.remove({ output: "create:crushing_wheel" });
 
@@ -128,4 +150,81 @@ ServerEvents.recipes((event) => {
 
     event.recipes.createFilling("create:blaze_cake", ["create:blaze_cake_base", Fluid.of("tconstruct:blazing_blood", 250)]);
     event.recipes.thermal.bottler("create:blaze_cake", ["create:blaze_cake_base", Fluid.of("tconstruct:blazing_blood", 250)]).energy(4800);
+
+    // Copper backtank
+    event.replaceInput({
+        output: "create:copper_backtank"
+    }, "#forge:ingots/copper", "#forge:plates/copper");
+
+    // Mechanical belt alt recipe
+    event.shaped("2x create:belt_connector", [
+        "AAA",
+        "AAA"
+    ], {
+        "A": "thermal:cured_rubber"
+    });
+
+    // Remove the weird missing tinker's bronze recipe
+    event.remove([{ input: "#c:glass_blocks", type: "create:mixing" }]);
+
+    // Hose pulley
+    event.remove({ output: "create:hose_pulley" });
+    event.shaped("create:hose_pulley", [
+        "ABA",
+        "CDC",
+        "AEA"
+    ], {
+        "A": "#forge:plates/steel",
+        "B": "create:copper_casing",
+        "C": "#forge:gears/bronze",
+        "D": "minecraft:dried_kelp_block",
+        "E": "create:mechanical_pump"
+    });
+
+    // Steam engine, could use manyullyn
+    event.remove({ output: "create:steam_engine" });
+    event.shaped("create:steam_engine", [
+        "ADA",
+        "BCB",
+        "AEA"
+    ], {
+        "A": "#forge:plates/steel",
+        "B": "#forge:plates/manyullyn",
+        "C": "#forge:gears/manyullyn",
+        "D": "kubejs:heat_mechanism",
+        "E": "#forge:storage_blocks/constantan"
+    });
+
+    // Heat mechanism
+    event.recipes.createSequencedAssembly([
+        Item.of("kubejs:heat_mechanism")
+    ], "immersiveengineering:component_steel", [
+        event.recipes.createDeploying("kubejs:incomplete_heat_mechanism", ["kubejs:incomplete_heat_mechanism", "#forge:plates/invar"]),
+        event.recipes.createDeploying("kubejs:incomplete_heat_mechanism", ["kubejs:incomplete_heat_mechanism", "create:sturdy_sheet"]),
+        event.recipes.createDeploying("kubejs:incomplete_heat_mechanism", ["kubejs:incomplete_heat_mechanism", "#forge:plates/invar"])
+    ]).transitionalItem("kubejs:incomplete_heat_mechanism").loops(4);
+
+    // Item drain
+    event.remove({ output: "create:item_drain" });
+    event.shaped("create:item_drain", [
+        "A",
+        "B"
+    ], {
+        "A": "minecraft:bucket",
+        "B": "create:copper_casing"
+    });
+
+    // Rolling mill
+    event.remove({ output: "createaddition:rolling_mill" });
+    event.shaped("createaddition:rolling_mill", [
+        "ABA",
+        "CDC",
+        "CEC"
+    ], {
+        "A": "#forge:plates/steel",
+        "B": "create:shaft",
+        "C": "create:andesite_alloy",
+        "D": "#forge:gears/iron",
+        "E": "create:andesite_casing"
+    })
 });

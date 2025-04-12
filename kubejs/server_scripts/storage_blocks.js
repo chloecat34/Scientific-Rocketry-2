@@ -6,11 +6,11 @@ ServerEvents.recipes((event) => {
 			event.shapeless(block, [`9x ${ingot}`]);
 			event.shapeless(`9x ${ingot}`, [block]);
 		}
-		
+
         event.recipes.thermal.press(block, [`9x ${ingot}`, "thermal:press_packing_3x3_die"]).energy(400);
         event.recipes.thermal.press(`9x ${ingot}`, [block, "thermal:press_unpacking_die"]).energy(400);
     }
-	
+
 	// 2x2 packing
 	function addPacking2x2(ingot, block) {
 		// Check if there is any 2x2 crafting recipe
@@ -18,7 +18,7 @@ ServerEvents.recipes((event) => {
 			event.shapeless(block, [`4x ${ingot}`]);
 			event.shapeless(`4x ${ingot}`, [block]);
 		}
-		
+
         event.recipes.thermal.press(block, [`4x ${ingot}`, "thermal:press_packing_2x2_die"]).energy(400);
         event.recipes.thermal.press(`4x ${ingot}`, [block, "thermal:press_unpacking_die"]).energy(400);
 	}
@@ -60,15 +60,15 @@ ServerEvents.recipes((event) => {
 	addPacking2x2("#forge:gems/fluix", "ae2:fluix_block");
 	addPacking("advanced_ae:quantum_alloy", "advanced_ae:quantum_alloy_block");
 	addPacking("createaddition:biomass_pellet", "createaddition:biomass_pellet_block");
-	
+
 	["desh", "ostrum", "calorite", "prismalium", "melodium", "stellarium"].forEach(material => {
 		addPacking(`#forge:nuggets/${material}`, `#forge:ingots/${material}`);
 	});
-	
+
 	addPacking("avaritia:neutronium_nugget", "avaritia:neutronium_ingot");
 
 	addPacking("kubejs:platinum_nugget", "kubejs:platinum_ingot");
 	addPacking("kubejs:platinum_ingot", "kubejs:platinum_block");
-	addPacking("kubejs:knightslime_nugget", "kubejs:knightslime_ingot");
-	addPacking("kubejs:knightslime_ingot", "kubejs:knightslime_block");
+	addPacking("tconstruct:knightslime_nugget", "tconstruct:knightslime_ingot");
+	addPacking("tconstruct:knightslime_ingot", "tconstruct:knightslime_block");
 });
