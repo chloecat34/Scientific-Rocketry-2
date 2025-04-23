@@ -1,7 +1,7 @@
 ServerEvents.recipes((event) => {
     // Remove hammer recipes
     [
-        "thermal:iron_dust", 
+        "thermal:iron_dust",
         "mekanism:dust_osmium",
         "thermal:gold_dust",
         "thermal:copper_dust",
@@ -219,12 +219,12 @@ ServerEvents.recipes((event) => {
 
     // Remove mixing recipes for dusts
     [
-        "thermal:bronze_dust", 
-        "thermal:electrum_dust", 
-        "thermal:invar_dust", 
-        "thermal:constantan_dust", 
-        "thermal:signalum_dust", 
-        "thermal:enderium_dust", 
+        "thermal:bronze_dust",
+        "thermal:electrum_dust",
+        "thermal:invar_dust",
+        "thermal:constantan_dust",
+        "thermal:signalum_dust",
+        "thermal:enderium_dust",
         "thermal:lumium_dust"
     ].forEach(dust => {
         event.remove({ output: dust, type: "minecraft:crafting_shapeless" });
@@ -259,7 +259,7 @@ ServerEvents.recipes((event) => {
             count: 4
         }
     });
-    
+
     event.custom({
         type: "immersiveengineering:crusher",
         energy: 3000,
@@ -277,7 +277,7 @@ ServerEvents.recipes((event) => {
             count: 4
         }
     });
-    
+
     event.custom({
         type: "immersiveengineering:crusher",
         energy: 3000,
@@ -309,4 +309,8 @@ ServerEvents.recipes((event) => {
 
     // Millstone recipe for first obsidian dust
     event.recipes.createMilling("create:powdered_obsidian", "minecraft:obsidian");
+
+    // Soul sand dust
+    event.recipes.createCrushing(["kubejs:soul_sand_dust", Item.of("kubejs:soul_sand_dust").withChance(0.5)], "minecraft:soul_sand");
+    event.recipes.thermal.pulverizer([Item.of("kubejs:soul_sand_dust").withChance(1.5)], "minecraft:soul_sand").energy(4000);
 });

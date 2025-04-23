@@ -3,38 +3,39 @@
 	default_quest_shape: ""
 	filename: "chapter_1"
 	group: ""
+	icon: "ad_astra:earth_globe"
 	id: "5AB945357235E828"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["13079C9CB31B27D7"]
+			description: [
+				"&7&oI will need tools. Whether from Vanilla or Tinkers' Construct, it doesn't matter, but I will need something to help face what is to come."
+				""
+				"The Crafting Station holds its items when closed, which makes it more convenient than a Crafting Table."
+			]
 			id: "35441B6C5335D3F9"
-			tasks: [{
-				id: "3EFB2CC08A45CE18"
-				item: "minecraft:oak_log"
+			rewards: [{
+				count: 8
+				id: "2B4837216892C630"
+				item: "tconstruct:pattern"
 				type: "item"
 			}]
-			x: -2.5d
+			tasks: [{
+				id: "7536A4BADA088041"
+				item: "craftingstation:crafting_station"
+				type: "item"
+			}]
+			x: -3.0d
 			y: -3.0d
 		}
 		{
 			dependencies: ["35441B6C5335D3F9"]
-			description: ["Vanilla tools below Netherite tier are disabled, so you will need Tinkers' Construct's tools."]
-			id: "0C79935D194244E3"
-			tasks: [{
-				id: "257595867BB7FBA3"
-				item: "tconstruct:tinker_station"
-				type: "item"
-			}]
-			x: -2.5d
-			y: -2.0d
-		}
-		{
-			dependencies: ["0C79935D194244E3"]
 			description: [
-				"If you haven't noticed already, you can't process your ores by conventional means. You will need to construct a Seared Melter. For now, you will need to power it with a Seared Heater."
+				"&o&7Even when I mine copper and iron, I can't smelt them directly. It seems I'll need to craft a Seared Melter."
 				""
-				"The Melter and Smeltery do not ore double, but you will unlock better ore processing methods later."
+				"This device can be powered with a Seared Heater. You can use Sand Casts to cast your molten metals into ingots or tool parts. Later on you can make gold casts."
 			]
 			id: "306C19107D8BE5F5"
 			rewards: [{
@@ -55,9 +56,377 @@
 					type: "item"
 				}
 			]
-			x: -2.5d
+			title: "Processing Ores"
+			x: -3.0d
+			y: -2.0d
+		}
+		{
+			description: [
+				"&o&7Where am I...?"
+				"&o&7What happened...?"
+				""
+				"You wake up on a strange planet. You don't remember anything, You see terrain around you, but it isn't recognizable. Despite not knowing how you got here, you know you need to act quickly."
+				""
+				"&bWelcome to Scientific Rocketry 2"
+			]
+			icon: "ad_astra:earth_globe"
+			id: "13079C9CB31B27D7"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "315FAAC3197C93E3"
+				title: "Crash Landing"
+				type: "checkmark"
+			}]
+			x: -3.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["306C19107D8BE5F5"]
+			description: [
+				"Create is the first major tech mod you can access. Andesite Alloy needs zinc specifically to craft, and must first be crafted in the Casting Basin."
+				""
+				"You can use the ponder feature to learn about Create's various options."
+			]
+			id: "789074FA6DC18EA3"
+			rewards: [{
+				count: 8
+				id: "22CFA27D08470391"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			tasks: [{
+				id: "12341C55A5391032"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["789074FA6DC18EA3"]
+			description: ["&o&7To progress, I will need to make metal plates. These require a Mechanical Press, but since all other forms of stress production require plates or further tech, I will need to use my own strength to produce my first plates."]
+			id: "0A2374E7D318F3D0"
+			rewards: [{
+				count: 8
+				id: "740ECA301F72F7B6"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "47C43890A4CD9F2F"
+					item: "create:hand_crank"
+					type: "item"
+				}
+				{
+					id: "407B810F45B65712"
+					item: "create:mechanical_press"
+					type: "item"
+				}
+			]
+			title: "Manual Labor"
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0A2374E7D318F3D0"]
+			description: ["With Water Wheels, you can automate stress production. You can also use metal plates to craft some automated machines, such as the Mechanical Mixer and the Mechanical Saw."]
+			id: "24C13B282686C929"
+			rewards: [{
+				count: 32
+				id: "034C0DC4C864AD7D"
+				item: "create:shaft"
+				type: "item"
+			}]
+			tasks: [{
+				id: "53565913F29DC6A3"
+				item: "create:water_wheel"
+				type: "item"
+			}]
+			title: "Age of Automation"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["24C13B282686C929"]
+			description: ["The Mechanical Mixer lets you mix items together, which makes Andesite Alloy easier to produce. It can also produce alloys if heated."]
+			id: "45C0B807D18F94B7"
+			rewards: [{
+				id: "4EE9842E5F64BF73"
+				item: "create:basin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "725237307AEF9279"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["24C13B282686C929"]
+			description: ["The Mechanical Saw can be used for more efficiently turning logs into planks, and can also be used for a tree farm."]
+			id: "121EB783288392E1"
+			rewards: [{
+				count: 4
+				id: "29190ECB4E2CE34B"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			tasks: [{
+				id: "35B845F85004976F"
+				item: "create:mechanical_saw"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["24C13B282686C929"]
+			description: ["The Millstone can process ores into dust at the same ratio as a Melter, but without having to worry about casts or molten metals."]
+			id: "6F5E8109624B9E0E"
+			rewards: [{
+				count: 16
+				id: "78EDA94F70769557"
+				item: "create:cogwheel"
+				type: "item"
+			}]
+			tasks: [{
+				id: "114D03E782A3FA9C"
+				item: "create:millstone"
+				type: "item"
+			}]
+			x: 1.0d
 			y: -1.0d
 		}
+		{
+			dependencies: ["45C0B807D18F94B7"]
+			description: [
+				"&o&7Wait, I need HOW much gunpowder?"
+				""
+				"The Coke Oven lets you produce Coal Coke and Creosote. Assemble a 3x3x3 multiblock out of Coke Bricks, then right-click the center block with a hammer."
+			]
+			icon: "immersiveengineering:cokebrick"
+			id: "4DBBB387B2E65E58"
+			rewards: [{
+				id: "21A4F2FDE82A7FDC"
+				item: "immersiveengineering:manual"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 27L
+					id: "12F9A7A7F19A3D8A"
+					item: { Count: 27, id: "immersiveengineering:cokebrick" }
+					type: "item"
+				}
+				{
+					id: "500279D4357A3450"
+					item: {
+						Count: 1
+						id: "immersiveengineering:hammer"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Coke Oven"
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["306C19107D8BE5F5"]
+			description: ["The Smeltery is an upgraded version of the Melter that lets you melt more items at once and produce some basic alloys."]
+			id: "1F30B014C43203AE"
+			rewards: [{
+				count: 32
+				id: "7B5461A81390C282"
+				item: "tconstruct:seared_brick"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0A189C07279A9206"
+				item: "tconstruct:smeltery_controller"
+				type: "item"
+			}]
+			title: "Smeltery"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F30B014C43203AE"]
+			description: ["A special component needed for more advanced Create technology."]
+			id: "524C16049CA1C2D3"
+			rewards: [{
+				count: 4
+				id: "50517E3A95D2AC50"
+				item: "create:rose_quartz"
+				type: "item"
+			}]
+			tasks: [{
+				id: "044F045DDC2AD2D4"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2AF2FE528AA4774D"
+				"31BDC4E9DEDDC05C"
+			]
+			description: ["The Mechanical Crafter is a multiblock that lets you automate crafting and carry out some special recipes, such as the Crushing Wheels or metal gears."]
+			id: "3C1806B1852F0006"
+			tasks: [{
+				id: "250DB33F706EB509"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			title: "Big Crafts"
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3C1806B1852F0006"]
+			description: ["Cured Rubber is a material needed for various crafts. You need to use an Arboreal Extractor on a tree to get Latex or Resin, which can be turned into Rubber with a Mechanical Press and a Basin. Then, you can mix it with Molten Sulfur to produce Cured Rubber."]
+			icon: "thermal:cured_rubber"
+			id: "12FB1FD9B86207D7"
+			rewards: [{
+				count: 32
+				id: "0D5369E203D4FBD0"
+				item: "thermal:phytogro"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "00AD9A71E6AB3CE8"
+					item: "thermal:device_tree_extractor"
+					type: "item"
+				}
+				{
+					id: "386FC7D3BC9184CB"
+					item: "thermal:cured_rubber"
+					type: "item"
+				}
+			]
+			title: "Cured Rubber"
+			x: 4.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3C1806B1852F0006"]
+			description: [
+				"The Crushing Wheels let you crush ores for a more efficient yield. It also unlocks processing some new ores, such as Cobalt."
+				""
+				"&o&bThe Millstone can create Obsidian Dust."
+			]
+			id: "1740ED183C620BC8"
+			tasks: [{
+				count: 2L
+				id: "681315361B467F6E"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			title: "Crushing Wheels"
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1740ED183C620BC8"]
+			description: ["Now that you have Cobalt, you can make a Blaze Burner, which lets you run heated mixer recipes. This is important for making the Blast Furnace."]
+			id: "1FC5EB9642F82968"
+			tasks: [{
+				id: "5C9BBADC3244875B"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			title: "Blazing Hot"
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1FC5EB9642F82968"]
+			description: ["Make a Blast Furnace out of Blast Bricks. This multiblock turns iron and coke into steel, a very important material."]
+			icon: "immersiveengineering:blastbrick"
+			id: "508CE71920CDF407"
+			tasks: [
+				{
+					count: 27L
+					id: "34C0E0E531765279"
+					item: { Count: 27, id: "immersiveengineering:blastbrick" }
+					type: "item"
+				}
+				{
+					id: "029D9FCC1BF98DFE"
+					item: "thermal:steel_ingot"
+					type: "item"
+				}
+			]
+			title: "Now We're Cooking!"
+			x: 7.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4DBBB387B2E65E58"]
+			description: ["Treated Wood requires a Spout to craft, you can't just hand-craft it here."]
+			id: "2AF2FE528AA4774D"
+			rewards: [{
+				count: 16
+				id: "6510E6CAE66A417A"
+				item: "immersiveengineering:treated_wood_horizontal"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5CCD245342529F1B"
+				item: "immersiveengineering:treated_wood_horizontal"
+				type: "item"
+			}]
+			title: "Treated Wood"
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["524C16049CA1C2D3"]
+			description: ["Precision Mechanisms require Sequenced Assembly to be produced. The recipe is changed in this pack so that it has a 100% chance of success."]
+			id: "31BDC4E9DEDDC05C"
+			rewards: [{
+				count: 8
+				id: "01CDBBBACAEBDF43"
+				item: "thermal:electrum_plate"
+				type: "item"
+			}]
+			tasks: [{
+				id: "446AE8BB3159B3D4"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2AF2FE528AA4774D"]
+			description: ["If you don't like spamming Water Wheels, then you can use Windmills, which use Sails and produce stress units."]
+			id: "0565B5D943D98DE5"
+			rewards: [{
+				count: 8
+				id: "07E36034AF99E75A"
+				item: "create:white_sail"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5E61AC21999E4CB4"
+				item: "create:windmill_bearing"
+				type: "item"
+			}]
+			title: "Wind Power"
+			x: 3.0d
+			y: -3.0d
+		}
 	]
-	title: "Progression Chapter 1"
+	title: "Chapter 1: Crash Landing"
 }

@@ -44,4 +44,21 @@ ServerEvents.recipes((event) => {
         A: "#forge:plates/iron",
         B: "#forge:chests/wooden"
     });
+
+    // Remove thermal amethyst cluster recipe
+    event.remove({ id: "thermal:machines/crystallizer/crystallizer_amethyst_cluster" });
+
+    // Piston
+    event.remove({ output: "minecraft:piston" });
+
+    event.shaped("minecraft:piston", [
+        "AAA",
+        "BCB",
+        "BDB"
+    ], {
+        A: "#forge:treated_wood",
+        B: "minecraft:smooth_stone",
+        C: "#forge:plates/iron",
+        D: "#forge:ingots/red_alloy"
+    })
 });

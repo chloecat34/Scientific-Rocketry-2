@@ -1,7 +1,7 @@
 {
     "type": "tconstruct:retextured_casting_basin",
     "cast": {
-      "tag": "tconstruct:smeltery_bricks"
+      "item": "tconstruct:seared_melter"
     },
     "cast_consumed": true,
     "cooling_time": 100,

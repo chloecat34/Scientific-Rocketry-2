@@ -10,9 +10,6 @@ ServerEvents.recipes((event) => {
         "thermal:raw_lead",
         "thermal:raw_silver",
         "thermal:raw_nickel",
-        "createoreexcavation:raw_diamond",
-        "createoreexcavation:raw_emerald",
-        "createoreexcavation:raw_redstone",
         "ad_astra:raw_desh",
         "ad_astra:raw_ostrum",
         "ad_astra:raw_calorite",
@@ -127,10 +124,10 @@ ServerEvents.recipes((event) => {
         ["#forge:raw_materials/cobalt", "#forge:ores/cobalt", "kubejs:cobalt_dust", "thermal:lead_dust", 2],
         ["#forge:raw_materials/nickel", "#forge:ores/nickel", "thermal:nickel_dust", "kubejs:platinum_dust", 2],
         ["#forge:raw_materials/desh", "#forge:ores/desh", "kubejs:desh_dust", "thermal:copper_dust", 2],
-        ["#forge:raw_materials/aluminum", "#forge:ores/aluminum", "kubejs:bauxite_dust", "thermal:iron_dust", 3]
+        ["#forge:raw_materials/aluminum", "#forge:ores/aluminum", "immersiveengineering:dust_aluminum", "thermal:iron_dust", 3]
     ].forEach(entry => {
         const [rawOre, ore, dust, byproduct, tier] = entry;
-        
+
         if (tier === 1) {
             event.recipes.createMilling([dust], rawOre);
             event.recipes.createMilling([Item.of(dust, 2)], ore);
@@ -320,7 +317,7 @@ ServerEvents.recipes((event) => {
                 }
             });
         }
-        
+
         event.recipes.thermal.pulverizer([Item.of(primary).withChance(baseAmount * 4), Item.of(byproduct2).withChance(0.5)], ore).energy(8000);
         event.recipes.mekanismEnriching(`${baseAmount * 4}x ${primary}`, ore);
     });

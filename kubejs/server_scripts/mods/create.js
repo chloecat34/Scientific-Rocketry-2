@@ -226,5 +226,84 @@ ServerEvents.recipes((event) => {
         "C": "create:andesite_alloy",
         "D": "#forge:gears/iron",
         "E": "create:andesite_casing"
-    })
+    });
+
+    // Windmill
+    event.replaceInput({output: "create:white_sail"}, "#forge:rods/wooden", "immersiveengineering:stick_treated");
+    event.replaceInput({output: "create:windmill_bearing"}, "#minecraft:wooden_slabs", "#forge:treated_wood_slab");
+
+    // Mechanical drill
+    event.replaceInput({output: "create:mechanical_drill"}, "#forge:ingots/iron", "#forge:plates/iron");
+
+    // Sturdy sheet thermal recipe
+    event.recipes.thermal.bottler("create:sturdy_sheet", ["#forge:dusts/obsidian", Fluid.of("minecraft:lava", 500)]).energy(9600);
+
+    // Blaze cake thermal recipe
+    event.recipes.thermal.smelter("create:blaze_cake_base", ["minecraft:egg", "minecraft:sugar", "create:cinder_flour"]).energy(4800);
+
+    // Nugget of experience
+    let xpTypes = ["industrialforegoing:essence", "pneumaticcraft:memory_essence", "cofh_core:experience", "sophisticatedcore:xp_still", "mob_grinding_utils:fluid_xp"];
+
+    xpTypes.forEach(xp => {
+        event.recipes.createCompacting(["create:experience_nugget"], [Fluid.of(xp, 60)]);
+        event.recipes.thermal.chiller("create:experience_nugget", [Fluid.of(xp, 60)]).energy(2400);
+    });
+
+    event.recipes.thermal.crucible(Fluid.of("pneumaticcraft:memory_essence", 60), "create:experience_nugget").energy(2400);
+
+    // Straw
+    event.remove({ output: "createaddition:straw" });
+
+    event.recipes.shaped("createaddition:straw", [
+        "AA",
+        " A",
+        " A"
+    ], {
+        "A": "pneumaticcraft:plastic"
+    });
+
+    // Capacitor
+    event.remove({ output: "createaddition:capacitor" });
+
+    event.recipes.shaped("createaddition:capacitor", [
+        "A",
+        "B",
+        "C"
+    ], {
+        "A": "create:electron_tube",
+        "B": "#forge:plates/steel",
+        "C": "#forge:plates/red_alloy"
+    });
+
+    // Alternator
+    event.remove({ output: "createaddition:alternator" });
+
+    event.recipes.createMechanicalCrafting("createaddition:alternator", [
+        "  A  ",
+        " ABA ",
+        "ACDCA",
+        " AEA "
+    ], {
+        "A": "#forge:plates/steel",
+        "B": "immersiveengineering:coil_mv",
+        "C": "immersiveengineering:rs_engineering",
+        "D": "#forge:rods/steel",
+        "E": "createaddition:capacitor"
+    });
+
+    // Electric motor
+    event.remove({ output: "createaddition:electric_motor" });
+
+    event.recipes.createMechanicalCrafting("createaddition:electric_motor", [
+        "  A  ",
+        " ABA ",
+        "ACDCA",
+        " AEA "
+    ], {
+        "A": "#forge:plates/aluminum",
+        "B": "immersiveengineering:coil_hv",
+        "C": "immersiveengineering:heavy_engineering",
+        "D": "#forge:rods/aluminum",
+        "E": "immersiveengineering:component_electronic_adv"
+    });
 });

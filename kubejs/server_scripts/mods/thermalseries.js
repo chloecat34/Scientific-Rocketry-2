@@ -85,5 +85,32 @@ ServerEvents.recipes((event) => {
         "C": "#forge:glass",
         "D": "minecraft:bucket",
         "E": "#forge:gears/bronze"
-    })
+    });
+
+    // Redstone servo
+    event.remove({ output: "thermal:redstone_servo" });
+
+    event.shaped("thermal:redstone_servo", [
+        "ABA",
+        " B ",
+        "ABA"
+    ], {
+        "A": "#forge:plates/red_alloy",
+        "B": "#forge:rods/aluminum"
+    });
+
+    // Igneous extruder
+    event.remove({ output: "thermal:device_rock_gen" });
+
+    event.shaped("thermal:device_rock_gen", [
+        "ABA",
+        "CDC",
+        "AEA"
+    ], {
+        "A": "#forge:plates/invar",
+        "B": "#forge:gears/constantan",
+        "C": "#forge:glass",
+        "D": "create:mechanical_drill",
+        "E": "thermal:redstone_servo"
+    });
 });

@@ -52,6 +52,27 @@ StartupEvents.registry("item", event => {
         .tag("forge:gears")
         .tag("forge:gears/platinum");
 
+    event.create("red_alloy_ingot")
+        .displayName("Red Alloy Ingot")
+        .tag("forge:ingots")
+        .tag("ae2:metal_ingots")
+        .tag("forge:ingots/red_alloy");
+
+    event.create("red_alloy_nugget")
+        .displayName("Red Alloy Nugget")
+        .tag("forge:nuggets")
+        .tag("forge:nuggets/red_alloy");
+
+    event.create("red_alloy_plate")
+        .displayName("Red Alloy Plate")
+        .tag("forge:plates")
+        .tag("forge:plates/red_alloy");
+
+    event.create("red_alloy_gear")
+        .displayName("Red Alloy Gear")
+        .tag("forge:gears")
+        .tag("forge:gears/red_alloy");
+
     event.create("compressed_iron_plate")
         .displayName("Compressed Iron Plate")
         .tag("forge:plates")
@@ -71,11 +92,6 @@ StartupEvents.registry("item", event => {
         .displayName("Coagulated Blood")
         .tag("forge:slimeballs")
         .tag("forge:slimeball/blood");
-
-    event.create("bauxite_dust")
-        .displayName("Bauxite Dust")
-        .tag("forge:dusts")
-        .tag("forge:dusts/bauxite");
 
     event.create("coke_brick_blend")
         .displayName("Coke Brick Blend");
@@ -104,4 +120,8 @@ StartupEvents.registry("item", event => {
 
     event.create("incomplete_heat_mechanism")
         .displayName("Incomplete Heat Mechanism");
+
+    event.create("soul_sand_dust")
+        .displayName("Soul Sand Dust")
+        .tag("forge:dusts/soul_sand");
 });
