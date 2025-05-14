@@ -113,7 +113,9 @@ JEIEvents.hideItems((event) => {
         "industrialforegoing:latex_processing_unit",
         "industrialforegoing:plastic",
         "industrialforegoing:dryrubber",
-		"kubejs:incomplete_heat_mechanism"
+		"kubejs:incomplete_heat_mechanism",
+		"actuallyadditions:crusher",
+		"actuallyadditions:crusher_double"
 	];
 
 	itemsToRemove.forEach(item => event.hide(item));

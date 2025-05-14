@@ -60,5 +60,11 @@ ServerEvents.recipes((event) => {
         B: "minecraft:smooth_stone",
         C: "#forge:plates/iron",
         D: "#forge:ingots/red_alloy"
-    })
+    });
+
+    // Ender eye
+    event.remove({ output: "minecraft:ender_eye" });
+
+    event.recipes.create.filling("minecraft:ender_eye", ["minecraft:ender_pearl", Fluid.of("tconstruct:blazing_blood", 100)]);
+    event.recipes.thermal.bottler("minecraft:ender_eye", ["minecraft:ender_pearl", Fluid.of("tconstruct:blazing_blood", 100)]).energy(4800);
 });

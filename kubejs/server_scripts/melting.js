@@ -174,6 +174,7 @@ ServerEvents.recipes((event) => {
     // Replace Create recipe for rose gold
     event.remove({ output: "thermal:rose_gold_ingot", type: "create:mixing" });
     event.remove({ output: "tconstruct:rose_gold_ingot", type: "create:mixing" });
+    event.remove({ id: "thermal:compat/tconstruct/smelter_alloy_tconstruct_rose_gold_ingot"});
     event.recipes.createMixing("2x thermal:rose_gold_ingot", ["#forge:ingots/copper", "#forge:ingots/gold"]).heated();
 
     // Molten pigiron

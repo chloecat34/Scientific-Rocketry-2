@@ -31,4 +31,26 @@ StartupEvents.registry("block", event => {
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_iron_tool");
+
+    event.create("energetic_alloy_block")
+        .displayName("Energetic Alloy Block")
+        .material("metal")
+        .hardness(4.0)
+        .resistance(20.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/energetic_alloy")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
+
+    event.create("vibrant_alloy_block")
+        .displayName("Vibrant Alloy Block")
+        .material("metal")
+        .hardness(5.0)
+        .resistance(30.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/vibrant_alloy")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
 });

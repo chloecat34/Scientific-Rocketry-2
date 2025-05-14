@@ -97,6 +97,8 @@ ServerEvents.recipes((event) => {
         ]
     });
 
+    event.recipes.mekanism.combining("create:brass_casing", "#forge:treated_wood", "#forge:plates/brass");
+
     // Copper casing
     event.remove({ output: "create:copper_casing" });
 
@@ -117,6 +119,50 @@ ServerEvents.recipes((event) => {
             }
         ]
     });
+
+    event.custom({
+        type: "create:item_application",
+        ingredients: [
+            {
+                tag: "forge:treated_wood"
+            },
+
+            {
+                tag: "forge:plates/copper"
+            }
+        ],
+        results: [
+            {
+                item: "create:copper_casing"
+            }
+        ]
+    });
+
+    event.recipes.mekanism.combining("create:copper_casing", "#forge:treated_wood", "#forge:plates/copper");
+
+    // Andesite casing
+    event.custom({
+        type: "create:item_application",
+        ingredients: [
+            {
+                tag: "forge:treated_wood"
+            },
+
+            {
+                item: "create:andesite_alloy"
+            }
+        ],
+        results: [
+            {
+                item: "create:andesite_casing"
+            }
+        ]
+    });
+
+    event.recipes.mekanism.combining("create:andesite_casing", "#forge:treated_wood", "create:andesite_alloy");
+
+    // Train casing
+    event.recipes.mekanism.combining("create:railway_casing", "create:brass_casing", "create:sturdy_sheet");
 
     // Crushing wheels
     event.remove({ output: "create:crushing_wheel" });

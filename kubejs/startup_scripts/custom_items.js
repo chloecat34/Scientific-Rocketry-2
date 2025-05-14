@@ -73,6 +73,63 @@ StartupEvents.registry("item", event => {
         .tag("forge:gears")
         .tag("forge:gears/red_alloy");
 
+    event.create("energetic_alloy_ingot")
+        .displayName("Energetic Alloy Ingot")
+        .tag("forge:ingots")
+        .tag("ae2:metal_ingots")
+        .tag("forge:ingots/energetic_alloy");
+
+    event.create("energetic_alloy_nugget")
+        .displayName("Energetic Alloy Nugget")
+        .tag("forge:nuggets")
+        .tag("forge:nuggets/energetic_alloy");
+
+    event.create("energetic_alloy_plate")
+        .displayName("Energetic Alloy Plate")
+        .tag("forge:plates")
+        .tag("forge:plates/energetic_alloy");
+
+    event.create("energetic_alloy_gear")
+        .displayName("Energetic Alloy Gear")
+        .tag("forge:gears")
+        .tag("forge:gears/energetic_alloy");
+
+    event.create("vibrant_alloy_ingot")
+        .displayName("Vibrant Alloy Ingot")
+        .tag("forge:ingots")
+        .tag("ae2:metal_ingots")
+        .tag("forge:ingots/vibrant_alloy");
+
+    event.create("vibrant_alloy_nugget")
+        .displayName("Vibrant Alloy Nugget")
+        .tag("forge:nuggets")
+        .tag("forge:nuggets/vibrant_alloy");
+
+    event.create("vibrant_alloy_plate")
+        .displayName("Vibrant Alloy Plate")
+        .tag("forge:plates")
+        .tag("forge:plates/vibrant_alloy");
+
+    event.create("vibrant_alloy_gear")
+        .displayName("Vibrant Alloy Gear")
+        .tag("forge:gears")
+        .tag("forge:gears/vibrant_alloy");
+
+    event.create("red_alloy_wire")
+        .displayName("Red Alloy Wire")
+        .tag("forge:wires")
+        .tag("forge:wires/red_alloy");
+
+    event.create("energetic_alloy_wire")
+        .displayName("Energetic Alloy Wire")
+        .tag("forge:wires")
+        .tag("forge:wires/energetic_alloy");
+
+    event.create("vibrant_alloy_wire")
+        .displayName("Vibrant Alloy Wire")
+        .tag("forge:wires")
+        .tag("forge:wires/vibrant_alloy");
+
     event.create("compressed_iron_plate")
         .displayName("Compressed Iron Plate")
         .tag("forge:plates")
@@ -121,7 +178,17 @@ StartupEvents.registry("item", event => {
     event.create("incomplete_heat_mechanism")
         .displayName("Incomplete Heat Mechanism");
 
+    event.create("incomplete_electronic_component")
+        .displayName("Incomplete Electronic Component");
+
     event.create("soul_sand_dust")
         .displayName("Soul Sand Dust")
         .tag("forge:dusts/soul_sand");
+
+    event.create("electrotine")
+        .displayName("Electrotine Dust")
+        .tag("forge:dusts/electrotine");
+
+    event.create("energetic_blend")
+        .displayName("Energetic Blend");
 });

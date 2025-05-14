@@ -313,4 +313,7 @@ ServerEvents.recipes((event) => {
     // Soul sand dust
     event.recipes.createCrushing(["kubejs:soul_sand_dust", Item.of("kubejs:soul_sand_dust").withChance(0.5)], "minecraft:soul_sand");
     event.recipes.thermal.pulverizer([Item.of("kubejs:soul_sand_dust").withChance(1.5)], "minecraft:soul_sand").energy(4000);
+
+    event.recipes.remove({ id: "create:milling/lapis_lazuli" });
+    event.recipes.createCrushing("thermal:lapis_dust", "#forge:gems/lapis");
 });

@@ -85,6 +85,8 @@ ServerEvents.recipes((event) => {
         "compressed_iron",
         "cobalt",
         "manyullyn",
-        "red_alloy"
+        "red_alloy",
+        "energetic_alloy",
+        "vibrant_alloy"
     ].forEach(ingot => standardizePlates(ingot, `kubejs:${ingot}_plate`));
 });

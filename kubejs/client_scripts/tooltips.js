@@ -21,8 +21,6 @@ ItemEvents.tooltip(event => {
     [
         "thermal:sulfur_ore",
         "thermal:deepslate_sulfur_ore",
-        "thermal:niter_ore",
-        "thermal:deepslate_niter_ore",
         "thermal:cinnabar_ore",
         "thermal:deepslate_cinnabar_ore",
         "thermal:nickel_ore",
@@ -36,6 +34,7 @@ ItemEvents.tooltip(event => {
         "rftoolsbase:dimensionalshard_overworld",
         "rftoolsbase:dimensionalshard_nether",
         "rftoolsbase:dimensionalshard_end",
+        "actuallyadditions:black_quartz_ore"
     ].forEach(item => addRedTooltip(item, "Removed from worldgen", 1));
 
     // Set up tooltips for ores

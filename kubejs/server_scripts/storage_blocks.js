@@ -73,4 +73,8 @@ ServerEvents.recipes((event) => {
 	addPacking("tconstruct:knightslime_ingot", "tconstruct:knightslime_block");
 	addPacking("kubejs:red_alloy_nugget", "kubejs:red_alloy_ingot");
 	addPacking("kubejs:red_alloy_ingot", "kubejs:red_alloy_block");
+	addPacking("kubejs:energetic_alloy_nugget", "kubejs:energetic_alloy_ingot");
+	addPacking("kubejs:energetic_alloy_ingot", "kubejs:energetic_alloy_block");
+	addPacking("kubejs:vibrant_alloy_nugget", "kubejs:vibrant_alloy_ingot");
+	addPacking("kubejs:vibrant_alloy_ingot", "kubejs:vibrant_alloy_block");
 });

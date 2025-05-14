@@ -293,7 +293,11 @@
 		}
 		{
 			dependencies: ["3C1806B1852F0006"]
-			description: ["Cured Rubber is a material needed for various crafts. You need to use an Arboreal Extractor on a tree to get Latex or Resin, which can be turned into Rubber with a Mechanical Press and a Basin. Then, you can mix it with Molten Sulfur to produce Cured Rubber."]
+			description: [
+				"Cured Rubber is a material needed for various crafts, such as coating cables. "
+				""
+				"You need to use an Arboreal Extractor on a tree to get Latex or Resin, which can be turned into Rubber with a Mechanical Press and a Basin. Then, you can mix it with Molten Sulfur to produce Cured Rubber."
+			]
 			icon: "thermal:cured_rubber"
 			id: "12FB1FD9B86207D7"
 			rewards: [{

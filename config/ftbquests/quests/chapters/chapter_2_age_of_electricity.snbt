@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter_2_age_of_electricity"
+	group: ""
+	icon: "immersiveengineering:rs_engineering"
+	id: "4D4DE737C2066213"
+	order_index: 1
+	quest_links: [ ]
+	quests: [ ]
+	title: "Chapter 2: Age of Electricity"
+}
