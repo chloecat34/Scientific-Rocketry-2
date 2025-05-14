@@ -1,0 +1,6 @@
+{
+    "type": "immersiveengineering:blueprint",
+    "category": "components",
+    "inputs": [{ "tag": "forge:plates/plastic" }, { "tag": "forge:plates/rose_gold" }],
+    "result": { "item": "immersiveengineering:circuit_board" }
+}

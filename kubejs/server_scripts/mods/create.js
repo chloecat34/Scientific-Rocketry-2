@@ -352,4 +352,20 @@ ServerEvents.recipes((event) => {
         "D": "#forge:rods/aluminum",
         "E": "immersiveengineering:component_electronic_adv"
     });
+
+    // Accumulator
+    event.remove({ output: "createaddition:modular_accumulator" });
+
+    event.recipes.createMechanicalCrafting("createaddition:modular_accumulator", [
+        "  A  ",
+        " ABA ",
+        "ACDCA",
+        " AEA "
+    ], {
+        "A": "#forge:plates/brass",
+        "B": "immersiveengineering:coil_mv",
+        "C": "immersiveengineering:rs_engineering",
+        "D": "#forge:rods/copper",
+        "E": "createaddition:capacitor"
+    });
 });

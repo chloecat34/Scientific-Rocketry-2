@@ -1,0 +1,15 @@
+{
+    "type": "immersiveengineering:blueprint",
+    "category": "components",
+    "inputs": [
+        { "tag": "forge:glass" },
+        {
+            "base_ingredient": [
+                { "item": "minecraft:bamboo" }
+            ],
+            "count": 3
+        },
+        { "tag": "forge:plates/energetic_alloy" }
+    ],
+    "result": { "count": 3, "item": "immersiveengineering:light_bulb" }
+}

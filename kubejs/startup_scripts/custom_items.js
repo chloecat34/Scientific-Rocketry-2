@@ -181,6 +181,9 @@ StartupEvents.registry("item", event => {
     event.create("incomplete_electronic_component")
         .displayName("Incomplete Electronic Component");
 
+    event.create("incomplete_adv_electronic_component")
+        .displayName("Incomplete Advanced Electronic Component");
+
     event.create("soul_sand_dust")
         .displayName("Soul Sand Dust")
         .tag("forge:dusts/soul_sand");

@@ -272,4 +272,142 @@ ServerEvents.recipes((event) => {
         event.recipes.createDeploying("kubejs:incomplete_electronic_component", ["kubejs:incomplete_electronic_component", "kubejs:energetic_alloy_wire"]),
         event.recipes.createFilling("kubejs:incomplete_electronic_component", ["kubejs:incomplete_electronic_component", Fluid.of("immersiveengineering:redstone_acid", 500)])
     ]).transitionalItem("kubejs:incomplete_electronic_component").loops(1);
+
+	// Adv. Electronic component
+	event.remove({ output: "immersiveengineering:component_electronic_adv" });
+
+	event.recipes.createSequencedAssembly([
+        Item.of("immersiveengineering:component_electronic_adv")
+    ], "immersiveengineering:plate_duroplast", [
+        event.recipes.createDeploying("kubejs:incomplete_adv_electronic_component", ["kubejs:incomplete_adv_electronic_component", "immersiveengineering:electron_tube"]),
+        event.recipes.createDeploying("kubejs:incomplete_adv_electronic_component", ["kubejs:incomplete_adv_electronic_component", "kubejs:vibrant_alloy_wire"]),
+        event.recipes.createDeploying("kubejs:incomplete_adv_electronic_component", ["kubejs:incomplete_adv_electronic_component", "kubejs:vibrant_alloy_wire"]),
+        event.recipes.createFilling("kubejs:incomplete_adv_electronic_component", ["kubejs:incomplete_adv_electronic_component", Fluid.of("immersiveengineering:redstone_acid", 500)])
+    ]).transitionalItem("kubejs:incomplete_adv_electronic_component").loops(1);
+
+	// Insulating glass
+	event.remove({ id: "immersiveengineering:arcfurnace/insulating_glass"});
+
+	event.recipes.create.mixing("immersiveengineering:insulating_glass", ["immersiveengineering:slag_glass", Fluid.of("tconstruct:molten_iron", 45)]).heated();
+
+	event.recipes.thermal.smelter("2x immersiveengineering:insulating_glass", ["2x immersiveengineering:slag_glass", "#forge:dusts/iron"]).energy(9600);
+
+	// Slag gravel
+	event.recipes.mekanism.crushing("immersiveengineering:slag_gravel", "#forge:slag");
+	event.recipes.thermal.pulverizer("immersiveengineering:slag_gravel", "#forge:slag").energy(4000);
+
+	// Vacuum tube
+	event.remove({ output: "immersiveengineering:electron_tube" });
+
+	event.custom({
+		type: "immersiveengineering:blueprint",
+		category: "components",
+		inputs: [
+			{
+				item: "immersiveengineering:insulating_glass"
+			},
+			{
+				tag: "forge:plates/nickel"
+			},
+			{
+				tag: "forge:wires/red_alloy"
+			},
+			{
+				item: "createaddition:capacitor"
+			}
+		],
+		result: {
+			count: 2,
+			item: "immersiveengineering:electron_tube"
+		}
+	});
+
+	// IE circuit board alt recipe
+	event.recipes.thermal.smelter("immersiveengineering:circuit_board", ["immersiveengineering:plate_duroplast", "#forge:plates/rose_gold"]).energy(6400);
+
+	// Garden cloche
+	event.remove({ output: "immersiveengineering:cloche" });
+
+	event.shaped("immersiveengineering:cloche", [
+		"ABA",
+		"ACA",
+		"DED"
+	], {
+		"A": "#forge:plates/vibrant_alloy",
+		"B": "immersiveengineering:light_bulb",
+		"C": "#forge:gears/vibrant_alloy",
+		"D": "#forge:treated_wood",
+		"E": "actuallyadditions:farmer"
+	});
+
+	// IE wire coils
+	event.remove({ output: "immersiveengineering:wirecoil_copper" });
+	event.remove({ output: "immersiveengineering:wirecoil_electrum" });
+	event.remove({ output: "immersiveengineering:wirecoil_steel" });
+	event.remove({ output: "immersiveengineering:wirecoil_structure_rope" });
+	event.remove({ output: "immersiveengineering:wirecoil_structure_steel" });
+	event.remove({ output: "immersiveengineering:wirecoil_redstone" });
+
+	event.shaped("2x immersiveengineering:wirecoil_copper", [
+		"AAA",
+		"ABA",
+		"AAA"
+	], {
+		"A": "#forge:wires/copper",
+		"B": "immersiveengineering:stick_treated"
+	});
+
+	event.shaped("2x immersiveengineering:wirecoil_electrum", [
+		"AAA",
+		"ABA",
+		"AAA"
+	], {
+		"A": "#forge:wires/electrum",
+		"B": "immersiveengineering:stick_treated"
+	});
+
+	event.shaped("2x immersiveengineering:wirecoil_steel", [
+		"ABA",
+		"BCB",
+		"ABA"
+	], {
+		"A": "#forge:wires/steel",
+		"B": "#forge:wires/aluminum",
+		"C": "immersiveengineering:stick_treated"
+	});
+
+	event.shaped("2x immersiveengineering:wirecoil_redstone", [
+		"AAA",
+		"ABA",
+		"AAA"
+	], {
+		"A": "#forge:wires/red_alloy",
+		"B": "immersiveengineering:stick_treated"
+	});
+
+	event.shaped("4x immersiveengineering:wirecoil_structure_rope", [
+		" A ",
+		"ABA",
+		" A "
+	], {
+		"A": "#forge:fiber_hemp",
+		"B": "immersiveengineering:stick_treated"
+	});
+
+	event.shaped("4x immersiveengineering:wirecoil_structure_steel", [
+		" A ",
+		"ABA",
+		" A "
+	], {
+		"A": "#forge:wires/steel",
+		"B": "immersiveengineering:stick_treated"
+	});
+
+	// Core sample drill
+	event.replaceInput({ output: "immersiveengineering:sample_drill"}, "immersiveengineering:light_engineering", "immersiveengineering:heavy_engineering");
+
+	// Coil blocks
+	event.replaceInput({ output: "immersiveengineering:coil_lv"}, "#forge:ingots/iron", "create:copper_casing");
+	event.replaceInput({ output: "immersiveengineering:coil_mv"}, "#forge:ingots/iron", "create:brass_casing");
+	event.replaceInput({ output: "immersiveengineering:coil_hv"}, "#forge:ingots/iron", "create:railway_casing");
 });
