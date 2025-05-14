@@ -23,3 +23,6 @@ resourcepacks
 hs_err_pid*.log
 .qmenu_opened.marker
 shaderpacks
+ESM
+fancymenu_data
+impossible_data
