@@ -15,7 +15,8 @@ ItemEvents.tooltip(event => {
         "industrialforegoing:fluid_sieving_machine",
         "industrialforegoing:latex_processing_unit",
         "industrialforegoing:plastic",
-        "industrialforegoing:dryrubber"
+        "industrialforegoing:dryrubber",
+        "immersiveengineering:alloybrick"
     ].forEach(item => addRedTooltip(item, "Disabled", 1));
 
     [
@@ -83,6 +84,7 @@ ItemEvents.tooltip(event => {
     t1OreTooltip("minecraft:diamond_ore", 1);
     t1OreTooltip("minecraft:deepslate_diamond_ore", 1);
     t1OreTooltip("minecraft:nether_quartz_ore", 1);
+    t1OreTooltip("actuallyadditions:black_quartz_ore", 1);
     t5OreTooltip("mekanism:raw_osmium", 1);
     t5OreTooltip("mekanism:osmium_ore", 1);
     t5OreTooltip("mekanism:deepslate_osmium_ore", 1);

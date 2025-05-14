@@ -7,6 +7,674 @@
 	id: "4D4DE737C2066213"
 	order_index: 1
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			dependencies: ["508CE71920CDF407"]
+			description: ["The Rolling Mill lets you create Rods from Ingots, and Wires from Plates."]
+			id: "6896901F62AE3B96"
+			tasks: [{
+				id: "518BAC1362F41531"
+				item: "createaddition:rolling_mill"
+				type: "item"
+			}]
+			title: "Rolling Along"
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3B9E84A16963E755"]
+			description: ["The Alternator runs off Create rotational power to produce electricity. You can transfer power with IE wires or Powah cables (which have custom tiers)."]
+			id: "6B574C7F507B18CB"
+			tasks: [{
+				id: "6C0F8945D14D5D9C"
+				item: "createaddition:alternator"
+				type: "item"
+			}]
+			title: "Getting Powerful"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6B574C7F507B18CB"]
+			description: ["The Improved Blast Furnace can be built to allow automating the Blast Furnace. You can also add Preheaters to speed up crafting."]
+			icon: "immersiveengineering:blastbrick_reinforced"
+			id: "346BFE0E768D04E4"
+			rewards: [{
+				count: 16
+				id: "6C8A3BF732E7DB81"
+				item: "immersiveengineering:coal_coke"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 27L
+					id: "3E50398B4531F251"
+					item: { Count: 27, id: "immersiveengineering:blastbrick_reinforced" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "71A82A26453D0D80"
+					item: { Count: 2, id: "immersiveengineering:blastfurnace_preheater" }
+					type: "item"
+				}
+			]
+			title: "Faster Steel"
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["6B574C7F507B18CB"]
+			description: [
+				"The Engineer's Workbench lets you craft some new components, such as Iron Mechanical Components. They are needed for further crafts."
+				""
+				"You can automate this later on with an Automated Engineer's Workbench."
+			]
+			icon: "immersiveengineering:workbench"
+			id: "29B36D2F3D39B0E5"
+			tasks: [
+				{
+					id: "25393733F721C661"
+					item: "immersiveengineering:workbench"
+					type: "item"
+				}
+				{
+					id: "400C6CEDC817A4C5"
+					item: {
+						Count: 1
+						id: "immersiveengineering:blueprint"
+						tag: {
+							blueprint: "components"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6896901F62AE3B96"]
+			description: ["Red Alloy is an important alloy for electricity and redstone related operations."]
+			id: "3B9E84A16963E755"
+			rewards: [{
+				count: 8
+				id: "24A413BAC72CF2B1"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7F5038A29ADEEA24"
+				item: "immersiveengineering:rs_engineering"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29B36D2F3D39B0E5"]
+			description: ["These components let you build the first tier of Immersive Engineering's powered multiblocks."]
+			id: "4D720EE1BC5DB40E"
+			rewards: [{
+				count: 4
+				id: "6453DACDB22C7305"
+				item: "immersiveengineering:component_iron"
+				type: "item"
+			}]
+			tasks: [{
+				id: "10B872791C4D689E"
+				item: "immersiveengineering:light_engineering"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4D720EE1BC5DB40E"]
+			description: ["Redstone Acid is used for Energetic Alloy and some electronic components. It is made in the Mixer."]
+			icon: "immersiveengineering:redstone_acid_bucket"
+			id: "6C9260EEDC41F9A7"
+			rewards: [{
+				count: 16
+				id: "217A5BF39F03B6D4"
+				item: "kubejs:red_alloy_ingot"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 4L
+					id: "3CBAFF13C898AA91"
+					item: { Count: 4, id: "immersiveengineering:light_engineering" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1F0FAC42DCBFB5E1"
+					item: { Count: 4, id: "immersiveengineering:sheetmetal_iron" }
+					type: "item"
+				}
+				{
+					id: "69D3A1AF5FB340D4"
+					item: "immersiveengineering:rs_engineering"
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "61C030A0D2BFC904"
+					item: { Count: 5, id: "immersiveengineering:steel_scaffolding_standard" }
+					type: "item"
+				}
+				{
+					id: "6DDB17510BD7F52E"
+					item: "immersiveengineering:steel_fence"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "7D2BF6CA8A250857"
+					item: { Count: 3, id: "immersiveengineering:fluid_pipe" }
+					type: "item"
+				}
+				{
+					id: "3EC74DF24BD1B5B5"
+					item: "immersiveengineering:redstone_acid_bucket"
+					type: "item"
+				}
+			]
+			title: "Redstone Acid"
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["6C9260EEDC41F9A7"]
+			description: ["Energetic Alloy is used for the second tier of Powah Cables."]
+			id: "075AEB403329FD51"
+			rewards: [{
+				count: 8
+				id: "2DAFB8C018B2D8DE"
+				item: "kubejs:energetic_alloy_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "431407F8C7549DCB"
+				item: "kubejs:energetic_alloy_ingot"
+				type: "item"
+			}]
+			title: "Energetic Alloy"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4D720EE1BC5DB40E"]
+			description: [
+				"The Crusher can be used to get better yield from your ores and get byproducts."
+				""
+				"One of these is Nickel, which can be used to produce Invar and Constantan as alloys."
+			]
+			id: "5862FCB0880BDC1D"
+			rewards: [{
+				count: 4
+				id: "024338316BBFB9D3"
+				item: "immersiveengineering:light_engineering"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 10L
+					id: "295631ACED20CD78"
+					item: { Count: 10, id: "immersiveengineering:light_engineering" }
+					type: "item"
+				}
+				{
+					id: "43F905474B14B2F0"
+					item: "immersiveengineering:rs_engineering"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "6B2306F2AB685BF9"
+					item: { Count: 10, id: "immersiveengineering:steel_scaffolding_standard" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "454484B77304C82A"
+					item: { Count: 8, id: "immersiveengineering:steel_fence" }
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "1593285DB0EB786F"
+					item: { Count: 9, id: "minecraft:hopper" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "757D80052C80627C"
+					item: { Count: 8, id: "thermal:nickel_ingot" }
+					type: "item"
+				}
+			]
+			title: "Crusher"
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5862FCB0880BDC1D"]
+			description: ["Now that you have Invar, you can craft Kinetic Dynamos, which unlock the use of Waterwheels and Windmills for power generation."]
+			id: "2D3C338A5790DE28"
+			rewards: [{
+				count: 16
+				id: "36544D0BD9BE5A99"
+				item: "immersiveengineering:wirecoil_electrum"
+				type: "item"
+			}]
+			tasks: [{
+				id: "600034F95054A954"
+				item: "immersiveengineering:dynamo"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6B574C7F507B18CB"]
+			description: [
+				"The Accumulator is a multiblock that can store power. It works like the Create Fluid Tank, and needs the mod's own Connectors for power transfer. "
+				""
+				"You can upgrade it into singleblock Accumulators from Immersive Engineering, which are buffed to store more power."
+			]
+			id: "3FC3D7177A3CC1F8"
+			rewards: [{
+				id: "6D25059EA2388A7D"
+				item: "createaddition:modular_accumulator"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0C5D623E76437E01"
+				item: "createaddition:modular_accumulator"
+				type: "item"
+			}]
+			title: "Power Storage"
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5862FCB0880BDC1D"]
+			description: ["Heavy Engineering Blocks unlock some more advanced machines."]
+			id: "7C8B2A6CBE209314"
+			rewards: [{
+				count: 4
+				id: "082AF54D2B8B6448"
+				item: "immersiveengineering:component_steel"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3E96FE7424049D6A"
+				item: "immersiveengineering:heavy_engineering"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7C8B2A6CBE209314"]
+			description: [
+				"The Arc Furnace can smelt higher-tier materials and make some more advanced alloys."
+				""
+				"It needs Electrodes, which you can make in the Engineer's Workbench with a special blueprint."
+			]
+			icon: {
+				Count: 1
+				id: "immersiveengineering:graphite_electrode"
+				tag: {
+					graphDmg: 0
+				}
+			}
+			id: "014611E2E11520B2"
+			tasks: [
+				{
+					count: 8L
+					id: "33243A5C9B35C833"
+					item: { Count: 8, id: "immersiveengineering:sheetmetal_steel" }
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "1240BC243ADBF5A5"
+					item: { Count: 6, id: "thermal:steel_block" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "0081018DA6FFED4B"
+					item: { Count: 5, id: "immersiveengineering:heavy_engineering" }
+					type: "item"
+				}
+				{
+					id: "2A1B1C4ED09120D1"
+					item: "immersiveengineering:rs_engineering"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "2BE21039F700306C"
+					item: { Count: 10, id: "immersiveengineering:light_engineering" }
+					type: "item"
+				}
+				{
+					count: 27L
+					id: "3E35588F78AEFA1D"
+					item: { Count: 27, id: "immersiveengineering:blastbrick_reinforced" }
+					type: "item"
+				}
+				{
+					count: 14L
+					id: "64DDE39B312D025F"
+					item: { Count: 14, id: "immersiveengineering:slab_sheetmetal_steel" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "12582A3E43E091F0"
+					item: { Count: 5, id: "immersiveengineering:steel_scaffolding_standard" }
+					type: "item"
+				}
+				{
+					id: "7C3767709DFB7A26"
+					item: "minecraft:cauldron"
+					type: "item"
+				}
+				{
+					id: "7169F110516E7160"
+					item: {
+						Count: 1
+						id: "immersiveengineering:blueprint"
+						tag: {
+							blueprint: "electrode"
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "570B536BC60660EB"
+					item: { Count: 8, id: "immersiveengineering:ingot_aluminum" }
+					type: "item"
+				}
+			]
+			title: "Arc Furnace"
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"075AEB403329FD51"
+				"014611E2E11520B2"
+				"469B27E17669DF13"
+			]
+			description: ["Vibrant Alloy is used for the third tier of Powah Cables. It requires an Arc Furnace, as well as Blazing Blood."]
+			id: "577BD027309EC30B"
+			rewards: [{
+				count: 8
+				id: "2E0045720550E632"
+				item: "kubejs:vibrant_alloy_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2D68C7BDF6634BA3"
+				item: "kubejs:vibrant_alloy_ingot"
+				type: "item"
+			}]
+			title: "Vibrant Alloy"
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7C8B2A6CBE209314"]
+			description: ["Duroplast is a special type of plastic used for Advanced Electronic Components. It requires multiple steps, but the catalysts in the Refinery are not consumed for each craft."]
+			id: "141B5402AFA073E1"
+			rewards: [{
+				count: 8
+				id: "6350F09A136E8EAB"
+				item: "immersiveengineering:plate_duroplast"
+				type: "item"
+			}]
+			tasks: [{
+				id: "58377B2F0F367203"
+				item: "immersiveengineering:plate_duroplast"
+				type: "item"
+			}]
+			title: "Duroplast"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["014611E2E11520B2"]
+			description: [
+				"Thermoelectric Generators are very easy to set up, as they just rely on the gradient between the hot and cold ends. Due to this, they need some progression to unlock, as they are effectively free power."
+				""
+				"You can use Blazing Blood for this, it has a temperature of 2500K."
+			]
+			id: "14900EDEEB077667"
+			tasks: [{
+				id: "77955D29806928B1"
+				item: "immersiveengineering:thermoelectric_generator"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			description: ["Ender Eyes require Blazing Blood, so going to the End may be slightly trickier. The bossfight itself is the same though."]
+			id: "469B27E17669DF13"
+			rewards: [{
+				count: 4
+				id: "468D7F214DBCD130"
+				item: "minecraft:ender_eye"
+				type: "item"
+			}]
+			tasks: [{
+				id: "32279E3AEF796493"
+				item: "minecraft:ender_eye"
+				type: "item"
+			}]
+			title: "The End of the World"
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["014611E2E11520B2"]
+			description: [
+				"Netherite has a special recipe. It requires the Arc Furnace, but the actual alloys that go into it require a Superheated Mixer. "
+				""
+				"This means you will need to provide Blaze Cakes to your Blaze Burner, as you can't make a Straw until you get Plastic."
+			]
+			id: "4BB169A6E71ED26B"
+			require_sequential_tasks: false
+			rewards: [{
+				count: 4
+				id: "38B8261645334344"
+				item: "create:blaze_cake"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1C941C59CCE586E0"
+				item: "minecraft:netherite_ingot"
+				type: "item"
+			}]
+			title: "Netherite"
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5862FCB0880BDC1D"]
+			description: ["The Steam Engine is a better way of producing rotational power for your Create machines. It relies on Blaze Burners, and produces more power if the burners are super-heated."]
+			id: "5BDD5FA450E6FD08"
+			rewards: [{
+				count: 4
+				id: "7EACEC236E4A209F"
+				item: "create:empty_blaze_burner"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1E3883ADC7B7A560"
+				item: "create:steam_engine"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4BB169A6E71ED26B"]
+			description: ["The Diesel Generator can produce 4096 RF/t using a steady supply of Biodiesel."]
+			id: "1FC25D06A4B62839"
+			rewards: [{
+				count: 16
+				id: "65D5616ACA20AB8C"
+				item: "immersiveengineering:light_bulb"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 9L
+					id: "452DB7FFFFA04539"
+					item: { Count: 9, id: "immersiveengineering:radiator" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "254DE0C631DC0EA4"
+					item: { Count: 4, id: "immersiveengineering:generator" }
+					type: "item"
+				}
+				{
+					count: 13L
+					id: "6B342FC357796673"
+					item: { Count: 13, id: "immersiveengineering:heavy_engineering" }
+					type: "item"
+				}
+				{
+					id: "7B4BD35E481A0AE2"
+					item: "immersiveengineering:rs_engineering"
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "69611F72A591E6E2"
+					item: { Count: 6, id: "immersiveengineering:steel_scaffolding_standard" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "4BA89CA1B32D7057"
+					item: { Count: 5, id: "immersiveengineering:fluid_pipe" }
+					type: "item"
+				}
+			]
+			title: "Diesel Generator"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7C8B2A6CBE209314"]
+			description: ["The Metal Press lets you make plates, rods, wires, and gears automatically. Gears are significantly easier with this machine."]
+			id: "0CA79C57435638FF"
+			rewards: [{
+				count: 16
+				id: "1B3A7235C078AB96"
+				item: "thermal:steel_plate"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "31DB04A885AFDF9F"
+					item: "immersiveengineering:rs_engineering"
+					type: "item"
+				}
+				{
+					id: "1ED1143BD3E0E76A"
+					item: "minecraft:piston"
+					type: "item"
+				}
+				{
+					id: "43175EE70C387D14"
+					item: "immersiveengineering:heavy_engineering"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "43837A4698B598B0"
+					item: { Count: 2, id: "immersiveengineering:steel_scaffolding_standard" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "2E33D32E27F618D8"
+					item: { Count: 2, id: "immersiveengineering:conveyor_basic" }
+					type: "item"
+				}
+			]
+			title: "Metal Press"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4BB169A6E71ED26B"]
+			description: ["The Excavator lets you automate the production of ores. They use 4096 RF/t, and the ore veins have an infinite supply."]
+			id: "6F26CFE3531A641B"
+			tasks: [
+				{
+					count: 16L
+					id: "63B22719372D47E7"
+					item: { Count: 16, id: "immersiveengineering:sheetmetal_steel" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "4CF09FBF707C23D1"
+					item: { Count: 3, id: "immersiveengineering:radiator" }
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "484700E51613C2A1"
+					item: { Count: 9, id: "immersiveengineering:light_engineering" }
+					type: "item"
+				}
+				{
+					id: "16E3150C1A30B773"
+					item: "immersiveengineering:rs_engineering"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "31ED7F15825E2582"
+					item: { Count: 4, id: "immersiveengineering:heavy_engineering" }
+					type: "item"
+				}
+				{
+					count: 26L
+					id: "7448BF967EE60148"
+					item: { Count: 26, id: "immersiveengineering:steel_scaffolding_standard" }
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "470DCE1E9635FA94"
+					item: { Count: 9, id: "thermal:steel_block" }
+					type: "item"
+				}
+				{
+					id: "0140274E29AB83E6"
+					item: "immersiveengineering:sample_drill"
+					type: "item"
+				}
+			]
+			title: "Excavator"
+			x: 4.0d
+			y: 0.0d
+		}
+	]
 	title: "Chapter 2: Age of Electricity"
 }

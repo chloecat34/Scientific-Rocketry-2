@@ -410,4 +410,14 @@ ServerEvents.recipes((event) => {
 	event.replaceInput({ output: "immersiveengineering:coil_lv"}, "#forge:ingots/iron", "create:copper_casing");
 	event.replaceInput({ output: "immersiveengineering:coil_mv"}, "#forge:ingots/iron", "create:brass_casing");
 	event.replaceInput({ output: "immersiveengineering:coil_hv"}, "#forge:ingots/iron", "create:railway_casing");
+
+	// IE wiring
+	event.replaceInput({ output: "immersiveengineering:connector_redstone"}, "#forge:nuggets/electrum", "#forge:nuggets/red_alloy");
+
+	// Blazing blood for thermoelectrics
+	event.custom({
+		type: "immersiveengineering:thermoelectric_source",
+		singleFluid: "tconstruct:blazing_blood",
+		tempKelvin: 2500
+	});
 });

@@ -64,7 +64,8 @@ ServerEvents.recipes((event) => {
         "#forge:storage_blocks/raw_aluminum",
         "#forge:storage_blocks/raw_cobalt",
         "#forge:storage_blocks/raw_uranium",
-        "ad_astra:moon_cheese_ore"
+        "ad_astra:moon_cheese_ore",
+        "#forge:ores/black_quartz"
     ].forEach(rawOre => {
         event.remove({
             input: rawOre,
@@ -286,7 +287,8 @@ ServerEvents.recipes((event) => {
         ["#forge:ores/niter", "thermal:niter", "thermal:niter", "thermal:niter", 2, 1],
         ["#forge:ores/ruby", "thermal:ruby", "thermal:cinnabar", "thermal:cinnabar", 1, 1],
         ["#forge:ores/sapphire", "thermal:sapphire", "thermal:apatite", "thermal:apatite", 1, 1],
-        ["#forge:ores/cheese", "ad_astra:cheese", "ad_astra:cheese", "ad_astra:cheese", 1, 3]
+        ["#forge:ores/cheese", "ad_astra:cheese", "ad_astra:cheese", "ad_astra:cheese", 1, 3],
+        ["#forge:ores/black_quartz", "actuallyadditions:black_quartz", "thermal:quartz_dust", "minecraft:quartz", 1, 1]
     ].forEach(entry => {
         const [ore, primary, byproduct1, byproduct2, baseAmount, tier] = entry;
 

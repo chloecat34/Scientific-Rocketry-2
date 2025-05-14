@@ -358,6 +358,12 @@
 			description: ["Make a Blast Furnace out of Blast Bricks. This multiblock turns iron and coke into steel, a very important material."]
 			icon: "immersiveengineering:blastbrick"
 			id: "508CE71920CDF407"
+			rewards: [{
+				count: 16
+				id: "7FE339C7E1BEE4BD"
+				item: "thermal:steel_ingot"
+				type: "item"
+			}]
 			tasks: [
 				{
 					count: 27L
