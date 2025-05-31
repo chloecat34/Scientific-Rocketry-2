@@ -145,6 +145,11 @@ StartupEvents.registry("item", event => {
         .tag("forge:gears")
         .tag("forge:gears/cobalt");
 
+    event.create("zinc_rod")
+        .displayName("Zinc Rod")
+        .tag("forge:rods")
+        .tag("forge:rods/zinc");
+
     event.create("coagulated_blood")
         .displayName("Coagulated Blood")
         .tag("forge:slimeballs")

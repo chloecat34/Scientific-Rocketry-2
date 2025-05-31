@@ -16,6 +16,9 @@ ServerEvents.tags("item", event => {
     // Ingot cast works in blast chiller
     event.add("thermal:crafting/casts", "tconstruct:ingot_cast");
     event.add("thermal:crafting/casts", "tconstruct:gem_cast");
+
+    event.remove("forge:dusts/wood", "immersiveengineering:dust_wood");
+    event.remove("forge:dusts/wood", "mekanism:sawdust");
 });
 
 ServerEvents.tags("fluid", event => {

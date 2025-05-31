@@ -368,4 +368,16 @@ ServerEvents.recipes((event) => {
         "D": "#forge:rods/copper",
         "E": "createaddition:capacitor"
     });
+
+    // Spool
+    event.remove({ output: "createaddition:spool" });
+
+    event.recipes.shaped("4x createaddition:spool", [
+        "A",
+        "B",
+        "A"
+    ], {
+        "A": "#forge:plates/zinc",
+        "B": "#forge:rods/zinc"
+    });
 });

@@ -10,6 +10,17 @@ StartupEvents.registry("block", event => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_stone_tool");
 
+    event.create("nether_copper_ore")
+        .displayName("Nether Copper Ore")
+        .material("stone")
+        .hardness(3.0)
+        .resistance(3.0)
+        .tag("forge:ores")
+        .tag("forge:ores/copper")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_stone_tool");
+
     event.create("platinum_block")
         .displayName("Platinum Block")
         .material("metal")

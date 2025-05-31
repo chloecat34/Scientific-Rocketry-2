@@ -316,4 +316,8 @@ ServerEvents.recipes((event) => {
 
     event.recipes.remove({ id: "create:milling/lapis_lazuli" });
     event.recipes.createCrushing("thermal:lapis_dust", "#forge:gems/lapis");
+
+    // Sawdust fix
+    event.replaceOutput({}, "immersiveengineering:dust_wood", "thermal:sawdust");
+    event.replaceOutput({}, "mekanism:sawdust", "thermal:sawdust");
 });

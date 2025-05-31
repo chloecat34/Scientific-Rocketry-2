@@ -117,7 +117,9 @@ JEIEvents.hideItems((event) => {
 		"actuallyadditions:crusher",
 		"actuallyadditions:crusher_double",
 		"kubejs:incomplete_electronic_component",
-		"kubejs:incomplete_adv_electronic_component"
+		"kubejs:incomplete_adv_electronic_component",
+		"mekanism:sawdust",
+		"immersiveengineering:dust_wood"
 	];
 
 	itemsToRemove.forEach(item => event.hide(item));
