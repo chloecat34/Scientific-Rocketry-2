@@ -346,6 +346,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:nuggets/zinc", "tconstruct:molten_zinc", 10, 600);
     crucibleMelting("#forge:storage_blocks/zinc", "tconstruct:molten_zinc", 810, 4800 * 9);
     crucibleMelting("#forge:plates/zinc", "tconstruct:molten_zinc", 90, 4800);
+    crucibleMelting("#forge:rods/zinc", "tconstruct:molten_zinc", 45, 2400);
     chillerIngotCasting("#forge:ingots/zinc", "tconstruct:molten_zinc", 90, 4800);
     chillerBlockCasting("create:zinc_block", "tconstruct:molten_zinc", 810, 4800 * 9);
 
