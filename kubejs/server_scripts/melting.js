@@ -224,25 +224,11 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:storage_blocks/hepatizon", "tconstruct:molten_hepatizon", 810, 4800 * 9);
     chillerBlockCasting("tconstruct:hepatizon_block", "tconstruct:molten_hepatizon", 810, 4800 * 9);
 
-    // Hepatizon recipe
-    event.remove({ output: "tconstruct:hepatizon_ingot", type: "create:mixing" });
-    event.remove({ output: "tconstruct:hepatizon_ingot", type: "thermal:smelter" });
-
-    event.recipes.createMixing("2x tconstruct:hepatizon_ingot", ["2x #forge:ingots/amethyst_bronze", "#forge:ingots/cobalt", "2x create:polished_rose_quartz"]).superheated();
-    event.recipes.thermal.smelter("2x tconstruct:hepatizon_ingot", ["2x #forge:ingots/amethyst_bronze", "#forge:ingots/cobalt", "2x create:polished_rose_quartz"]).energy(16000);
-
     // Molten queen's slime
     crucibleMelting("#forge:ingots/queens_slime", "tconstruct:molten_queens_slime", 90, 4800);
     crucibleMelting("#forge:nuggets/queens_slime", "tconstruct:molten_queens_slime", 10, 600);
     crucibleMelting("#forge:storage_blocks/queens_slime", "tconstruct:molten_queens_slime", 810, 4800 * 9);
     chillerBlockCasting("tconstruct:queens_slime_block", "tconstruct:molten_queens_slime", 810, 4800 * 9);
-
-    // Queen's slime recipe
-    event.remove({ output: "tconstruct:queens_slime_ingot", type: "create:mixing" });
-    event.remove({ output: "tconstruct:queens_slime_ingot", type: "thermal:smelter" });
-
-    event.recipes.createMixing("2x tconstruct:queens_slime_ingot", ["#forge:ingots/cobalt", "#forge:ingots/rose_gold", Fluid.of("kubejs:ichorslime", 250)]).superheated();
-    event.recipes.thermal.smelter("2x tconstruct:queens_slime_ingot", ["#forge:ingots/cobalt", "#forge:ingots/rose_gold", "tconstruct:ichor_slime_ball"]).energy(16000);
 
     // Molten netherite
     crucibleMelting("#forge:ingots/netherite", "tconstruct:molten_netherite", 90, 4800);
@@ -253,43 +239,11 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:plates/netherite", "tconstruct:molten_netherite", 90, 4800);
     chillerBlockCasting("minecraft:netherite_block", "tconstruct:molten_netherite", 810, 4800 * 9);
 
-    event.custom({
-        "type": "immersiveengineering:arc_furnace",
-        "additives": [
-            {
-                "item": "tconstruct:slimesteel_ingot"
-            },
-
-            {
-                "item": "tconstruct:hepatizon_ingot"
-            },
-
-            {
-                "item": "tconstruct:queens_slime_ingot"
-            },
-
-            {
-                "item": "tconstruct:knightslime_ingot"
-            }
-        ],
-        "energy": 102400,
-        "input": { "base_ingredient": { "tag": "forge:ingots/manyullyn" }, "count": 1 },
-        "results": [{ "base_ingredient": { "tag": "forge:ingots/netherite" }, "count": 1 }],
-        "time": 100
-    })
-
-    // Netherite recipe
-    event.remove({ output: "minecraft:netherite_ingot", input: "minecraft:netherite_scrap" });
-    event.remove({ output: "#forge:dusts/netherite", input: "minecraft:netherite_scrap" });
-
     // Knightslime recipes
     addBothMelterRecipes("tconstruct:knightslime_ingot", "tconstruct:molten_knightslime", 90, 72, 1200, 4800);
     addBothMelterRecipes("tconstruct:knightslime_block", "tconstruct:molten_knightslime", 810, 216, 1200, 4800 * 9);
     addBothMelterRecipes("tconstruct:knightslime_nugget", "tconstruct:molten_knightslime", 10, 24, 1200, 600);
     chillerBlockCasting("tconstruct:knightslime_block", "tconstruct:molten_knightslime", 810, 4800 * 9);
-
-    event.recipes.createMixing("2x tconstruct:knightslime_ingot", ["#forge:ingots/steel", "#forge:ingots/netherite_scrap", Fluid.of("tconstruct:ender_slime", 250)]).superheated();
-    event.recipes.thermal.smelter("2x tconstruct:knightslime_ingot", ["#forge:ingots/steel", "#forge:ingots/netherite_scrap", "tconstruct:ender_slime_ball"]).energy(16000);
 
     // Molten tin
     crucibleMelting("#forge:ingots/tin", "tconstruct:molten_tin", 90, 4800);
@@ -428,9 +382,6 @@ ServerEvents.recipes((event) => {
     chillerIngotCasting("#forge:ingots/enderium", "tconstruct:molten_enderium", 90, 4800);
     chillerBlockCasting("thermal:enderium_block", "tconstruct:molten_enderium", 810, 4800 * 9);
 
-    // Enderium recipes
-    event.remove({ output: "thermal:enderium_ingot", input: "thermal:diamond_dust", type: "thermal:smelter" });
-
     // Molten lumium
     crucibleMelting("#forge:ingots/lumium", "tconstruct:molten_lumium", 90, 4800);
     crucibleMelting("#forge:nuggets/lumium", "tconstruct:molten_lumium", 10, 600);
@@ -441,9 +392,6 @@ ServerEvents.recipes((event) => {
     chillerIngotCasting("#forge:ingots/lumium", "tconstruct:molten_lumium", 90, 4800);
     chillerBlockCasting("thermal:lumium_block", "tconstruct:molten_lumium", 810, 4800 * 9);
 
-    // Lumium recipes
-    event.remove({ output: "thermal:lumium_ingot", input: "#forge:dusts/glowstone", type: "thermal:smelter" });
-
     // Molten signalum
     crucibleMelting("#forge:ingots/signalum", "tconstruct:molten_signalum", 90, 4800);
     crucibleMelting("#forge:nuggets/signalum", "tconstruct:molten_signalum", 10, 600);
@@ -453,9 +401,6 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:plates/signalum", "tconstruct:molten_signalum", 90, 4800);
     chillerIngotCasting("#forge:ingots/signalum", "tconstruct:molten_signalum", 90, 4800);
     chillerBlockCasting("thermal:signalum_block", "tconstruct:molten_signalum", 810, 4800 * 9);
-
-    // Signalum recipes
-    event.remove({ output: "thermal:signalum_ingot", input: "#forge:dusts/redstone", type: "thermal:smelter" });
 
     // Molten bronze
     crucibleMelting("#forge:ingots/bronze", "tconstruct:molten_bronze", 90, 4800);

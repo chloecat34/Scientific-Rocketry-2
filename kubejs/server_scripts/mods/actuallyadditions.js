@@ -41,4 +41,6 @@ ServerEvents.recipes((event) => {
             weight: weight
         });
     }
+
+    // Black quartz
 });

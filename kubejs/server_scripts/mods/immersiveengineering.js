@@ -3,10 +3,6 @@ ServerEvents.recipes((event) => {
 	event.remove({ output: "immersiveengineering:alloybrick" });
 	event.remove({ output: "immersiveengineering:slab_alloybrick" });
 
-	// Remove rose gold from arc furnace recipes
-	event.remove({ id: "immersiveengineering:arcfurnace/alloy_rose_gold" });
-	event.remove({ id: "immersiveengineering:arcfurnace/dust_rose_gold" });
-
 	// Remove treated wood handcrafting
 	event.remove({ id: "immersiveengineering:crafting/treated_wood_horizontal"});
 	event.remove({ id: "tconstruct:compat/immersiveengineering/treated_wood"});
