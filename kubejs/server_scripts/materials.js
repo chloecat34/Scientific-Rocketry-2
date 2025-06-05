@@ -142,6 +142,11 @@ ServerEvents.recipes((event) => {
         "#forge:slimeball/ender"
     ], "#forge:ingots/knightslime", 2, 51200, 100);
 
+    // Amethyst bronze
+    createArcFurnaceRecipe("#forge:ingots/copper", 1, [
+        "#forge:gems/amethyst"
+    ], "#forge:ingots/amethyst_bronze", 1, 51200, 100);
+
     // Enderium
     event.remove({ output: "thermal:enderium_ingot", input: "thermal:diamond_dust", type: "thermal:smelter" });
 
