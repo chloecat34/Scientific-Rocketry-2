@@ -1,7 +1,54 @@
 ServerEvents.recipes((event) => {
+    // Creates a proper json item from the given input item
+    const createJsonItem = (item) => {
+        if (item[0] == "#") {
+            return {
+                "tag": item.slice(1, item.length)
+            };
+        } else {
+            return {
+                "item": item
+            };
+        }
+    }
+
+    // Creates an arc furnace recipe
+    // Provide base, additives, and output with strings instead of json items
+    const createArcFurnaceRecipe = (base, base_count, additives, output, output_count, energy, time) => {
+        event.custom({
+            "type": "immersiveengineering:arc_furnace",
+            "additives": additives.map(createJsonItem),
+            "energy": energy,
+            "input": { "base_ingredient": createJsonItem(base), "count": base_count },
+            "results": [{ "base_ingredient": createJsonItem(output), "count": output_count }],
+            "time": time
+        });
+    }
+
     // Red alloy
     event.recipes.createFilling("kubejs:red_alloy_ingot", ["#forge:ingots/copper", Fluid.of("thermal:redstone", 400)]);
     event.recipes.thermal.smelter("2x kubejs:red_alloy_ingot", ["#forge:ingots/copper", "4x minecraft:redstone"]).energy(4800);
+
+    event.custom({
+        "type": "pneumaticcraft:thermo_plant",
+        "exothermic": false,
+        "fluid_input": {
+            "type": "pneumaticcraft:fluid",
+            "amount": 200,
+            "fluid": "thermal:redstone"
+        },
+        "item_input": {
+            "tag": "forge:ingots/copper"
+        },
+        "item_output": {
+            "count": 1,
+            "item": "kubejs:red_alloy_ingot"
+        },
+        "pressure": 2.0,
+        "temperature": {
+            "min_temp": 273
+        }
+    });
 
     // Electrotine
     event.custom({
@@ -28,25 +75,16 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal.smelter("kubejs:energetic_alloy_ingot", ["#forge:ingots/electrum", "2x kubejs:energetic_blend"]).energy(6400);
 
     // Vibrant alloy
-    event.custom({
-        "type": "immersiveengineering:arc_furnace",
-        "additives": [
-            {
-                "item": "minecraft:ender_eye"
-            }
-        ],
-        "energy": 102400,
-        "input": { "base_ingredient": { "tag": "forge:ingots/energetic_alloy" }, "count": 1 },
-        "results": [{ "base_ingredient": { "tag": "forge:ingots/vibrant_alloy" }, "count": 1 }],
-        "time": 100
-    })
+    createArcFurnaceRecipe("#forge:ingots/energetic_alloy", 1, ["minecraft:ender_eye"], "#forge:ingots/vibrant_alloy", 1, 102400, 100);
 
     event.recipes.thermal.smelter("kubejs:vibrant_alloy_ingot", ["#forge:ingots/energetic_alloy", "minecraft:ender_eye"]).energy(9600);
-
 
 	// Remove rose gold from arc furnace recipes
 	event.remove({ id: "immersiveengineering:arcfurnace/alloy_rose_gold" });
 	event.remove({ id: "immersiveengineering:arcfurnace/dust_rose_gold" });
+
+    // Rose gold arc furnace
+    createArcFurnaceRecipe("#forge:ingots/copper", 1, ["#forge:ingots/gold"], "thermal:rose_gold_ingot", 2, 51200, 100);
 
 	// Replace rose gold with thermal rose gold
 	event.replaceOutput({}, "tconstruct:rose_gold_ingot", "thermal:rose_gold_ingot");
@@ -67,31 +105,30 @@ ServerEvents.recipes((event) => {
     event.recipes.createMixing("2x tconstruct:queens_slime_ingot", ["#forge:ingots/cobalt", "#forge:ingots/rose_gold", Fluid.of("kubejs:ichorslime", 250)]).superheated();
     event.recipes.thermal.smelter("2x tconstruct:queens_slime_ingot", ["#forge:ingots/cobalt", "#forge:ingots/rose_gold", "tconstruct:ichor_slime_ball"]).energy(16000);
 
+    createArcFurnaceRecipe("#forge:ingots/cobalt", 1, [
+        "#forge:ingots/rose_gold",
+        "#forge:slimeball/ichor"
+    ], "#forge:ingots/queens_slime", 2, 51200, 100);
+
+    // Slimesteel recipes
+    event.remove({ output: "tconstruct:slimesteel_ingot", type: "create:mixing" });
+    event.remove({ output: "tconstruct:slimesteel_ingot", type: "thermal:smelter" });
+
+    event.recipes.createMixing("2x tconstruct:slimesteel_ingot", ["#forge:ingots/steel", "tconstruct:seared_brick", Fluid.of("tconstruct:sky_slime", 250)]).heated();
+    event.recipes.thermal.smelter("2x tconstruct:slimesteel_ingot", ["#forge:ingots/steel", "tconstruct:seared_brick", "tconstruct:sky_slime_ball"]).energy(9600);
+
+    createArcFurnaceRecipe("#forge:ingots/steel", 1, [
+        "tconstruct:seared_brick",
+        "#forge:slimeball/sky"
+    ], "#forge:ingots/slimesteel", 2, 51200, 100);
+
     // Netherite recipe
-    event.custom({
-        "type": "immersiveengineering:arc_furnace",
-        "additives": [
-            {
-                "item": "tconstruct:slimesteel_ingot"
-            },
-
-            {
-                "item": "tconstruct:hepatizon_ingot"
-            },
-
-            {
-                "item": "tconstruct:queens_slime_ingot"
-            },
-
-            {
-                "item": "tconstruct:knightslime_ingot"
-            }
-        ],
-        "energy": 102400,
-        "input": { "base_ingredient": { "tag": "forge:ingots/manyullyn" }, "count": 1 },
-        "results": [{ "base_ingredient": { "tag": "forge:ingots/netherite" }, "count": 1 }],
-        "time": 100
-    })
+    createArcFurnaceRecipe("#forge:ingots/manyullyn", 1, [
+        "tconstruct:slimesteel_ingot",
+        "tconstruct:hepatizon_ingot",
+        "tconstruct:queens_slime_ingot",
+        "tconstruct:knightslime_ingot"
+    ], "#forge:ingots/netherite", 1, 102400, 100);
 
     event.remove({ output: "minecraft:netherite_ingot", input: "minecraft:netherite_scrap" });
     event.remove({ output: "#forge:dusts/netherite", input: "minecraft:netherite_scrap" });
@@ -99,6 +136,11 @@ ServerEvents.recipes((event) => {
     // Knightslime
     event.recipes.createMixing("2x tconstruct:knightslime_ingot", ["#forge:ingots/steel", "#forge:ingots/netherite_scrap", Fluid.of("tconstruct:ender_slime", 250)]).superheated();
     event.recipes.thermal.smelter("2x tconstruct:knightslime_ingot", ["#forge:ingots/steel", "#forge:ingots/netherite_scrap", "tconstruct:ender_slime_ball"]).energy(16000);
+
+    createArcFurnaceRecipe("#forge:ingots/steel", 1, [
+        "#forge:ingots/netherite_scrap",
+        "#forge:slimeball/ender"
+    ], "#forge:ingots/knightslime", 2, 51200, 100);
 
     // Enderium
     event.remove({ output: "thermal:enderium_ingot", input: "thermal:diamond_dust", type: "thermal:smelter" });

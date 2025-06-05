@@ -149,13 +149,6 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:storage_blocks/slimesteel", "tconstruct:molten_slimesteel", 810, 4800 * 9);
     chillerBlockCasting("tconstruct:slimesteel_block", "tconstruct:molten_slimesteel", 810, 4800 * 9);
 
-    // Slimesteel recipes
-    event.remove({ output: "tconstruct:slimesteel_ingot", type: "create:mixing" });
-    event.remove({ output: "tconstruct:slimesteel_ingot", type: "thermal:smelter" });
-
-    event.recipes.createMixing("2x tconstruct:slimesteel_ingot", ["#forge:ingots/steel", "tconstruct:seared_brick", Fluid.of("tconstruct:sky_slime", 250)]).heated();
-    event.recipes.thermal.smelter("2x tconstruct:slimesteel_ingot", ["#forge:ingots/steel", "tconstruct:seared_brick", "tconstruct:sky_slime_ball"]).energy(9600);
-
     // Molten amethyst bronze
     crucibleMelting("#forge:ingots/amethyst_bronze", "tconstruct:molten_amethyst_bronze", 90, 4800);
     crucibleMelting("#forge:nuggets/amethyst_bronze", "tconstruct:molten_amethyst_bronze", 10, 600);

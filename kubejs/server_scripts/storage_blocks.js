@@ -54,8 +54,6 @@ ServerEvents.recipes((event) => {
 	addPacking2x2("tconstruct:sky_slime_crystal", "tconstruct:sky_slime_crystal_block");
 	addPacking2x2("tconstruct:ichor_slime_crystal", "tconstruct:ichor_slime_crystal_block");
 	addPacking2x2("tconstruct:ender_slime_crystal", "tconstruct:ender_slime_crystal_block");
-	addPacking("avaritia:neutronium_ingot", "avaritia:neutronium_block");
-	addPacking("avaritia:infinity_ingot", "avaritia:infinity_block");
 	addPacking2x2("#forge:gems/certus_quartz", "#forge:storage_blocks/certus_quartz");
 	addPacking2x2("#forge:gems/fluix", "ae2:fluix_block");
 	addPacking("advanced_ae:quantum_alloy", "advanced_ae:quantum_alloy_block");
@@ -64,8 +62,6 @@ ServerEvents.recipes((event) => {
 	["desh", "ostrum", "calorite", "prismalium", "melodium", "stellarium"].forEach(material => {
 		addPacking(`#forge:nuggets/${material}`, `#forge:ingots/${material}`);
 	});
-
-	addPacking("avaritia:neutronium_nugget", "avaritia:neutronium_ingot");
 
 	addPacking("kubejs:platinum_nugget", "kubejs:platinum_ingot");
 	addPacking("kubejs:platinum_ingot", "kubejs:platinum_block");

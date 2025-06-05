@@ -49,6 +49,27 @@ ServerEvents.recipes((event) => {
     event.recipes.createFilling("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 400)]);
     event.recipes.thermal.bottler("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 400)]).energy(8000);
 
+    event.custom({
+        "type": "pneumaticcraft:thermo_plant",
+        "exothermic": false,
+        "fluid_input": {
+            "type": "pneumaticcraft:fluid",
+            "amount": 400,
+            "fluid": "thermal:redstone"
+        },
+        "item_input": {
+            "tag": "forge:gems/quartz"
+        },
+        "item_output": {
+            "count": 1,
+            "item": "create:rose_quartz"
+        },
+        "pressure": 2,
+        "temperature": {
+            "min_temp": 273
+        }
+    });
+
     // Blaze burner
     event.remove({ output: "create:empty_blaze_burner" });
 

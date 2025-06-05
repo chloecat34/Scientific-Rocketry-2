@@ -243,8 +243,6 @@ ServerEvents.recipes((event) => {
 	});
 
 	// Reinforced blast brick
-	event.remove({ id: "immersiveengineering:crafting/blastbrick_reinforced" });
-
     event.recipes.mekanism.combining("immersiveengineering:blastbrick_reinforced", "immersiveengineering:blastbrick", "#forge:plates/steel");
 
 	// Slag glass
