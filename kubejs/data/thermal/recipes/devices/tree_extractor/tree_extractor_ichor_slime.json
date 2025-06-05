@@ -1,0 +1,18 @@
+{
+    "type": "thermal:tree_extractor",
+    "trunk": {
+        "Name": "tconstruct:bloodshroom_log"
+    },
+    "leaves": {
+        "Name": "tconstruct:blood_slime_leaves"
+    },
+    "sapling": "tconstruct:blood_slime_sapling",
+    "min_height": 4,
+    "max_height": 24,
+    "min_leaves": 8,
+    "max_leaves": 48,
+    "result": {
+        "fluid": "kubejs:ichorslime",
+        "amount": 25
+    }
+}

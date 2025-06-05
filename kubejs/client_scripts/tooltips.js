@@ -142,4 +142,7 @@ ItemEvents.tooltip(event => {
     t2OreTooltip("minecraft:ancient_debris", 1);
     t2OreTooltip("tconstruct:raw_cobalt", 1);
     t2OreTooltip("tconstruct:cobalt_ore", 1);
+
+    // Arboreal extractor tooltip
+    addTooltip("thermal:device_tree_extractor", "Works with artificial trees", Text.green, 1);
 });

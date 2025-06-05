@@ -89,4 +89,49 @@ ServerEvents.recipes((event) => {
         "output": "{Amount:4,FluidName:\"thermal:latex\"}",
         "result": "thermal:stripped_rubberwood_log"
     });
+
+    // Slime trees
+    event.custom({
+        "type": "industrialforegoing:fluid_extractor",
+        "breakChance": 0.01,
+        "defaultRecipe": false,
+        "input": {
+            "item": "tconstruct:greenheart_log"
+        },
+        "output": "{Amount:4,FluidName:\"tconstruct:earth_slime\"}",
+        "result": "tconstruct:stripped_greenheart_log"
+    });
+
+    event.custom({
+        "type": "industrialforegoing:fluid_extractor",
+        "breakChance": 0.01,
+        "defaultRecipe": false,
+        "input": {
+            "item": "tconstruct:skyroot_log"
+        },
+        "output": "{Amount:4,FluidName:\"tconstruct:sky_slime\"}",
+        "result": "tconstruct:stripped_skyroot_log"
+    });
+
+    event.custom({
+        "type": "industrialforegoing:fluid_extractor",
+        "breakChance": 0.01,
+        "defaultRecipe": false,
+        "input": {
+            "item": "tconstruct:enderbark_log"
+        },
+        "output": "{Amount:4,FluidName:\"tconstruct:ender_slime\"}",
+        "result": "tconstruct:stripped_enderbark_log"
+    });
+
+    event.custom({
+        "type": "industrialforegoing:fluid_extractor",
+        "breakChance": 0.01,
+        "defaultRecipe": false,
+        "input": {
+            "item": "tconstruct:bloodshroom_log"
+        },
+        "output": "{Amount:4,FluidName:\"kubejs:ichorslime\"}",
+        "result": "tconstruct:stripped_bloodshroom_log"
+    });
 });
