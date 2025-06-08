@@ -73,4 +73,6 @@ ServerEvents.recipes((event) => {
 	addPacking("kubejs:energetic_alloy_ingot", "kubejs:energetic_alloy_block");
 	addPacking("kubejs:vibrant_alloy_nugget", "kubejs:vibrant_alloy_ingot");
 	addPacking("kubejs:vibrant_alloy_ingot", "kubejs:vibrant_alloy_block");
+	addPacking("kubejs:electrical_steel_nugget", "kubejs:electrical_steel_ingot");
+	addPacking("kubejs:electrical_steel_ingot", "kubejs:electrical_steel_block");
 });

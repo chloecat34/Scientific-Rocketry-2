@@ -64,4 +64,15 @@ StartupEvents.registry("block", event => {
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_iron_tool");
+
+    event.create("electrical_steel_block")
+        .displayName("Electrical Steel Block")
+        .material("metal")
+        .hardness(5.0)
+        .resistance(30.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/electrical_steel")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
 });

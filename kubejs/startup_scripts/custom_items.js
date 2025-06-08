@@ -1,4 +1,7 @@
 StartupEvents.registry("item", event => {
+    // Function that capitalizes a word
+    const capitalize = word => word[0].toUpperCase() + word.slice(1, word.length).toLowerCase();
+
     event.create("rod_die")
         .displayName("Rod Die")
         .tag("thermal:crafting/dies");
@@ -31,107 +34,8 @@ StartupEvents.registry("item", event => {
         .tag("forge:dusts")
         .tag("forge:dusts/platinum");
 
-    event.create("platinum_ingot")
-        .displayName("Platinum Ingot")
-        .tag("forge:ingots")
-        .tag("ae2:metal_ingots")
-        .tag("forge:ingots/platinum");
-
-    event.create("platinum_nugget")
-        .displayName("Platinum Nugget")
-        .tag("forge:nuggets")
-        .tag("forge:nuggets/platinum");
-
-    event.create("platinum_plate")
-        .displayName("Platinum Plate")
-        .tag("forge:plates")
-        .tag("forge:plates/platinum");
-
-    event.create("platinum_gear")
-        .displayName("Platinum Gear")
-        .tag("forge:gears")
-        .tag("forge:gears/platinum");
-
-    event.create("red_alloy_ingot")
-        .displayName("Red Alloy Ingot")
-        .tag("forge:ingots")
-        .tag("ae2:metal_ingots")
-        .tag("forge:ingots/red_alloy");
-
-    event.create("red_alloy_nugget")
-        .displayName("Red Alloy Nugget")
-        .tag("forge:nuggets")
-        .tag("forge:nuggets/red_alloy");
-
-    event.create("red_alloy_plate")
-        .displayName("Red Alloy Plate")
-        .tag("forge:plates")
-        .tag("forge:plates/red_alloy");
-
-    event.create("red_alloy_gear")
-        .displayName("Red Alloy Gear")
-        .tag("forge:gears")
-        .tag("forge:gears/red_alloy");
-
-    event.create("energetic_alloy_ingot")
-        .displayName("Energetic Alloy Ingot")
-        .tag("forge:ingots")
-        .tag("ae2:metal_ingots")
-        .tag("forge:ingots/energetic_alloy");
-
-    event.create("energetic_alloy_nugget")
-        .displayName("Energetic Alloy Nugget")
-        .tag("forge:nuggets")
-        .tag("forge:nuggets/energetic_alloy");
-
-    event.create("energetic_alloy_plate")
-        .displayName("Energetic Alloy Plate")
-        .tag("forge:plates")
-        .tag("forge:plates/energetic_alloy");
-
-    event.create("energetic_alloy_gear")
-        .displayName("Energetic Alloy Gear")
-        .tag("forge:gears")
-        .tag("forge:gears/energetic_alloy");
-
-    event.create("vibrant_alloy_ingot")
-        .displayName("Vibrant Alloy Ingot")
-        .tag("forge:ingots")
-        .tag("ae2:metal_ingots")
-        .tag("forge:ingots/vibrant_alloy");
-
-    event.create("vibrant_alloy_nugget")
-        .displayName("Vibrant Alloy Nugget")
-        .tag("forge:nuggets")
-        .tag("forge:nuggets/vibrant_alloy");
-
-    event.create("vibrant_alloy_plate")
-        .displayName("Vibrant Alloy Plate")
-        .tag("forge:plates")
-        .tag("forge:plates/vibrant_alloy");
-
-    event.create("vibrant_alloy_gear")
-        .displayName("Vibrant Alloy Gear")
-        .tag("forge:gears")
-        .tag("forge:gears/vibrant_alloy");
-
-    event.create("red_alloy_wire")
-        .displayName("Red Alloy Wire")
-        .tag("forge:wires")
-        .tag("forge:wires/red_alloy");
-
-    event.create("energetic_alloy_wire")
-        .displayName("Energetic Alloy Wire")
-        .tag("forge:wires")
-        .tag("forge:wires/energetic_alloy");
-
-    event.create("vibrant_alloy_wire")
-        .displayName("Vibrant Alloy Wire")
-        .tag("forge:wires")
-        .tag("forge:wires/vibrant_alloy");
-
     event.create("compressed_iron_plate")
-        .displayName("Compressed Iron Plate")
+        .displayName("Compressed Steel Plate")
         .tag("forge:plates")
         .tag("forge:plates/compressed_iron");
 
@@ -199,4 +103,31 @@ StartupEvents.registry("item", event => {
 
     event.create("energetic_blend")
         .displayName("Energetic Blend");
+
+    // Register materials with ingots, nuggets, plates, and gears
+    let materials = ["red_alloy", "energetic_alloy", "vibrant_alloy", "electrical_steel", "platinum"];
+
+    let wires = ["red_alloy", "energetic_alloy", "vibrant_alloy"];
+
+    materials.forEach(material => {
+        let materialName = material.split("_").map(capitalize).join(" ");
+
+        for (const type of ["ingot", "nugget", "plate", "gear"]) {
+            let result = event.create(`${material}_${type}`)
+                .displayName(`${materialName} ${capitalize(type)}`)
+                .tag(`forge:${type}s`)
+                .tag(`forge:${type}s/${material}`);
+
+            if (type === "ingot") {
+                result.tag("ae2:metal_ingots");
+            }
+        }
+
+        if (wires.indexOf(material) !== -1) {
+            event.create(`${material}_wire`)
+                .displayName(`${materialName} Wire`)
+                .tag("forge:wires")
+                .tag(`forge:wires/${material}`);
+        }
+    });
 });

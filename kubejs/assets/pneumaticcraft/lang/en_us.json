@@ -1,0 +1,11 @@
+{
+    "block.pneumaticcraft.compressed_iron_block": "Compressed Steel Block",
+    "block.pneumaticcraft.creative_compressed_iron_block": "Creative Compressed Steel Block",
+    "item.pneumaticcraft.ingot_iron_compressed": "Compressed Steel Ingot",
+    "item.pneumaticcraft.compressed_iron_boots": "Compressed Steel Boots",
+    "item.pneumaticcraft.compressed_iron_chestplate": "Compressed Steel Chestplate",
+    "item.pneumaticcraft.compressed_iron_helmet": "Compressed Steel Helmet",
+    "item.pneumaticcraft.compressed_iron_leggings": "Compressed Steel Leggings",
+    "item.pneumaticcraft.compressed_iron_gear": "Compressed Steel Gear",
+    "item.pneumaticcraft.drill_bit_compressed_iron": "Compressed Steel Drill Bit"
+}

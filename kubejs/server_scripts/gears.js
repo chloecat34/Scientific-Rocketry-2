@@ -66,7 +66,7 @@ ServerEvents.recipes((event) => {
     );
 
     // Kubejs
-    const kubejsGears = ["platinum", "cobalt", "manyullyn", "red_alloy", "energetic_alloy", "vibrant_alloy"];
+    const kubejsGears = ["platinum", "cobalt", "manyullyn", "red_alloy", "energetic_alloy", "vibrant_alloy", "electrical_steel"];
     kubejsGears.forEach(ingot => standardizeGears(ingot, `kubejs:${ingot}_gear`));
 
     // Get rid of the gem gears

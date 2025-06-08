@@ -161,6 +161,19 @@ ServerEvents.recipes((event) => {
         "#forge:dusts/hop_graphite"
     ], "#forge:gems/black_quartz", 8, 51200, 100);
 
+    event.recipes.thermal.smelter("8x #forge:gems/black_quartz", ["8x #forge:gems/quartz", "#forge:dusts/hop_graphite"]).energy(12800);
+
     // HOP Graphite
     event.recipes.mekanism.enriching("#forge:dusts/hop_graphite", "4x #forge:dusts/coal_coke");
+
+    // Electrical steel
+    createArcFurnaceRecipe("#forge:ingots/steel", 1, [
+        "#forge:silicon"
+    ], "#forge:ingots/electrical_steel", 1, 51200, 100);
+
+    event.recipes.thermal.smelter("#forge:ingots/electrical_steel", ["#forge:ingots/steel", "#forge:silicon"]).energy(9600);
+
+    // Silicon
+    event.smelting("ae2:silicon", "#forge:dusts/quartz");
+    event.blasting("ae2:silicon", "#forge:dusts/quartz");
 });
