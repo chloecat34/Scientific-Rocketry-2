@@ -155,4 +155,12 @@ ServerEvents.recipes((event) => {
 
     // Signalum
     event.remove({ output: "thermal:signalum_ingot", input: "#forge:dusts/redstone", type: "thermal:smelter" });
+
+    // Black quartz
+    createArcFurnaceRecipe("#forge:gems/quartz", 8, [
+        "#forge:dusts/hop_graphite"
+    ], "#forge:gems/black_quartz", 8, 51200, 100);
+
+    // HOP Graphite
+    event.recipes.mekanism.enriching("#forge:dusts/hop_graphite", "4x #forge:dusts/coal_coke");
 });
