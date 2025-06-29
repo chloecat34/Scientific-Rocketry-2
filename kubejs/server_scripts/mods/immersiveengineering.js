@@ -414,4 +414,7 @@ ServerEvents.recipes((event) => {
 		singleFluid: "tconstruct:blazing_blood",
 		tempKelvin: 2500
 	});
+
+	// Remove extra coke recipe
+	event.remove({id: "immersiveengineering:crafting/coke_to_coal_coke"});
 });

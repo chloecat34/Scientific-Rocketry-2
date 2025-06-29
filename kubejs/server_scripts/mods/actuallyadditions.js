@@ -42,5 +42,53 @@ ServerEvents.recipes((event) => {
         });
     }
 
-    // Black quartz
+    // Enori crystals
+    event.remove({ id: "actuallyadditions:laser/crystalize_enori_crystal"});
+    event.remove({ id: "actuallyadditions:laser/crystalize_enori_crystal_block"});
+    event.remove({ id: "actuallyadditions:laser/crystalize_void_crystal"});
+    event.remove({ id: "actuallyadditions:laser/crystalize_void_crystal_block"});
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 800,
+        ingredient: {
+            tag: "forge:ingots/electrical_steel"
+        },
+        result: {
+            item: "actuallyadditions:enori_crystal"
+        }
+    });
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 8000,
+        ingredient: {
+            tag: "forge:storage_blocks/electrical_steel"
+        },
+        result: {
+            item: "actuallyadditions:enori_crystal_block"
+        }
+    });
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 600,
+        ingredient: {
+            tag: "forge:coal_coke"
+        },
+        result: {
+            item: "actuallyadditions:void_crystal"
+        }
+    });
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 6000,
+        ingredient: {
+            tag: "forge:storage_blocks/coal_coke"
+        },
+        result: {
+            item: "actuallyadditions:void_crystal_block"
+        }
+    });
 });
