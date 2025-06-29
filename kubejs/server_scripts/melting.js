@@ -28,21 +28,99 @@ ServerEvents.recipes((event) => {
         event.custom({
             type: "tconstruct:melting",
             ingredient: {
-                item: item
+                item: item,
             },
             result: {
                 amount: fluidAmount,
-                fluid: fluid
+                fluid: fluid,
             },
             temperature: temperature,
-            time: time
+            time: time,
         });
-    }
+    };
 
     const addBothMelterRecipes = (item, fluid, fluidAmount, time, temperature, energy) => {
         addTinkersMelterRecipe(item, fluid, fluidAmount, time, temperature);
         crucibleMelting(item, fluid, fluidAmount, energy);
-    }
+    };
+
+    const addTinkersBlockCastingRecipe = (item, fluid, fluidAmount, time) => {
+        event.custom({
+            type: "tconstruct:casting_basin",
+            cooling_time: time,
+            fluid: {
+                amount: fluidAmount,
+                fluid: fluid,
+            },
+            result: {
+                item: item,
+            },
+        });
+    };
+
+    const addTinkersIngotCastingRecipe = (item, fluid, time) => {
+        event.custom({
+            type: "tconstruct:casting_basin",
+            cast: {
+                tag: "tconstruct:casts/multi_use/ingot",
+            },
+            cooling_time: time,
+            fluid: {
+                amount: 90,
+                fluid: fluid,
+            },
+            result: {
+                item: item,
+            },
+        });
+
+        event.custom({
+            type: "tconstruct:casting_basin",
+            cast: {
+                tag: "tconstruct:casts/single_use/ingot",
+            },
+            cooling_time: time,
+            fluid: {
+                amount: 90,
+                fluid: fluid,
+            },
+            result: {
+                item: item,
+            },
+        });
+    };
+
+    const addTinkersNuggetCastingRecipe = (item, fluid, time) => {
+        event.custom({
+            type: "tconstruct:casting_basin",
+            cast: {
+                tag: "tconstruct:casts/multi_use/nugget",
+            },
+            cooling_time: time,
+            fluid: {
+                amount: 10,
+                fluid: fluid,
+            },
+            result: {
+                item: item,
+            },
+        });
+
+        event.custom({
+            type: "tconstruct:casting_basin",
+            cast: {
+                tag: "tconstruct:casts/single_use/nugget",
+            },
+            cooling_time: time,
+            fluid: {
+                amount: 10,
+                fluid: fluid,
+            },
+            result: {
+                item: item,
+            },
+        });
+    };
 
     // Remove molten slime + amethyst
     event.remove({ output: "minecraft:slime_ball", type: "create:compacting" });
@@ -166,8 +244,13 @@ ServerEvents.recipes((event) => {
 
     // Replace Create recipe for rose gold
     event.remove({ output: "thermal:rose_gold_ingot", type: "create:mixing" });
-    event.remove({ output: "tconstruct:rose_gold_ingot", type: "create:mixing" });
-    event.remove({ id: "thermal:compat/tconstruct/smelter_alloy_tconstruct_rose_gold_ingot"});
+    event.remove({
+        output: "tconstruct:rose_gold_ingot",
+        type: "create:mixing",
+    });
+    event.remove({
+        id: "thermal:compat/tconstruct/smelter_alloy_tconstruct_rose_gold_ingot",
+    });
     event.recipes.createMixing("2x thermal:rose_gold_ingot", ["#forge:ingots/copper", "#forge:ingots/gold"]).heated();
 
     // Molten pigiron
@@ -177,26 +260,40 @@ ServerEvents.recipes((event) => {
     chillerBlockCasting("tconstruct:pig_iron_block", "tconstruct:molten_pig_iron", 810, 4800 * 9);
 
     // Pigiron changes
-    event.remove({ output: "tconstruct:pig_iron_ingot", type: "create:mixing" });
-    event.remove({ output: "tconstruct:pig_iron_ingot", type: "thermal:smelter" });
+    event.remove({
+        output: "tconstruct:pig_iron_ingot",
+        type: "create:mixing",
+    });
+    event.remove({
+        output: "tconstruct:pig_iron_ingot",
+        type: "thermal:smelter",
+    });
 
-    event.recipes.createMixing("2x tconstruct:pig_iron_ingot", ["#forge:ingots/iron", "2x #forge:slimeball/blood", Fluid.of("minecraft:milk", 250)]).heated();
+    event.recipes
+        .createMixing("2x tconstruct:pig_iron_ingot", [
+            "#forge:ingots/iron",
+            "2x #forge:slimeball/blood",
+            Fluid.of("minecraft:milk", 250),
+        ])
+        .heated();
     // event.recipes.thermal.smelter("2x tconsstruct:pig_iron_ingot", ["#forge:ingots/iron", "#forge:slimeball/blood", "industrialforegoing:pink_slime"]).energy(4800);
 
     // Coagulated blood
     event.custom({
         type: "tconstruct:casting_table",
         result: {
-            item: "kubejs:coagulated_blood"
+            item: "kubejs:coagulated_blood",
         },
         fluid: {
             amount: 250,
-            fluid: "tconstruct:meat_soup"
+            fluid: "tconstruct:meat_soup",
         },
-        cooling_time: 40
+        cooling_time: 40,
     });
 
-    event.recipes.thermal.chiller("kubejs:coagulated_blood", [Fluid.of("tconstruct:meat_soup", 250), "thermal:chiller_ball_cast"]).energy(4800);
+    event.recipes.thermal
+        .chiller("kubejs:coagulated_blood", [Fluid.of("tconstruct:meat_soup", 250), "thermal:chiller_ball_cast"])
+        .energy(4800);
 
     crucibleMelting("kubejs:coagulated_blood", "tconstruct:meat_soup", 250, 4800);
 
@@ -433,8 +530,12 @@ ServerEvents.recipes((event) => {
     crucibleMelting("tconstruct:earth_slime_crystal", "tconstruct:earth_slime", 250, 4800);
     crucibleMelting("tconstruct:earth_slime_crystal_block", "tconstruct:earth_slime", 1000, 4800 * 4);
     crucibleMelting("tconstruct:earth_slime_sapling", "tconstruct:earth_slime", 250, 4800);
-    event.recipes.thermal.chiller("minecraft:slime_ball", [Fluid.of("tconstruct:earth_slime", 250), "thermal:chiller_ball_cast"]).energy(4800);
-    event.recipes.thermal.chiller("tconstruct:earth_congealed_slime", [Fluid.of("tconstruct:earth_slime", 1000)]).energy(4800 * 4);
+    event.recipes.thermal
+        .chiller("minecraft:slime_ball", [Fluid.of("tconstruct:earth_slime", 250), "thermal:chiller_ball_cast"])
+        .energy(4800);
+    event.recipes.thermal
+        .chiller("tconstruct:earth_congealed_slime", [Fluid.of("tconstruct:earth_slime", 1000)])
+        .energy(4800 * 4);
 
     // Skyslime
     crucibleMelting("tconstruct:sky_slime_ball", "tconstruct:sky_slime", 250, 4800);
@@ -443,8 +544,12 @@ ServerEvents.recipes((event) => {
     crucibleMelting("tconstruct:sky_slime_crystal", "tconstruct:sky_slime", 250, 4800);
     crucibleMelting("tconstruct:sky_slime_crystal_block", "tconstruct:sky_slime", 1000, 4800 * 4);
     crucibleMelting("tconstruct:sky_slime_sapling", "tconstruct:sky_slime", 250, 4800);
-    event.recipes.thermal.chiller("tconstruct:sky_slime_ball", [Fluid.of("tconstruct:sky_slime", 250), "thermal:chiller_ball_cast"]).energy(4800);
-    event.recipes.thermal.chiller("tconstruct:sky_congealed_slime", [Fluid.of("tconstruct:sky_slime", 1000)]).energy(4800 * 4);
+    event.recipes.thermal
+        .chiller("tconstruct:sky_slime_ball", [Fluid.of("tconstruct:sky_slime", 250), "thermal:chiller_ball_cast"])
+        .energy(4800);
+    event.recipes.thermal
+        .chiller("tconstruct:sky_congealed_slime", [Fluid.of("tconstruct:sky_slime", 1000)])
+        .energy(4800 * 4);
 
     // Enderslime
     crucibleMelting("tconstruct:ender_slime_ball", "tconstruct:ender_slime", 250, 4800);
@@ -453,14 +558,23 @@ ServerEvents.recipes((event) => {
     crucibleMelting("tconstruct:ender_slime_crystal", "tconstruct:ender_slime", 250, 4800);
     crucibleMelting("tconstruct:ender_slime_crystal_block", "tconstruct:ender_slime", 1000, 4800 * 4);
     crucibleMelting("tconstruct:ender_slime_sapling", "tconstruct:ender_slime", 250, 4800);
-    event.recipes.thermal.chiller("tconstruct:ender_slime_ball", [Fluid.of("tconstruct:ender_slime", 250), "thermal:chiller_ball_cast"]).energy(4800);
-    event.recipes.thermal.chiller("tconstruct:ender_congealed_slime", [Fluid.of("tconstruct:ender_slime", 1000)]).energy(4800 * 4);
+    event.recipes.thermal
+        .chiller("tconstruct:ender_slime_ball", [Fluid.of("tconstruct:ender_slime", 250), "thermal:chiller_ball_cast"])
+        .energy(4800);
+    event.recipes.thermal
+        .chiller("tconstruct:ender_congealed_slime", [Fluid.of("tconstruct:ender_slime", 1000)])
+        .energy(4800 * 4);
 
     // Magma
-    event.recipes.remove({ output: "minecraft:lava", input: "minecraft:magma_block" });
+    event.recipes.remove({
+        output: "minecraft:lava",
+        input: "minecraft:magma_block",
+    });
     crucibleMelting("minecraft:magma_cream", "tconstruct:magma", 250, 4800);
     crucibleMelting("minecraft:magma_block", "tconstruct:magma", 1000, 4800 * 4);
-    event.recipes.thermal.chiller("minecraft:magma_cream", [Fluid.of("tconstruct:magma", 250), "thermal:chiller_ball_cast"]).energy(4800);
+    event.recipes.thermal
+        .chiller("minecraft:magma_cream", [Fluid.of("tconstruct:magma", 250), "thermal:chiller_ball_cast"])
+        .energy(4800);
     event.recipes.thermal.chiller("minecraft:magma_block", [Fluid.of("tconstruct:magma", 1000)]).energy(4800 * 4);
 
     // Seared stone
@@ -505,8 +619,15 @@ ServerEvents.recipes((event) => {
     crucibleMelting("minecraft:dragon_head", "thermal:ender", 1000, 80000);
 
     // Phenolic resin
-    event.recipes.thermal.chiller("immersiveengineering:plate_duroplast", [Fluid.of("immersiveengineering:phenolic_resin", 250), "kubejs:chiller_plate_cast"]).energy(2400);
-    event.recipes.thermal.chiller("immersiveengineering:duroplast", [Fluid.of("immersiveengineering:phenolic_resin", 1000)]).energy(4800);
+    event.recipes.thermal
+        .chiller("immersiveengineering:plate_duroplast", [
+            Fluid.of("immersiveengineering:phenolic_resin", 250),
+            "kubejs:chiller_plate_cast",
+        ])
+        .energy(2400);
+    event.recipes.thermal
+        .chiller("immersiveengineering:duroplast", [Fluid.of("immersiveengineering:phenolic_resin", 1000)])
+        .energy(4800);
 
     // Molten platinum
     crucibleMelting("#forge:ingots/platinum", "tconstruct:molten_platinum", 90, 4800);
@@ -527,11 +648,49 @@ ServerEvents.recipes((event) => {
     addTinkersMelterRecipe("tconstruct:large_ichor_slime_crystal_bud", "kubejs:ichorslime", 750, 64, 70);
     addTinkersMelterRecipe("tconstruct:medium_ichor_slime_crystal_bud", "kubejs:ichorslime", 500, 48, 70);
     addTinkersMelterRecipe("tconstruct:small_ichor_slime_crystal_bud", "kubejs:ichorslime", 250, 32, 70);
-    event.recipes.thermal.chiller("tconstruct:ichor_slime_ball", [Fluid.of("kubejs:ichorslime", 250), "thermal:chiller_ball_cast"]).energy(4800);
-    event.recipes.thermal.chiller("tconstruct:ichor_congealed_slime", [Fluid.of("kubejs:ichorslime", 1000)]).energy(4800 * 4);
+    event.recipes.thermal
+        .chiller("tconstruct:ichor_slime_ball", [Fluid.of("kubejs:ichorslime", 250), "thermal:chiller_ball_cast"])
+        .energy(4800);
+    event.recipes.thermal
+        .chiller("tconstruct:ichor_congealed_slime", [Fluid.of("kubejs:ichorslime", 1000)])
+        .energy(4800 * 4);
 
     // Molten sulfur
     addBothMelterRecipes("thermal:sulfur", "kubejs:molten_sulfur", 250, 40, 300, 4800);
     addBothMelterRecipes("thermal:sulfur_dust", "kubejs:molten_sulfur", 250, 40, 300, 4800);
     addBothMelterRecipes("thermal:sulfur_block", "kubejs:molten_sulfur", 2250, 160, 300, 4800 * 9);
+
+    // Molten electrotine
+    addBothMelterRecipes("kubejs:electrotine", "kubejs:molten_electrotine", 100, 80, 900, 4800);
+    addBothMelterRecipes("kubejs:electrotine_block", "kubejs:molten_electrotine", 900, 250, 900, 4800 * 9);
+    chillerBlockCasting("kubejs:electrotine_block", "kubejs:molten_electrotine", 900, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:electrotine_block", "kubejs:molten_electrotine", 900, 160);
+
+    // Thermal casting table recipes
+    addTinkersBlockCastingRecipe("minecraft:redstone_block", "thermal:redstone", 900, 160);
+    addTinkersBlockCastingRecipe("minecraft:glowstone", "thermal:glowstone", 1000, 160);
+
+    // Molten vibrant alloy
+    addBothMelterRecipes("kubejs:vibrant_alloy_ingot", "kubejs:molten_vibrant_alloy", 90, 60, 900, 4800);
+    addBothMelterRecipes("kubejs:vibrant_alloy_plate", "kubejs:molten_vibrant_alloy", 90, 60, 900, 4800);
+    addBothMelterRecipes("kubejs:vibrant_alloy_nugget", "kubejs:molten_vibrant_alloy", 10, 20, 900, 600);
+    addBothMelterRecipes("kubejs:vibrant_alloy_gear", "kubejs:molten_vibrant_alloy", 360, 120, 900, 4800 * 4);
+    addBothMelterRecipes("kubejs:vibrant_alloy_block", "kubejs:molten_vibrant_alloy", 810, 200, 900, 4800 * 9);
+    chillerIngotCasting("#forge:ingots/vibrant_alloy", "kubejs:molten_vibrant_alloy", 90, 4800);
+    chillerBlockCasting("kubejs:vibrant_alloy_block", "kubejs:molten_vibrant_alloy", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:vibrant_alloy_block", "kubejs:molten_vibrant_alloy", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:vibrant_alloy_ingot", "kubejs:molten_vibrant_alloy", 50);
+    addTinkersIngotCastingRecipe("kubejs:vibrant_alloy_nugget", "kubejs:molten_vibrant_alloy", 10);
+
+    // Molten pulsating alloy
+    addBothMelterRecipes("kubejs:pulsating_alloy_ingot", "kubejs:molten_pulsating_alloy", 90, 60, 700, 4800);
+    addBothMelterRecipes("kubejs:pulsating_alloy_plate", "kubejs:molten_pulsating_alloy", 90, 60, 700, 4800);
+    addBothMelterRecipes("kubejs:pulsating_alloy_nugget", "kubejs:molten_pulsating_alloy", 10, 20, 700, 600);
+    addBothMelterRecipes("kubejs:pulsating_alloy_gear", "kubejs:molten_pulsating_alloy", 360, 120, 700, 4800 * 4);
+    addBothMelterRecipes("kubejs:pulsating_alloy_block", "kubejs:molten_pulsating_alloy", 810, 200, 700, 4800 * 9);
+    chillerIngotCasting("#forge:ingots/pulsating_alloy", "kubejs:molten_pulsating_alloy", 90, 4800);
+    chillerBlockCasting("kubejs:pulsating_alloy_block", "kubejs:molten_pulsating_alloy", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:pulsating_alloy_block", "kubejs:molten_pulsating_alloy", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:pulsating_alloy_ingot", "kubejs:molten_pulsating_alloy", 50);
+    addTinkersIngotCastingRecipe("kubejs:pulsating_alloy_nugget", "kubejs:molten_pulsating_alloy", 10);
 });

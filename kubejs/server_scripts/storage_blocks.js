@@ -159,4 +159,13 @@ ServerEvents.recipes((event) => {
         "kubejs:electrical_steel_ingot",
         "kubejs:electrical_steel_block"
     );
+    addPacking("kubejs:redstone_alloy_nugget", "kubejs:redstone_alloy_ingot");
+    addPacking("kubejs:redstone_alloy_ingot", "kubejs:redstone_alloy_block");
+    addPacking("kubejs:blue_alloy_nugget", "kubejs:blue_alloy_ingot");
+    addPacking("kubejs:blue_alloy_ingot", "kubejs:blue_alloy_block");
+    addPacking("kubejs:purple_alloy_nugget", "kubejs:purple_alloy_ingot");
+    addPacking("kubejs:purple_alloy_ingot", "kubejs:purple_alloy_block");
+    addPacking("kubejs:pulsating_alloy_nugget", "kubejs:pulsating_alloy_ingot");
+    addPacking("kubejs:pulsating_alloy_ingot", "kubejs:pulsating_alloy_block");
+    addPacking("kubejs:electrotine", "kubejs:electrotine_block");
 });

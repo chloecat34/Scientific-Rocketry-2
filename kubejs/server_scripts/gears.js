@@ -74,6 +74,10 @@ ServerEvents.recipes((event) => {
         "energetic_alloy",
         "vibrant_alloy",
         "electrical_steel",
+        "redstone_alloy",
+        "blue_alloy",
+        "purple_alloy",
+        "pulsating_alloy",
     ];
     kubejsGears.forEach((ingot) =>
         standardizeGears(ingot, `kubejs:${ingot}_gear`)

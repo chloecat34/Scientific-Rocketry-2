@@ -1,5 +1,5 @@
 // This event handles molten metals to ensure they burn the player
-const molten = ["kubejs:molten_sulfur"];
+const molten = ["kubejs:molten_sulfur", "kubejs:molten_electrotine", "kubejs:molten_pulsating_alloy", "kubejs:molten_vibrant_alloy"];
 
 PlayerEvents.tick((event) => {
     let player = event.player;

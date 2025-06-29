@@ -29,11 +29,7 @@ ServerEvents.recipes((event) => {
         ["thermal:deepslate_ruby_ore", "minecraft:deepslate", 25],
         ["kubejs:sulfur_ore", "minecraft:netherrack", 1000],
         ["create:deepslate_zinc_ore", "minecraft:deepslate", 1000],
-        [
-            "immersiveengineering:deepslate_ore_aluminum",
-            "minecraft:deepslate",
-            250,
-        ],
+        ["immersiveengineering:deepslate_ore_aluminum", "minecraft:deepslate", 250],
     ];
 
     for (let entry of lensRecipes) {
@@ -60,6 +56,22 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "actuallyadditions:laser/crystalize_void_crystal" });
     event.remove({
         id: "actuallyadditions:laser/crystalize_void_crystal_block",
+    });
+    event.remove({ id: "actuallyadditions:laser/crystalize_restonia_crystal" });
+    event.remove({
+        id: "actuallyadditions:laser/crystalize_restonia_crystal_block",
+    });
+    event.remove({ id: "actuallyadditions:laser/crystalize_palis_crystal" });
+    event.remove({
+        id: "actuallyadditions:laser/crystalize_palis_crystal_block",
+    });
+    event.remove({ id: "actuallyadditions:laser/crystalize_diamatine_crystal" });
+    event.remove({
+        id: "actuallyadditions:laser/crystalize_diamatine_crystal_block",
+    });
+    event.remove({ id: "actuallyadditions:laser/crystalize_emeradic_crystal" });
+    event.remove({
+        id: "actuallyadditions:laser/crystalize_emeradic_crystal_block",
     });
 
     event.custom({
@@ -103,6 +115,84 @@ ServerEvents.recipes((event) => {
         },
         result: {
             item: "actuallyadditions:void_crystal_block",
+        },
+    });
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 400,
+        ingredient: {
+            tag: "forge:ingots/redstone_alloy",
+        },
+        result: {
+            item: "actuallyadditions:restonia_crystal",
+        },
+    });
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 4000,
+        ingredient: {
+            tag: "forge:storage_blocks/redstone_alloy",
+        },
+        result: {
+            item: "actuallyadditions:restonia_crystal_block",
+        },
+    });
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 400,
+        ingredient: {
+            tag: "forge:ingots/blue_alloy",
+        },
+        result: {
+            item: "actuallyadditions:palis_crystal",
+        },
+    });
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 4000,
+        ingredient: {
+            tag: "forge:storage_blocks/blue_alloy",
+        },
+        result: {
+            item: "actuallyadditions:palis_crystal_block",
+        },
+    });
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 1200,
+        ingredient: {
+            item: "kubejs:pulsating_crystal",
+        },
+        result: {
+            item: "actuallyadditions:diamatine_crystal",
+        },
+    });
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 1600,
+        ingredient: {
+            item: "kubejs:vibrant_crystal",
+        },
+        result: {
+            item: "actuallyadditions:emeradic_crystal",
+        },
+    });
+
+    // Extra electrotine recipe
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 5000,
+        ingredient: {
+            tag: "forge:dusts/lapis",
+        },
+        result: {
+            item: "kubejs:electrotine",
         },
     });
 });

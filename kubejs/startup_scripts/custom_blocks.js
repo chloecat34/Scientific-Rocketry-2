@@ -82,4 +82,64 @@ StartupEvents.registry("block", (event) => {
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_iron_tool");
+
+    event
+        .create("blue_alloy_block")
+        .displayName("Blue Alloy Block")
+        .material("metal")
+        .hardness(2.5)
+        .resistance(15.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/blue_alloy")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
+
+    event
+        .create("purple_alloy_block")
+        .displayName("Purple Alloy Block")
+        .material("metal")
+        .hardness(4.5)
+        .resistance(30.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/purple_alloy")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
+
+    event
+        .create("redstone_alloy_block")
+        .displayName("Redstone Alloy Block")
+        .material("metal")
+        .hardness(2.5)
+        .resistance(15.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/redstone_alloy")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
+
+    event
+        .create("pulsating_alloy_block")
+        .displayName("Pulsating Alloy Block")
+        .material("metal")
+        .hardness(2.5)
+        .resistance(15.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/pulsating_alloy")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
+
+    event
+        .create("electrotine_block")
+        .displayName("Electrotine Block")
+        .material("metal")
+        .hardness(2.5)
+        .resistance(10.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/electrotine")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
 });
