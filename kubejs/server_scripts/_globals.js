@@ -13,17 +13,18 @@ const ZINC_TEMPERATURE = 420;
 const NICKEL_TEMPERATURE = 950;
 
 // For these functions, you can create your own version using the captured event value
-const makeTinkersMeltingRecipe = event => (itemTag, fluidTag, fluidAmount, time, temperature) => {
-    event.custom({
-        type: "tconstruct:melting",
-        ingredient: {
-            tag: itemTag
-        },
-        result: {
-            amount: fluidAmount,
-            tag: fluidTag
-        },
-        temperature: temperature,
-        time: time
-    });
-}
+const makeTinkersMeltingRecipe =
+    (event) => (itemTag, fluidTag, fluidAmount, time, temperature) => {
+        event.custom({
+            type: "tconstruct:melting",
+            ingredient: {
+                tag: itemTag,
+            },
+            result: {
+                amount: fluidAmount,
+                tag: fluidTag,
+            },
+            temperature: temperature,
+            time: time,
+        });
+    };

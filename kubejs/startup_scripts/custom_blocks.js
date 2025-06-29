@@ -1,5 +1,6 @@
-StartupEvents.registry("block", event => {
-    event.create("sulfur_ore")
+StartupEvents.registry("block", (event) => {
+    event
+        .create("sulfur_ore")
         .displayName("Sulfur Ore")
         .material("stone")
         .hardness(3.0)
@@ -10,7 +11,8 @@ StartupEvents.registry("block", event => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_stone_tool");
 
-    event.create("nether_copper_ore")
+    event
+        .create("nether_copper_ore")
         .displayName("Nether Copper Ore")
         .material("stone")
         .hardness(3.0)
@@ -21,7 +23,8 @@ StartupEvents.registry("block", event => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_stone_tool");
 
-    event.create("platinum_block")
+    event
+        .create("platinum_block")
         .displayName("Platinum Block")
         .material("metal")
         .hardness(5.0)
@@ -32,7 +35,8 @@ StartupEvents.registry("block", event => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_diamond_tool");
 
-    event.create("red_alloy_block")
+    event
+        .create("red_alloy_block")
         .displayName("Red Alloy Block")
         .material("metal")
         .hardness(2.5)
@@ -43,7 +47,8 @@ StartupEvents.registry("block", event => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_iron_tool");
 
-    event.create("energetic_alloy_block")
+    event
+        .create("energetic_alloy_block")
         .displayName("Energetic Alloy Block")
         .material("metal")
         .hardness(4.0)
@@ -54,7 +59,8 @@ StartupEvents.registry("block", event => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_iron_tool");
 
-    event.create("vibrant_alloy_block")
+    event
+        .create("vibrant_alloy_block")
         .displayName("Vibrant Alloy Block")
         .material("metal")
         .hardness(5.0)
@@ -65,7 +71,8 @@ StartupEvents.registry("block", event => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_iron_tool");
 
-    event.create("electrical_steel_block")
+    event
+        .create("electrical_steel_block")
         .displayName("Electrical Steel Block")
         .material("metal")
         .hardness(5.0)

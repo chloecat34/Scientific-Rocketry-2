@@ -6,8 +6,14 @@ ServerEvents.recipes((event) => {
     event.remove({ type: "actuallyadditions:crushing" });
 
     // Remove some lens of the miner recipes
-    for (let ore of ["powah/uraninite_ore", "mekanism/fluorite_ore", "stone_ores_uranium", "mekanism/osmium_ore", "stone_ores_nickel"]) {
-        event.remove({ id: `actuallyadditions:mininglens/${ore}`});
+    for (let ore of [
+        "powah/uraninite_ore",
+        "mekanism/fluorite_ore",
+        "stone_ores_uranium",
+        "mekanism/osmium_ore",
+        "stone_ores_nickel",
+    ]) {
+        event.remove({ id: `actuallyadditions:mininglens/${ore}` });
     }
 
     // Mining lens recipes
@@ -23,7 +29,11 @@ ServerEvents.recipes((event) => {
         ["thermal:deepslate_ruby_ore", "minecraft:deepslate", 25],
         ["kubejs:sulfur_ore", "minecraft:netherrack", 1000],
         ["create:deepslate_zinc_ore", "minecraft:deepslate", 1000],
-        ["immersiveengineering:deepslate_ore_aluminum", "minecraft:deepslate", 250]
+        [
+            "immersiveengineering:deepslate_ore_aluminum",
+            "minecraft:deepslate",
+            250,
+        ],
     ];
 
     for (let entry of lensRecipes) {
@@ -32,63 +42,67 @@ ServerEvents.recipes((event) => {
         event.custom({
             type: "actuallyadditions:mining_lens",
             ingredient: {
-                item: stone
+                item: stone,
             },
             output_type: "item",
             result: {
-                item: target
+                item: target,
             },
-            weight: weight
+            weight: weight,
         });
     }
 
     // Enori crystals
-    event.remove({ id: "actuallyadditions:laser/crystalize_enori_crystal"});
-    event.remove({ id: "actuallyadditions:laser/crystalize_enori_crystal_block"});
-    event.remove({ id: "actuallyadditions:laser/crystalize_void_crystal"});
-    event.remove({ id: "actuallyadditions:laser/crystalize_void_crystal_block"});
+    event.remove({ id: "actuallyadditions:laser/crystalize_enori_crystal" });
+    event.remove({
+        id: "actuallyadditions:laser/crystalize_enori_crystal_block",
+    });
+    event.remove({ id: "actuallyadditions:laser/crystalize_void_crystal" });
+    event.remove({
+        id: "actuallyadditions:laser/crystalize_void_crystal_block",
+    });
 
     event.custom({
         type: "actuallyadditions:laser",
         energy: 800,
         ingredient: {
-            tag: "forge:ingots/electrical_steel"
+            tag: "forge:ingots/electrical_steel",
         },
         result: {
-            item: "actuallyadditions:enori_crystal"
-        }
+            item: "actuallyadditions:enori_crystal",
+        },
     });
 
     event.custom({
         type: "actuallyadditions:laser",
         energy: 8000,
         ingredient: {
-            tag: "forge:storage_blocks/electrical_steel"
+            tag: "forge:storage_blocks/electrical_steel",
         },
         result: {
-            item: "actuallyadditions:enori_crystal_block"
-        }
+            item: "actuallyadditions:enori_crystal_block",
+        },
     });
 
     event.custom({
         type: "actuallyadditions:laser",
         energy: 600,
         ingredient: {
-            tag: "forge:coal_coke"
+            tag: "forge:coal_coke",
         },
         result: {
-            item: "actuallyadditions:void_crystal"
-        }
+            item: "actuallyadditions:void_crystal",
+        },
     });
 
     event.custom({
         type: "actuallyadditions:laser",
         energy: 6000,
         ingredient: {
-            tag: "forge:storage_blocks/coal_coke"
+            tag: "forge:storage_blocks/coal_coke",
         },
         result: {
-            item: "actuallyadditions:void_crystal_block"
-        }
+            item: "actuallyadditions:void_crystal_block",
+        },
     });
 });

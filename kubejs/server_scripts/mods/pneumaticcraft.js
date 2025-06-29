@@ -1,2 +1,1 @@
-ServerEvents.recipes((event) => {
-});
+ServerEvents.recipes((event) => {});

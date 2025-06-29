@@ -1,13 +1,13 @@
-ItemEvents.tooltip(event => {
+ItemEvents.tooltip((event) => {
     function addTooltip(itemName, itemText, textColor, idx) {
         event.addAdvanced(itemName, (item, advanced, text) => {
-			text.add(1, textColor(itemText))
-		});
+            text.add(1, textColor(itemText));
+        });
     }
 
     function addRedTooltip(itemName, itemText, idx) {
-		addTooltip(itemName, itemText, Text.red, idx)
-	}
+        addTooltip(itemName, itemText, Text.red, idx);
+    }
 
     [
         "industrialforegoing:washing_factory",
@@ -16,8 +16,8 @@ ItemEvents.tooltip(event => {
         "industrialforegoing:latex_processing_unit",
         "industrialforegoing:plastic",
         "industrialforegoing:dryrubber",
-        "immersiveengineering:alloybrick"
-    ].forEach(item => addRedTooltip(item, "Disabled", 1));
+        "immersiveengineering:alloybrick",
+    ].forEach((item) => addRedTooltip(item, "Disabled", 1));
 
     [
         "thermal:sulfur_ore",
@@ -35,8 +35,8 @@ ItemEvents.tooltip(event => {
         "rftoolsbase:dimensionalshard_overworld",
         "rftoolsbase:dimensionalshard_nether",
         "rftoolsbase:dimensionalshard_end",
-        "actuallyadditions:black_quartz_ore"
-    ].forEach(item => addRedTooltip(item, "Removed from worldgen", 1));
+        "actuallyadditions:black_quartz_ore",
+    ].forEach((item) => addRedTooltip(item, "Removed from worldgen", 1));
 
     // Set up tooltips for ores
     function t1OreTooltip(item, idx) {
@@ -144,5 +144,10 @@ ItemEvents.tooltip(event => {
     t2OreTooltip("tconstruct:cobalt_ore", 1);
 
     // Arboreal extractor tooltip
-    addTooltip("thermal:device_tree_extractor", "Works with artificial trees", Text.green, 1);
+    addTooltip(
+        "thermal:device_tree_extractor",
+        "Works with artificial trees",
+        Text.green,
+        1
+    );
 });

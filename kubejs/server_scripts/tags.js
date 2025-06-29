@@ -1,7 +1,13 @@
-ServerEvents.tags("item", event => {
+ServerEvents.tags("item", (event) => {
     // Attempt to get rid of tinkers rose gold
-    event.add("immersiveengineering:recycling/blacklist", "thermal:rose_gold_gear");
-    event.add("immersiveengineering:recycling/blacklist", "thermal:rose_gold_plate");
+    event.add(
+        "immersiveengineering:recycling/blacklist",
+        "thermal:rose_gold_gear"
+    );
+    event.add(
+        "immersiveengineering:recycling/blacklist",
+        "thermal:rose_gold_plate"
+    );
 
     // Missing venus sandstone tag
     event.add("forge:sandstone/venus_sandstone", "ad_astra:venus_sandstone");
@@ -21,6 +27,9 @@ ServerEvents.tags("item", event => {
     event.remove("forge:dusts/wood", "mekanism:sawdust");
 });
 
-ServerEvents.tags("fluid", event => {
-    event.remove("c:hidden_from_recipe_viewers", "tconstruct:molten_knightslime");
+ServerEvents.tags("fluid", (event) => {
+    event.remove(
+        "c:hidden_from_recipe_viewers",
+        "tconstruct:molten_knightslime"
+    );
 });

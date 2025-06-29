@@ -4,7 +4,7 @@ ServerEvents.recipes((event) => {
         "immersiveengineering:stick_iron",
         "immersiveengineering:stick_steel",
         "immersiveengineering:stick_aluminum",
-    ].forEach(rod => {
+    ].forEach((rod) => {
         event.remove({ output: rod, type: "minecraft:crafting_shaped" });
     });
 
@@ -17,8 +17,8 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/gold", "createaddition:gold_rod"],
         ["#forge:ingots/electrum", "createaddition:electrum_rod"],
         ["#forge:ingots/brass", "createaddition:brass_rod"],
-        ["#forge:ingots/zinc", "kubejs:zinc_rod", true]
-    ].forEach(entry => {
+        ["#forge:ingots/zinc", "kubejs:zinc_rod", true],
+    ].forEach((entry) => {
         const [ingot, rod, createRecipe] = entry;
 
         event.recipes.thermal
@@ -29,13 +29,13 @@ ServerEvents.recipes((event) => {
             event.custom({
                 type: "createaddition:rolling",
                 input: {
-                    tag: ingot.slice(1, ingot.length)
+                    tag: ingot.slice(1, ingot.length),
                 },
                 result: {
                     item: rod,
-                    count: 2
-                }
+                    count: 2,
+                },
             });
         }
-    })
+    });
 });

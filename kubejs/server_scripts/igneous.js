@@ -1,12 +1,12 @@
 ServerEvents.recipes((event) => {
-	let rockgen = (adjacent, below, out) => {
+    let rockgen = (adjacent, below, out) => {
         event.custom({
-            type: 'thermal:rock_gen',
+            type: "thermal:rock_gen",
             adjacent: adjacent,
             below: below,
-            result: {item: out}}
-        )
-    }
+            result: { item: out },
+        });
+    };
 
     let rocks = [
         "minecraft:diorite",
@@ -27,8 +27,8 @@ ServerEvents.recipes((event) => {
         "quark:jasper",
         "quark:shale",
         "quark:myalite",
-        "quark:permafrost"
+        "quark:permafrost",
     ];
 
-    rocks.forEach(rock => rockgen("minecraft:water", rock, rock));
+    rocks.forEach((rock) => rockgen("minecraft:water", rock, rock));
 });

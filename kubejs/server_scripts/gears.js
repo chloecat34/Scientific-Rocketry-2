@@ -10,7 +10,7 @@ ServerEvents.recipes((event) => {
         if (
             !event.containsRecipe({
                 output: gear,
-                type: "immersiveengineering:metal_press"
+                type: "immersiveengineering:metal_press",
             })
         ) {
             event.custom({
@@ -18,14 +18,14 @@ ServerEvents.recipes((event) => {
                 energy: 2400,
                 input: {
                     base_ingredient: {
-                        tag: `forge:ingots/${ingot}`
+                        tag: `forge:ingots/${ingot}`,
                     },
-                    count: 4
+                    count: 4,
                 },
                 mold: "immersiveengineering:mold_gear",
                 result: {
-                    item: gear
-                }
+                    item: gear,
+                },
             });
         }
 
@@ -57,7 +57,7 @@ ServerEvents.recipes((event) => {
         "signalum",
         "lumium",
         "enderium",
-        "rose_gold"
+        "rose_gold",
     ].forEach((ingot) => standardizeGears(ingot, `thermal:${ingot}_gear`));
 
     // Thermal endergy
@@ -66,24 +66,30 @@ ServerEvents.recipes((event) => {
     );
 
     // Kubejs
-    const kubejsGears = ["platinum", "cobalt", "manyullyn", "red_alloy", "energetic_alloy", "vibrant_alloy", "electrical_steel"];
-    kubejsGears.forEach(ingot => standardizeGears(ingot, `kubejs:${ingot}_gear`));
+    const kubejsGears = [
+        "platinum",
+        "cobalt",
+        "manyullyn",
+        "red_alloy",
+        "energetic_alloy",
+        "vibrant_alloy",
+        "electrical_steel",
+    ];
+    kubejsGears.forEach((ingot) =>
+        standardizeGears(ingot, `kubejs:${ingot}_gear`)
+    );
 
     // Get rid of the gem gears
     ["lapis", "diamond", "emerald", "quartz"].forEach((gem) =>
         event.remove({
-            output: `thermal:${gem}_gear`
+            output: `thermal:${gem}_gear`,
         })
     );
 
     // Custom gear recipes (designed to not be used long-term)
     function mechcraftGears(gear, plate) {
-        event.recipes.createMechanicalCrafting(gear, [
-            " A ",
-            "A A",
-            " A "
-        ], {
-            A: plate
+        event.recipes.createMechanicalCrafting(gear, [" A ", "A A", " A "], {
+            A: plate,
         });
     }
 
@@ -106,10 +112,12 @@ ServerEvents.recipes((event) => {
         "prismalium",
         "melodium",
         "stellarium",
-        "copper"
-    ].concat(kubejsGears).forEach(ingot => {
-        mechcraftGears(`#forge:gears/${ingot}`, `#forge:plates/${ingot}`)
-    });
+        "copper",
+    ]
+        .concat(kubejsGears)
+        .forEach((ingot) => {
+            mechcraftGears(`#forge:gears/${ingot}`, `#forge:plates/${ingot}`);
+        });
 
     mechcraftGears("thermal:iron_gear", "#forge:plates/iron");
     mechcraftGears("thermal:gold_gear", "#forge:plates/gold");

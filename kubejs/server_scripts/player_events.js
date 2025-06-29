@@ -1,9 +1,7 @@
 // This event handles molten metals to ensure they burn the player
-const molten = [
-    "kubejs:molten_sulfur"
-];
+const molten = ["kubejs:molten_sulfur"];
 
-PlayerEvents.tick(event => {
+PlayerEvents.tick((event) => {
     let player = event.player;
 
     if (isNaN(player.health)) {
@@ -13,7 +11,10 @@ PlayerEvents.tick(event => {
     let directDamage = 4;
     let fireSeconds = 15;
 
-    if (molten.includes(player.block.id) || molten.includes(player.block.up.id)) {
+    if (
+        molten.includes(player.block.id) ||
+        molten.includes(player.block.up.id)
+    ) {
         player.setSecondsOnFire(fireSeconds);
         event.entity.attack(player.damageSources().lava(), directDamage);
     }

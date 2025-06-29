@@ -15,19 +15,19 @@ ServerEvents.recipes((event) => {
         if (
             !event.containsRecipe({
                 output: plate,
-                type: "immersiveengineering:metal_press"
+                type: "immersiveengineering:metal_press",
             })
         ) {
             event.custom({
                 type: "immersiveengineering:metal_press",
                 energy: 2400,
                 input: {
-                    tag: `forge:ingots/${ingot}`
+                    tag: `forge:ingots/${ingot}`,
                 },
                 mold: "immersiveengineering:mold_plate",
                 result: {
-                    item: plate
-                }
+                    item: plate,
+                },
             });
         }
 
@@ -58,7 +58,7 @@ ServerEvents.recipes((event) => {
         "signalum",
         "lumium",
         "enderium",
-        "rose_gold"
+        "rose_gold",
     ].forEach((ingot) => standardizePlates(ingot, `thermal:${ingot}_plate`));
 
     // Thermal endergy plates
@@ -88,6 +88,6 @@ ServerEvents.recipes((event) => {
         "red_alloy",
         "energetic_alloy",
         "vibrant_alloy",
-        "electrical_steel"
-    ].forEach(ingot => standardizePlates(ingot, `kubejs:${ingot}_plate`));
+        "electrical_steel",
+    ].forEach((ingot) => standardizePlates(ingot, `kubejs:${ingot}_plate`));
 });
