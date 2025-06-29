@@ -120,25 +120,23 @@ JEIEvents.hideItems((event) => {
         "kubejs:incomplete_adv_electronic_component",
         "mekanism:sawdust",
         "immersiveengineering:dust_wood",
+        "pneumaticcraft:air_compressor",
+        "pneumaticcraft:advanced_air_compressor",
     ];
 
     itemsToRemove.forEach((item) => event.hide(item));
 });
 
 JEIEvents.hideFluids((event) => {
-    [
-        "estrogen:molten_slime",
-        "estrogen:molten_amethyst",
-        "tconstruct:molten_ender",
-    ].forEach((fluid) => event.hide(fluid));
+    ["estrogen:molten_slime", "estrogen:molten_amethyst", "tconstruct:molten_ender"].forEach((fluid) =>
+        event.hide(fluid)
+    );
 });
 
 JEIEvents.addItems((event) => {
-    [
-        "tconstruct:knightslime_nugget",
-        "tconstruct:knightslime_ingot",
-        "tconstruct:knightslime_block",
-    ].forEach((item) => event.add(Item.of(item)));
+    ["tconstruct:knightslime_nugget", "tconstruct:knightslime_ingot", "tconstruct:knightslime_block"].forEach((item) =>
+        event.add(Item.of(item))
+    );
 });
 
 JEIEvents.addFluids((event) => {

@@ -55,4 +55,15 @@ ServerEvents.recipes((event) => {
             block: "minecraft:obsidian"
         }
     });
+
+    event.custom({
+        type: "pneumaticcraft:heat_properties",
+        fluid: "kubejs:molten_compressed_iron",
+        temperature: 1500,
+        thermalResistance: 100,
+        heatCapacity: 10000,
+        transformCold: {
+            block: "minecraft:obsidian"
+        }
+    });
 });

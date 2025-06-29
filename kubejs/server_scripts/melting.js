@@ -693,4 +693,14 @@ ServerEvents.recipes((event) => {
     addTinkersBlockCastingRecipe("kubejs:pulsating_alloy_block", "kubejs:molten_pulsating_alloy", 810, 160);
     addTinkersIngotCastingRecipe("kubejs:pulsating_alloy_ingot", "kubejs:molten_pulsating_alloy", 50);
     addTinkersIngotCastingRecipe("kubejs:pulsating_alloy_nugget", "kubejs:molten_pulsating_alloy", 10);
+
+    // Molten compressed steel
+    addBothMelterRecipes("pneumaticcraft:ingot_iron_compressed", "kubejs:molten_compressed_iron", 90, 60, 1200, 4800);
+    addBothMelterRecipes("kubejs:compressed_iron_plate", "kubejs:molten_compressed_iron", 90, 60, 1200, 4800);
+    addBothMelterRecipes("pneumaticcraft:compressed_iron_gear", "kubejs:molten_compressed_iron", 360, 120, 1200, 4800 * 4);
+    addBothMelterRecipes("pneumaticcraft:compressed_iron_block", "kubejs:molten_compressed_iron", 810, 200, 1200, 4800 * 9);
+    chillerIngotCasting("#forge:ingots/compressed_iron", "kubejs:molten_compressed_iron", 90, 4800);
+    chillerBlockCasting("pneumaticcraft:compressed_iron_block", "kubejs:molten_compressed_iron", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("pneumaticcraft:compressed_iron_block", "kubejs:molten_compressed_iron", 810, 160);
+    addTinkersIngotCastingRecipe("pneumaticcraft:ingot_iron_compressed", "kubejs:molten_compressed_iron", 50);
 });

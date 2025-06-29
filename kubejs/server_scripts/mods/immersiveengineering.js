@@ -16,6 +16,26 @@ ServerEvents.recipes((event) => {
         ])
         .energy(2000);
 
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 125,
+            fluid: "immersiveengineering:creosote",
+        },
+        item_input: {
+            tag: "minecraft:planks",
+        },
+        item_output: {
+            count: 1,
+            item: "immersiveengineering:treated_wood_horizontal",
+        },
+        temperature: {
+            min_temp: 273,
+        },
+    });
+
     // Coke bricks
     event.remove({ id: "immersiveengineering:crafting/cokebrick" });
     event.shaped("immersiveengineering:cokebrick", ["AA", "AA"], {
@@ -31,11 +51,7 @@ ServerEvents.recipes((event) => {
     event.smelting("kubejs:coke_brick", "kubejs:coke_brick_blend");
 
     event.recipes.thermal
-        .smelter("4x kubejs:coke_brick", [
-            "2x minecraft:clay_ball",
-            "#forge:sand",
-            "#forge:gunpowder",
-        ])
+        .smelter("4x kubejs:coke_brick", ["2x minecraft:clay_ball", "#forge:sand", "#forge:gunpowder"])
         .energy(9600);
 
     // Blast bricks
@@ -55,11 +71,7 @@ ServerEvents.recipes((event) => {
     event.smelting("kubejs:blast_brick", "kubejs:blast_brick_blend");
 
     event.recipes.thermal
-        .smelter("4x kubejs:blast_brick", [
-            "2x create:cinder_flour",
-            "kubejs:soul_sand_dust",
-            "#forge:dusts/coal_coke",
-        ])
+        .smelter("4x kubejs:blast_brick", ["2x create:cinder_flour", "kubejs:soul_sand_dust", "#forge:dusts/coal_coke"])
         .energy(9600);
 
     // Mech. component crafting
@@ -75,44 +87,32 @@ ServerEvents.recipes((event) => {
     // Redstone engineering block
     event.remove({ output: "immersiveengineering:rs_engineering" });
 
-    event.shaped(
-        "2x immersiveengineering:rs_engineering",
-        ["ABA", "CDC", "ABA"],
-        {
-            A: "#forge:sheetmetals/iron",
-            B: "#forge:plates/red_alloy",
-            C: "create:electron_tube",
-            D: "#forge:gears/rose_gold",
-        }
-    );
+    event.shaped("2x immersiveengineering:rs_engineering", ["ABA", "CDC", "ABA"], {
+        A: "#forge:sheetmetals/iron",
+        B: "#forge:plates/red_alloy",
+        C: "create:electron_tube",
+        D: "#forge:gears/rose_gold",
+    });
 
     // Light engineering block
     event.remove({ output: "immersiveengineering:light_engineering" });
 
-    event.shaped(
-        "2x immersiveengineering:light_engineering",
-        ["ABA", "CDC", "ABA"],
-        {
-            A: "#forge:sheetmetals/iron",
-            B: "immersiveengineering:component_iron",
-            C: "createaddition:capacitor",
-            D: "#forge:gears/bronze",
-        }
-    );
+    event.shaped("2x immersiveengineering:light_engineering", ["ABA", "CDC", "ABA"], {
+        A: "#forge:sheetmetals/iron",
+        B: "immersiveengineering:component_iron",
+        C: "createaddition:capacitor",
+        D: "#forge:gears/bronze",
+    });
 
     // Heavy engineering block
     event.remove({ output: "immersiveengineering:heavy_engineering" });
 
-    event.shaped(
-        "2x immersiveengineering:heavy_engineering",
-        ["ABA", "CDC", "ABA"],
-        {
-            A: "#forge:sheetmetals/steel",
-            B: "immersiveengineering:component_steel",
-            C: "create:precision_mechanism",
-            D: "#forge:gears/invar",
-        }
-    );
+    event.shaped("2x immersiveengineering:heavy_engineering", ["ABA", "CDC", "ABA"], {
+        A: "#forge:sheetmetals/steel",
+        B: "immersiveengineering:component_steel",
+        C: "create:precision_mechanism",
+        D: "#forge:gears/invar",
+    });
 
     // Radiator block
     event.remove({ output: "immersiveengineering:radiator" });
@@ -158,17 +158,13 @@ ServerEvents.recipes((event) => {
         }),
     });
 
-    event.shaped(
-        Item.of("immersiveengineering:blueprint", { blueprint: "components" }),
-        ["ABC", "DDD", "EEE"],
-        {
-            A: "#forge:plates/bronze",
-            B: "#forge:plates/steel",
-            C: "#forge:plates/electrum",
-            D: "#forge:dyes/blue",
-            E: "minecraft:paper",
-        }
-    );
+    event.shaped(Item.of("immersiveengineering:blueprint", { blueprint: "components" }), ["ABC", "DDD", "EEE"], {
+        A: "#forge:plates/bronze",
+        B: "#forge:plates/steel",
+        C: "#forge:plates/electrum",
+        D: "#forge:dyes/blue",
+        E: "minecraft:paper",
+    });
 
     // Metal press molds blueprint
     event.remove({
@@ -177,15 +173,11 @@ ServerEvents.recipes((event) => {
         }),
     });
 
-    event.shaped(
-        Item.of("immersiveengineering:blueprint", { blueprint: "molds" }),
-        ["AAA", "DDD", "EEE"],
-        {
-            A: "#forge:plates/steel",
-            D: "#forge:dyes/blue",
-            E: "minecraft:paper",
-        }
-    );
+    event.shaped(Item.of("immersiveengineering:blueprint", { blueprint: "molds" }), ["AAA", "DDD", "EEE"], {
+        A: "#forge:plates/steel",
+        D: "#forge:dyes/blue",
+        E: "minecraft:paper",
+    });
 
     // Arc furnace electrodes blueprint
     event.remove({
@@ -194,22 +186,14 @@ ServerEvents.recipes((event) => {
         }),
     });
 
-    event.shaped(
-        Item.of("immersiveengineering:blueprint", { blueprint: "electrode" }),
-        ["AAA", "DDD", "EEE"],
-        {
-            A: "#forge:ingots/hop_graphite",
-            D: "#forge:dyes/blue",
-            E: "minecraft:paper",
-        }
-    );
+    event.shaped(Item.of("immersiveengineering:blueprint", { blueprint: "electrode" }), ["AAA", "DDD", "EEE"], {
+        A: "#forge:ingots/hop_graphite",
+        D: "#forge:dyes/blue",
+        E: "minecraft:paper",
+    });
 
     // Engineer's workbench
-    event.replaceInput(
-        { output: "immersiveengineering:workbench" },
-        "#forge:ingots/iron",
-        "#forge:rods/steel"
-    );
+    event.replaceInput({ output: "immersiveengineering:workbench" }, "#forge:ingots/iron", "#forge:rods/steel");
 
     // Redstone acid needs IE
     event.remove({ id: "immersiveengineering:crafting/redstone_acid" });
@@ -247,25 +231,17 @@ ServerEvents.recipes((event) => {
     // Concrete
     event.remove({ id: "immersiveengineering:crafting/concrete" });
 
-    event.recipes.create.mixing(
-        Fluid.of("immersiveengineering:concrete", 500),
-        [
-            "2x #forge:sand",
-            "#forge:gravel",
-            "minecraft:clay_ball",
-            Fluid.of("minecraft:water", 500),
-        ]
-    );
-
-    event.recipes.create.compacting("immersiveengineering:concrete", [
-        Fluid.of("immersiveengineering:concrete", 1000),
+    event.recipes.create.mixing(Fluid.of("immersiveengineering:concrete", 500), [
+        "2x #forge:sand",
+        "#forge:gravel",
+        "minecraft:clay_ball",
+        Fluid.of("minecraft:water", 500),
     ]);
 
+    event.recipes.create.compacting("immersiveengineering:concrete", [Fluid.of("immersiveengineering:concrete", 1000)]);
+
     event.recipes.thermal
-        .chiller(
-            "immersiveengineering:concrete",
-            Fluid.of("immersiveengineering:concrete", 1000)
-        )
+        .chiller("immersiveengineering:concrete", Fluid.of("immersiveengineering:concrete", 1000))
         .energy(8000);
 
     event.custom({
@@ -294,21 +270,10 @@ ServerEvents.recipes((event) => {
 
     // Slag glass
     event.remove({ id: "immersiveengineering:smelting/slag_glass" });
-    event.smelting(
-        "immersiveengineering:slag_glass",
-        "immersiveengineering:slag_gravel"
-    );
+    event.smelting("immersiveengineering:slag_glass", "immersiveengineering:slag_gravel");
 
-    event.replaceInput(
-        { output: "immersiveengineering:windmill" },
-        "#forge:ingots/iron",
-        "#forge:rods/steel"
-    );
-    event.replaceInput(
-        { output: "immersiveengineering:watermill" },
-        "#forge:ingots/steel",
-        "#forge:rods/steel"
-    );
+    event.replaceInput({ output: "immersiveengineering:windmill" }, "#forge:ingots/iron", "#forge:rods/steel");
+    event.replaceInput({ output: "immersiveengineering:watermill" }, "#forge:ingots/steel", "#forge:rods/steel");
 
     // Electrodes
     event.remove({ id: "immersiveengineering:metalpress/electrode" });
@@ -317,40 +282,24 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "immersiveengineering:component_electronic" });
 
     event.recipes
-        .createSequencedAssembly(
-            [Item.of("immersiveengineering:component_electronic")],
-            "#forge:treated_wood_slab",
-            [
-                event.recipes.createDeploying(
-                    "kubejs:incomplete_electronic_component",
-                    [
-                        "kubejs:incomplete_electronic_component",
-                        "createaddition:capacitor",
-                    ]
-                ),
-                event.recipes.createDeploying(
-                    "kubejs:incomplete_electronic_component",
-                    [
-                        "kubejs:incomplete_electronic_component",
-                        "kubejs:energetic_alloy_wire",
-                    ]
-                ),
-                event.recipes.createDeploying(
-                    "kubejs:incomplete_electronic_component",
-                    [
-                        "kubejs:incomplete_electronic_component",
-                        "kubejs:energetic_alloy_wire",
-                    ]
-                ),
-                event.recipes.createFilling(
-                    "kubejs:incomplete_electronic_component",
-                    [
-                        "kubejs:incomplete_electronic_component",
-                        Fluid.of("immersiveengineering:redstone_acid", 500),
-                    ]
-                ),
-            ]
-        )
+        .createSequencedAssembly([Item.of("immersiveengineering:component_electronic")], "#forge:treated_wood_slab", [
+            event.recipes.createDeploying("kubejs:incomplete_electronic_component", [
+                "kubejs:incomplete_electronic_component",
+                "createaddition:capacitor",
+            ]),
+            event.recipes.createDeploying("kubejs:incomplete_electronic_component", [
+                "kubejs:incomplete_electronic_component",
+                "kubejs:energetic_alloy_wire",
+            ]),
+            event.recipes.createDeploying("kubejs:incomplete_electronic_component", [
+                "kubejs:incomplete_electronic_component",
+                "kubejs:energetic_alloy_wire",
+            ]),
+            event.recipes.createFilling("kubejs:incomplete_electronic_component", [
+                "kubejs:incomplete_electronic_component",
+                Fluid.of("immersiveengineering:redstone_acid", 500),
+            ]),
+        ])
         .transitionalItem("kubejs:incomplete_electronic_component")
         .loops(1);
 
@@ -362,34 +311,22 @@ ServerEvents.recipes((event) => {
             [Item.of("immersiveengineering:component_electronic_adv")],
             "immersiveengineering:plate_duroplast",
             [
-                event.recipes.createDeploying(
+                event.recipes.createDeploying("kubejs:incomplete_adv_electronic_component", [
                     "kubejs:incomplete_adv_electronic_component",
-                    [
-                        "kubejs:incomplete_adv_electronic_component",
-                        "immersiveengineering:electron_tube",
-                    ]
-                ),
-                event.recipes.createDeploying(
+                    "immersiveengineering:electron_tube",
+                ]),
+                event.recipes.createDeploying("kubejs:incomplete_adv_electronic_component", [
                     "kubejs:incomplete_adv_electronic_component",
-                    [
-                        "kubejs:incomplete_adv_electronic_component",
-                        "kubejs:vibrant_alloy_wire",
-                    ]
-                ),
-                event.recipes.createDeploying(
+                    "kubejs:vibrant_alloy_wire",
+                ]),
+                event.recipes.createDeploying("kubejs:incomplete_adv_electronic_component", [
                     "kubejs:incomplete_adv_electronic_component",
-                    [
-                        "kubejs:incomplete_adv_electronic_component",
-                        "kubejs:vibrant_alloy_wire",
-                    ]
-                ),
-                event.recipes.createFilling(
+                    "kubejs:vibrant_alloy_wire",
+                ]),
+                event.recipes.createFilling("kubejs:incomplete_adv_electronic_component", [
                     "kubejs:incomplete_adv_electronic_component",
-                    [
-                        "kubejs:incomplete_adv_electronic_component",
-                        Fluid.of("immersiveengineering:redstone_acid", 500),
-                    ]
-                ),
+                    Fluid.of("immersiveengineering:redstone_acid", 500),
+                ]),
             ]
         )
         .transitionalItem("kubejs:incomplete_adv_electronic_component")
@@ -413,13 +350,8 @@ ServerEvents.recipes((event) => {
         .energy(9600);
 
     // Slag gravel
-    event.recipes.mekanism.crushing(
-        "immersiveengineering:slag_gravel",
-        "#forge:slag"
-    );
-    event.recipes.thermal
-        .pulverizer("immersiveengineering:slag_gravel", "#forge:slag")
-        .energy(4000);
+    event.recipes.mekanism.crushing("immersiveengineering:slag_gravel", "#forge:slag");
+    event.recipes.thermal.pulverizer("immersiveengineering:slag_gravel", "#forge:slag").energy(4000);
 
     // Vacuum tube
     event.remove({ output: "immersiveengineering:electron_tube" });
@@ -474,60 +406,36 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "immersiveengineering:wirecoil_structure_steel" });
     event.remove({ output: "immersiveengineering:wirecoil_redstone" });
 
-    event.shaped(
-        "2x immersiveengineering:wirecoil_copper",
-        ["AAA", "ABA", "AAA"],
-        {
-            A: "#forge:wires/copper",
-            B: "immersiveengineering:stick_treated",
-        }
-    );
+    event.shaped("2x immersiveengineering:wirecoil_copper", ["AAA", "ABA", "AAA"], {
+        A: "#forge:wires/copper",
+        B: "immersiveengineering:stick_treated",
+    });
 
-    event.shaped(
-        "2x immersiveengineering:wirecoil_electrum",
-        ["AAA", "ABA", "AAA"],
-        {
-            A: "#forge:wires/electrum",
-            B: "immersiveengineering:stick_treated",
-        }
-    );
+    event.shaped("2x immersiveengineering:wirecoil_electrum", ["AAA", "ABA", "AAA"], {
+        A: "#forge:wires/electrum",
+        B: "immersiveengineering:stick_treated",
+    });
 
-    event.shaped(
-        "2x immersiveengineering:wirecoil_steel",
-        ["ABA", "BCB", "ABA"],
-        {
-            A: "#forge:wires/steel",
-            B: "#forge:wires/aluminum",
-            C: "immersiveengineering:stick_treated",
-        }
-    );
+    event.shaped("2x immersiveengineering:wirecoil_steel", ["ABA", "BCB", "ABA"], {
+        A: "#forge:wires/steel",
+        B: "#forge:wires/aluminum",
+        C: "immersiveengineering:stick_treated",
+    });
 
-    event.shaped(
-        "2x immersiveengineering:wirecoil_redstone",
-        ["AAA", "ABA", "AAA"],
-        {
-            A: "#forge:wires/red_alloy",
-            B: "immersiveengineering:stick_treated",
-        }
-    );
+    event.shaped("2x immersiveengineering:wirecoil_redstone", ["AAA", "ABA", "AAA"], {
+        A: "#forge:wires/red_alloy",
+        B: "immersiveengineering:stick_treated",
+    });
 
-    event.shaped(
-        "4x immersiveengineering:wirecoil_structure_rope",
-        [" A ", "ABA", " A "],
-        {
-            A: "#forge:fiber_hemp",
-            B: "immersiveengineering:stick_treated",
-        }
-    );
+    event.shaped("4x immersiveengineering:wirecoil_structure_rope", [" A ", "ABA", " A "], {
+        A: "#forge:fiber_hemp",
+        B: "immersiveengineering:stick_treated",
+    });
 
-    event.shaped(
-        "4x immersiveengineering:wirecoil_structure_steel",
-        [" A ", "ABA", " A "],
-        {
-            A: "#forge:wires/steel",
-            B: "immersiveengineering:stick_treated",
-        }
-    );
+    event.shaped("4x immersiveengineering:wirecoil_structure_steel", [" A ", "ABA", " A "], {
+        A: "#forge:wires/steel",
+        B: "immersiveengineering:stick_treated",
+    });
 
     // Core sample drill
     event.replaceInput(
@@ -537,21 +445,9 @@ ServerEvents.recipes((event) => {
     );
 
     // Coil blocks
-    event.replaceInput(
-        { output: "immersiveengineering:coil_lv" },
-        "#forge:ingots/iron",
-        "create:copper_casing"
-    );
-    event.replaceInput(
-        { output: "immersiveengineering:coil_mv" },
-        "#forge:ingots/iron",
-        "create:brass_casing"
-    );
-    event.replaceInput(
-        { output: "immersiveengineering:coil_hv" },
-        "#forge:ingots/iron",
-        "create:railway_casing"
-    );
+    event.replaceInput({ output: "immersiveengineering:coil_lv" }, "#forge:ingots/iron", "create:copper_casing");
+    event.replaceInput({ output: "immersiveengineering:coil_mv" }, "#forge:ingots/iron", "create:brass_casing");
+    event.replaceInput({ output: "immersiveengineering:coil_hv" }, "#forge:ingots/iron", "create:railway_casing");
 
     // IE wiring
     event.replaceInput(
@@ -569,4 +465,11 @@ ServerEvents.recipes((event) => {
 
     // Remove extra coke recipe
     event.remove({ id: "immersiveengineering:crafting/coke_to_coal_coke" });
+
+    // Leaded concrete
+    event.recipes.mekanism.combining(
+        "immersiveengineering:concrete_leaded",
+        "immersiveengineering:concrete",
+        "#forge:plates/lead"
+    );
 });

@@ -195,4 +195,34 @@ ServerEvents.recipes((event) => {
             item: "kubejs:electrotine",
         },
     });
+
+    // Wood casing
+    event.remove({ output: "actuallyadditions:wood_casing" });
+
+    event.shaped("actuallyadditions:wood_casing", ["ABA", "BCB", "ABA"], {
+        A: "#forge:treated_wood",
+        B: "#forge:rods/treated_wood",
+        C: "#forge:plates/iron",
+    });
+
+    // Iron casing
+    event.remove({ output: "actuallyadditions:iron_casing" });
+
+    event.shaped("actuallyadditions:iron_casing", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/aluminum",
+        B: "#forge:rods/treated_wood",
+        C: "#forge:gems/black_quartz",
+        D: "#forge:gears/electrical_steel",
+    });
+
+    // Atomic reconstructor
+    event.remove({ output: "actuallyadditions:atomic_reconstructor" });
+
+    event.shaped("actuallyadditions:atomic_reconstructor", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/purple_alloy",
+        B: "immersiveengineering:tesla_coil",
+        C: "#forge:gems/ruby",
+        D: "actuallyadditions:iron_casing",
+        E: "createaddition:tesla_coil",
+    });
 });
