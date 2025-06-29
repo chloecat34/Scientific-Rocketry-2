@@ -1,10 +1,11 @@
 ServerEvents.recipes((event) => {
 	let rockgen = (adjacent, below, out) => {
-    event.custom({
-        type: 'thermal:rock_gen',
-        adjacent: adjacent,
-        below: below,
-        result: {item: out}})
+        event.custom({
+            type: 'thermal:rock_gen',
+            adjacent: adjacent,
+            below: below,
+            result: {item: out}}
+        )
     }
 
     let rocks = [

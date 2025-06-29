@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter_3_under_pressure"
+	group: ""
+	icon: "pneumaticcraft:printed_circuit_board"
+	id: "626413B87F1C4AFD"
+	order_index: 2
+	quest_links: [ ]
+	quests: [ ]
+	title: "Chapter 3: Under Pressure"
+}
