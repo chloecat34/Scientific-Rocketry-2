@@ -92,40 +92,15 @@ ServerEvents.recipes((event) => {
     // Tinkers melting
     const addTinkersMelterRecipe = makeTinkersMeltingRecipe(event);
     const addCrucibleRecipe = (item, fluid, fluidAmount, energy) => {
-        event.recipes.thermal
-            .crucible(Fluid.of(fluid, fluidAmount), item)
-            .energy(energy);
+        event.recipes.thermal.crucible(Fluid.of(fluid, fluidAmount), item).energy(energy);
     };
 
     const meltOre = (material, molten, time, temperature) => {
-        addTinkersMelterRecipe(
-            `forge:raw_materials/${material}`,
-            molten,
-            90,
-            time,
-            temperature
-        );
-        addTinkersMelterRecipe(
-            `forge:storage_blocks/raw_${material}`,
-            molten,
-            810,
-            time * 4,
-            temperature
-        );
-        addTinkersMelterRecipe(
-            `forge:ores/${material}`,
-            molten,
-            180,
-            time * 2,
-            temperature
-        );
+        addTinkersMelterRecipe(`forge:raw_materials/${material}`, molten, 90, time, temperature);
+        addTinkersMelterRecipe(`forge:storage_blocks/raw_${material}`, molten, 810, time * 4, temperature);
+        addTinkersMelterRecipe(`forge:ores/${material}`, molten, 180, time * 2, temperature);
         addCrucibleRecipe(`#forge:raw_materials/${material}`, molten, 90, 8000);
-        addCrucibleRecipe(
-            `#forge:storage_blocks/raw_${material}`,
-            molten,
-            810,
-            72000
-        );
+        addCrucibleRecipe(`#forge:storage_blocks/raw_${material}`, molten, 810, 72000);
         addCrucibleRecipe(`#forge:ores/${material}`, molten, 180, 8000);
     };
 
@@ -140,76 +115,16 @@ ServerEvents.recipes((event) => {
 
     // Standard crushing recipes
     [
-        [
-            "#forge:raw_materials/iron",
-            "#forge:ores/iron",
-            "thermal:iron_dust",
-            "thermal:nickel_dust",
-            1,
-        ],
-        [
-            "#forge:raw_materials/gold",
-            "#forge:ores/gold",
-            "thermal:gold_dust",
-            "thermal:copper_dust",
-            1,
-        ],
-        [
-            "#forge:raw_materials/copper",
-            "#forge:ores/copper",
-            "thermal:copper_dust",
-            "thermal:nickel_dust",
-            1,
-        ],
-        [
-            "#forge:raw_materials/tin",
-            "#forge:ores/tin",
-            "thermal:tin_dust",
-            "kubejs:zinc_dust",
-            1,
-        ],
-        [
-            "#forge:raw_materials/silver",
-            "#forge:ores/silver",
-            "thermal:silver_dust",
-            "thermal:lead_dust",
-            1,
-        ],
-        [
-            "#forge:raw_materials/lead",
-            "#forge:ores/lead",
-            "thermal:lead_dust",
-            "thermal:silver_dust",
-            1,
-        ],
-        [
-            "#forge:raw_materials/zinc",
-            "#forge:ores/zinc",
-            "kubejs:zinc_dust",
-            "thermal:tin_dust",
-            1,
-        ],
-        [
-            "#forge:raw_materials/cobalt",
-            "#forge:ores/cobalt",
-            "kubejs:cobalt_dust",
-            "thermal:lead_dust",
-            2,
-        ],
-        [
-            "#forge:raw_materials/nickel",
-            "#forge:ores/nickel",
-            "thermal:nickel_dust",
-            "kubejs:platinum_dust",
-            2,
-        ],
-        [
-            "#forge:raw_materials/desh",
-            "#forge:ores/desh",
-            "kubejs:desh_dust",
-            "thermal:copper_dust",
-            2,
-        ],
+        ["#forge:raw_materials/iron", "#forge:ores/iron", "thermal:iron_dust", "thermal:nickel_dust", 1],
+        ["#forge:raw_materials/gold", "#forge:ores/gold", "thermal:gold_dust", "thermal:copper_dust", 1],
+        ["#forge:raw_materials/copper", "#forge:ores/copper", "thermal:copper_dust", "thermal:nickel_dust", 1],
+        ["#forge:raw_materials/tin", "#forge:ores/tin", "thermal:tin_dust", "kubejs:zinc_dust", 1],
+        ["#forge:raw_materials/silver", "#forge:ores/silver", "thermal:silver_dust", "thermal:lead_dust", 1],
+        ["#forge:raw_materials/lead", "#forge:ores/lead", "thermal:lead_dust", "thermal:silver_dust", 1],
+        ["#forge:raw_materials/zinc", "#forge:ores/zinc", "kubejs:zinc_dust", "thermal:tin_dust", 1],
+        ["#forge:raw_materials/cobalt", "#forge:ores/cobalt", "kubejs:cobalt_dust", "thermal:lead_dust", 2],
+        ["#forge:raw_materials/nickel", "#forge:ores/nickel", "thermal:nickel_dust", "kubejs:platinum_dust", 2],
+        ["#forge:raw_materials/desh", "#forge:ores/desh", "kubejs:desh_dust", "thermal:copper_dust", 2],
         [
             "#forge:raw_materials/aluminum",
             "#forge:ores/aluminum",
@@ -226,10 +141,7 @@ ServerEvents.recipes((event) => {
         }
 
         if (tier <= 2) {
-            event.recipes.createCrushing(
-                [dust, Item.of(dust).withChance(0.5)],
-                rawOre
-            );
+            event.recipes.createCrushing([dust, Item.of(dust).withChance(0.5)], rawOre);
             event.recipes.createCrushing([Item.of(dust, 3)], ore);
         }
 
@@ -287,29 +199,14 @@ ServerEvents.recipes((event) => {
             });
         }
 
-        event.recipes.thermal.pulverizer(
-            [
-                Item.of(dust).withChance(2.0),
-                Item.of(byproduct).withChance(0.25),
-            ],
-            rawOre
-        );
+        event.recipes.thermal.pulverizer([Item.of(dust).withChance(2.0), Item.of(byproduct).withChance(0.25)], rawOre);
         event.recipes.thermal
-            .pulverizer(
-                [
-                    Item.of(dust).withChance(4.0),
-                    Item.of(byproduct).withChance(0.5),
-                ],
-                ore
-            )
+            .pulverizer([Item.of(dust).withChance(4.0), Item.of(byproduct).withChance(0.5)], ore)
             .energy(8000);
     });
 
     // Netherite scrap
-    event.recipes.createCrushing(
-        [Item.of("minecraft:netherite_scrap", 2)],
-        "minecraft:ancient_debris"
-    );
+    event.recipes.createCrushing([Item.of("minecraft:netherite_scrap", 2)], "minecraft:ancient_debris");
 
     event.custom({
         type: "immersiveengineering:crusher",
@@ -339,10 +236,7 @@ ServerEvents.recipes((event) => {
 
     event.recipes.thermal
         .pulverizer(
-            [
-                Item.of("minecraft:netherite_scrap").withChance(3.0),
-                Item.of("kubejs:cobalt_dust").withChance(0.5),
-            ],
+            [Item.of("minecraft:netherite_scrap").withChance(3.0), Item.of("kubejs:cobalt_dust").withChance(0.5)],
             "minecraft:ancient_debris"
         )
         .energy(8000);
@@ -368,11 +262,7 @@ ServerEvents.recipes((event) => {
     });
 
     // Remove smelting raw ore bricks
-    [
-        "quark:raw_iron_bricks",
-        "quark:raw_gold_bricks",
-        "quark:raw_copper_bricks",
-    ].forEach((ore) => {
+    ["quark:raw_iron_bricks", "quark:raw_gold_bricks", "quark:raw_copper_bricks"].forEach((ore) => {
         event.remove({ input: ore, type: "smelting" });
         event.remove({ input: ore, type: "blasting" });
     });
@@ -417,78 +307,15 @@ ServerEvents.recipes((event) => {
     // Set up gem ore crushing recipes
     [
         // ore, primary, IE byproduct, Thermal byproduct, Base amount, Tier
-        [
-            "#forge:ores/coal",
-            "minecraft:coal",
-            "thermal:sulfur_dust",
-            "thermal:sulfur",
-            1,
-            1,
-        ],
-        [
-            "#forge:ores/redstone",
-            "minecraft:redstone",
-            "thermal:cinnabar",
-            "thermal:cinnabar",
-            3,
-            1,
-        ],
-        [
-            "#forge:ores/emerald",
-            "minecraft:emerald",
-            "minecraft:emerald",
-            "minecraft:emerald",
-            1,
-            1,
-        ],
-        [
-            "#forge:ores/diamond",
-            "minecraft:diamond",
-            "minecraft:diamond",
-            "minecraft:diamond",
-            1,
-            1,
-        ],
-        [
-            "#forge:ores/lapis",
-            "minecraft:lapis_lazuli",
-            "thermal:sulfur_dust",
-            "thermal:sulfur",
-            3,
-            1,
-        ],
-        [
-            "#forge:ores/quartz",
-            "minecraft:quartz",
-            "thermal:sulfur_dust",
-            "thermal:sulfur",
-            1,
-            1,
-        ],
-        [
-            "#forge:ores/fluorite",
-            "mekanism:fluorite_gem",
-            "thermal:blitz_powder",
-            "thermal:blitz_powder",
-            2,
-            4,
-        ],
-        [
-            "#forge:ores/ice_shard",
-            "ad_astra:ice_shard",
-            "thermal:blizz_powder",
-            "thermal:blizz_powder",
-            1,
-            3,
-        ],
-        [
-            "#forge:ores/sulfur",
-            "thermal:sulfur",
-            "minecraft:blaze_powder",
-            "minecraft:blaze_powder",
-            2,
-            1,
-        ],
+        ["#forge:ores/coal", "minecraft:coal", "thermal:sulfur_dust", "thermal:sulfur", 1, 1],
+        ["#forge:ores/redstone", "minecraft:redstone", "thermal:cinnabar", "thermal:cinnabar", 3, 1],
+        ["#forge:ores/emerald", "minecraft:emerald", "minecraft:emerald", "minecraft:emerald", 1, 1],
+        ["#forge:ores/diamond", "minecraft:diamond", "minecraft:diamond", "minecraft:diamond", 1, 1],
+        ["#forge:ores/lapis", "minecraft:lapis_lazuli", "thermal:sulfur_dust", "thermal:sulfur", 3, 1],
+        ["#forge:ores/quartz", "minecraft:quartz", "thermal:sulfur_dust", "thermal:sulfur", 1, 1],
+        ["#forge:ores/fluorite", "mekanism:fluorite_gem", "thermal:blitz_powder", "thermal:blitz_powder", 2, 4],
+        ["#forge:ores/ice_shard", "ad_astra:ice_shard", "thermal:blizz_powder", "thermal:blizz_powder", 1, 3],
+        ["#forge:ores/sulfur", "thermal:sulfur", "minecraft:blaze_powder", "minecraft:blaze_powder", 2, 1],
         [
             "#forge:ores/dimensional_shard",
             "rftoolsbase:dimensionalshard",
@@ -497,62 +324,13 @@ ServerEvents.recipes((event) => {
             2,
             3,
         ],
-        [
-            "#forge:ores/apatite",
-            "thermal:apatite",
-            "minecraft:lapis_lazuli",
-            "minecraft:lapis_lazuli",
-            3,
-            1,
-        ],
-        [
-            "#forge:ores/cinnabar",
-            "thermal:cinnabar",
-            "thermal:ruby_dust",
-            "thermal:ruby",
-            1,
-            1,
-        ],
-        [
-            "#forge:ores/niter",
-            "thermal:niter",
-            "thermal:niter",
-            "thermal:niter",
-            2,
-            1,
-        ],
-        [
-            "#forge:ores/ruby",
-            "thermal:ruby",
-            "thermal:cinnabar",
-            "thermal:cinnabar",
-            1,
-            1,
-        ],
-        [
-            "#forge:ores/sapphire",
-            "thermal:sapphire",
-            "thermal:apatite",
-            "thermal:apatite",
-            1,
-            1,
-        ],
-        [
-            "#forge:ores/cheese",
-            "ad_astra:cheese",
-            "ad_astra:cheese",
-            "ad_astra:cheese",
-            1,
-            3,
-        ],
-        [
-            "#forge:ores/black_quartz",
-            "actuallyadditions:black_quartz",
-            "thermal:quartz_dust",
-            "minecraft:quartz",
-            1,
-            1,
-        ],
+        ["#forge:ores/apatite", "thermal:apatite", "minecraft:lapis_lazuli", "minecraft:lapis_lazuli", 3, 1],
+        ["#forge:ores/cinnabar", "thermal:cinnabar", "thermal:ruby_dust", "thermal:ruby", 1, 1],
+        ["#forge:ores/niter", "thermal:niter", "thermal:niter", "thermal:niter", 2, 1],
+        ["#forge:ores/ruby", "thermal:ruby", "thermal:cinnabar", "thermal:cinnabar", 1, 1],
+        ["#forge:ores/sapphire", "thermal:sapphire", "thermal:apatite", "thermal:apatite", 1, 1],
+        ["#forge:ores/cheese", "ad_astra:cheese", "ad_astra:cheese", "ad_astra:cheese", 1, 3],
+        ["#forge:ores/black_quartz", "actuallyadditions:black_quartz", "thermal:quartz_dust", "minecraft:quartz", 1, 1],
     ].forEach((entry) => {
         const [ore, primary, byproduct1, byproduct2, baseAmount, tier] = entry;
 
@@ -561,10 +339,7 @@ ServerEvents.recipes((event) => {
         }
 
         if (tier <= 2) {
-            event.recipes.createCrushing(
-                [Item.of(primary, baseAmount * 2)],
-                ore
-            );
+            event.recipes.createCrushing([Item.of(primary, baseAmount * 2)], ore);
         }
 
         if (tier <= 3) {
@@ -590,14 +365,18 @@ ServerEvents.recipes((event) => {
         }
 
         event.recipes.thermal
-            .pulverizer(
-                [
-                    Item.of(primary).withChance(baseAmount * 4),
-                    Item.of(byproduct2).withChance(0.5),
-                ],
-                ore
-            )
+            .pulverizer([Item.of(primary).withChance(baseAmount * 4), Item.of(byproduct2).withChance(0.5)], ore)
             .energy(8000);
         event.recipes.mekanismEnriching(`${baseAmount * 4}x ${primary}`, ore);
+    });
+
+    // Remove mek crystal line
+    ["iron", "gold", "osmium", "copper", "tin", "lead", "uranium"].forEach((material) => {
+        event.remove({ id: `mekanism:processing/${material}/dust/from_dirty_dust` });
+        event.remove({ id: `mekanism:processing/${material}/dirty_dust/from_clump` });
+        event.remove({ id: `mekanism:processing/${material}/clump/from_shard` });
+        event.remove({ id: `mekanism:processing/${material}/shard/from_crystal` });
+        event.remove({ id: `mekanism:processing/${material}/crystal/from_slurry` });
+        event.remove({ id: `mekanism:processing/${material}/slurry/clean` });
     });
 });
