@@ -225,4 +225,33 @@ ServerEvents.recipes((event) => {
         D: "actuallyadditions:iron_casing",
         E: "createaddition:tesla_coil",
     });
+
+    // Canola processing thermal support
+    event.recipes.thermal
+        .centrifuge(Fluid.of("actuallyadditions:canola_oil", 80), "actuallyadditions:canola")
+        .energy(800);
+
+    event.recipes.thermal.refinery(
+        [Fluid.of("actuallyadditions:refined_canola_oil", 80)],
+        Fluid.of("actuallyadditions:canola_oil", 80)
+    ).energy(800);
+
+    event.recipes.thermal
+        .brewer(Fluid.of("actuallyadditions:crystallized_oil", 1000), [
+            Fluid.of("actuallyadditions:refined_canola_oil", 1000),
+            "actuallyadditions:crystallized_canola_seed",
+        ])
+        .energy(4000);
+
+    event.recipes.thermal
+        .brewer(Fluid.of("actuallyadditions:empowered_oil", 1000), [
+            Fluid.of("actuallyadditions:crystallized_oil", 1000),
+            "actuallyadditions:empowered_canola_seed",
+        ])
+        .energy(4000);
+
+    event.recipes.thermal.compression_fuel(Fluid.of("actuallyadditions:canola_oil", 1000)).energy(80000);
+    event.recipes.thermal.compression_fuel(Fluid.of("actuallyadditions:refined_canola_oil", 1000)).energy(200000);
+    event.recipes.thermal.compression_fuel(Fluid.of("actuallyadditions:crystallized_oil", 1000)).energy(800000);
+    event.recipes.thermal.compression_fuel(Fluid.of("actuallyadditions:empowered_oil", 1000)).energy(1600000);
 });
