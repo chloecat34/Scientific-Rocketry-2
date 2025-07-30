@@ -86,7 +86,6 @@ ServerEvents.recipes((event) => {
         "#forge:raw_materials/calorite",
         "#forge:storage_blocks/raw_calorite"
     );
-    addPacking("estrogen:estrogen_pill", "estrogen:estrogen_pill_block");
     addPacking("minecraft:allium", "biomeswevegone:allium_petal_block");
     addPacking(
         "biomeswevegone:pink_allium",

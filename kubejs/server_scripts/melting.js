@@ -60,7 +60,7 @@ ServerEvents.recipes((event) => {
 
     const addTinkersIngotCastingRecipe = (item, fluid, time) => {
         event.custom({
-            type: "tconstruct:casting_basin",
+            type: "tconstruct:casting_table",
             cast: {
                 tag: "tconstruct:casts/multi_use/ingot",
             },
@@ -75,7 +75,7 @@ ServerEvents.recipes((event) => {
         });
 
         event.custom({
-            type: "tconstruct:casting_basin",
+            type: "tconstruct:casting_table",
             cast: {
                 tag: "tconstruct:casts/single_use/ingot",
             },
@@ -92,7 +92,7 @@ ServerEvents.recipes((event) => {
 
     const addTinkersNuggetCastingRecipe = (item, fluid, time) => {
         event.custom({
-            type: "tconstruct:casting_basin",
+            type: "tconstruct:casting_table",
             cast: {
                 tag: "tconstruct:casts/multi_use/nugget",
             },
@@ -107,7 +107,7 @@ ServerEvents.recipes((event) => {
         });
 
         event.custom({
-            type: "tconstruct:casting_basin",
+            type: "tconstruct:casting_table",
             cast: {
                 tag: "tconstruct:casts/single_use/nugget",
             },
@@ -121,10 +121,6 @@ ServerEvents.recipes((event) => {
             },
         });
     };
-
-    // Remove molten slime + amethyst
-    event.remove({ output: "minecraft:slime_ball", type: "create:compacting" });
-    event.remove({ output: Fluid.of("estrogen:molten_amethyst", 250) });
 
     // Solidify molten plastic
     event.recipes.thermal.chiller("pneumaticcraft:plastic", Fluid.of("pneumaticcraft:plastic", 500)).energy(2400);

@@ -49,16 +49,10 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/prismalium", "thermalendergy:prismalium_dust"],
         ["#forge:ingots/melodium", "thermalendergy:melodium_dust"],
         ["#forge:ingots/stellarium", "thermalendergy:stellarium_dust"],
-        [
-            "#forge:ingots/hop_graphite",
-            "immersiveengineering:dust_hop_graphite",
-        ],
+        ["#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
         ["#forge:ingots/aluminum", "immersiveengineering:dust_aluminum"],
         ["#forge:ingots/uranium", "immersiveengineering:dust_uranium"],
-        [
-            "advanced_ae:shattered_singularity",
-            "advanced_ae:quantum_infused_dust",
-        ],
+        ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
         ["#forge:ingots/zinc", "kubejs:zinc_dust"],
         ["#forge:ingots/platinum", "kubejs:platinum_dust"],
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
@@ -110,10 +104,7 @@ ServerEvents.recipes((event) => {
         ["minecraft:charcoal", "mekanism:dust_charcoal"],
         ["minecraft:quartz", "thermal:quartz_dust"],
         ["ae2:sky_stone_block", "ae2:sky_dust"],
-        [
-            "advanced_ae:shattered_singularity",
-            "advanced_ae:quantum_infused_dust",
-        ],
+        ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
     ].forEach((entry) => {
         event.custom({
             type: "immersiveengineering:crusher",
@@ -142,19 +133,6 @@ ServerEvents.recipes((event) => {
         },
     });
 
-    event.custom({
-        type: "immersiveengineering:crusher",
-        energy: 3000,
-        input: {
-            item: "estrogen:testosterone_chunk",
-        },
-        secondaries: [],
-        result: {
-            item: "estrogen:testosterone_powder",
-            count: 3,
-        },
-    });
-
     // Add Mekanism crusher recipes
     [
         ["minecraft:quartz", "thermal:quartz_dust"],
@@ -178,12 +156,8 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/melodium", "thermalendergy:melodium_dust"],
         ["#forge:ingots/stellarium", "thermalendergy:stellarium_dust"],
         ["#forge:coal_coke", "immersiveengineering:dust_coke"],
-        [
-            "#forge:ingots/hop_graphite",
-            "immersiveengineering:dust_hop_graphite",
-        ],
+        ["#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
         ["#forge:ingots/aluminum", "immersiveengineering:dust_aluminum"],
-        ["estrogen:testosterone_chunk", "3x estrogen:testosterone_powder"],
         ["#forge:ingots/zinc", "kubejs:zinc_dust"],
         ["#forge:ingots/platinum", "kubejs:platinum_dust"],
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
@@ -202,12 +176,8 @@ ServerEvents.recipes((event) => {
         ["#forge:gems/certus_quartz", "ae2:certus_quartz_dust"],
         ["#forge:gems/fluix", "ae2:fluix_dust"],
         ["ae2:sky_stone_block", "ae2:sky_dust"],
-        [
-            "advanced_ae:shattered_singularity",
-            "advanced_ae:quantum_infused_dust",
-        ],
+        ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
         ["minecraft:obsidian", "4x create:powdered_obsidian"],
-        ["estrogen:testosterone_chunk", "3x estrogen:testosterone_powder"],
     ].forEach((entry) => {
         event.recipes.thermal.pulverizer(entry[1], entry[0]).energy(4000);
     });
@@ -216,10 +186,7 @@ ServerEvents.recipes((event) => {
     [
         ["#forge:ingots/refined_obsidian", "mekanism:dust_refined_obsidian"],
         ["#forge:ingots/osmium", "mekanism:dust_osmium"],
-        [
-            "#forge:ingots/hop_graphite",
-            "immersiveengineering:dust_hop_graphite",
-        ],
+        ["#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
         ["#forge:ingots/zinc", "kubejs:zinc_dust"],
         ["#forge:ingots/platinum", "kubejs:platinum_dust"],
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
@@ -234,18 +201,9 @@ ServerEvents.recipes((event) => {
     });
 
     // Apatite to cyan dye
-    event.recipes.createCrushing(
-        ["2x minecraft:cyan_dye"],
-        "#forge:gems/apatite"
-    );
-    event.recipes.createMilling(
-        ["2x minecraft:cyan_dye"],
-        "#forge:gems/apatite"
-    );
-    event.recipes.mekanismEnriching(
-        "2x minecraft:cyan_dye",
-        "#forge:gems/apatite"
-    );
+    event.recipes.createCrushing(["2x minecraft:cyan_dye"], "#forge:gems/apatite");
+    event.recipes.createMilling(["2x minecraft:cyan_dye"], "#forge:gems/apatite");
+    event.recipes.mekanismEnriching("2x minecraft:cyan_dye", "#forge:gems/apatite");
 
     // Remove mixing recipes for dusts
     [
@@ -261,43 +219,22 @@ ServerEvents.recipes((event) => {
     });
 
     // Enrichment chamber recipes for elemental rods
-    event.recipes.mekanismEnriching(
-        "4x minecraft:blaze_powder",
-        "minecraft:blaze_rod"
-    );
-    event.recipes.mekanismEnriching(
-        "4x thermal:basalz_powder",
-        "thermal:basalz_rod"
-    );
-    event.recipes.mekanismEnriching(
-        "4x thermal:blitz_powder",
-        "thermal:blitz_rod"
-    );
-    event.recipes.mekanismEnriching(
-        "4x thermal:blizz_powder",
-        "thermal:blizz_rod"
-    );
+    event.recipes.mekanismEnriching("4x minecraft:blaze_powder", "minecraft:blaze_rod");
+    event.recipes.mekanismEnriching("4x thermal:basalz_powder", "thermal:basalz_rod");
+    event.recipes.mekanismEnriching("4x thermal:blitz_powder", "thermal:blitz_rod");
+    event.recipes.mekanismEnriching("4x thermal:blizz_powder", "thermal:blizz_rod");
 
     // Crushing wheel recipes for elemental rods
     event.recipes.createCrushing(
-        [
-            "3x thermal:basalz_powder",
-            Item.of("3x thermal:basalz_powder").withChance(0.33),
-        ],
+        ["3x thermal:basalz_powder", Item.of("3x thermal:basalz_powder").withChance(0.33)],
         "thermal:basalz_rod"
     );
     event.recipes.createCrushing(
-        [
-            "3x thermal:blitz_powder",
-            Item.of("3x thermal:blitz_powder").withChance(0.33),
-        ],
+        ["3x thermal:blitz_powder", Item.of("3x thermal:blitz_powder").withChance(0.33)],
         "thermal:blitz_rod"
     );
     event.recipes.createCrushing(
-        [
-            "3x thermal:blizz_powder",
-            Item.of("3x thermal:blizz_powder").withChance(0.33),
-        ],
+        ["3x thermal:blizz_powder", Item.of("3x thermal:blizz_powder").withChance(0.33)],
         "thermal:blizz_rod"
     );
 
@@ -374,34 +311,21 @@ ServerEvents.recipes((event) => {
     });
 
     // Millstone recipe for first obsidian dust
-    event.recipes.createMilling(
-        "create:powdered_obsidian",
-        "minecraft:obsidian"
-    );
+    event.recipes.createMilling("create:powdered_obsidian", "minecraft:obsidian");
 
     // Soul sand dust
     event.recipes.createCrushing(
-        [
-            "kubejs:soul_sand_dust",
-            Item.of("kubejs:soul_sand_dust").withChance(0.5),
-        ],
+        ["kubejs:soul_sand_dust", Item.of("kubejs:soul_sand_dust").withChance(0.5)],
         "minecraft:soul_sand"
     );
     event.recipes.thermal
-        .pulverizer(
-            [Item.of("kubejs:soul_sand_dust").withChance(1.5)],
-            "minecraft:soul_sand"
-        )
+        .pulverizer([Item.of("kubejs:soul_sand_dust").withChance(1.5)], "minecraft:soul_sand")
         .energy(4000);
 
     event.recipes.remove({ id: "create:milling/lapis_lazuli" });
     event.recipes.createCrushing("thermal:lapis_dust", "#forge:gems/lapis");
 
     // Sawdust fix
-    event.replaceOutput(
-        {},
-        "immersiveengineering:dust_wood",
-        "thermal:sawdust"
-    );
+    event.replaceOutput({}, "immersiveengineering:dust_wood", "thermal:sawdust");
     event.replaceOutput({}, "mekanism:sawdust", "thermal:sawdust");
 });
