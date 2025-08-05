@@ -316,6 +316,13 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:storage_blocks/queens_slime", "tconstruct:molten_queens_slime", 810, 4800 * 9);
     chillerBlockCasting("tconstruct:queens_slime_block", "tconstruct:molten_queens_slime", 810, 4800 * 9);
 
+    // Molten cinderslime
+    crucibleMelting("#forge:ingots/cinderslime", "tconstruct:molten_cinderslime", 90, 4800);
+    crucibleMelting("#forge:nuggets/cinderslime", "tconstruct:molten_cinderslime", 10, 600);
+    crucibleMelting("#forge:storage_blocks/cinderslime", "tconstruct:molten_cinderslime", 810, 4800 * 9);
+    chillerBlockCasting("tconstruct:cinderslime_block", "tconstruct:molten_cinderslime", 810, 4800 * 9);
+    chillerIngotCasting("#forge:ingots/cinderslime", "tconstruct:molten_cinderslime", 90, 4800);
+
     // Molten netherite
     crucibleMelting("#forge:ingots/netherite", "tconstruct:molten_netherite", 90, 4800);
     crucibleMelting("#forge:nuggets/netherite", "tconstruct:molten_netherite", 10, 600);

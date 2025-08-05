@@ -215,23 +215,50 @@ ServerEvents.recipes((event) => {
     event.recipes
         .createMixing("2x tconstruct:queens_slime_ingot", [
             "#forge:ingots/cobalt",
-            "#forge:ingots/rose_gold",
-            Fluid.of("tconstruct:ichor", 250),
+            "#forge:ingots/electrum",
+            Fluid.of("tconstruct:earth_slime", 250),
         ])
         .superheated();
     event.recipes.thermal
         .smelter("2x tconstruct:queens_slime_ingot", [
             "#forge:ingots/cobalt",
-            "#forge:ingots/rose_gold",
-            "tconstruct:ichor_slime_ball",
+            "#forge:ingots/electrum",
+            "minecraft:slime_ball",
         ])
         .energy(16000);
 
     createArcFurnaceRecipe(
         "#forge:ingots/cobalt",
         1,
-        ["#forge:ingots/rose_gold", "#forge:slimeball/ichor"],
+        ["#forge:ingots/electrum", "minecraft:slime_ball"],
         "#forge:ingots/queens_slime",
+        2,
+        51200,
+        100
+    );
+
+    // Cinderslime
+    event.recipes
+        .createMixing("2x tconstruct:cinderslime_ingot", [
+            "tconstruct:scorched_brick", // TODO: replace with ardite
+            "#forge:ingots/rose_gold",
+            Fluid.of("tconstruct:ichor", 250),
+        ])
+        .superheated();
+
+    event.recipes.thermal
+        .smelter("2x tconstruct:cinderslime_ingot", [
+            "tconstruct:scorched_brick",
+            "#forge:ingots/rose_gold",
+            "tconstruct:ichor_slime_ball",
+        ])
+        .energy(16000);
+
+    createArcFurnaceRecipe(
+        "tconstruct:scorched_brick",
+        1,
+        ["#forge:ingots/rose_gold", "tconstruct:ichor_slime_ball"],
+        "#forge:ingots/cinderslime_ingot",
         2,
         51200,
         100
