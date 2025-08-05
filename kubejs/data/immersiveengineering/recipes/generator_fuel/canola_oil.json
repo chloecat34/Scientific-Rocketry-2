@@ -1,0 +1,5 @@
+{
+  "type": "immersiveengineering:generator_fuel",
+  "burnTime": 40,
+  "fluidTag": "forge:canola_oil"
+}

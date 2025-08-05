@@ -1,13 +1,7 @@
 ServerEvents.tags("item", (event) => {
     // Attempt to get rid of tinkers rose gold
-    event.add(
-        "immersiveengineering:recycling/blacklist",
-        "thermal:rose_gold_gear"
-    );
-    event.add(
-        "immersiveengineering:recycling/blacklist",
-        "thermal:rose_gold_plate"
-    );
+    event.add("immersiveengineering:recycling/blacklist", "thermal:rose_gold_gear");
+    event.add("immersiveengineering:recycling/blacklist", "thermal:rose_gold_plate");
 
     // Missing venus sandstone tag
     event.add("forge:sandstone/venus_sandstone", "ad_astra:venus_sandstone");
@@ -25,11 +19,20 @@ ServerEvents.tags("item", (event) => {
 
     event.remove("forge:dusts/wood", "immersiveengineering:dust_wood");
     event.remove("forge:dusts/wood", "mekanism:sawdust");
+
+    // Blocks to show
+    ["tconstruct:knightslime_nugget", "tconstruct:knightslime_ingot", "tconstruct:knightslime_block"].forEach(
+        (item) => {
+            event.remove("c:hidden_from_recipe_viewers", item);
+        }
+    );
 });
 
 ServerEvents.tags("fluid", (event) => {
-    event.remove(
-        "c:hidden_from_recipe_viewers",
-        "tconstruct:molten_knightslime"
-    );
+    event.remove("c:hidden_from_recipe_viewers", "tconstruct:molten_knightslime");
+
+    event.add("forge:canola_oil", "actuallyadditions:canola_oil");
+    event.add("forge:refined_canola_oil", "actuallyadditions:refined_canola_oil");
+    event.add("forge:crystallized_oil", "actuallyadditions:crystallized_oil");
+    event.add("forge:empowered_oil", "actuallyadditions:empowered_oil");
 });

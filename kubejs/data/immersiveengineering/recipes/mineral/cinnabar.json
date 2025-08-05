@@ -3,8 +3,9 @@
     "dimensions": ["minecraft:overworld"],
     "fail_chance": 0.1,
     "ores": [
-        { "chance": 0.6, "output": { "tag": "forge:ores/redstone" } },
-        { "chance": 0.4, "output": { "item": "thermal:sulfur_dust" } },
+        { "chance": 0.5, "output": { "tag": "forge:ores/redstone" } },
+        { "chance": 0.35, "output": { "item": "thermal:sulfur_dust" } },
+        { "chance": 0.15, "output": {"item": "thermal:cinnabar_ore" }},
         {
             "chance": 0.3,
             "conditions": [
