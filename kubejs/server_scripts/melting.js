@@ -337,6 +337,20 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("tconstruct:knightslime_block", "tconstruct:molten_knightslime", 810, 216, 1200, 4800 * 9);
     addBothMelterRecipes("tconstruct:knightslime_nugget", "tconstruct:molten_knightslime", 10, 24, 1200, 600);
     chillerBlockCasting("tconstruct:knightslime_block", "tconstruct:molten_knightslime", 810, 4800 * 9);
+    chillerIngotCasting("tconstruct:knightslime_ingot", "tconstruct:molten_knightslime", 90, 4800);
+    addTinkersBlockCastingRecipe("tconstruct:knightslime_block","tconstruct:molten_knightslime", 810, 160);
+    addTinkersIngotCastingRecipe("tconstruct:knightslime_ingot","tconstruct:molten_knightslime", 90, 50);
+    addTinkersNuggetCastingRecipe("tconstruct:knightslime_nugget","tconstruct:molten_knightslime", 10, 10);
+
+    // Soulsteel recipes
+    addBothMelterRecipes("tconstruct:soulsteel_ingot", "tconstruct:molten_soulsteel", 90, 72, 1200, 4800);
+    addBothMelterRecipes("tconstruct:soulsteel_block", "tconstruct:molten_soulsteel", 810, 216, 1200, 4800 * 9);
+    addBothMelterRecipes("tconstruct:soulsteel_nugget", "tconstruct:molten_soulsteel", 10, 24, 1200, 600);
+    chillerBlockCasting("tconstruct:soulsteel_block", "tconstruct:molten_soulsteel", 810, 4800 * 9);
+    chillerIngotCasting("tconstruct:soulsteel_ingot", "tconstruct:molten_soulsteel", 90, 4800);
+    addTinkersBlockCastingRecipe("tconstruct:soulsteel_block","tconstruct:molten_soulsteel", 810, 160);
+    addTinkersIngotCastingRecipe("tconstruct:soulsteel_ingot","tconstruct:molten_soulsteel", 90, 50);
+    addTinkersNuggetCastingRecipe("tconstruct:soulsteel_nugget","tconstruct:molten_soulsteel", 10, 10);
 
     // Molten tin
     crucibleMelting("#forge:ingots/tin", "tconstruct:molten_tin", 90, 4800);
@@ -694,7 +708,7 @@ ServerEvents.recipes((event) => {
     chillerBlockCasting("kubejs:vibrant_alloy_block", "kubejs:molten_vibrant_alloy", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("kubejs:vibrant_alloy_block", "kubejs:molten_vibrant_alloy", 810, 160);
     addTinkersIngotCastingRecipe("kubejs:vibrant_alloy_ingot", "kubejs:molten_vibrant_alloy", 50);
-    addTinkersIngotCastingRecipe("kubejs:vibrant_alloy_nugget", "kubejs:molten_vibrant_alloy", 10);
+    addTinkersNuggetCastingRecipe("kubejs:vibrant_alloy_nugget", "kubejs:molten_vibrant_alloy", 10);
 
     // Molten pulsating alloy
     addBothMelterRecipes("kubejs:pulsating_alloy_ingot", "kubejs:molten_pulsating_alloy", 90, 60, 700, 4800);
@@ -706,7 +720,7 @@ ServerEvents.recipes((event) => {
     chillerBlockCasting("kubejs:pulsating_alloy_block", "kubejs:molten_pulsating_alloy", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("kubejs:pulsating_alloy_block", "kubejs:molten_pulsating_alloy", 810, 160);
     addTinkersIngotCastingRecipe("kubejs:pulsating_alloy_ingot", "kubejs:molten_pulsating_alloy", 50);
-    addTinkersIngotCastingRecipe("kubejs:pulsating_alloy_nugget", "kubejs:molten_pulsating_alloy", 10);
+    addTinkersNuggetCastingRecipe("kubejs:pulsating_alloy_nugget", "kubejs:molten_pulsating_alloy", 10);
 
     // Molten compressed steel
     addBothMelterRecipes("pneumaticcraft:ingot_iron_compressed", "kubejs:molten_compressed_iron", 90, 60, 1200, 4800);

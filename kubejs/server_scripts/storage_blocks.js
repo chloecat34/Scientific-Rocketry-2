@@ -79,6 +79,8 @@ ServerEvents.recipes((event) => {
     addPacking("#forge:ingots/ostrum", "#forge:storage_blocks/ostrum");
     addPacking("#forge:ingots/cinderslime", "#forge:storage_blocks/cinderslime");
     addPacking("#forge:nuggets/cinderslime", "#forge:ingots/cinderslime");
+    addPacking("#forge:ingots/soulsteel", "#forge:storage_blocks/soulsteel");
+    addPacking("#forge:nuggets/soulsteel", "#forge:ingots/soulsteel");
     addPacking(
         "#forge:raw_materials/ostrum",
         "#forge:storage_blocks/raw_ostrum"

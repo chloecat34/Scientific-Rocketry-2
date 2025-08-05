@@ -134,11 +134,16 @@ JEIEvents.hideFluids((event) => {
 });
 
 JEIEvents.addItems((event) => {
-    ["tconstruct:knightslime_nugget", "tconstruct:knightslime_ingot", "tconstruct:knightslime_block"].forEach((item) =>
-        event.add(Item.of(item))
-    );
+    [
+        "tconstruct:knightslime_nugget",
+        "tconstruct:knightslime_ingot",
+        "tconstruct:knightslime_block",
+        "tconstruct:soulsteel_nugget",
+        "tconstruct:soulsteel_ingot",
+        "tconstruct:soulsteel_block",
+    ].forEach((item) => event.add(Item.of(item)));
 });
 
 JEIEvents.addFluids((event) => {
-    ["tconstruct:molten_knightslime"].forEach((fluid) => event.add(fluid));
+    ["tconstruct:molten_knightslime", "tconstruct:molten_soulsteel"].forEach((fluid) => event.add(fluid));
 });
