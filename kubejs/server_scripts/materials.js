@@ -216,7 +216,7 @@ ServerEvents.recipes((event) => {
         .createMixing("2x tconstruct:queens_slime_ingot", [
             "#forge:ingots/cobalt",
             "#forge:ingots/rose_gold",
-            Fluid.of("kubejs:ichorslime", 250),
+            Fluid.of("tconstruct:ichor", 250),
         ])
         .superheated();
     event.recipes.thermal

@@ -12,7 +12,7 @@
     "min_leaves": 8,
     "max_leaves": 48,
     "result": {
-        "fluid": "kubejs:ichorslime",
+        "fluid": "tconstruct:ichor",
         "amount": 25
     }
 }

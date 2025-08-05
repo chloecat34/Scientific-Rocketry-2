@@ -131,7 +131,7 @@ ServerEvents.recipes((event) => {
         input: {
             item: "tconstruct:bloodshroom_log",
         },
-        output: '{Amount:4,FluidName:"kubejs:ichorslime"}',
+        output: '{Amount:4,FluidName:"tconstruct:ichor"}',
         result: "tconstruct:stripped_bloodshroom_log",
     });
 });

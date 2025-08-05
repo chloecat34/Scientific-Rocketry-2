@@ -634,22 +634,33 @@ ServerEvents.recipes((event) => {
     chillerIngotCasting("#forge:ingots/platinum", "tconstruct:molten_platinum", 90, 4800);
     chillerBlockCasting("kubejs:platinum_block", "tconstruct:molten_platinum", 810, 4800 * 9);
 
-    // Ichorslime
-    addBothMelterRecipes("tconstruct:ichor_slime_ball", "kubejs:ichorslime", 250, 32, 70, 4800);
-    addBothMelterRecipes("tconstruct:ichor_slime", "kubejs:ichorslime", 2250, 92, 70, 4800 * 9);
-    addBothMelterRecipes("tconstruct:ichor_congealed_slime", "kubejs:ichorslime", 1000, 64, 70, 4800 * 4);
-    addBothMelterRecipes("tconstruct:ichor_slime_crystal", "kubejs:ichorslime", 250, 32, 70, 4800);
-    addBothMelterRecipes("tconstruct:ichor_slime_crystal_block", "kubejs:ichorslime", 1000, 64, 70, 4800 * 4);
-    addTinkersMelterRecipe("tconstruct:ichor_slime_crystal_cluster", "kubejs:ichorslime", 1000, 78, 70);
-    addTinkersMelterRecipe("tconstruct:large_ichor_slime_crystal_bud", "kubejs:ichorslime", 750, 64, 70);
-    addTinkersMelterRecipe("tconstruct:medium_ichor_slime_crystal_bud", "kubejs:ichorslime", 500, 48, 70);
-    addTinkersMelterRecipe("tconstruct:small_ichor_slime_crystal_bud", "kubejs:ichorslime", 250, 32, 70);
+    // Ichor
+    addBothMelterRecipes("tconstruct:ichor_slime_ball", "tconstruct:ichor", 250, 32, 70, 4800);
+    addBothMelterRecipes("tconstruct:ichor_slime", "tconstruct:ichor", 2250, 92, 70, 4800 * 9);
+    addBothMelterRecipes("tconstruct:ichor_congealed_slime", "tconstruct:ichor", 1000, 64, 70, 4800 * 4);
+    addBothMelterRecipes("tconstruct:ichor_slime_crystal", "tconstruct:ichor", 250, 32, 70, 4800);
+    addBothMelterRecipes("tconstruct:ichor_slime_crystal_block", "tconstruct:ichor", 1000, 64, 70, 4800 * 4);
+    addTinkersMelterRecipe("tconstruct:ichor_slime_crystal_cluster", "tconstruct:ichor", 1000, 78, 70);
+    addTinkersMelterRecipe("tconstruct:large_ichor_slime_crystal_bud", "tconstruct:ichor", 750, 64, 70);
+    addTinkersMelterRecipe("tconstruct:medium_ichor_slime_crystal_bud", "tconstruct:ichor", 500, 48, 70);
+    addTinkersMelterRecipe("tconstruct:small_ichor_slime_crystal_bud", "tconstruct:ichor", 250, 32, 70);
     event.recipes.thermal
-        .chiller("tconstruct:ichor_slime_ball", [Fluid.of("kubejs:ichorslime", 250), "thermal:chiller_ball_cast"])
+        .chiller("tconstruct:ichor_slime_ball", [Fluid.of("tconstruct:ichor", 250), "thermal:chiller_ball_cast"])
         .energy(4800);
     event.recipes.thermal
-        .chiller("tconstruct:ichor_congealed_slime", [Fluid.of("kubejs:ichorslime", 1000)])
+        .chiller("tconstruct:ichor_congealed_slime", [Fluid.of("tconstruct:ichor", 1000)])
         .energy(4800 * 4);
+
+    // Remove melting ichor stuff into blazing blood
+    event.remove({id: "tconstruct:smeltery/melting/slime/ichor/ball"});
+    event.remove({id: "tconstruct:smeltery/melting/slime/ichor/block"});
+    event.remove({id: "tconstruct:smeltery/melting/slime/ichor/bud_cluster"});
+    event.remove({id: "tconstruct:smeltery/melting/slime/ichor/bud_large"});
+    event.remove({id: "tconstruct:smeltery/melting/slime/ichor/bud_medium"});
+    event.remove({id: "tconstruct:smeltery/melting/slime/ichor/bud_small"});
+    event.remove({id: "tconstruct:smeltery/melting/slime/ichor/congealed"});
+    event.remove({id: "tconstruct:smeltery/melting/slime/ichor/crystal"});
+    event.remove({id: "tconstruct:smeltery/melting/slime/ichor/crystal_block"});
 
     // Molten sulfur
     addBothMelterRecipes("thermal:sulfur", "kubejs:molten_sulfur", 250, 40, 300, 4800);
