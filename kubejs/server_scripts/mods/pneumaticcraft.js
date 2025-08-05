@@ -52,4 +52,49 @@ ServerEvents.recipes((event) => {
             Fluid.of("kubejs:molten_compressed_iron", 90),
         ])
         .energy(9600);
+
+    // Liquid fuels
+    event.custom({
+        type: "pneumaticcraft:fuel_quality",
+        air_per_bucket: 250000,
+        burn_rate: 0.5,
+        fluid: {
+            type: "pneumaticcraft:fluid",
+            amount: 1000,
+            fluid: "actuallyadditions:canola_oil"
+        }
+    });
+
+    event.custom({
+        type: "pneumaticcraft:fuel_quality",
+        air_per_bucket: 400000,
+        burn_rate: 0.75,
+        fluid: {
+            type: "pneumaticcraft:fluid",
+            amount: 1000,
+            fluid: "actuallyadditions:refined_canola_oil"
+        }
+    });
+
+    event.custom({
+        type: "pneumaticcraft:fuel_quality",
+        air_per_bucket: 1000000,
+        burn_rate: 1,
+        fluid: {
+            type: "pneumaticcraft:fluid",
+            amount: 1000,
+            fluid: "actuallyadditions:crystallized_oil"
+        }
+    });
+
+    event.custom({
+        type: "pneumaticcraft:fuel_quality",
+        air_per_bucket: 2000000,
+        burn_rate: 1.5,
+        fluid: {
+            type: "pneumaticcraft:fluid",
+            amount: 1000,
+            fluid: "actuallyadditions:empowered_oil"
+        }
+    });
 });

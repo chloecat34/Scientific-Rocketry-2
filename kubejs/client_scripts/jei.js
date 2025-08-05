@@ -140,7 +140,7 @@ JEIEvents.addItems((event) => {
         "tconstruct:knightslime_block",
         "tconstruct:soulsteel_nugget",
         "tconstruct:soulsteel_ingot",
-        "tconstruct:soulsteel_block",
+        "tconstruct:soulsteel_block"
     ].forEach((item) => event.add(Item.of(item)));
 });
 
