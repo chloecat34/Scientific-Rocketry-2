@@ -167,4 +167,5 @@ ServerEvents.recipes((event) => {
     addPacking("kubejs:pulsating_alloy_nugget", "kubejs:pulsating_alloy_ingot");
     addPacking("kubejs:pulsating_alloy_ingot", "kubejs:pulsating_alloy_block");
     addPacking("kubejs:electrotine", "kubejs:electrotine_block");
+    addPacking("pneumaticcraft:ingot_iron_compressed", "pneumaticcraft:compressed_iron_block");
 });
