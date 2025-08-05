@@ -264,6 +264,9 @@ ServerEvents.recipes((event) => {
         100
     );
 
+    // Molten pewter
+
+
     // Slimesteel recipes
     event.remove({
         output: "tconstruct:slimesteel_ingot",
