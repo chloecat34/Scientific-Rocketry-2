@@ -560,6 +560,20 @@
 			x: 3.0d
 			y: -3.0d
 		}
+		{
+			dependencies: ["13079C9CB31B27D7"]
+			description: ["The modpack is designed to be playable on Peaceful Mode. You won't have to fight mobs or build mob farms to progress. You can craft most mob drops without fighting."]
+			icon: "minecraft:zombie_head"
+			id: "2CC39EED6EAE563E"
+			shape: "hexagon"
+			tasks: [{
+				id: "253D21E5301378FF"
+				type: "checkmark"
+			}]
+			title: "Where are the mobs?"
+			x: -1.0d
+			y: -5.0d
+		}
 	]
 	title: "Chapter 1: Crash Landing"
 }

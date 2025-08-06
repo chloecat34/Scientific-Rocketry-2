@@ -8,28 +8,17 @@ ServerEvents.recipes((event) => {
     });
 
     // Bucket
-    event.replaceInput(
-        { output: "minecraft:bucket" },
-        "minecraft:iron_ingot",
-        "#forge:plates/iron"
-    );
+    event.replaceInput({ output: "minecraft:bucket" }, "minecraft:iron_ingot", "#forge:plates/iron");
 
     // Cauldron
-    event.replaceInput(
-        { output: "minecraft:cauldron" },
-        "minecraft:iron_ingot",
-        "#forge:plates/iron"
-    );
+    event.replaceInput({ output: "minecraft:cauldron" }, "minecraft:iron_ingot", "#forge:plates/iron");
 
     // Remove extra gunpowder recipe
     event.remove({ id: "immersiveengineering:crafting/gunpowder_from_dusts" });
 
     // Remove mek paper recipe, use sugar cane or the IE one instead
     event.remove({ id: "mekanism:paper" });
-    event.recipes.createMixing("minecraft:paper", [
-        "2x #forge:sawdust",
-        Fluid.of("minecraft:water", 500),
-    ]);
+    event.recipes.createMixing("minecraft:paper", ["2x #forge:sawdust", Fluid.of("minecraft:water", 500)]);
 
     // Iron bars
     event.remove({ id: "minecraft:iron_bars" });
@@ -68,9 +57,14 @@ ServerEvents.recipes((event) => {
         Fluid.of("tconstruct:blazing_blood", 100),
     ]);
     event.recipes.thermal
-        .bottler("minecraft:ender_eye", [
-            "minecraft:ender_pearl",
-            Fluid.of("tconstruct:blazing_blood", 100),
-        ])
+        .bottler("minecraft:ender_eye", ["minecraft:ender_pearl", Fluid.of("tconstruct:blazing_blood", 100)])
         .energy(4800);
+
+    // Gunpowder recipe with coal
+    event.shapeless("4x minecraft:gunpowder", [
+        "minecraft:coal",
+        "#forge:gems/niter",
+        "#forge:gems/niter",
+        "#forge:gems/sulfur",
+    ]);
 });
