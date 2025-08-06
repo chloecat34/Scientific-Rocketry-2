@@ -486,9 +486,8 @@
 		{
 			dependencies: ["014611E2E11520B2"]
 			description: [
-				"Netherite has a special recipe. It requires the Arc Furnace, but the actual alloys that go into it require a Superheated Mixer. "
+				"Netherite requires the Arc Furnace. The cost isn't as bad because you can get 2.5x Netherite Scrap per Ancient Debris at this stage."
 				""
-				"This means you will need to provide Blaze Cakes to your Blaze Burner, as you can't make a Straw until you get Plastic."
 			]
 			id: "4BB169A6E71ED26B"
 			require_sequential_tasks: false

@@ -315,10 +315,7 @@ ServerEvents.recipes((event) => {
         .superheated();
 
     event.recipes.thermal
-        .smelter("tconstruct:manyullyn_ingot", [
-            "#forge:ingots/cobalt",
-            "#forge:ingots/ardite"
-        ])
+        .smelter("tconstruct:manyullyn_ingot", ["#forge:ingots/cobalt", "#forge:ingots/ardite"])
         .energy(9600);
 
     createArcFurnaceRecipe(
@@ -336,16 +333,20 @@ ServerEvents.recipes((event) => {
         "#forge:ingots/manyullyn",
         1,
         [
-            "tconstruct:slimesteel_ingot",
-            "tconstruct:hepatizon_ingot",
-            "tconstruct:queens_slime_ingot",
-            "tconstruct:knightslime_ingot",
+            "#forge:ingots/netherite_scrap",
+            "#forge:ingots/netherite_scrap",
+            "#forge:ingots/netherite_scrap",
+            "#forge:ingots/netherite_scrap",
         ],
         "#forge:ingots/netherite",
         1,
         102400,
         100
     );
+
+    event.recipes.thermal
+        .smelter("minecraft:netherite_ingot", ["#forge:ingots/manyullyn", "4x #forge:ingots/netherite_scrap"])
+        .energy(24000);
 
     event.remove({
         output: "minecraft:netherite_ingot",
