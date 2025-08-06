@@ -215,14 +215,14 @@ ServerEvents.recipes((event) => {
     event.recipes
         .createMixing("2x tconstruct:queens_slime_ingot", [
             "#forge:ingots/cobalt",
-            "#forge:ingots/electrum",
+            "#forge:ingots/rose_gold",
             Fluid.of("tconstruct:earth_slime", 250),
         ])
         .superheated();
     event.recipes.thermal
         .smelter("2x tconstruct:queens_slime_ingot", [
             "#forge:ingots/cobalt",
-            "#forge:ingots/electrum",
+            "#forge:ingots/rose_gold",
             "minecraft:slime_ball",
         ])
         .energy(16000);
@@ -230,7 +230,7 @@ ServerEvents.recipes((event) => {
     createArcFurnaceRecipe(
         "#forge:ingots/cobalt",
         1,
-        ["#forge:ingots/electrum", "minecraft:slime_ball"],
+        ["#forge:ingots/rose_gold", "minecraft:slime_ball"],
         "#forge:ingots/queens_slime",
         2,
         51200,
@@ -240,8 +240,8 @@ ServerEvents.recipes((event) => {
     // Cinderslime
     event.recipes
         .createMixing("2x tconstruct:cinderslime_ingot", [
-            "tconstruct:scorched_brick", // TODO: replace with ardite
-            "#forge:ingots/rose_gold",
+            "tconstruct:scorched_brick",
+            "#forge:ingots/ardite",
             Fluid.of("tconstruct:ichor", 250),
         ])
         .superheated();
@@ -249,7 +249,7 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal
         .smelter("2x tconstruct:cinderslime_ingot", [
             "tconstruct:scorched_brick",
-            "#forge:ingots/rose_gold",
+            "#forge:ingots/ardite",
             "tconstruct:ichor_slime_ball",
         ])
         .energy(16000);
@@ -257,15 +257,12 @@ ServerEvents.recipes((event) => {
     createArcFurnaceRecipe(
         "tconstruct:scorched_brick",
         1,
-        ["#forge:ingots/rose_gold", "tconstruct:ichor_slime_ball"],
-        "#forge:ingots/cinderslime_ingot",
+        ["#forge:ingots/ardite", "tconstruct:ichor_slime_ball"],
+        "#forge:ingots/cinderslime",
         2,
         51200,
         100
     );
-
-    // Molten pewter
-
 
     // Slimesteel recipes
     event.remove({
@@ -298,6 +295,38 @@ ServerEvents.recipes((event) => {
         ["tconstruct:seared_brick", "#forge:slimeball/sky"],
         "#forge:ingots/slimesteel",
         2,
+        51200,
+        100
+    );
+
+    // New manyullyn recipe
+    event.remove({
+        output: "tconstruct:manyullyn_ingot",
+        type: "create:mixing",
+    });
+
+    event.remove({
+        output: "tconstruct:manyullyn_ingot",
+        type: "thermal:smelter",
+    });
+
+    event.recipes
+        .createMixing("tconstruct:manyullyn_ingot", ["#forge:ingots/cobalt", "#forge:ingots/ardite"])
+        .superheated();
+
+    event.recipes.thermal
+        .smelter("tconstruct:manyullyn_ingot", [
+            "#forge:ingots/cobalt",
+            "#forge:ingots/ardite"
+        ])
+        .energy(9600);
+
+    createArcFurnaceRecipe(
+        "#forge:ingots/cobalt",
+        1,
+        ["#forge:ingots/ardite"],
+        "#forge:ingots/manyullyn",
+        1,
         51200,
         100
     );

@@ -66,6 +66,8 @@ ServerEvents.recipes((event) => {
         "#forge:storage_blocks/raw_uranium",
         "ad_astra:moon_cheese_ore",
         "#forge:ores/black_quartz",
+        "#forge:raw_materials/ardite",
+        "#forge:ores/ardite"
     ].forEach((rawOre) => {
         event.remove({
             input: rawOre,
@@ -123,6 +125,7 @@ ServerEvents.recipes((event) => {
         ["#forge:raw_materials/lead", "#forge:ores/lead", "thermal:lead_dust", "thermal:silver_dust", 1],
         ["#forge:raw_materials/zinc", "#forge:ores/zinc", "kubejs:zinc_dust", "thermal:tin_dust", 1],
         ["#forge:raw_materials/cobalt", "#forge:ores/cobalt", "kubejs:cobalt_dust", "thermal:lead_dust", 2],
+        ["#forge:raw_materials/ardite", "#forge:ores/ardite", "kubejs:ardite_dust", "thermal:gold_dust", 2],
         ["#forge:raw_materials/nickel", "#forge:ores/nickel", "thermal:nickel_dust", "kubejs:platinum_dust", 2],
         ["#forge:raw_materials/desh", "#forge:ores/desh", "kubejs:desh_dust", "thermal:copper_dust", 2],
         [

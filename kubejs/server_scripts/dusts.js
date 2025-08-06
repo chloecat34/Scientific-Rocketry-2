@@ -11,6 +11,7 @@ ServerEvents.recipes((event) => {
         "thermal:nickel_dust",
         "immersiveengineering:dust_aluminum",
         "immersiveengineering:dust_uranium",
+        "kubejs:ardite_dust",
     ].forEach((dust) => {
         event.remove({
             output: dust,
@@ -57,6 +58,7 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/platinum", "kubejs:platinum_dust"],
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
         ["#forge:ingots/desh", "kubejs:desh_dust"],
+        ["#forge:ingots/ardite", "kubejs:ardite_dust"],
     ].forEach((entry) => {
         event.recipes.createCrushing(entry[1], entry[0]);
     });
@@ -162,6 +164,7 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/platinum", "kubejs:platinum_dust"],
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
         ["#forge:ingots/desh", "kubejs:desh_dust"],
+        ["#forge:ingots/ardite", "kubejs:ardite_dust"],
     ].forEach((entry) => {
         event.recipes.mekanismCrushing(entry[1], entry[0]);
     });
@@ -191,6 +194,7 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/platinum", "kubejs:platinum_dust"],
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
         ["#forge:ingots/desh", "kubejs:desh_dust"],
+        ["#forge:ingots/ardite", "kubejs:ardite_dust"]
     ].forEach((entry) => {
         event.recipes.thermal.pulverizer(entry[1], entry[0]).energy(2000);
     });
@@ -303,6 +307,7 @@ ServerEvents.recipes((event) => {
     [
         ["#forge:dusts/zinc", "create:zinc_ingot"],
         ["#forge:dusts/cobalt", "tconstruct:cobalt_ingot"],
+        ["#forge:dusts/ardite", "kubejs:ardite_ingot"],
     ].forEach((entry) => {
         const [dust, ingot] = entry;
 

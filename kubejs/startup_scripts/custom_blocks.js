@@ -12,6 +12,30 @@ StartupEvents.registry("block", (event) => {
         .tagBlock("minecraft:needs_stone_tool");
 
     event
+        .create("ardite_ore")
+        .displayName("Ardite Ore")
+        .material("stone")
+        .hardness(5.0)
+        .resistance(30.0)
+        .tag("forge:ores")
+        .tag("forge:ores/ardite")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
+
+    event
+        .create("ardite_block")
+        .displayName("Ardite Block")
+        .material("stone")
+        .hardness(5.0)
+        .resistance(30.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/ardite")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
+
+    event
         .create("nether_copper_ore")
         .displayName("Nether Copper Ore")
         .material("stone")

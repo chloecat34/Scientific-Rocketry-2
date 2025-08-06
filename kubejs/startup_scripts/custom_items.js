@@ -11,6 +11,8 @@ StartupEvents.registry("item", (event) => {
     event.create("zinc_dust").displayName("Zinc Dust").tag("forge:dusts").tag("forge:dusts/zinc");
 
     event.create("cobalt_dust").displayName("Cobalt Dust").tag("forge:dusts").tag("forge:dusts/cobalt");
+    event.create("ardite_dust").displayName("Ardite Dust").tag("forge:dusts").tag("forge:dusts/ardite");
+    event.create("raw_ardite").displayName("Raw Ardite").tag("forge:raw_materials").tag("forge:raw_materials/ardite");
 
     event.create("desh_dust").displayName("Desh Dust").tag("forge:dusts").tag("forge:dusts/desh");
 
@@ -74,6 +76,7 @@ StartupEvents.registry("item", (event) => {
         "blue_alloy",
         "purple_alloy",
         "pulsating_alloy",
+        "ardite"
     ];
 
     let wires = ["red_alloy", "energetic_alloy", "vibrant_alloy"];

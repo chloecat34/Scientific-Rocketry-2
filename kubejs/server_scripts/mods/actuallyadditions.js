@@ -28,6 +28,7 @@ ServerEvents.recipes((event) => {
         ["thermal:ruby_ore", "minecraft:stone", 25],
         ["thermal:deepslate_ruby_ore", "minecraft:deepslate", 25],
         ["kubejs:sulfur_ore", "minecraft:netherrack", 1000],
+        ["kubejs:ardite_ore", "minecraft:netherrack", 50],
         ["create:deepslate_zinc_ore", "minecraft:deepslate", 1000],
         ["immersiveengineering:deepslate_ore_aluminum", "minecraft:deepslate", 250],
     ];
