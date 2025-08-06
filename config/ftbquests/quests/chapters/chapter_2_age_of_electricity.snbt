@@ -526,7 +526,7 @@
 		}
 		{
 			dependencies: ["4BB169A6E71ED26B"]
-			description: ["The Diesel Generator can produce 4096 RF/t using a steady supply of Biodiesel."]
+			description: ["The Diesel Generator can produce 4096 RF/t using a steady supply of Biodiesel. It also works with Canola Oil and its variants."]
 			id: "1FC25D06A4B62839"
 			rewards: [{
 				count: 16

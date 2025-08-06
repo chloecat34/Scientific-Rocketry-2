@@ -470,4 +470,7 @@ ServerEvents.recipes((event) => {
         A: "#forge:plates/zinc",
         B: "#forge:rods/zinc",
     });
+
+    // Sequenced pulse generator
+    event.replaceInput({}, "create_connected:control_chip", "create:precision_mechanism");
 });
