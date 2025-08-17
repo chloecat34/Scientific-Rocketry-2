@@ -28,6 +28,9 @@ StartupEvents.registry("item", (event) => {
 
     event.create("cobalt_gear").displayName("Cobalt Gear").tag("forge:gears").tag("forge:gears/cobalt");
 
+    event.create("amethyst_bronze_plate").displayName("Amethyst Bronze Plate").tag("forge:plates").tag("forge:plates/amethyst_bronze");
+    event.create("amethyst_bronze_gear").displayName("Amethyst Bronze Gear").tag("forge:gears").tag("forge:gears/amethyst_bronze");
+
     event.create("zinc_rod").displayName("Zinc Rod").tag("forge:rods").tag("forge:rods/zinc");
 
     event

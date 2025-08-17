@@ -74,7 +74,7 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "create:empty_blaze_burner" });
 
     event.shaped("create:empty_blaze_burner", [" A ", "ABA", " A "], {
-        A: "#forge:plates/cobalt",
+        A: "#forge:plates/ardite",
         B: "minecraft:netherrack",
     });
 
@@ -433,4 +433,13 @@ ServerEvents.recipes((event) => {
         .energy(9600);
 
     event.recipes.mekanism.combining("create:blaze_burner", "create:empty_blaze_burner", "powah:crystal_blazing");
+
+    // Redstone link should take amethyst bronze plates, so it can use a metal component while also using amethyst
+    event.remove({ output: "create:transmitter" });
+
+    event.recipes.shaped("create:transmitter", [" A ", "BBB", " C "], {
+        A: "minecraft:lightning_rod",
+        B: "#forge:plates/amethyst_bronze",
+        C: "#forge:dusts/redstone",
+    });
 });

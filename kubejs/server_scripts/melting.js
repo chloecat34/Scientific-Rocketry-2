@@ -24,6 +24,7 @@ ServerEvents.recipes((event) => {
         event.recipes.thermal.crucible(Fluid.of(fluid, fluidAmount), item).energy(energy);
     }
 
+    // Melting times are 0.25 seconds per unit
     const addTinkersMelterRecipe = (item, fluid, fluidAmount, time, temperature) => {
         event.custom({
             type: "tconstruct:melting",
@@ -181,7 +182,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:gears/iron", "tconstruct:molten_iron", 360, 4800 * 4);
     crucibleMelting("#forge:plates/iron", "tconstruct:molten_iron", 90, 4800);
     crucibleMelting("#forge:rods/iron", "tconstruct:molten_iron", 45, 2400);
-    crucibleMelting("#forge:wires/iron", "tconstruct:molten_iron", 45, 2400);
+    addBothMelterRecipes("createaddition:iron_wire", "tconstruct:molten_iron", 45, 15, 800, 2400);
     crucibleMelting("#forge:sheetmetals/iron", "tconstruct:molten_iron", 90, 4800);
     chillerBlockCasting("minecraft:iron_block", "tconstruct:molten_iron", 810, 4800 * 9);
 
@@ -193,7 +194,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:gears/gold", "tconstruct:molten_gold", 360, 4800 * 4);
     crucibleMelting("#forge:plates/gold", "tconstruct:molten_gold", 90, 4800);
     crucibleMelting("#forge:rods/gold", "tconstruct:molten_gold", 45, 2400);
-    crucibleMelting("#forge:wires/gold", "tconstruct:molten_gold", 45, 2400);
+    addBothMelterRecipes("createaddition:gold_wire", "tconstruct:molten_gold", 45, 14, 700, 2400);
     crucibleMelting("#forge:sheetmetals/gold", "tconstruct:molten_gold", 90, 4800);
     chillerBlockCasting("minecraft:gold_block", "tconstruct:molten_gold", 810, 4800 * 9);
 
@@ -213,8 +214,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:ingots/cobalt", "tconstruct:molten_cobalt", 90, 4800);
     crucibleMelting("#forge:nuggets/cobalt", "tconstruct:molten_cobalt", 10, 600);
     crucibleMelting("#forge:storage_blocks/cobalt", "tconstruct:molten_cobalt", 810, 4800 * 9);
-    crucibleMelting("#forge:gears/cobalt", "tconstruct:molten_cobalt", 360, 4800 * 4);
-    crucibleMelting("#forge:plates/cobalt", "tconstruct:molten_cobalt", 90, 4800);
+    addBothMelterRecipes("kubejs:cobalt_gear", "tconstruct:molten_cobalt", 360, 135, 950, 4800 * 4);
+    addBothMelterRecipes("kubejs:cobalt_plate", "tconstruct:molten_cobalt", 90, 64, 950, 4800);
     chillerBlockCasting("tconstruct:cobalt_block", "tconstruct:molten_cobalt", 810, 4800 * 9);
 
     // Molten slimesteel
@@ -227,6 +228,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:ingots/amethyst_bronze", "tconstruct:molten_amethyst_bronze", 90, 4800);
     crucibleMelting("#forge:nuggets/amethyst_bronze", "tconstruct:molten_amethyst_bronze", 10, 600);
     crucibleMelting("#forge:storage_blocks/amethyst_bronze", "tconstruct:molten_amethyst_bronze", 810, 4800 * 9);
+    addBothMelterRecipes("kubejs:amethyst_bronze_plate", "tconstruct:molten_amethyst_bronze", 90, 60, 820, 4800);
+    addBothMelterRecipes("kubejs:amethyst_bronze_gear", "tconstruct:molten_amethyst_bronze", 360, 130, 820, 4800 * 4);
     chillerBlockCasting("tconstruct:amethyst_bronze_block", "tconstruct:molten_amethyst_bronze", 810, 4800 * 9);
 
     // Molten rose gold
@@ -300,8 +303,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:ingots/manyullyn", "tconstruct:molten_manyullyn", 90, 4800);
     crucibleMelting("#forge:nuggets/manyullyn", "tconstruct:molten_manyullyn", 10, 600);
     crucibleMelting("#forge:storage_blocks/manyullyn", "tconstruct:molten_manyullyn", 810, 4800 * 9);
-    crucibleMelting("#forge:plates/manyullyn", "tconstruct:molten_manyullyn", 90, 4800);
-    crucibleMelting("#forge:gears/manyullyn", "tconstruct:molten_manyullyn", 360, 4800 * 4);
+    addBothMelterRecipes("kubejs:manyullyn_plate", "tconstruct:molten_manyullyn", 90, 72, 1200, 4800);
+    addBothMelterRecipes("kubejs:manyullyn_gear", "tconstruct:molten_manyullyn", 360, 160, 1200, 4800 * 4);
     chillerBlockCasting("tconstruct:manyullyn_block", "tconstruct:molten_manyullyn", 810, 4800 * 9);
 
     // Molten hepatizon
@@ -607,7 +610,6 @@ ServerEvents.recipes((event) => {
     crucibleMelting("tconstruct:scorched_brick", "tconstruct:scorched_stone", 250, 4800);
     crucibleMelting("tconstruct:scorched_bricks", "tconstruct:scorched_stone", 1000, 4800 * 4);
     crucibleMelting("tconstruct:scorched_stone", "tconstruct:scorched_stone", 1000, 4800 * 4);
-    crucibleMelting("tconstruct:nether_grout", "tconstruct:scorched_stone", 500, 4800);
 
     chillerIngotCasting("tconstruct:scorched_brick", "tconstruct:scorched_stone", 250, 4800);
     chillerBlockCasting("tconstruct:scorched_stone", "tconstruct:scorched_stone", 1000, 4800 * 4);
@@ -650,8 +652,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:ingots/platinum", "tconstruct:molten_platinum", 90, 4800);
     crucibleMelting("#forge:nuggets/platinum", "tconstruct:molten_platinum", 10, 600);
     crucibleMelting("#forge:storage_blocks/platinum", "tconstruct:molten_platinum", 810, 4800 * 9);
-    crucibleMelting("#forge:gears/platinum", "tconstruct:molten_platinum", 360, 4800 * 4);
-    crucibleMelting("#forge:plates/platinum", "tconstruct:molten_platinum", 90, 4800);
+    addBothMelterRecipes("kubejs:platinum_gear", "tconstruct:molten_platinum", 360, 135, 970, 4800 * 4);
+    addBothMelterRecipes("kubejs:platinum_plate", "tconstruct:molten_platinum", 90, 64, 970, 4800);
     chillerIngotCasting("#forge:ingots/platinum", "tconstruct:molten_platinum", 90, 4800);
     chillerBlockCasting("kubejs:platinum_block", "tconstruct:molten_platinum", 810, 4800 * 9);
 
@@ -704,6 +706,7 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("kubejs:vibrant_alloy_nugget", "kubejs:molten_vibrant_alloy", 10, 20, 900, 600);
     addBothMelterRecipes("kubejs:vibrant_alloy_gear", "kubejs:molten_vibrant_alloy", 360, 120, 900, 4800 * 4);
     addBothMelterRecipes("kubejs:vibrant_alloy_block", "kubejs:molten_vibrant_alloy", 810, 200, 900, 4800 * 9);
+    addBothMelterRecipes("kubejs:vibrant_alloy_wire", "kubejs:molten_vibrant_alloy", 45, 15, 900, 2400);
     chillerIngotCasting("#forge:ingots/vibrant_alloy", "kubejs:molten_vibrant_alloy", 90, 4800);
     chillerBlockCasting("kubejs:vibrant_alloy_block", "kubejs:molten_vibrant_alloy", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("kubejs:vibrant_alloy_block", "kubejs:molten_vibrant_alloy", 810, 160);

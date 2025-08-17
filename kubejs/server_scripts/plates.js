@@ -93,6 +93,7 @@ ServerEvents.recipes((event) => {
         "blue_alloy",
         "purple_alloy",
         "pulsating_alloy",
-        "ardite"
+        "ardite",
+        "amethyst_bronze"
     ].forEach((ingot) => standardizePlates(ingot, `kubejs:${ingot}_plate`));
 });

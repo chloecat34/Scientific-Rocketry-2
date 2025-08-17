@@ -127,6 +127,9 @@ ServerEvents.recipes((event) => {
         "#forge:storage_blocks/certus_quartz"
     );
     addPacking2x2("#forge:gems/fluix", "ae2:fluix_block");
+    addPacking2x2("tconstruct:seared_brick", "tconstruct:seared_bricks");
+    addPacking2x2("tconstruct:scorched_brick", "tconstruct:scorched_bricks");
+    addPacking2x2("create:cardboard", "create:cardboard_block");
     addPacking("advanced_ae:quantum_alloy", "advanced_ae:quantum_alloy_block");
     addPacking(
         "createaddition:biomass_pellet",
