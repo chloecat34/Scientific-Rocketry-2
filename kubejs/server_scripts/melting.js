@@ -591,7 +591,6 @@ ServerEvents.recipes((event) => {
         input: "minecraft:magma_block",
     });
     crucibleMelting("minecraft:magma_cream", "tconstruct:magma", 250, 4800);
-    crucibleMelting("minecraft:magma_block", "tconstruct:magma", 1000, 4800 * 4);
     event.recipes.thermal
         .chiller("minecraft:magma_cream", [Fluid.of("tconstruct:magma", 250), "thermal:chiller_ball_cast"])
         .energy(4800);
