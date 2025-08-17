@@ -333,4 +333,8 @@ ServerEvents.recipes((event) => {
     // Sawdust fix
     event.replaceOutput({}, "immersiveengineering:dust_wood", "thermal:sawdust");
     event.replaceOutput({}, "mekanism:sawdust", "thermal:sawdust");
+
+    // Flax to string (Create)
+    event.recipes.createMilling("minecraft:string", "thermal:flax");
+    event.recipes.createCrushing(["minecraft:string", Item.of("minecraft:string").withChance(0.5)], "thermal:flax");
 });

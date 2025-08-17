@@ -10,12 +10,7 @@ ServerEvents.recipes((event) => {
     });
 
     // Replace andesite alloy in induction smelter
-    event.recipes.thermal.smelter(
-        "create:andesite_alloy",
-        ["minecraft:andesite", "#forge:nuggets/zinc"],
-        0,
-        3200
-    );
+    event.recipes.thermal.smelter("create:andesite_alloy", ["minecraft:andesite", "#forge:nuggets/zinc"], 0, 3200);
 
     // Water wheel
     event.remove({ output: "create:water_wheel" });
@@ -49,15 +44,9 @@ ServerEvents.recipes((event) => {
         type: "minecraft:crafting_shapeless",
     });
 
-    event.recipes.createFilling("create:rose_quartz", [
-        "#forge:gems/quartz",
-        Fluid.of("thermal:redstone", 400),
-    ]);
+    event.recipes.createFilling("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 400)]);
     event.recipes.thermal
-        .bottler("create:rose_quartz", [
-            "#forge:gems/quartz",
-            Fluid.of("thermal:redstone", 400),
-        ])
+        .bottler("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 400)])
         .energy(8000);
 
     event.custom({
@@ -121,11 +110,7 @@ ServerEvents.recipes((event) => {
         ],
     });
 
-    event.recipes.mekanism.combining(
-        "create:brass_casing",
-        "#forge:treated_wood",
-        "#forge:plates/brass"
-    );
+    event.recipes.mekanism.combining("create:brass_casing", "#forge:treated_wood", "#forge:plates/brass");
 
     // Copper casing
     event.remove({ output: "create:copper_casing" });
@@ -166,11 +151,7 @@ ServerEvents.recipes((event) => {
         ],
     });
 
-    event.recipes.mekanism.combining(
-        "create:copper_casing",
-        "#forge:treated_wood",
-        "#forge:plates/copper"
-    );
+    event.recipes.mekanism.combining("create:copper_casing", "#forge:treated_wood", "#forge:plates/copper");
 
     // Andesite casing
     event.custom({
@@ -191,61 +172,39 @@ ServerEvents.recipes((event) => {
         ],
     });
 
-    event.recipes.mekanism.combining(
-        "create:andesite_casing",
-        "#forge:treated_wood",
-        "create:andesite_alloy"
-    );
+    event.recipes.mekanism.combining("create:andesite_casing", "#forge:treated_wood", "create:andesite_alloy");
 
     // Train casing
-    event.recipes.mekanism.combining(
-        "create:railway_casing",
-        "create:brass_casing",
-        "create:sturdy_sheet"
-    );
+    event.recipes.mekanism.combining("create:railway_casing", "create:brass_casing", "create:sturdy_sheet");
 
     // Crushing wheels
     event.remove({ output: "create:crushing_wheel" });
 
-    event.recipes.createMechanicalCrafting(
-        "2x create:crushing_wheel",
-        [" AAA ", "ABCBA", "ACDCA", "ABCBA", " AAA "],
-        {
-            A: "create:sturdy_sheet",
-            B: "create:andesite_alloy",
-            C: "create:brass_casing",
-            D: "#forge:storage_blocks/andesite_alloy",
-        }
-    );
+    event.recipes.createMechanicalCrafting("2x create:crushing_wheel", [" AAA ", "ABCBA", "ACDCA", "ABCBA", " AAA "], {
+        A: "create:sturdy_sheet",
+        B: "create:andesite_alloy",
+        C: "create:brass_casing",
+        D: "#forge:storage_blocks/andesite_alloy",
+    });
 
     // Precision mechanism
     event.remove({ output: "create:precision_mechanism" });
 
     event.recipes
-        .createSequencedAssembly(
-            [Item.of("create:precision_mechanism")],
-            "#forge:plates/electrum",
-            [
-                event.recipes.createDeploying(
-                    "create:incomplete_precision_mechanism",
-                    ["create:incomplete_precision_mechanism", "create:cogwheel"]
-                ),
-                event.recipes.createDeploying(
-                    "create:incomplete_precision_mechanism",
-                    [
-                        "create:incomplete_precision_mechanism",
-                        "create:large_cogwheel",
-                    ]
-                ),
-                event.recipes.createDeploying(
-                    "create:incomplete_precision_mechanism",
-                    [
-                        "create:incomplete_precision_mechanism",
-                        "minecraft:iron_nugget",
-                    ]
-                ),
-            ]
-        )
+        .createSequencedAssembly([Item.of("create:precision_mechanism")], "#forge:plates/electrum", [
+            event.recipes.createDeploying("create:incomplete_precision_mechanism", [
+                "create:incomplete_precision_mechanism",
+                "create:cogwheel",
+            ]),
+            event.recipes.createDeploying("create:incomplete_precision_mechanism", [
+                "create:incomplete_precision_mechanism",
+                "create:large_cogwheel",
+            ]),
+            event.recipes.createDeploying("create:incomplete_precision_mechanism", [
+                "create:incomplete_precision_mechanism",
+                "minecraft:iron_nugget",
+            ]),
+        ])
         .transitionalItem("create:incomplete_precision_mechanism")
         .loops(3);
 
@@ -257,10 +216,7 @@ ServerEvents.recipes((event) => {
         Fluid.of("tconstruct:blazing_blood", 250),
     ]);
     event.recipes.thermal
-        .bottler("create:blaze_cake", [
-            "create:blaze_cake_base",
-            Fluid.of("tconstruct:blazing_blood", 250),
-        ])
+        .bottler("create:blaze_cake", ["create:blaze_cake_base", Fluid.of("tconstruct:blazing_blood", 250)])
         .energy(4800);
 
     // Copper backtank
@@ -302,24 +258,20 @@ ServerEvents.recipes((event) => {
 
     // Heat mechanism
     event.recipes
-        .createSequencedAssembly(
-            [Item.of("kubejs:heat_mechanism")],
-            "immersiveengineering:component_steel",
-            [
-                event.recipes.createDeploying(
-                    "kubejs:incomplete_heat_mechanism",
-                    ["kubejs:incomplete_heat_mechanism", "#forge:plates/invar"]
-                ),
-                event.recipes.createDeploying(
-                    "kubejs:incomplete_heat_mechanism",
-                    ["kubejs:incomplete_heat_mechanism", "create:sturdy_sheet"]
-                ),
-                event.recipes.createDeploying(
-                    "kubejs:incomplete_heat_mechanism",
-                    ["kubejs:incomplete_heat_mechanism", "#forge:plates/invar"]
-                ),
-            ]
-        )
+        .createSequencedAssembly([Item.of("kubejs:heat_mechanism")], "immersiveengineering:component_steel", [
+            event.recipes.createDeploying("kubejs:incomplete_heat_mechanism", [
+                "kubejs:incomplete_heat_mechanism",
+                "#forge:plates/invar",
+            ]),
+            event.recipes.createDeploying("kubejs:incomplete_heat_mechanism", [
+                "kubejs:incomplete_heat_mechanism",
+                "create:sturdy_sheet",
+            ]),
+            event.recipes.createDeploying("kubejs:incomplete_heat_mechanism", [
+                "kubejs:incomplete_heat_mechanism",
+                "#forge:plates/invar",
+            ]),
+        ])
         .transitionalItem("kubejs:incomplete_heat_mechanism")
         .loops(4);
 
@@ -341,39 +293,20 @@ ServerEvents.recipes((event) => {
     });
 
     // Windmill
-    event.replaceInput(
-        { output: "create:white_sail" },
-        "#forge:rods/wooden",
-        "immersiveengineering:stick_treated"
-    );
-    event.replaceInput(
-        { output: "create:windmill_bearing" },
-        "#minecraft:wooden_slabs",
-        "#forge:treated_wood_slab"
-    );
+    event.replaceInput({ output: "create:white_sail" }, "#forge:rods/wooden", "immersiveengineering:stick_treated");
+    event.replaceInput({ output: "create:windmill_bearing" }, "#minecraft:wooden_slabs", "#forge:treated_wood_slab");
 
     // Mechanical drill
-    event.replaceInput(
-        { output: "create:mechanical_drill" },
-        "#forge:ingots/iron",
-        "#forge:plates/iron"
-    );
+    event.replaceInput({ output: "create:mechanical_drill" }, "#forge:ingots/iron", "#forge:plates/iron");
 
     // Sturdy sheet thermal recipe
     event.recipes.thermal
-        .bottler("create:sturdy_sheet", [
-            "#forge:dusts/obsidian",
-            Fluid.of("minecraft:lava", 500),
-        ])
+        .bottler("create:sturdy_sheet", ["#forge:dusts/obsidian", Fluid.of("minecraft:lava", 500)])
         .energy(9600);
 
     // Blaze cake thermal recipe
     event.recipes.thermal
-        .smelter("create:blaze_cake_base", [
-            "minecraft:egg",
-            "minecraft:sugar",
-            "create:cinder_flour",
-        ])
+        .smelter("create:blaze_cake_base", ["minecraft:egg", "minecraft:sugar", "create:cinder_flour"])
         .energy(4800);
 
     // Nugget of experience
@@ -386,20 +319,12 @@ ServerEvents.recipes((event) => {
     ];
 
     xpTypes.forEach((xp) => {
-        event.recipes.createCompacting(
-            ["create:experience_nugget"],
-            [Fluid.of(xp, 60)]
-        );
-        event.recipes.thermal
-            .chiller("create:experience_nugget", [Fluid.of(xp, 60)])
-            .energy(2400);
+        event.recipes.createCompacting(["create:experience_nugget"], [Fluid.of(xp, 60)]);
+        event.recipes.thermal.chiller("create:experience_nugget", [Fluid.of(xp, 60)]).energy(2400);
     });
 
     event.recipes.thermal
-        .crucible(
-            Fluid.of("pneumaticcraft:memory_essence", 60),
-            "create:experience_nugget"
-        )
+        .crucible(Fluid.of("pneumaticcraft:memory_essence", 60), "create:experience_nugget")
         .energy(2400);
 
     // Straw
@@ -421,47 +346,35 @@ ServerEvents.recipes((event) => {
     // Alternator
     event.remove({ output: "createaddition:alternator" });
 
-    event.recipes.createMechanicalCrafting(
-        "createaddition:alternator",
-        ["  A  ", " ABA ", "ACDCA", " AEA "],
-        {
-            A: "#forge:plates/steel",
-            B: "immersiveengineering:coil_mv",
-            C: "immersiveengineering:rs_engineering",
-            D: "#forge:rods/steel",
-            E: "createaddition:capacitor",
-        }
-    );
+    event.recipes.createMechanicalCrafting("createaddition:alternator", ["  A  ", " ABA ", "ACDCA", " AEA "], {
+        A: "#forge:plates/steel",
+        B: "immersiveengineering:coil_mv",
+        C: "immersiveengineering:rs_engineering",
+        D: "#forge:rods/steel",
+        E: "createaddition:capacitor",
+    });
 
     // Electric motor
     event.remove({ output: "createaddition:electric_motor" });
 
-    event.recipes.createMechanicalCrafting(
-        "createaddition:electric_motor",
-        ["  A  ", " ABA ", "ACDCA", " AEA "],
-        {
-            A: "#forge:plates/aluminum",
-            B: "immersiveengineering:coil_hv",
-            C: "immersiveengineering:heavy_engineering",
-            D: "#forge:rods/aluminum",
-            E: "immersiveengineering:component_electronic_adv",
-        }
-    );
+    event.recipes.createMechanicalCrafting("createaddition:electric_motor", ["  A  ", " ABA ", "ACDCA", " AEA "], {
+        A: "#forge:plates/aluminum",
+        B: "immersiveengineering:coil_hv",
+        C: "immersiveengineering:heavy_engineering",
+        D: "#forge:rods/aluminum",
+        E: "immersiveengineering:component_electronic_adv",
+    });
 
     // Accumulator
     event.remove({ output: "createaddition:modular_accumulator" });
 
-    event.recipes.createMechanicalCrafting(
-        "createaddition:modular_accumulator",
-        ["  A  ", " ABA ", "ACDCA", " AEA "],
-        {
-            A: "#forge:plates/brass",
-            B: "immersiveengineering:coil_mv",
-            C: "immersiveengineering:rs_engineering",
-            D: "#forge:rods/copper",
-            E: "createaddition:capacitor",
-        }
-    );
+    event.recipes.createMechanicalCrafting("createaddition:modular_accumulator", ["  A  ", " ABA ", "ACDCA", " AEA "], {
+        A: "#forge:plates/brass",
+        B: "immersiveengineering:coil_mv",
+        C: "immersiveengineering:rs_engineering",
+        D: "#forge:rods/copper",
+        E: "createaddition:capacitor",
+    });
 
     // Spool
     event.remove({ output: "createaddition:spool" });
@@ -473,4 +386,51 @@ ServerEvents.recipes((event) => {
 
     // Sequenced pulse generator
     event.replaceInput({}, "create_connected:control_chip", "create:precision_mechanism");
+
+    // Blaze burner filling
+    event.recipes.create.filling("create:blaze_burner", [
+        "create:empty_blaze_burner",
+        Fluid.of("tconstruct:blazing_blood", 1000),
+    ]);
+
+    event.custom({
+        type: "tconstruct:casting_basin",
+        cast: {
+            item: "create:empty_blaze_burner",
+        },
+        cast_consumed: true,
+        cooling_time: 80,
+        fluid: {
+            amount: 1000,
+            fluid: "tconstruct:blazing_blood",
+        },
+        result: "create:blaze_burner",
+    });
+
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 1000,
+            fluid: "tconstruct:blazing_blood",
+        },
+        item_input: {
+            item: "create:empty_blaze_burner",
+        },
+        item_output: {
+            count: 1,
+            item: "create:blaze_burner",
+        },
+        pressure: 2.0,
+        temperature: {
+            min_temp: 273,
+        },
+    });
+
+    event.recipes.thermal
+        .bottler("create:blaze_burner", ["create:empty_blaze_burner", Fluid.of("tconstruct:blazing_blood", 1000)])
+        .energy(9600);
+
+    event.recipes.mekanism.combining("create:blaze_burner", "create:empty_blaze_burner", "powah:crystal_blazing");
 });
