@@ -61,4 +61,7 @@ ServerEvents.recipes((event) => {
             output: "minecraft:blaze_rod",
         },
     });
+
+    // Blaze rod casting with thermal
+    event.recipes.thermal.chiller("minecraft:blaze_rod", [Fluid.of("tconstruct:blazing_blood", 100), "tconstruct:rod_cast"]).energy(2400);
 });
