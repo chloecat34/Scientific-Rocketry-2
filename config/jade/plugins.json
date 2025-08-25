@@ -1,4 +1,7 @@
 {
+  "mm": {
+    "controller_progress": true
+  },
   "minecraft": {
     "item_storage.show_name_amount": 5,
     "furnace": true,
@@ -55,19 +58,6 @@
     "machine": true,
     "tunnel": true
   },
-  "jadeaddons.create": {
-    "filter": true,
-    "backtank_capacity": true,
-    "goggles.requires_goggles": true,
-    "goggles": false,
-    "blaze_burner": true,
-    "exact_block": true,
-    "goggles.detailed": false,
-    "placard": true
-  },
-  "jadeaddons.mcjtylib": {
-    "jadeaddons": true
-  },
   "pneumaticcraft": {
     "pneumatic": true,
     "tube_module": true,
@@ -90,6 +80,12 @@
   "expatternprovider": {
     "jade_chamber": true,
     "jade_wireless": true
+  },
+  "mcjtylib": {
+    "jadeaddons": true
+  },
+  "lootr": {
+    "info": true
   },
   "functionalstorage": {
     "armory": true
@@ -127,9 +123,6 @@
   "jadeaddons": {
     "equipment_requirement": ""
   },
-  "jadeaddons.lootr": {
-    "info": true
-  },
   "mekanism": {
     "infuse_type": true,
     "gas": true,
@@ -139,6 +132,17 @@
     "slurry": true,
     "energy": true,
     "tooltip_renderer": true
+  },
+  "create": {
+    "filter": true,
+    "backtank_capacity": true,
+    "goggles.requires_goggles": true,
+    "goggles": false,
+    "blaze_burner": true,
+    "exact_block": true,
+    "crafting_blueprint": true,
+    "goggles.detailed": false,
+    "placard": true
   },
   "gravestone": {
     "grave": true

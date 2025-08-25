@@ -118,8 +118,7 @@ ServerEvents.recipes((event) => {
         "prismalium",
         "melodium",
         "stellarium",
-        "copper",
-        "amethyst_bronze"
+        "copper"
     ]
         .concat(kubejsGears)
         .forEach((ingot) => {

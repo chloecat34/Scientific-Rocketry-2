@@ -12,6 +12,12 @@
 			dependencies: ["508CE71920CDF407"]
 			description: ["The Rolling Mill lets you create Rods from Ingots, and Wires from Plates."]
 			id: "6896901F62AE3B96"
+			rewards: [{
+				count: 8
+				id: "1159069B15B6B481"
+				item: "thermal:iron_plate"
+				type: "item"
+			}]
 			tasks: [{
 				id: "518BAC1362F41531"
 				item: "createaddition:rolling_mill"
@@ -25,6 +31,12 @@
 			dependencies: ["3B9E84A16963E755"]
 			description: ["The Alternator runs off Create rotational power to produce electricity. You can transfer power with IE wires or Powah cables (which have custom tiers)."]
 			id: "6B574C7F507B18CB"
+			rewards: [{
+				count: 16
+				id: "7405B5399293C287"
+				item: "immersiveengineering:wirecoil_copper"
+				type: "item"
+			}]
 			tasks: [{
 				id: "6C0F8945D14D5D9C"
 				item: "createaddition:alternator"
@@ -42,7 +54,7 @@
 			rewards: [{
 				count: 16
 				id: "6C8A3BF732E7DB81"
-				item: "immersiveengineering:coal_coke"
+				item: "thermal:coal_coke"
 				type: "item"
 			}]
 			tasks: [
@@ -72,6 +84,11 @@
 			]
 			icon: "immersiveengineering:workbench"
 			id: "29B36D2F3D39B0E5"
+			rewards: [{
+				id: "27FCDAE68F71B4A7"
+				item: "immersiveengineering:craftingtable"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "25393733F721C661"
@@ -332,6 +349,12 @@
 				}
 			}
 			id: "014611E2E11520B2"
+			rewards: [{
+				count: 16
+				id: "16CF86F69A134960"
+				item: "immersiveengineering:ingot_hop_graphite"
+				type: "item"
+			}]
 			tasks: [
 				{
 					count: 8L
@@ -457,6 +480,11 @@
 				"You can use Blazing Blood for this, it has a temperature of 2500K."
 			]
 			id: "14900EDEEB077667"
+			rewards: [{
+				id: "21F2C8BB6C421211"
+				item: "tconstruct:blazing_blood_bucket"
+				type: "item"
+			}]
 			tasks: [{
 				id: "77955D29806928B1"
 				item: "immersiveengineering:thermoelectric_generator"
@@ -622,6 +650,11 @@
 			dependencies: ["4BB169A6E71ED26B"]
 			description: ["The Excavator lets you automate the production of ores. They use 4096 RF/t, and the ore veins have an infinite supply."]
 			id: "6F26CFE3531A641B"
+			rewards: [{
+				id: "744ABB0EE31BBFA9"
+				item: "immersiveengineering:capacitor_hv"
+				type: "item"
+			}]
 			tasks: [
 				{
 					count: 16L

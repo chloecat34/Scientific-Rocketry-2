@@ -271,6 +271,7 @@ ServerEvents.recipes((event) => {
     // Slag glass
     event.remove({ id: "immersiveengineering:smelting/slag_glass" });
     event.smelting("immersiveengineering:slag_glass", "immersiveengineering:slag_gravel");
+    event.remove({ id: "create:crushing/compat/immersiveengineering/slag" });
 
     event.replaceInput({ output: "immersiveengineering:windmill" }, "#forge:ingots/iron", "#forge:rods/steel");
     event.replaceInput({ output: "immersiveengineering:watermill" }, "#forge:ingots/steel", "#forge:rods/steel");

@@ -6,8 +6,9 @@ ServerEvents.recipes((event) => {
         "immersiveengineering:wire_lead",
         "immersiveengineering:wire_steel",
         "immersiveengineering:wire_aluminum",
-    ].forEach((rod) => {
-        event.remove({ output: rod, type: "minecraft:crafting_shapeless" });
+    ].forEach((wire) => {
+        event.remove({ output: wire, type: "minecraft:crafting_shapeless" });
+        event.remove({ output: wire, type: "create:cutting" });
     });
 
     // Add press recipes

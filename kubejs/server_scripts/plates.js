@@ -39,6 +39,8 @@ ServerEvents.recipes((event) => {
 
     // Get rid of extra steel plate recipe
     event.remove({ output: "thermal:steel_plate", type: "create:pressing" });
+    event.remove({ id: "createaddition:pressing/aluminum_ingot"});
+    event.remove({ id: "createaddition:pressing/uranium_ingot"});
 
     // Thermal plates
     [

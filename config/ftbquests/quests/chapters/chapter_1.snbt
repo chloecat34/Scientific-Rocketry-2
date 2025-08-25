@@ -403,6 +403,12 @@
 			]
 			description: ["The Mechanical Crafter is a multiblock that lets you automate crafting and carry out some special recipes, such as the Crushing Wheels or metal gears."]
 			id: "3C1806B1852F0006"
+			rewards: [{
+				count: 8
+				id: "6330B745A803DBED"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
 			tasks: [{
 				id: "250DB33F706EB509"
 				item: "create:mechanical_crafter"
@@ -453,6 +459,12 @@
 				"&o&bThe Millstone can create Obsidian Dust."
 			]
 			id: "1740ED183C620BC8"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "614F2E410430EBFC"
+				table_id: 3188429560219160650L
+				type: "choice"
+			}]
 			tasks: [{
 				count: 2L
 				id: "681315361B467F6E"
@@ -464,16 +476,21 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["1740ED183C620BC8"]
-			description: ["Now that you have Cobalt, you can make a Blaze Burner, which lets you run heated mixer recipes. This is important for making the Blast Furnace."]
+			dependencies: ["17F0A261342B5731"]
+			description: ["Now that you have Cobalt and Blazing Blood, you can make a Blaze Burner, which lets you run heated mixer recipes. This is important for making the Blast Furnace."]
 			id: "1FC5EB9642F82968"
+			rewards: [{
+				id: "16A1A4C877853BAD"
+				item: "create:empty_blaze_burner"
+				type: "item"
+			}]
 			tasks: [{
 				id: "5C9BBADC3244875B"
 				item: "create:blaze_burner"
 				type: "item"
 			}]
 			title: "Blazing Hot"
-			x: 6.0d
+			x: 7.0d
 			y: -2.0d
 		}
 		{
@@ -501,7 +518,7 @@
 				}
 			]
 			title: "Now We're Cooking!"
-			x: 7.0d
+			x: 8.0d
 			y: -2.0d
 		}
 		{
@@ -573,6 +590,72 @@
 			title: "Where are the mobs?"
 			x: -1.0d
 			y: -5.0d
+		}
+		{
+			dependencies: ["1740ED183C620BC8"]
+			description: [
+				"The Lava Enricher is the first multiblock you must construct. It lets you make Blazing Blood from Lava and Ichor, and is your first source of Blazing Blood."
+				""
+				"You can view the multiblock preview in JEI. There are 3 blocks where you can place hatches, and you can place any fluid hatch there."
+			]
+			icon: "mbd2:lava_enricher"
+			id: "17F0A261342B5731"
+			rewards: [{
+				count: 16
+				id: "3AA29A7598E4E75F"
+				item: "tconstruct:scorched_bricks"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "45709519C4F14866"
+					item: "mbd2:lava_enricher"
+					type: "item"
+				}
+				{
+					count: 33L
+					id: "517549EA5F01ABED"
+					item: { Count: 49, id: "tconstruct:scorched_bricks" }
+					type: "item"
+				}
+				{
+					count: 20L
+					id: "362B8F406D42889D"
+					item: { Count: 20, id: "create:cut_scorchia_bricks" }
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "1F56E129970AFE81"
+					item: { Count: 9, id: "tconstruct:scorched_glass" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "6E83FB4E4C553989"
+					item: { Count: 16, id: "minecraft:magma_block" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1F816ABEBC8AB210"
+					item: { Count: 2, id: "tconstruct:ichor_slime" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "11E7A17E649724E2"
+					item: { Count: 2, id: "mbd2:bronze_input_hatch" }
+					type: "item"
+				}
+				{
+					id: "67EFE433836E63C9"
+					item: "mbd2:bronze_output_hatch"
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -2.0d
 		}
 	]
 	title: "Chapter 1: Crash Landing"

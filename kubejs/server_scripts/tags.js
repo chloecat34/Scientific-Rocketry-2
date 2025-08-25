@@ -34,6 +34,21 @@ ServerEvents.tags("item", (event) => {
     });
 });
 
+ServerEvents.tags("block", (event) => {
+    // MBD2 tags
+    ["mbd2:bronze_input_hatch"].forEach((block) => {
+        event.add("forge:mbd_hatch", block);
+        event.add("forge:mbd_fluid_hatch", block);
+        event.add("forge:mbd_fluid_input_hatch", block);
+    });
+
+    ["mbd2:bronze_output_hatch"].forEach((block) => {
+        event.add("forge:mbd_hatch", block);
+        event.add("forge:mbd_fluid_hatch", block);
+        event.add("forge:mbd_fluid_output_hatch", block);
+    });
+});
+
 ServerEvents.tags("fluid", (event) => {
     event.remove("c:hidden_from_recipe_viewers", "tconstruct:molten_knightslime");
     event.remove("c:hidden_from_recipe_viewers", "tconstruct:molten_soulsteel");
