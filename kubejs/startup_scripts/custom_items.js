@@ -31,6 +31,9 @@ StartupEvents.registry("item", (event) => {
     event.create("amethyst_bronze_plate").displayName("Amethyst Bronze Plate").tag("forge:plates").tag("forge:plates/amethyst_bronze");
     event.create("amethyst_bronze_gear").displayName("Amethyst Bronze Gear").tag("forge:gears").tag("forge:gears/amethyst_bronze");
 
+    event.create("hepatizon_plate").displayName("Hepatizon Plate").tag("forge:plates").tag("forge:plates/hepatizon");
+    event.create("hepatizon_gear").displayName("Hepatizon Gear").tag("forge:gears").tag("forge:gears/hepatizon");
+
     event.create("zinc_rod").displayName("Zinc Rod").tag("forge:rods").tag("forge:rods/zinc");
 
     event

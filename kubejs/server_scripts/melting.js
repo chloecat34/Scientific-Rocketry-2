@@ -311,6 +311,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:ingots/hepatizon", "tconstruct:molten_hepatizon", 90, 4800);
     crucibleMelting("#forge:nuggets/hepatizon", "tconstruct:molten_hepatizon", 10, 600);
     crucibleMelting("#forge:storage_blocks/hepatizon", "tconstruct:molten_hepatizon", 810, 4800 * 9);
+    addBothMelterRecipes("kubejs:hepatizon_plate", "tconstruct:molten_hepatizon", 90, 76, 1400, 4800);
+    addBothMelterRecipes("kubejs:hepatizon_gear", "tconstruct:molten_hepatizon", 360, 172, 1400, 4800 * 4);
     chillerBlockCasting("tconstruct:hepatizon_block", "tconstruct:molten_hepatizon", 810, 4800 * 9);
 
     // Molten queen's slime

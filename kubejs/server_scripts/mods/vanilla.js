@@ -62,16 +62,8 @@ ServerEvents.recipes((event) => {
         C: "minecraft:smooth_stone"
     });
 
-    // Ender eye
+    // Ender eye (WIP)
     event.remove({ output: "minecraft:ender_eye" });
-
-    event.recipes.create.filling("minecraft:ender_eye", [
-        "minecraft:ender_pearl",
-        Fluid.of("tconstruct:blazing_blood", 100),
-    ]);
-    event.recipes.thermal
-        .bottler("minecraft:ender_eye", ["minecraft:ender_pearl", Fluid.of("tconstruct:blazing_blood", 100)])
-        .energy(4800);
 
     // Gunpowder recipe with coal
     event.shapeless("4x minecraft:gunpowder", [
@@ -80,4 +72,18 @@ ServerEvents.recipes((event) => {
         "#forge:gems/niter",
         "#forge:gems/sulfur",
     ]);
+
+    // Enchanting table
+    event.remove({ output: "minecraft:enchanting_table" });
+
+    event.recipes.shaped("minecraft:enchanting_table", [
+        " A ",
+        "BCB",
+        "DDD"
+    ], {
+        A: "minecraft:book",
+        B: "#forge:gems/diamond",
+        C: "#forge:gears/hepatizon",
+        D: "minecraft:obsidian"
+    });
 });

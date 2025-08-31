@@ -442,4 +442,7 @@ ServerEvents.recipes((event) => {
         B: "#forge:plates/amethyst_bronze",
         C: "#forge:dusts/redstone",
     });
+
+    // Empty fan catalyst
+    event.replaceInput({output: "create_connected:empty_fan_catalyst"}, "#forge:ingots/brass", "#forge:plates/brass");
 });

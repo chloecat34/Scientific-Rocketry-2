@@ -434,9 +434,8 @@
 			dependencies: [
 				"075AEB403329FD51"
 				"014611E2E11520B2"
-				"469B27E17669DF13"
 			]
-			description: ["Vibrant Alloy is used for the third tier of Powah Cables. It requires an Arc Furnace, as well as Blazing Blood."]
+			description: ["Vibrant Alloy is used for the third tier of Powah Cables. It requires an Arc Furnace."]
 			id: "577BD027309EC30B"
 			rewards: [{
 				count: 8
@@ -492,24 +491,6 @@
 			}]
 			x: 3.0d
 			y: 2.0d
-		}
-		{
-			description: ["Ender Eyes require Blazing Blood, so going to the End may be slightly trickier. The bossfight itself is the same though."]
-			id: "469B27E17669DF13"
-			rewards: [{
-				count: 4
-				id: "468D7F214DBCD130"
-				item: "minecraft:ender_eye"
-				type: "item"
-			}]
-			tasks: [{
-				id: "32279E3AEF796493"
-				item: "minecraft:ender_eye"
-				type: "item"
-			}]
-			title: "The End of the World"
-			x: 3.0d
-			y: -2.0d
 		}
 		{
 			dependencies: ["014611E2E11520B2"]
