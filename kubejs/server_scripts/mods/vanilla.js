@@ -49,6 +49,19 @@ ServerEvents.recipes((event) => {
         D: "#forge:ingots/red_alloy",
     });
 
+    // Blast furnace
+    event.remove({ output: "minecraft:blast_furnace" });
+
+    event.shaped("minecraft:blast_furnace", [
+        "AAA",
+        "ABA",
+        "CCC"
+    ], {
+        A: "#forge:plates/iron",
+        B: "minecraft:furnace",
+        C: "minecraft:smooth_stone"
+    });
+
     // Ender eye
     event.remove({ output: "minecraft:ender_eye" });
 

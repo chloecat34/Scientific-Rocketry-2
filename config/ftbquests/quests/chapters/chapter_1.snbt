@@ -328,6 +328,8 @@
 				"&o&7Wait, I need HOW much gunpowder?"
 				""
 				"The Coke Oven lets you produce Coal Coke and Creosote. Assemble a 3x3x3 multiblock out of Coke Bricks, then right-click the center block with a hammer."
+				""
+				"Gunpowder can be crafted using Coal, Niter, and Sulfur. Sulfur is found in the Nether."
 			]
 			icon: "immersiveengineering:cokebrick"
 			id: "4DBBB387B2E65E58"

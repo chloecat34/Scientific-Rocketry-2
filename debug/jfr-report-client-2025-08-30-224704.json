@@ -1,0 +1,689 @@
+{
+  "startedEpoch": 1756608424896,
+  "endedEpoch": 1756608482163,
+  "durationMs": 57266,
+  "heap": {
+    "allocationRateBytesPerSecond": 1.767599542857143E8,
+    "gcCount": 7,
+    "gcOverHeadPercent": 0.026385639,
+    "gcTotalDurationMs": 1511
+  },
+  "cpuPercent": {
+    "jvm": {
+      "min": 0.0,
+      "average": 0.0031727287735390875,
+      "max": 0.009499683044850826
+    },
+    "userJvm": {
+      "min": 0.0,
+      "average": 0.05731600656041077,
+      "max": 0.2495250105857849
+    },
+    "system": {
+      "min": 0.04722921922802925,
+      "average": 0.08575205797595638,
+      "max": 0.6666666865348816
+    }
+  },
+  "network": {
+    "sent": {
+      "totalBytes": 0,
+      "count": 0,
+      "bytesPerSecond": 0.0,
+      "countPerSecond": 0.0,
+      "topContributors": []
+    },
+    "received": {
+      "totalBytes": 0,
+      "count": 0,
+      "bytesPerSecond": 0.0,
+      "countPerSecond": 0.0,
+      "topContributors": []
+    }
+  },
+  "fileIO": {
+    "write": {
+      "totalBytes": 29554014,
+      "count": 6649,
+      "bytesPerSecond": 518491.4736842105,
+      "countPerSecond": 116.64912280701755,
+      "topContributors": [
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/cache/r.-1.-1.mca",
+          "totalBytes": 5303774
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/cache/r.-1.0.mca",
+          "totalBytes": 4945048
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/cache/r.0.-1.mca",
+          "totalBytes": 4794710
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/cache/r.0.0.mca",
+          "totalBytes": 4335361
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/topo/cache/r.-1.-1.mca",
+          "totalBytes": 2571380
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/topo/cache/r.-1.0.mca",
+          "totalBytes": 2421134
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/topo/cache/r.0.-1.mca",
+          "totalBytes": 2336392
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/topo/cache/r.0.0.mca",
+          "totalBytes": 2117522
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/day/0,-1.png.new",
+          "totalBytes": 85401
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/day/0,0.png.new",
+          "totalBytes": 77871
+        }
+      ]
+    },
+    "read": {
+      "totalBytes": 13074248,
+      "count": 3783,
+      "bytesPerSecond": 229372.77192982455,
+      "countPerSecond": 66.36842105263158,
+      "topContributors": [
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/cache/r.-1.-1.mca",
+          "totalBytes": 2203732
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/cache/r.-1.0.mca",
+          "totalBytes": 2080688
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/cache/r.0.-1.mca",
+          "totalBytes": 1990484
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/cache/r.0.0.mca",
+          "totalBytes": 1802832
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/topo/cache/r.-1.-1.mca",
+          "totalBytes": 1101322
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/topo/cache/r.-1.0.mca",
+          "totalBytes": 1039962
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/topo/cache/r.0.-1.mca",
+          "totalBytes": 999424
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/journeymap/data/sp/New World (1)/overworld/topo/cache/r.0.0.mca",
+          "totalBytes": 905216
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/config/spark/tmp/spark-72c0f11c889a-profile-data.jfr.tmp",
+          "totalBytes": 609952
+        },
+        {
+          "path": "/home/chloecat34/.local/share/PrismLauncher/instances/Scientific Rocketry 2/.minecraft/mods/EnderStorage-1.20.1-2.11.0.188-universal.jar",
+          "totalBytes": 44264
+        }
+      ]
+    }
+  },
+  "serverTick": {
+    "minMs": 0.0,
+    "averageMs": 5.271480053571429,
+    "maxMs": 6.477368,
+    "p99": 6.42771125,
+    "p90": 5.9037755,
+    "p75": 5.554345,
+    "p50": 5.306941
+  },
+  "threadAllocation": [
+    {
+      "thread": "Async-profiler Timer",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "C1 CompilerThread0",
+      "bytesPerSecond": 19.04
+    },
+    {
+      "thread": "C1 CompilerThread1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "C2 CompilerThread0",
+      "bytesPerSecond": 10.24
+    },
+    {
+      "thread": "Chunk Render Task Executor #0",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Chunk Render Task Executor #1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Chunk Render Task Executor #2",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Chunk Render Task Executor #3",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Chunk Render Task Executor #4",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Chunk Render Task Executor #5",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Chunk Render Task Executor #6",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Chunk Render Task Executor #7",
+      "bytesPerSecond": 2089.92
+    },
+    {
+      "thread": "Chunk Render Task Executor #8",
+      "bytesPerSecond": 1217.44
+    },
+    {
+      "thread": "Chunk Render Task Executor #9",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Cleaner-0",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Cleaner-1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Common-Cleaner",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Config Lib config file watcher",
+      "bytesPerSecond": -115.84
+    },
+    {
+      "thread": "DFU cleaning thread",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "FTBLibrary-ItemSearch",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "FileSystemWatchService",
+      "bytesPerSecond": -614.72
+    },
+    {
+      "thread": "Finalizer",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Flywheel Task Executor #0",
+      "bytesPerSecond": 14430.88
+    },
+    {
+      "thread": "Flywheel Task Executor #1",
+      "bytesPerSecond": 8889.12
+    },
+    {
+      "thread": "Flywheel Task Executor #2",
+      "bytesPerSecond": 11850.24
+    },
+    {
+      "thread": "Flywheel Task Executor #3",
+      "bytesPerSecond": 12123.04
+    },
+    {
+      "thread": "Flywheel Task Executor #4",
+      "bytesPerSecond": 16564.16
+    },
+    {
+      "thread": "Flywheel Task Executor #5",
+      "bytesPerSecond": 8869.12
+    },
+    {
+      "thread": "Flywheel Task Executor #6",
+      "bytesPerSecond": 8088.64
+    },
+    {
+      "thread": "Flywheel Task Executor #7",
+      "bytesPerSecond": 10199.2
+    },
+    {
+      "thread": "Flywheel Task Executor #8",
+      "bytesPerSecond": 8508.8
+    },
+    {
+      "thread": "Flywheel Task Executor #9",
+      "bytesPerSecond": 13134.08
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-1",
+      "bytesPerSecond": 414.72
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-10",
+      "bytesPerSecond": 379.04
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-11",
+      "bytesPerSecond": 877.44
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-13",
+      "bytesPerSecond": 958.4
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-14",
+      "bytesPerSecond": 604.48
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-15",
+      "bytesPerSecond": 55562.88
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-16",
+      "bytesPerSecond": 55649.12
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-17",
+      "bytesPerSecond": 680.96
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-18",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-19",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-2",
+      "bytesPerSecond": 444.8
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-4",
+      "bytesPerSecond": 490.88
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-5",
+      "bytesPerSecond": 826.56
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-6",
+      "bytesPerSecond": 677.44
+    },
+    {
+      "thread": "ForkJoinPool.commonPool-worker-8",
+      "bytesPerSecond": 484.16
+    },
+    {
+      "thread": "HttpClient-1-SelectorManager",
+      "bytesPerSecond": 43.52
+    },
+    {
+      "thread": "HttpClient-2-SelectorManager",
+      "bytesPerSecond": 40.96
+    },
+    {
+      "thread": "IO-Worker-26",
+      "bytesPerSecond": 1.010997488E7
+    },
+    {
+      "thread": "IO-Worker-33",
+      "bytesPerSecond": 1.013159712E7
+    },
+    {
+      "thread": "IO-Worker-34",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "IO-Worker-35",
+      "bytesPerSecond": 6138370.4
+    },
+    {
+      "thread": "IO-Worker-37",
+      "bytesPerSecond": 7962441.92
+    },
+    {
+      "thread": "IO-Worker-38",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "IO-Worker-39",
+      "bytesPerSecond": 1.60761316E7
+    },
+    {
+      "thread": "IO-Worker-40",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Ingredient reference clearing thread",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "JEI Config File Watcher",
+      "bytesPerSecond": 65.44
+    },
+    {
+      "thread": "JFR Periodic Tasks",
+      "bytesPerSecond": 146.56
+    },
+    {
+      "thread": "JFR Recorder Thread",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "JM-task-4",
+      "bytesPerSecond": 2.566100176E7
+    },
+    {
+      "thread": "JM-texture-2",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "JM-texture-3",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "JNA Cleaner",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Java Sound Event Dispatcher",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Java2D Disposer",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "KubeJS Background Thread",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "KubeJS Recipe Event Worker 0",
+      "bytesPerSecond": -141986.08
+    },
+    {
+      "thread": "LDLib Async Thread-0",
+      "bytesPerSecond": 154843.52
+    },
+    {
+      "thread": "MBD2 Multiblock Async Thread-0",
+      "bytesPerSecond": 37770.88
+    },
+    {
+      "thread": "ModernFix integrated server watchdog",
+      "bytesPerSecond": 0.48
+    },
+    {
+      "thread": "Monitor Deflation Thread",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Music Triggers Audio Output [example]",
+      "bytesPerSecond": 2819.04
+    },
+    {
+      "thread": "Music Triggers Audio Output [jukebox]",
+      "bytesPerSecond": 2817.92
+    },
+    {
+      "thread": "Music Triggers Audio Output [preview]",
+      "bytesPerSecond": 2817.92
+    },
+    {
+      "thread": "Netty Local Client IO #0",
+      "bytesPerSecond": 24962.56
+    },
+    {
+      "thread": "Netty Server IO #0",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Netty Server IO #1",
+      "bytesPerSecond": 37393.6
+    },
+    {
+      "thread": "Notification Thread",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Reference Handler",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Render thread",
+      "bytesPerSecond": 8.857851424E7
+    },
+    {
+      "thread": "Server thread",
+      "bytesPerSecond": 2.480052656E7
+    },
+    {
+      "thread": "Service Thread",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Signal Dispatcher",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Sound engine",
+      "bytesPerSecond": 5699.52
+    },
+    {
+      "thread": "Sweeper thread",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Thread-0",
+      "bytesPerSecond": 57.12
+    },
+    {
+      "thread": "Thread-20",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Timer hack thread",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-11",
+      "bytesPerSecond": 12965.44
+    },
+    {
+      "thread": "Worker-Main-12",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-13",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-14",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-15",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-16",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-17",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-2",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-4",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-5",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-6",
+      "bytesPerSecond": 10879.68
+    },
+    {
+      "thread": "Worker-Main-7",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-Main-8",
+      "bytesPerSecond": 18413.44
+    },
+    {
+      "thread": "Worker-Main-9",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-0",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-11",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-12",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-13",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-14",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-4",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-5",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-7",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-8",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Worker-ResourceReload-9",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "Yggdrasil Key Fetcher",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "lava-daemon-pool-info-loader-2-thread-1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "lava-daemon-pool-manager-3-thread-1",
+      "bytesPerSecond": 8.8
+    },
+    {
+      "thread": "lava-daemon-pool-manager-6-thread-1",
+      "bytesPerSecond": 8.8
+    },
+    {
+      "thread": "lava-daemon-pool-manager-9-thread-1",
+      "bytesPerSecond": 8.8
+    },
+    {
+      "thread": "lava-daemon-pool-playback-1-thread-1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "modloading-worker-0",
+      "bytesPerSecond": -1192200.0
+    },
+    {
+      "thread": "nioEventLoopGroup-2-1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "pool-10-thread-1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "pool-12-thread-1",
+      "bytesPerSecond": 1675027.68
+    },
+    {
+      "thread": "pool-7-thread-1",
+      "bytesPerSecond": 476185.76
+    },
+    {
+      "thread": "pool-8-thread-1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "pool-9-thread-1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "spark-async-sampler-worker-thread",
+      "bytesPerSecond": 262852.48
+    },
+    {
+      "thread": "spark-monitoring-thread",
+      "bytesPerSecond": 135618.88
+    },
+    {
+      "thread": "spark-worker-pool-1-thread-1",
+      "bytesPerSecond": 0.0
+    },
+    {
+      "thread": "spark-worker-pool-2-thread-1",
+      "bytesPerSecond": 0.0
+    }
+  ],
+  "chunkGen": {
+    "durationNanosTotal": 0.0,
+    "status": []
+  }
+}

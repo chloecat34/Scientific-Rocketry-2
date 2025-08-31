@@ -183,7 +183,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:plates/iron", "tconstruct:molten_iron", 90, 4800);
     crucibleMelting("#forge:rods/iron", "tconstruct:molten_iron", 45, 2400);
     addBothMelterRecipes("createaddition:iron_wire", "tconstruct:molten_iron", 45, 15, 800, 2400);
-    crucibleMelting("#forge:sheetmetals/iron", "tconstruct:molten_iron", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/iron", "tconstruct:molten_iron", 180, 4800);
     chillerBlockCasting("minecraft:iron_block", "tconstruct:molten_iron", 810, 4800 * 9);
 
     // Molten gold
@@ -195,7 +195,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:plates/gold", "tconstruct:molten_gold", 90, 4800);
     crucibleMelting("#forge:rods/gold", "tconstruct:molten_gold", 45, 2400);
     addBothMelterRecipes("createaddition:gold_wire", "tconstruct:molten_gold", 45, 14, 700, 2400);
-    crucibleMelting("#forge:sheetmetals/gold", "tconstruct:molten_gold", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/gold", "tconstruct:molten_gold", 180, 4800);
     chillerBlockCasting("minecraft:gold_block", "tconstruct:molten_gold", 810, 4800 * 9);
 
     // Molten copper
@@ -207,7 +207,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:plates/copper", "tconstruct:molten_copper", 90, 4800);
     crucibleMelting("#forge:rods/copper", "tconstruct:molten_copper", 45, 2400);
     crucibleMelting("#forge:wires/copper", "tconstruct:molten_copper", 45, 2400);
-    crucibleMelting("#forge:sheetmetals/copper", "tconstruct:molten_copper", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/copper", "tconstruct:molten_copper", 180, 4800);
     chillerBlockCasting("minecraft:copper_block", "tconstruct:molten_copper", 810, 4800 * 9);
 
     // Molten cobalt
@@ -371,7 +371,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:plates/aluminum", "tconstruct:molten_aluminum", 90, 4800);
     crucibleMelting("#forge:rods/aluminum", "tconstruct:molten_aluminum", 45, 2400);
     crucibleMelting("#forge:wires/aluminum", "tconstruct:molten_aluminum", 45, 2400);
-    crucibleMelting("#forge:sheetmetals/aluminum", "tconstruct:molten_aluminum", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/aluminum", "tconstruct:molten_aluminum", 180, 4800);
     chillerBlockCasting("immersiveengineering:storage_aluminum", "tconstruct:molten_aluminum", 810, 4800 * 9);
 
     // Molten lead
@@ -382,7 +382,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:gears/lead", "tconstruct:molten_lead", 360, 4800 * 4);
     crucibleMelting("#forge:plates/lead", "tconstruct:molten_lead", 90, 4800);
     crucibleMelting("#forge:wires/lead", "tconstruct:molten_lead", 45, 2400);
-    crucibleMelting("#forge:sheetmetals/lead", "tconstruct:molten_lead", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/lead", "tconstruct:molten_lead", 180, 4800);
     chillerBlockCasting("thermal:lead_block", "tconstruct:molten_lead", 810, 4800 * 9);
 
     // Molten silver
@@ -392,7 +392,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:coins/silver", "tconstruct:molten_silver", 30, 1600);
     crucibleMelting("#forge:gears/silver", "tconstruct:molten_silver", 360, 4800 * 4);
     crucibleMelting("#forge:plates/silver", "tconstruct:molten_silver", 90, 4800);
-    crucibleMelting("#forge:sheetmetals/silver", "tconstruct:molten_silver", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/silver", "tconstruct:molten_silver", 180, 4800);
     chillerBlockCasting("thermal:silver_block", "tconstruct:molten_silver", 810, 4800 * 9);
 
     // Molten nickel
@@ -402,7 +402,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:coins/nickel", "tconstruct:molten_nickel", 30, 1600);
     crucibleMelting("#forge:gears/nickel", "tconstruct:molten_nickel", 360, 4800 * 4);
     crucibleMelting("#forge:plates/nickel", "tconstruct:molten_nickel", 90, 4800);
-    crucibleMelting("#forge:sheetmetals/nickel", "tconstruct:molten_nickel", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/nickel", "tconstruct:molten_nickel", 180, 4800);
     chillerBlockCasting("thermal:nickel_block", "tconstruct:molten_nickel", 810, 4800 * 9);
 
     // Molten zinc
@@ -426,7 +426,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:nuggets/uranium", "tconstruct:molten_uranium", 10, 600);
     crucibleMelting("#forge:storage_blocks/uranium", "tconstruct:molten_uranium", 810, 4800 * 9);
     crucibleMelting("#forge:plates/uranium", "tconstruct:molten_uranium", 90, 4800);
-    crucibleMelting("#forge:sheetmetals/uranium", "tconstruct:molten_uranium", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/uranium", "tconstruct:molten_uranium", 180, 4800);
     chillerIngotCasting("immersiveengineering:ingot_uranium", "tconstruct:molten_uranium", 90, 4800);
     chillerBlockCasting("immersiveengineering:storage_uranium", "tconstruct:molten_uranium", 810, 4800 * 9);
 
@@ -447,7 +447,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:gears/electrum", "tconstruct:molten_electrum", 360, 4800 * 4);
     crucibleMelting("#forge:plates/electrum", "tconstruct:molten_electrum", 90, 4800);
     crucibleMelting("#forge:wires/electrum", "tconstruct:molten_electrum", 45, 2400);
-    crucibleMelting("#forge:sheetmetals/electrum", "tconstruct:molten_electrum", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/electrum", "tconstruct:molten_electrum", 180, 4800);
     chillerBlockCasting("thermal:electrum_block", "tconstruct:molten_electrum", 810, 4800 * 9);
 
     // Molten invar
@@ -468,7 +468,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:coins/constantan", "tconstruct:molten_constantan", 30, 1600);
     crucibleMelting("#forge:gears/constantan", "tconstruct:molten_constantan", 360, 4800 * 4);
     crucibleMelting("#forge:plates/constantan", "tconstruct:molten_constantan", 90, 4800);
-    crucibleMelting("#forge:sheetmetals/constantan", "tconstruct:molten_constantan", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/constantan", "tconstruct:molten_constantan", 180, 4800);
     chillerBlockCasting("thermal:constantan_block", "tconstruct:molten_constantan", 810, 4800 * 9);
 
     // Molten steel
@@ -479,7 +479,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:gears/steel", "tconstruct:molten_steel", 360, 4800 * 4);
     crucibleMelting("#forge:plates/steel", "tconstruct:molten_steel", 90, 4800);
     crucibleMelting("#forge:wires/steel", "tconstruct:molten_steel", 45, 2400);
-    crucibleMelting("#forge:sheetmetals/steel", "tconstruct:molten_steel", 90, 4800);
+    crucibleMelting("#forge:sheetmetals/steel", "tconstruct:molten_steel", 180, 4800);
     chillerBlockCasting("thermal:steel_block", "tconstruct:molten_steel", 810, 4800 * 9);
 
     // Molten enderium
