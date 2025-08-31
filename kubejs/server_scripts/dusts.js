@@ -59,6 +59,7 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
         ["#forge:ingots/desh", "kubejs:desh_dust"],
         ["#forge:ingots/ardite", "kubejs:ardite_dust"],
+        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"]
     ].forEach((entry) => {
         event.recipes.createCrushing(entry[1], entry[0]);
     });
@@ -107,6 +108,7 @@ ServerEvents.recipes((event) => {
         ["minecraft:quartz", "thermal:quartz_dust"],
         ["ae2:sky_stone_block", "ae2:sky_dust"],
         ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
+        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"]
     ].forEach((entry) => {
         event.custom({
             type: "immersiveengineering:crusher",
@@ -165,6 +167,7 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
         ["#forge:ingots/desh", "kubejs:desh_dust"],
         ["#forge:ingots/ardite", "kubejs:ardite_dust"],
+        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"]
     ].forEach((entry) => {
         event.recipes.mekanismCrushing(entry[1], entry[0]);
     });
@@ -181,6 +184,7 @@ ServerEvents.recipes((event) => {
         ["ae2:sky_stone_block", "ae2:sky_dust"],
         ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
         ["minecraft:obsidian", "4x create:powdered_obsidian"],
+        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"]
     ].forEach((entry) => {
         event.recipes.thermal.pulverizer(entry[1], entry[0]).energy(4000);
     });
