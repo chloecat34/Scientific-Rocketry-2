@@ -323,7 +323,7 @@ ServerEvents.recipes((event) => {
             "#forge:ores/dimensional_shard",
             "rftoolsbase:dimensionalshard",
             "thermal:ender_pearl_dust",
-            "minecraft:ender_pearl",
+            "thermal:ender_pearl_dust",
             2,
             3,
         ],

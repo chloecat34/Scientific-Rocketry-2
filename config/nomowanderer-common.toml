@@ -10,9 +10,9 @@
 
 [general]
 	#'true' to disable all spawns of entities in <entityWatchList> Ignores <radius>.
-	disableSpawns = false
+	disableSpawns = true
 	#A list of 'modid:entityName' entries used for the various functions of this mod.
-	entityWatchList = ["minecraft:wandering_trader", "minecraft:trader_llama", "rats:plague_doctor", "supplementaries:red_merchant"]
+	entityWatchList = ["minecraft:wandering_trader", "minecraft:trader_llama", "rats:plague_doctor", "supplementaries:red_merchant", "minecraft:villager"]
 
 [noSolicitingSign]
 	#Entities from <entityWatchList> that spawn within <signRadius> (in chunks)
