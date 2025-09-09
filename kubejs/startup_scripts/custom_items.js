@@ -66,6 +66,10 @@ StartupEvents.registry("item", (event) => {
 
     event.create("electrotine").displayName("Electrotine Dust").tag("forge:dusts/electrotine");
 
+    event.create("amethyst_dust").displayName("Amethyst Dust").tag("forge:dusts/amethyst");
+
+    event.create("vibrating_powder").displayName("Vibrating Powder");
+
     event.create("energetic_blend").displayName("Energetic Blend");
 
     event.create("pulsating_crystal").displayName("Pulsating Crystal");

@@ -134,4 +134,15 @@ ServerEvents.recipes((event) => {
         output: '{Amount:4,FluidName:"tconstruct:ichor"}',
         result: "tconstruct:stripped_bloodshroom_log",
     });
+
+    event.custom({
+        type: "industrialforegoing:fluid_extractor",
+        breakChance: 0.01,
+        defaultRecipe: false,
+        input: {
+            item: "integrateddynamics:menril_log",
+        },
+        output: '{Amount:4,FluidName:"integrateddynamics:menril_resin"}',
+        result: "integrateddynamics:menril_log_stripped",
+    });
 });

@@ -89,7 +89,7 @@ ServerEvents.recipes((event) => {
 
     // Pulsating alloy
     event.recipes.thermal
-        .smelter("kubejs:pulsating_alloy_ingot", ["#forge:ingots/silver", "#forge:ender_pearls"])
+        .bottler("kubejs:pulsating_alloy_ingot", ["#forge:ingots/silver", Fluid.of("thermal:ender", 250)])
         .energy(4800);
 
     event.custom({
@@ -154,7 +154,7 @@ ServerEvents.recipes((event) => {
     createArcFurnaceRecipe(
         "#forge:ingots/energetic_alloy",
         1,
-        ["minecraft:ender_eye"],
+        ["kubejs:vibrating_powder"],
         "#forge:ingots/vibrant_alloy",
         1,
         102400,
@@ -162,8 +162,50 @@ ServerEvents.recipes((event) => {
     );
 
     event.recipes.thermal
-        .smelter("kubejs:vibrant_alloy_ingot", ["#forge:ingots/energetic_alloy", "minecraft:ender_eye"])
+        .smelter("kubejs:vibrant_alloy_ingot", ["#forge:ingots/energetic_alloy", "kubejs:vibrating_powder"])
         .energy(9600);
+
+    // Vibrating powder
+    event.custom({
+        type: "immersiveengineering:bottling_machine",
+        fluid: {
+            amount: 250,
+            tag: "forge:ender"
+        },
+        inputs: [
+            {
+                item: "kubejs:amethyst_dust"
+            }
+        ],
+        results: [
+            {
+                item: "kubejs:vibrating_powder"
+            }
+        ]
+    });
+
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 250,
+            fluid: "thermal:ender",
+        },
+        item_input: {
+            tag: "forge:dusts/amethyst",
+        },
+        item_output: {
+            count: 1,
+            item: "kubejs:vibrating_powder",
+        },
+        pressure: 2.0,
+        temperature: {
+            max_temp: 273,
+        },
+    });
+
+    event.recipes.thermal.bottler("kubejs:vibrating_powder", ["#forge:dusts/amethyst", Fluid.of("thermal:ender", 250)]).energy(4800);
 
     // Remove rose gold from arc furnace recipes
     event.remove({ id: "immersiveengineering:arcfurnace/alloy_rose_gold" });

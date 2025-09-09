@@ -57,4 +57,6 @@ ServerEvents.tags("fluid", (event) => {
     event.add("forge:refined_canola_oil", "actuallyadditions:refined_canola_oil");
     event.add("forge:crystallized_oil", "actuallyadditions:crystallized_oil");
     event.add("forge:empowered_oil", "actuallyadditions:empowered_oil");
+    event.add("forge:menril_resin", "integrateddynamics:menril_resin");
+    event.add("forge:molten_electrotine", "kubejs:molten_electrotine");
 });

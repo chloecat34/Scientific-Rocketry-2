@@ -206,6 +206,8 @@ ServerEvents.recipes((event) => {
         event.recipes.thermal
             .pulverizer([Item.of(dust).withChance(4.0), Item.of(byproduct).withChance(0.5)], ore)
             .energy(8000);
+        event.recipes.mekanismEnriching(`4x ${dust}`, ore);
+        event.recipes.mekanismEnriching(`2x ${dust}`, rawOre);
     });
 
     // Netherite scrap
@@ -243,6 +245,8 @@ ServerEvents.recipes((event) => {
             "minecraft:ancient_debris"
         )
         .energy(8000);
+
+    event.recipes.mekanismEnriching("3x minecraft:netherite_scrap", "minecraft:ancient_debris");
 
     // Disable combining recipes for ores
     [

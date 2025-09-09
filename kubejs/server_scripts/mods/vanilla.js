@@ -86,4 +86,25 @@ ServerEvents.recipes((event) => {
         C: "#forge:gears/hepatizon",
         D: "minecraft:obsidian"
     });
+
+    // Resonant ender
+    event.custom({
+        type: "immersiveengineering:refinery",
+        catalyst: {
+            item: "tconstruct:sky_slime_crystal"
+        },
+        energy: 120,
+        input0: {
+            amount: 8,
+            tag: "forge:menril_resin"
+        },
+        input1: {
+            amount: 8,
+            tag: "forge:molten_electrotine"
+        },
+        result: {
+            amount: 16,
+            fluid: "thermal:ender"
+        }
+    });
 });

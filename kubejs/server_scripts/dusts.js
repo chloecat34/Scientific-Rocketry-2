@@ -19,6 +19,28 @@ ServerEvents.recipes((event) => {
         });
     });
 
+    // Add all crushing recipes for a tag
+    function allCrushingTag(item, dust, thermalEnergy) {
+        event.recipes.createCrushing(dust, item);
+
+        event.custom({
+            type: "immersiveengineering:crusher",
+            energy: 3000,
+            input: {
+                tag: item.replace("#", ""),
+            },
+            secondaries: [],
+            result: {
+                item: dust,
+                count: 1
+            },
+        });
+
+        event.recipes.mekanismCrushing(dust, item);
+
+        event.recipes.thermal.pulverizer(dust, item).energy(thermalEnergy);
+    }
+
     // Add crushing recipes for Create
     [
         ["#forge:gems/fluorite", "mekanism:dust_fluorite"],
@@ -59,7 +81,7 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
         ["#forge:ingots/desh", "kubejs:desh_dust"],
         ["#forge:ingots/ardite", "kubejs:ardite_dust"],
-        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"]
+        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"],
     ].forEach((entry) => {
         event.recipes.createCrushing(entry[1], entry[0]);
     });
@@ -108,7 +130,7 @@ ServerEvents.recipes((event) => {
         ["minecraft:quartz", "thermal:quartz_dust"],
         ["ae2:sky_stone_block", "ae2:sky_dust"],
         ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
-        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"]
+        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"],
     ].forEach((entry) => {
         event.custom({
             type: "immersiveengineering:crusher",
@@ -167,7 +189,7 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
         ["#forge:ingots/desh", "kubejs:desh_dust"],
         ["#forge:ingots/ardite", "kubejs:ardite_dust"],
-        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"]
+        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"],
     ].forEach((entry) => {
         event.recipes.mekanismCrushing(entry[1], entry[0]);
     });
@@ -184,7 +206,7 @@ ServerEvents.recipes((event) => {
         ["ae2:sky_stone_block", "ae2:sky_dust"],
         ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
         ["minecraft:obsidian", "4x create:powdered_obsidian"],
-        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"]
+        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"],
     ].forEach((entry) => {
         event.recipes.thermal.pulverizer(entry[1], entry[0]).energy(4000);
     });
@@ -198,7 +220,7 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/platinum", "kubejs:platinum_dust"],
         ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
         ["#forge:ingots/desh", "kubejs:desh_dust"],
-        ["#forge:ingots/ardite", "kubejs:ardite_dust"]
+        ["#forge:ingots/ardite", "kubejs:ardite_dust"],
     ].forEach((entry) => {
         event.recipes.thermal.pulverizer(entry[1], entry[0]).energy(2000);
     });
@@ -341,4 +363,12 @@ ServerEvents.recipes((event) => {
     // Flax to string (Create)
     event.recipes.createMilling("minecraft:string", "thermal:flax");
     event.recipes.createCrushing(["minecraft:string", Item.of("minecraft:string").withChance(0.5)], "thermal:flax");
+
+    // More crushing recipes
+    allCrushingTag("#forge:gems/amethyst", "kubejs:amethyst_dust", 4000);
+
+    // Gem crystallizer recipes
+    event.recipes.thermal.crystallizer("minecraft:amethyst_shard", ["#forge:dusts/amethyst", Fluid.of("minecraft:water", 2000)]).energy(20000);
+    event.recipes.thermal.crystallizer("#forge:gems/ruby", ["#forge:dusts/ruby", Fluid.of("minecraft:water", 2000)]).energy(20000);
+    event.recipes.thermal.crystallizer("#forge:gems/sapphire", ["#forge:dusts/sapphire", Fluid.of("minecraft:water", 2000)]).energy(20000);
 });
