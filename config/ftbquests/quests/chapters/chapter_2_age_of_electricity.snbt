@@ -435,7 +435,11 @@
 				"075AEB403329FD51"
 				"014611E2E11520B2"
 			]
-			description: ["Vibrant Alloy is used for the third tier of Powah Cables. It requires an Arc Furnace."]
+			description: [
+				"Vibrant Alloy is used for the third tier of Powah Cables. It requires an Arc Furnace."
+				""
+				"You can't get Ender Pearls yet, but Resonant Ender has a recipe in the Refinery."
+			]
 			id: "577BD027309EC30B"
 			rewards: [{
 				count: 8
@@ -629,7 +633,7 @@
 		}
 		{
 			dependencies: ["4BB169A6E71ED26B"]
-			description: ["The Excavator lets you automate the production of ores. They use 4096 RF/t, and the ore veins have an infinite supply."]
+			description: ["The Excavator lets you automate the production of ores. They use 1024 RF/t to operate. You need a Core Sample Drill to find the location of ore veins."]
 			id: "6F26CFE3531A641B"
 			rewards: [{
 				id: "744ABB0EE31BBFA9"

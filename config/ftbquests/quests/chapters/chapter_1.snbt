@@ -615,9 +615,9 @@
 					type: "item"
 				}
 				{
-					count: 33L
+					count: 49L
 					id: "517549EA5F01ABED"
-					item: { Count: 49, id: "tconstruct:scorched_bricks" }
+					item: "tconstruct:scorched_bricks"
 					type: "item"
 				}
 				{

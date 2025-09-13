@@ -191,7 +191,7 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "create:precision_mechanism" });
 
     event.recipes
-        .createSequencedAssembly([Item.of("create:precision_mechanism")], "#forge:plates/electrum", [
+        .createSequencedAssembly([Item.of("create:precision_mechanism")], "#forge:plates/brass", [
             event.recipes.createDeploying("create:incomplete_precision_mechanism", [
                 "create:incomplete_precision_mechanism",
                 "create:cogwheel",
