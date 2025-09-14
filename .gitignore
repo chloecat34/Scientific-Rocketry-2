@@ -30,4 +30,5 @@ config/spark/tmp
 *.xcf
 .mixin.out
 xaero
-XaeroWayPoints_BACKUP*
+XaeroWaypoints_BACKUP*
+config/oculus.properties
