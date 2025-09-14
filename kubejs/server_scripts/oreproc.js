@@ -127,7 +127,7 @@ ServerEvents.recipes((event) => {
         ["#forge:raw_materials/cobalt", "#forge:ores/cobalt", "kubejs:cobalt_dust", "thermal:lead_dust", 2],
         ["#forge:raw_materials/ardite", "#forge:ores/ardite", "kubejs:ardite_dust", "thermal:gold_dust", 2],
         ["#forge:raw_materials/nickel", "#forge:ores/nickel", "thermal:nickel_dust", "kubejs:platinum_dust", 2],
-        ["#forge:raw_materials/desh", "#forge:ores/desh", "kubejs:desh_dust", "thermal:copper_dust", 2],
+        ["#forge:raw_materials/desh", "#forge:ores/desh", "kubejs:desh_dust", "thermal:copper_dust", 3],
         [
             "#forge:raw_materials/aluminum",
             "#forge:ores/aluminum",

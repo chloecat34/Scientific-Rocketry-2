@@ -1,4 +1,7 @@
 ServerEvents.recipes((event) => {
+    // Get instances of helper functions
+    const immersiveCrushing = global.immersiveCrushing(event);
+
     // Remove hammer recipes
     [
         "thermal:iron_dust",
@@ -19,6 +22,42 @@ ServerEvents.recipes((event) => {
         });
     });
 
+    // Type of recipe for determining power usage
+    const ItemType = {
+        GEM: 4000,
+        INGOT: 2000,
+    };
+
+    // Flags for the crushing system
+    const CrushingFlags = {
+        NO_CREATE: 0, // Disable the crushing wheel recipe
+        NO_IE: 1, // Disable the crusher recipe
+    };
+
+    // New system for dusts
+    function standardizeCrushing(item, dust, itemType, _flags) {
+        const flags = _flags === undefined ? [] : _flags;
+
+        if (
+            !event.containsRecipe({ output: dust, input: item, type: "create:crushing" }) &&
+            !flags.includes(CrushingFlags.NO_CREATE)
+        ) {
+            event.recipes.createCrushing(dust, item);
+        }
+
+        if (!event.containsRecipe({ output: dust, type: "immersiveengineering:crusher" })) {
+            immersiveCrushing(3000, item, dust, 1, []);
+        }
+
+        if (!event.containsRecipe({ output: dust, input: item, type: "mekanism:crushing" })) {
+            event.recipes.mekanismCrushing(dust, item);
+        }
+
+        if (!event.containsRecipe({ output: dust, input: item, type: "thermal:pulverizer" })) {
+            event.recipes.thermal.pulverizer(dust, item).energy(itemType);
+        }
+    }
+
     // Add all crushing recipes for a tag
     function allCrushingTag(item, dust, thermalEnergy) {
         event.recipes.createCrushing(dust, item);
@@ -32,7 +71,7 @@ ServerEvents.recipes((event) => {
             secondaries: [],
             result: {
                 item: dust,
-                count: 1
+                count: 1,
             },
         });
 
@@ -41,189 +80,74 @@ ServerEvents.recipes((event) => {
         event.recipes.thermal.pulverizer(dust, item).energy(thermalEnergy);
     }
 
-    // Add crushing recipes for Create
-    [
-        ["#forge:gems/fluorite", "mekanism:dust_fluorite"],
-        ["minecraft:quartz", "thermal:quartz_dust"],
-        ["#forge:ingots/refined_obsidian", "mekanism:dust_refined_obsidian"],
-        ["#forge:ingots/osmium", "mekanism:dust_osmium"],
-        ["#forge:gems/cinnabar", "thermal:cinnabar_dust"],
-        ["#forge:gems/niter", "thermal:niter_dust"],
-        ["#forge:gems/sulfur", "thermal:sulfur_dust"],
-        ["#forge:ender_pearls", "thermal:ender_pearl_dust"],
-        ["#forge:ingots/gold", "thermal:gold_dust"],
-        ["#forge:ingots/copper", "thermal:copper_dust"],
-        ["#forge:ingots/netherite", "thermal:netherite_dust"],
-        ["#forge:ingots/tin", "thermal:tin_dust"],
-        ["#forge:ingots/lead", "thermal:lead_dust"],
-        ["#forge:ingots/silver", "thermal:silver_dust"],
-        ["#forge:ingots/nickel", "thermal:nickel_dust"],
-        ["#forge:ingots/rose_gold", "thermal:rose_gold_dust"],
-        ["#forge:ingots/bronze", "thermal:bronze_dust"],
-        ["#forge:ingots/electrum", "thermal:electrum_dust"],
-        ["#forge:ingots/invar", "thermal:invar_dust"],
-        ["#forge:ingots/constantan", "thermal:constantan_dust"],
-        ["#forge:ingots/signalum", "thermal:signalum_dust"],
-        ["#forge:ingots/lumium", "thermal:lumium_dust"],
-        ["#forge:ingots/enderium", "thermal:enderium_dust"],
-        ["#forge:gems/emerald", "thermal:emerald_dust"],
-        ["#forge:gems/ruby", "thermal:ruby_dust"],
-        ["#forge:gems/sapphire", "thermal:sapphire_dust"],
-        ["#forge:ingots/prismalium", "thermalendergy:prismalium_dust"],
-        ["#forge:ingots/melodium", "thermalendergy:melodium_dust"],
-        ["#forge:ingots/stellarium", "thermalendergy:stellarium_dust"],
-        ["#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
-        ["#forge:ingots/aluminum", "immersiveengineering:dust_aluminum"],
-        ["#forge:ingots/uranium", "immersiveengineering:dust_uranium"],
-        ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
-        ["#forge:ingots/zinc", "kubejs:zinc_dust"],
-        ["#forge:ingots/platinum", "kubejs:platinum_dust"],
-        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
-        ["#forge:ingots/desh", "kubejs:desh_dust"],
-        ["#forge:ingots/ardite", "kubejs:ardite_dust"],
-        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"],
-    ].forEach((entry) => {
-        event.recipes.createCrushing(entry[1], entry[0]);
-    });
+    // Standardize the dust crushing recipes
+    standardizeCrushing("minecraft:prismarine_shard", "minecraft:prismarine_crystals", ItemType.GEM);
+    standardizeCrushing("#forge:gems/apatite", "thermal:apatite_dust", ItemType.GEM, [CrushingFlags.NO_CREATE]);
+    standardizeCrushing("#forge:gems/fluorite", "mekanism:dust_fluorite", ItemType.GEM);
+    standardizeCrushing("minecraft:quartz", "thermal:quartz_dust", ItemType.GEM);
+    standardizeCrushing("#forge:ingots/refined_obsidian", "mekanism:dust_refined_obsidian", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/osmium", "mekanism:dust_osmium", ItemType.INGOT);
+    standardizeCrushing("#forge:gems/cinnabar", "thermal:cinnabar_dust", ItemType.GEM);
+    standardizeCrushing("#forge:gems/niter", "thermal:niter_dust", ItemType.GEM);
+    standardizeCrushing("#forge:gems/sulfur", "thermal:sulfur_dust", ItemType.GEM);
+    standardizeCrushing("#forge:ender_pearls", "thermal:ender_pearl_dust", ItemType.GEM);
+    standardizeCrushing("#forge:ingots/iron", "thermal:iron_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/gold", "thermal:gold_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/copper", "thermal:copper_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/netherite", "thermal:netherite_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/tin", "thermal:tin_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/lead", "thermal:lead_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/silver", "thermal:silver_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/nickel", "thermal:nickel_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/rose_gold", "thermal:rose_gold_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/bronze", "thermal:bronze_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/electrum", "thermal:electrum_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/invar", "thermal:invar_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/constantan", "thermal:constantan_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/signalum", "thermal:signalum_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/lumium", "thermal:lumium_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/enderium", "thermal:enderium_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:gems/diamond", "thermal:diamond_dust", ItemType.GEM);
+    standardizeCrushing("#forge:gems/emerald", "thermal:emerald_dust", ItemType.GEM);
+    standardizeCrushing("#forge:gems/ruby", "thermal:ruby_dust", ItemType.GEM);
+    standardizeCrushing("#forge:gems/sapphire", "thermal:sapphire_dust", ItemType.GEM);
+    standardizeCrushing("#forge:ingots/prismalium", "thermalendergy:prismalium_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/melodium", "thermalendergy:melodium_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/stellarium", "thermalendergy:stellarium_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/aluminum", "immersiveengineering:dust_aluminum", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/uranium", "immersiveengineering:dust_uranium", ItemType.INGOT);
+    standardizeCrushing("advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust", ItemType.GEM);
+    standardizeCrushing("#forge:ingots/zinc", "kubejs:zinc_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/platinum", "kubejs:platinum_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/cobalt", "kubejs:cobalt_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/desh", "kubejs:desh_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/ardite", "kubejs:ardite_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:gems/certus_quartz", "ae2:certus_quartz_dust", ItemType.GEM);
+    standardizeCrushing("#forge:gems/fluix", "ae2:fluix_dust", ItemType.GEM);
+    standardizeCrushing("#forge:gems/amethyst", "kubejs:amethyst_dust", ItemType.GEM);
+    standardizeCrushing("minecraft:coal", "mekanism:dust_coal", ItemType.GEM, [CrushingFlags.NO_CREATE]);
+    standardizeCrushing("minecraft:charcoal", "mekanism:dust_charcoal", ItemType.GEM, [
+        CrushingFlags.NO_CREATE,
+        CrushingFlags.NO_IE,
+    ]);
+    standardizeCrushing("ae2:sky_stone_block", "ae2:sky_dust", ItemType.GEM);
+    standardizeCrushing("#forge:coal_coke", "immersiveengineering:dust_coke", ItemType.GEM);
 
-    // Add IE Crusher recipes (w/ tags)
-    [
-        ["forge:gems/fluorite", "mekanism:dust_fluorite"],
-        ["forge:ingots/refined_obsidian", "mekanism:dust_refined_obsidian"],
-        ["forge:gems/apatite", "thermal:apatite_dust"],
-        ["forge:gems/cinnabar", "thermal:cinnabar_dust"],
-        ["forge:gems/niter", "thermal:niter_dust"],
-        ["forge:gems/sulfur", "thermal:sulfur_dust"],
-        ["forge:ender_pearls", "thermal:ender_pearl_dust"],
-        ["forge:ingots/netherite", "thermal:netherite_dust"],
-        ["forge:ingots/signalum", "thermal:signalum_dust"],
-        ["forge:ingots/lumium", "thermal:lumium_dust"],
-        ["forge:ingots/enderium", "thermal:enderium_dust"],
-        ["forge:gems/diamond", "thermal:diamond_dust"],
-        ["forge:gems/emerald", "thermal:emerald_dust"],
-        ["forge:gems/ruby", "thermal:ruby_dust"],
-        ["forge:gems/sapphire", "thermal:sapphire_dust"],
-        ["forge:ingots/prismalium", "thermalendergy:prismalium_dust"],
-        ["forge:ingots/melodium", "thermalendergy:melodium_dust"],
-        ["forge:ingots/stellarium", "thermalendergy:stellarium_dust"],
-        ["forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
-        ["forge:gems/certus_quartz", "ae2:certus_quartz_dust"],
-        ["forge:gems/fluix", "ae2:fluix_dust"],
-        ["forge:ingots/desh", "kubejs:desh_dust"],
-    ].forEach((entry) => {
-        event.custom({
-            type: "immersiveengineering:crusher",
-            energy: 3000,
-            input: {
-                tag: entry[0],
-            },
-            secondaries: [],
-            result: {
-                item: entry[1],
-            },
-        });
-    });
+    // Remove extra coke dust recipe
+    event.remove({ id: "create:crushing/compat/immersiveengineering/coal_coke" });
+    event.remove({ id: "create:crushing/compat/immersiveengineering/coke_block" });
 
-    // Add IE Crusher recipes (items)
-    [
-        ["minecraft:charcoal", "mekanism:dust_charcoal"],
-        ["minecraft:quartz", "thermal:quartz_dust"],
-        ["ae2:sky_stone_block", "ae2:sky_dust"],
-        ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
-        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"],
-    ].forEach((entry) => {
-        event.custom({
-            type: "immersiveengineering:crusher",
-            energy: 3000,
-            input: {
-                item: entry[0],
-            },
-            secondaries: [],
-            result: {
-                item: entry[1],
-            },
-        });
-    });
+    // Obsidian dust
+    event.remove({ id: "create:crushing/obsidian" });
+    event.recipes.createCrushing("4x create:powdered_obsidian", "minecraft:obsidian");
+    immersiveCrushing(3000, "minecraft:obsidian", "create:powdered_obsidian", 4, []);
+    event.recipes.thermal.pulverizer("4x create:powdered_obsidian", "minecraft:obsidian").energy(4000);
 
-    // Special crusher recipes
-    event.custom({
-        type: "immersiveengineering:crusher",
-        energy: 3000,
-        input: {
-            item: "minecraft:obsidian",
-        },
-        secondaries: [],
-        result: {
-            item: "create:powdered_obsidian",
-            count: 4,
-        },
-    });
-
-    // Add Mekanism crusher recipes
-    [
-        ["minecraft:quartz", "thermal:quartz_dust"],
-        ["#forge:gems/apatite", "thermal:apatite_dust"],
-        ["#forge:gems/cinnabar", "thermal:cinnabar_dust"],
-        ["#forge:gems/niter", "thermal:niter_dust"],
-        ["#forge:gems/sulfur", "thermal:sulfur_dust"],
-        ["#forge:ender_pearls", "thermal:ender_pearl_dust"],
-        ["#forge:ingots/silver", "thermal:silver_dust"],
-        ["#forge:ingots/nickel", "thermal:nickel_dust"],
-        ["#forge:ingots/rose_gold", "thermal:rose_gold_dust"],
-        ["#forge:ingots/electrum", "thermal:electrum_dust"],
-        ["#forge:ingots/invar", "thermal:invar_dust"],
-        ["#forge:ingots/constantan", "thermal:constantan_dust"],
-        ["#forge:ingots/signalum", "thermal:signalum_dust"],
-        ["#forge:ingots/lumium", "thermal:lumium_dust"],
-        ["#forge:ingots/enderium", "thermal:enderium_dust"],
-        ["#forge:gems/ruby", "thermal:ruby_dust"],
-        ["#forge:gems/sapphire", "thermal:sapphire_dust"],
-        ["#forge:ingots/prismalium", "thermalendergy:prismalium_dust"],
-        ["#forge:ingots/melodium", "thermalendergy:melodium_dust"],
-        ["#forge:ingots/stellarium", "thermalendergy:stellarium_dust"],
-        ["#forge:coal_coke", "immersiveengineering:dust_coke"],
-        ["#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
-        ["#forge:ingots/aluminum", "immersiveengineering:dust_aluminum"],
-        ["#forge:ingots/zinc", "kubejs:zinc_dust"],
-        ["#forge:ingots/platinum", "kubejs:platinum_dust"],
-        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
-        ["#forge:ingots/desh", "kubejs:desh_dust"],
-        ["#forge:ingots/ardite", "kubejs:ardite_dust"],
-        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"],
-    ].forEach((entry) => {
-        event.recipes.mekanismCrushing(entry[1], entry[0]);
-    });
-
-    // Pulverizer recipes (gems)
-    [
-        ["minecraft:charcoal", "mekanism:dust_charcoal"],
-        ["minecraft:coal", "mekanism:dust_coal"],
-        ["#forge:gems/ruby", "thermal:ruby_dust"],
-        ["#forge:gems/sapphire", "thermal:sapphire_dust"],
-        ["#forge:coal_coke", "immersiveengineering:dust_coke"],
-        ["#forge:gems/certus_quartz", "ae2:certus_quartz_dust"],
-        ["#forge:gems/fluix", "ae2:fluix_dust"],
-        ["ae2:sky_stone_block", "ae2:sky_dust"],
-        ["advanced_ae:shattered_singularity", "advanced_ae:quantum_infused_dust"],
-        ["minecraft:obsidian", "4x create:powdered_obsidian"],
-        ["minecraft:prismarine_shard", "minecraft:prismarine_crystals"],
-    ].forEach((entry) => {
-        event.recipes.thermal.pulverizer(entry[1], entry[0]).energy(4000);
-    });
-
-    // Pulverizer recipes (ingots)
-    [
-        ["#forge:ingots/refined_obsidian", "mekanism:dust_refined_obsidian"],
-        ["#forge:ingots/osmium", "mekanism:dust_osmium"],
-        ["#forge:ingots/hop_graphite", "immersiveengineering:dust_hop_graphite"],
-        ["#forge:ingots/zinc", "kubejs:zinc_dust"],
-        ["#forge:ingots/platinum", "kubejs:platinum_dust"],
-        ["#forge:ingots/cobalt", "kubejs:cobalt_dust"],
-        ["#forge:ingots/desh", "kubejs:desh_dust"],
-        ["#forge:ingots/ardite", "kubejs:ardite_dust"],
-    ].forEach((entry) => {
-        event.recipes.thermal.pulverizer(entry[1], entry[0]).energy(2000);
-    });
+    // Remove extra sky stone dust recipes
+    event.remove({ id: "ad_astra_giselle_addon:compat/mekanism/crushing/to_sky_dust" });
+    event.remove({ id: "ad_astra_giselle_addon:compat/ae2/inscriber/sky_stone_dust" });
+    event.remove({ id: "ad_astra_giselle_addon:compat/ae2/smelting/smooth_sky_stone_block" });
 
     // Remove some items
     ["mekanism:dust_quartz", "ae2:ender_dust"].forEach((dust) => {
@@ -269,65 +193,9 @@ ServerEvents.recipes((event) => {
     );
 
     // Crusher recipes for elemental rods
-    event.custom({
-        type: "immersiveengineering:crusher",
-        energy: 3000,
-        input: {
-            item: "thermal:basalz_rod",
-        },
-        secondaries: [
-            {
-                chance: 0.5,
-                output: {
-                    item: "immersiveengineering:slag",
-                },
-            },
-        ],
-        result: {
-            item: "thermal:basalz_powder",
-            count: 4,
-        },
-    });
-
-    event.custom({
-        type: "immersiveengineering:crusher",
-        energy: 3000,
-        input: {
-            item: "thermal:blitz_rod",
-        },
-        secondaries: [
-            {
-                chance: 0.5,
-                output: {
-                    item: "thermal:niter_dust",
-                },
-            },
-        ],
-        result: {
-            item: "thermal:blitz_powder",
-            count: 4,
-        },
-    });
-
-    event.custom({
-        type: "immersiveengineering:crusher",
-        energy: 3000,
-        input: {
-            item: "thermal:blizz_rod",
-        },
-        secondaries: [
-            {
-                chance: 0.5,
-                output: {
-                    item: "minecraft:snowball",
-                },
-            },
-        ],
-        result: {
-            item: "thermal:blizz_powder",
-            count: 4,
-        },
-    });
+    immersiveCrushing(3000, "thermal:basalz_rod", "thermal:basalz_powder", 4, [["immersiveengineering:slag", 1, 0.5]]);
+    immersiveCrushing(3000, "thermal:blitz_rod", "thermal:blitz_powder", 4, [["thermal:niter_dust", 1, 0.5]]);
+    immersiveCrushing(3000, "thermal:blizz_rod", "thermal:blizz_powder", 4, [["minecraft:snowball", 1, 0.5]]);
 
     // Smelting recipes for dusts
     [
@@ -364,11 +232,14 @@ ServerEvents.recipes((event) => {
     event.recipes.createMilling("minecraft:string", "thermal:flax");
     event.recipes.createCrushing(["minecraft:string", Item.of("minecraft:string").withChance(0.5)], "thermal:flax");
 
-    // More crushing recipes
-    allCrushingTag("#forge:gems/amethyst", "kubejs:amethyst_dust", 4000);
-
     // Gem crystallizer recipes
-    event.recipes.thermal.crystallizer("minecraft:amethyst_shard", ["#forge:dusts/amethyst", Fluid.of("minecraft:water", 2000)]).energy(20000);
-    event.recipes.thermal.crystallizer("#forge:gems/ruby", ["#forge:dusts/ruby", Fluid.of("minecraft:water", 2000)]).energy(20000);
-    event.recipes.thermal.crystallizer("#forge:gems/sapphire", ["#forge:dusts/sapphire", Fluid.of("minecraft:water", 2000)]).energy(20000);
+    event.recipes.thermal
+        .crystallizer("minecraft:amethyst_shard", ["#forge:dusts/amethyst", Fluid.of("minecraft:water", 2000)])
+        .energy(20000);
+    event.recipes.thermal
+        .crystallizer("#forge:gems/ruby", ["#forge:dusts/ruby", Fluid.of("minecraft:water", 2000)])
+        .energy(20000);
+    event.recipes.thermal
+        .crystallizer("#forge:gems/sapphire", ["#forge:dusts/sapphire", Fluid.of("minecraft:water", 2000)])
+        .energy(20000);
 });
