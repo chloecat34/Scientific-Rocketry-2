@@ -30,3 +30,4 @@ config/spark/tmp
 *.xcf
 .mixin.out
 xaero
+XaeroWayPoints_BACKUP*
