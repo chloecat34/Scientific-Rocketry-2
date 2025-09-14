@@ -154,4 +154,11 @@ ItemEvents.tooltip((event) => {
         Text.green,
         1
     );
+
+    // Rubberwood tooltip
+    addTooltip(
+        "thermal:rubberwood_sapling",
+        "Spawns in Bamboo Jungles",
+        Text.aqua
+    );
 });
