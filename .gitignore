@@ -29,3 +29,4 @@ impossible_data
 config/spark/tmp
 *.xcf
 .mixin.out
+xaero
