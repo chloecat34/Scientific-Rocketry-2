@@ -13,8 +13,6 @@ ServerEvents.recipes((event) => {
         "minecraft:andesite",
         "minecraft:granite",
         "minecraft:calcite",
-        "biomeswevegone:dacite_cobblestone",
-        "biomeswevegone:red_rock",
         "minecraft:tuff",
         "create:asurine",
         "create:crimsite",
@@ -28,6 +26,7 @@ ServerEvents.recipes((event) => {
         "quark:shale",
         "quark:myalite",
         "quark:permafrost",
+        "quark:dusky_myalite"
     ];
 
     rocks.forEach((rock) => rockgen("minecraft:water", rock, rock));

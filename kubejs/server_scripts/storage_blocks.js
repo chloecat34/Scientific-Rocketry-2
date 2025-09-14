@@ -90,16 +90,6 @@ ServerEvents.recipes((event) => {
         "#forge:raw_materials/calorite",
         "#forge:storage_blocks/raw_calorite"
     );
-    addPacking("minecraft:allium", "biomeswevegone:allium_petal_block");
-    addPacking(
-        "biomeswevegone:pink_allium",
-        "biomeswevegone:pink_allium_petal_block"
-    );
-    addPacking(
-        "biomeswevegone:white_allium",
-        "biomeswevegone:white_allium_petal_block"
-    );
-    addPacking("biomeswevegone:rose", "biomeswevegone:rose_petal_block");
     addPacking("create:experience_nugget", "create:experience_block");
     addPacking2x2("tconstruct:cheese_ingot", "tconstruct:cheese_block");
     addPacking(
