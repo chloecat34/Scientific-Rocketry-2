@@ -157,4 +157,16 @@ ServerEvents.recipes((event) => {
             ["integrateddynamics:menril_sapling", Fluid.of("minecraft:water", 1000)]
         )
         .energy(60000);
+
+    // Menril sawing
+    event.recipes.thermal
+        .sawmill(
+            [
+                "6x integrateddynamics:menril_planks",
+                Item.of("thermal:sawdust").withChance(0.25),
+                "integrateddynamics:crystalized_menril_chunk",
+            ],
+            "#integrateddynamics:menril_logs"
+        )
+        .energy(1000);
 });
