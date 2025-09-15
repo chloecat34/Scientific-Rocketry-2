@@ -581,7 +581,7 @@
 		}
 		{
 			dependencies: ["13079C9CB31B27D7"]
-			description: ["The modpack is designed to be playable on Peaceful Mode. You won't have to fight mobs or build mob farms to progress. You can craft most mob drops without fighting."]
+			description: ["The modpack is designed to be played on Peaceful Mode. You won't have to fight mobs or build mob farms to progress. You can craft most mob drops without fighting."]
 			icon: "minecraft:zombie_head"
 			id: "2CC39EED6EAE563E"
 			shape: "hexagon"

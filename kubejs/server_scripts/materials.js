@@ -1,4 +1,6 @@
 ServerEvents.recipes((event) => {
+    const thermoPlantWithMinTemp = global.thermoPlantWithMinTemp(event);
+
     // Creates a proper json item from the given input item
     const createJsonItem = (item) => {
         if (item[0] == "#") {

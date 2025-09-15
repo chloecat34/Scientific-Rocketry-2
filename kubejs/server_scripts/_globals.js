@@ -12,6 +12,9 @@ const SILVER_TEMPERATURE = 790;
 const ZINC_TEMPERATURE = 420;
 const NICKEL_TEMPERATURE = 950;
 
+// Gets a default value from the import
+global.getOrDefault = (value, defaultValue) => value === undefined ? defaultValue : value;
+
 // For these functions, you can create your own version using the captured event value
 const makeTinkersMeltingRecipe = (event) => (itemTag, fluidTag, fluidAmount, time, temperature) => {
     event.custom({
@@ -49,11 +52,11 @@ global.createItemSelectorWithCount = (item, count) => {
     return item[0] === "#"
         ? {
               tag: global.tagToIETag(item),
-              count: count
+              count: count,
           }
         : {
               item: item,
-              count: count
+              count: count,
           };
 };
 
@@ -67,18 +70,18 @@ global.createItemSelectorWithCount = (item, count) => {
  * @returns
  */
 global.immersiveCrushing = (event) => (energy, input, result, resultCount, secondaries) => {
-    const parsedSecondaries = secondaries.map(second => {
+    const parsedSecondaries = secondaries.map((second) => {
         return {
             chance: second[2],
-            output: global.createItemSelectorWithCount(second[0], second[1])
-        }
-    })
+            output: global.createItemSelectorWithCount(second[0], second[1]),
+        };
+    });
 
     event.custom({
         type: "immersiveengineering:crusher",
         energy: energy,
         input: global.createItemSelector(input),
         secondaries: parsedSecondaries,
-        result: global.createItemSelectorWithCount(result, resultCount)
+        result: global.createItemSelectorWithCount(result, resultCount),
     });
 };
