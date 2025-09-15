@@ -2,6 +2,7 @@ ServerEvents.recipes((event) => {
     // Disable air compressors
     event.remove({ output: "pneumaticcraft:air_compressor" });
     event.remove({ output: "pneumaticcraft:advanced_air_compressor" });
+    event.remove({ output: "pneumaticcraft:manual_compressor" });
 
     // Reinforced stone
     event.remove({ id: "pneumaticcraft:reinforced_stone" });
@@ -191,12 +192,51 @@ ServerEvents.recipes((event) => {
     });
 
     // Refinery output
-    event.remove({output: "pneumaticcraft:refinery_output"});
+    event.remove({ output: "pneumaticcraft:refinery_output" });
 
     event.shaped("pneumaticcraft:refinery_output", ["ABA", "CDC", "ABA"], {
         A: "pneumaticcraft:reinforced_stone_slab",
         B: "#forge:plates/cinderslime",
         C: "#thermal:glass/hardened",
-        D: "pneumaticcraft:small_tank"
+        D: "pneumaticcraft:small_tank",
+    });
+
+    // Thermal lagging
+    event.remove({ output: "pneumaticcraft:thermal_lagging" });
+
+    event.shaped("6x pneumaticcraft:thermal_lagging", ["ABA", "BCB", "ABA"], {
+        A: "thermal:black_rockwool",
+        B: "thermal:cured_rubber",
+        C: "actuallyadditions:void_crystal_block"
+    });
+
+    // Vortex tube
+    event.remove({ output: "pneumaticcraft:vortex_tube" });
+
+    event.shaped("pneumaticcraft:vortex_tube", ["ABA", "CDE", "ABA"], {
+        A: "#forge:plates/compressed_iron",
+        B: "pneumaticcraft:heat_pipe",
+        C: "#forge:ingots/slimesteel",
+        D: "immersiveengineering:radiator",
+        E: "#forge:ingots/cinderslime",
+    });
+
+    // Heat sink
+    event.remove({ output: "pneumaticcraft:heat_sink" });
+
+    event.shaped("pneumaticcraft:heat_sink", ["AAA", "BCB"], {
+        A: "minecraft:iron_bars",
+        B: "#forge:plates/compressed_iron",
+        C: "#forge:gears/slimesteel",
+    });
+
+    // Heat frame
+    event.remove({ output: "pneumaticcraft:heat_frame"});
+
+    event.shaped("pneumaticcraft:heat_frame", ["AAA", "BCB", "DDD"], {
+        A: "#forge:plates/compressed_iron",
+        B: "kubejs:heat_mechanism",
+        C: "#forge:gears/knightslime",
+        D: "#forge:storage_blocks/compressed_iron"
     })
 });

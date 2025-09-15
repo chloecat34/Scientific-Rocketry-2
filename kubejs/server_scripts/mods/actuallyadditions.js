@@ -316,4 +316,22 @@ ServerEvents.recipes((event) => {
             fluid: "actuallyadditions:empowered_oil",
         },
     });
+
+    // Coils
+    event.remove({ output: "actuallyadditions:basic_coil" });
+    event.remove({ output: "actuallyadditions:advanced_coil" });
+
+    event.shaped("actuallyadditions:basic_coil", ["ABC", "BDB", "CBA"], {
+        A: "#forge:gems/black_quartz",
+        B: "actuallyadditions:restonia_crystal",
+        C: "kubejs:energetic_alloy_coil",
+        D: "createaddition:capacitor",
+    });
+
+    event.shaped("actuallyadditions:advanced_coil", ["ABC", "BDB", "CBA"], {
+        A: "actuallyadditions:diamatine_crystal",
+        B: "actuallyadditions:palis_crystal",
+        C: "kubejs:vibrant_alloy_coil",
+        D: "actuallyadditions:basic_coil",
+    });
 });

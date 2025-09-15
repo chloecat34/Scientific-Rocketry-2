@@ -456,6 +456,16 @@ ServerEvents.recipes((event) => {
         B: "immersiveengineering:stick_treated",
     });
 
+    event.shaped("2x kubejs:energetic_alloy_coil", ["AAA", "ABA", "AAA"], {
+        A: "#forge:wires/energetic_alloy",
+        B: "immersiveengineering:stick_treated",
+    });
+
+    event.shaped("2x kubejs:vibrant_alloy_coil", ["AAA", "ABA", "AAA"], {
+        A: "#forge:wires/vibrant_alloy",
+        B: "immersiveengineering:stick_treated",
+    });
+
     // Core sample drill
     event.replaceInput(
         { output: "immersiveengineering:sample_drill" },

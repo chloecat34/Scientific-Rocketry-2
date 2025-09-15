@@ -438,28 +438,21 @@ ServerEvents.recipes((event) => {
     });
 
     // Knightslime
-    event.recipes
-        .createMixing("2x tconstruct:knightslime_ingot", [
-            "#forge:ingots/steel",
-            "#forge:ingots/netherite_scrap",
-            Fluid.of("tconstruct:ender_slime", 250),
-        ])
-        .superheated();
     event.recipes.thermal
         .smelter("2x tconstruct:knightslime_ingot", [
-            "#forge:ingots/steel",
-            "#forge:ingots/netherite_scrap",
+            "#forge:ingots/cinderslime",
+            "#forge:ingots/slimesteel",
             "tconstruct:ender_slime_ball",
         ])
-        .energy(16000);
+        .energy(32000);
 
     createArcFurnaceRecipe(
-        "#forge:ingots/steel",
+        "#forge:slimeball/ender",
         1,
-        ["#forge:ingots/netherite_scrap", "#forge:slimeball/ender"],
+        ["#forge:ingots/cinderslime", "#forge:ingots/slimesteel"],
         "#forge:ingots/knightslime",
         2,
-        51200,
+        102400,
         100
     );
 

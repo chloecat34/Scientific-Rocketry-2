@@ -223,6 +223,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:nuggets/slimesteel", "tconstruct:molten_slimesteel", 10, 600);
     crucibleMelting("#forge:storage_blocks/slimesteel", "tconstruct:molten_slimesteel", 810, 4800 * 9);
     chillerBlockCasting("tconstruct:slimesteel_block", "tconstruct:molten_slimesteel", 810, 4800 * 9);
+    addBothMelterRecipes("kubejs:slimesteel_plate", "tconstruct:molten_slimesteel", 90, 60, 900, 4800);
+    addBothMelterRecipes("kubejs:slimesteel_gear", "tconstruct:molten_slimesteel", 360, 136, 900, 4800 * 4);
 
     // Molten amethyst bronze
     crucibleMelting("#forge:ingots/amethyst_bronze", "tconstruct:molten_amethyst_bronze", 90, 4800);
@@ -327,6 +329,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:storage_blocks/cinderslime", "tconstruct:molten_cinderslime", 810, 4800 * 9);
     chillerBlockCasting("tconstruct:cinderslime_block", "tconstruct:molten_cinderslime", 810, 4800 * 9);
     chillerIngotCasting("#forge:ingots/cinderslime", "tconstruct:molten_cinderslime", 90, 4800);
+    addBothMelterRecipes("kubejs:cinderslime_plate", "tconstruct:molten_cinderslime", 90, 68, 1050, 4800);
+    addBothMelterRecipes("kubejs:cinderslime_gear", "tconstruct:molten_cinderslime", 360, 160, 1050, 4800 * 4);
 
     // Molten netherite
     crucibleMelting("#forge:ingots/netherite", "tconstruct:molten_netherite", 90, 4800);
@@ -346,6 +350,8 @@ ServerEvents.recipes((event) => {
     addTinkersBlockCastingRecipe("tconstruct:knightslime_block","tconstruct:molten_knightslime", 810, 160);
     addTinkersIngotCastingRecipe("tconstruct:knightslime_ingot","tconstruct:molten_knightslime", 90, 50);
     addTinkersNuggetCastingRecipe("tconstruct:knightslime_nugget","tconstruct:molten_knightslime", 10, 10);
+    addBothMelterRecipes("kubejs:knightslime_plate", "tconstruct:molten_knightslime", 90, 72, 1200, 4800);
+    addBothMelterRecipes("kubejs:knightslime_gear", "tconstruct:molten_knightslime", 360, 176, 1200, 4800 * 4);
 
     // Soulsteel recipes
     addBothMelterRecipes("tconstruct:soulsteel_ingot", "tconstruct:molten_soulsteel", 90, 72, 1200, 4800);

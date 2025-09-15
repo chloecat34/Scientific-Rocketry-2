@@ -310,7 +310,7 @@ ServerEvents.recipes((event) => {
             ]),
             event.recipes.createDeploying("kubejs:incomplete_heat_mechanism", [
                 "kubejs:incomplete_heat_mechanism",
-                "#forge:plates/invar",
+                "#forge:plates/hepatizon",
             ]),
         ])
         .transitionalItem("kubejs:incomplete_heat_mechanism")

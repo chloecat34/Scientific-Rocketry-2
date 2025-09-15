@@ -29,8 +29,13 @@ StartupEvents.registry("item", (event) => {
     event.create("cobalt_gear").displayName("Cobalt Gear").tag("forge:gears").tag("forge:gears/cobalt");
 
     event.create("cinderslime_plate").displayName("Cinderslime Plate").tag("forge:plates").tag("forge:plates/cinderslime");
-
     event.create("cinderslime_gear").displayName("Cinderslime Gear").tag("forge:gears").tag("forge:gears/cinderslime");
+
+    event.create("slimesteel_plate").displayName("Slimesteel Plate").tag("forge:plates").tag("forge:plates/slimesteel");
+    event.create("slimesteel_gear").displayName("Slimesteel Gear").tag("forge:gears").tag("forge:gears/slimesteel");
+
+    event.create("knightslime_plate").displayName("Knightslime Plate").tag("forge:plates").tag("forge:plates/knightslime");
+    event.create("knightslime_gear").displayName("Knightslime Gear").tag("forge:gears").tag("forge:gears/knightslime");
 
     event.create("amethyst_bronze_plate").displayName("Amethyst Bronze Plate").tag("forge:plates").tag("forge:plates/amethyst_bronze");
     event.create("amethyst_bronze_gear").displayName("Amethyst Bronze Gear").tag("forge:gears").tag("forge:gears/amethyst_bronze");
@@ -78,6 +83,9 @@ StartupEvents.registry("item", (event) => {
 
     event.create("pulsating_crystal").displayName("Pulsating Crystal");
     event.create("vibrant_crystal").displayName("Vibrant Crystal");
+
+    event.create("energetic_alloy_coil").displayName("Energetic Alloy Coil");
+    event.create("vibrant_alloy_coil").displayName("Vibrant Alloy Coil");
 
     // Register materials with ingots, nuggets, plates, and gears
     let materials = [

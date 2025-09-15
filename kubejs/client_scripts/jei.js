@@ -122,6 +122,7 @@ JEIEvents.hideItems((event) => {
         "immersiveengineering:dust_wood",
         "pneumaticcraft:air_compressor",
         "pneumaticcraft:advanced_air_compressor",
+        "pneumaticcraft:manual_compressor",
         "integratedtunnels:part_interface_energy",
         "integratedtunnels:part_interface_filter_energy",
         "integratedtunnels:part_importer_energy",

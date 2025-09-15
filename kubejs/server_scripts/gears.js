@@ -81,7 +81,9 @@ ServerEvents.recipes((event) => {
         "ardite",
         "amethyst_bronze",
         "hepatizon",
-        "cinderslime"
+        "cinderslime",
+        "slimesteel",
+        "knightslime"
     ];
     kubejsGears.forEach((ingot) =>
         standardizeGears(ingot, `kubejs:${ingot}_gear`)
