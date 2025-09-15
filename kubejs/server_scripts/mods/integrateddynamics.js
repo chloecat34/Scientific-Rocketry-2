@@ -12,6 +12,27 @@ ServerEvents.recipes((event) => {
 
     // Menril resin to menril
     // Menril blocks require a maximum temperature, while menril glass needs a higher temperature
+    // Menril blocks could use the Fluid Mixer with skyslime instead like what E6E does.
+    event.custom({
+        type: "pneumaticcraft:fluid_mixer",
+        input1: {
+            type: "pneumaticcraft:fluid",
+            amount: 750,
+            fluid: "integrateddynamics:menril_resin",
+        },
+        input2: {
+            type: "pneumaticcraft:fluid",
+            amount: 250,
+            fluid: "tconstruct:sky_slime",
+        },
+        item_output: {
+            item: "integrateddynamics:crystalized_menril_block",
+        },
+        pressure: 2.0,
+        time: 200,
+    });
+
+    // Menril glass
     event.custom({
         type: "pneumaticcraft:thermo_plant",
         exothermic: false,
@@ -20,17 +41,24 @@ ServerEvents.recipes((event) => {
             amount: 1000,
             fluid: "integrateddynamics:menril_resin",
         },
+        item_input: {
+            item: "thermal:obsidian_glass",
+        },
         item_output: {
             count: 1,
-            item: "integrateddynamics:crystalized_menril_block",
+            item: "integratedterminals:menril_glass",
         },
-        pressure: 2.0,
+        pressure: 4.0,
         temperature: {
-            min_temp: 273,
-            max_temp: 373,
+            min_temp: 773,
         },
     });
 
-    event.recipes.thermal.chiller("integrateddynamics:crystalized_menril_block", Fluid.of("integrateddynamics:menril_resin", 1000)).energy(4800);
-    event.recipes.thermal.crucible(Fluid.of("integrateddynamics:menril_resin", 1000), "integrateddynamics:crystalized_menril_block").energy(9600);
+    // Disable integrated tunnels energy transport
+    event.remove({ output: "integratedtunnels:part_interface_energy" });
+    event.remove({ output: "integratedtunnels:part_interface_filter_energy" });
+    event.remove({ output: "integratedtunnels:part_importer_energy" });
+    event.remove({ output: "integratedtunnels:part_exporter_energy" });
+    event.remove({ output: "integratedtunnels:part_importer_world_energy" });
+    event.remove({ output: "integratedtunnels:part_exporter_world_energy" });
 });

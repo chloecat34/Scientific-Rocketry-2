@@ -122,6 +122,13 @@ JEIEvents.hideItems((event) => {
         "immersiveengineering:dust_wood",
         "pneumaticcraft:air_compressor",
         "pneumaticcraft:advanced_air_compressor",
+        "integratedtunnels:part_interface_energy",
+        "integratedtunnels:part_interface_filter_energy",
+        "integratedtunnels:part_importer_energy",
+        "integratedtunnels:part_exporter_energy",
+        "integratedtunnels:part_importer_world_energy",
+        "integratedtunnels:part_exporter_world_energy",
+        "mekanism:dirty_netherite_scrap"
     ];
 
     itemsToRemove.forEach((item) => event.hide(item));

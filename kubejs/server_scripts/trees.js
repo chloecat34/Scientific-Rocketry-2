@@ -164,7 +164,7 @@ ServerEvents.recipes((event) => {
             [
                 "6x integrateddynamics:menril_planks",
                 Item.of("thermal:sawdust").withChance(0.25),
-                "integrateddynamics:crystalized_menril_chunk",
+                Item.of("integrateddynamics:crystalized_menril_chunk").withChance(1.0),
             ],
             "#integrateddynamics:menril_logs"
         )

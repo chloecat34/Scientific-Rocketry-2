@@ -1,6 +1,4 @@
 ServerEvents.recipes((event) => {
-    const thermoPlantWithMinTemp = global.thermoPlantWithMinTemp(event);
-
     // Creates a proper json item from the given input item
     const createJsonItem = (item) => {
         if (item[0] == "#") {
@@ -623,4 +621,25 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal
         .bottler("kubejs:vibrant_crystal", ["#forge:gems/emerald", Fluid.of("kubejs:molten_vibrant_alloy", 180)])
         .energy(12800);
+
+    // Hardened glass
+    event.remove({ output: "thermal:obsidian_glass" });
+
+    event.recipes.thermal
+        .smelter("2x thermal:obsidian_glass", [
+            "immersiveengineering:insulating_glass",
+            "minecraft:obsidian",
+            "#forge:gems/quartz",
+        ])
+        .energy(4800);
+
+    createArcFurnaceRecipe(
+        "minecraft:obsidian",
+        1,
+        ["immersiveengineering:insulating_glass", "#forge:gems/quartz"],
+        "thermal:obsidian_glass",
+        2,
+        51200,
+        100
+    );
 });

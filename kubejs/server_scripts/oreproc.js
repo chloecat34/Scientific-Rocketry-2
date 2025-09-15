@@ -67,7 +67,7 @@ ServerEvents.recipes((event) => {
         "ad_astra:moon_cheese_ore",
         "#forge:ores/black_quartz",
         "#forge:raw_materials/ardite",
-        "#forge:ores/ardite"
+        "#forge:ores/ardite",
     ].forEach((rawOre) => {
         event.remove({
             input: rawOre,
@@ -386,4 +386,7 @@ ServerEvents.recipes((event) => {
         event.remove({ id: `mekanism:processing/${material}/crystal/from_slurry` });
         event.remove({ id: `mekanism:processing/${material}/slurry/clean` });
     });
+
+    // Remove mek netherite process
+    event.remove({ id: "mekanism:processing/netherite/dirty_scrap_to_scrap" });
 });
