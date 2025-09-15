@@ -105,6 +105,87 @@
 			x: -8.0d
 			y: -0.5d
 		}
+		{
+			dependencies: ["2B40318BAE026813"]
+			description: ["Alongside Pneumaticcraft Repressurized, you also need to get into Actually Additions. The Atomic Reconstructor lets you zap items to turn them into new items. The recipes for the crystals are all modified."]
+			id: "3F73F687A32B9195"
+			rewards: [{
+				id: "4540EFBD802377CD"
+				item: "actuallyadditions:iron_casing"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "26C0DA7E2AF5A8BA"
+					item: "actuallyadditions:atomic_reconstructor"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "528A8FDEC1B22A94"
+					item: {
+						Count: 4
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "actuallyadditions:restonia_crystal"
+								}
+								{
+									Count: 1b
+									id: "actuallyadditions:palis_crystal"
+								}
+								{
+									Count: 1b
+									id: "actuallyadditions:diamatine_crystal"
+								}
+								{
+									Count: 1b
+									id: "actuallyadditions:void_crystal"
+								}
+								{
+									Count: 1b
+									id: "actuallyadditions:emeradic_crystal"
+								}
+								{
+									Count: 1b
+									id: "actuallyadditions:enori_crystal"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Actually Crafting"
+			x: -9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["014611E2E11520B2"]
+			description: [
+				"Black Quartz no longer spawns in the world, you need to use an Arc Furnace to craft it."
+				""
+				"You can get the ore later on using a Lens of the Miner."
+			]
+			id: "2B40318BAE026813"
+			rewards: [{
+				count: 4
+				id: "42B986DBBEFE06CF"
+				item: "immersiveengineering:dust_hop_graphite"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "750DAAB967608E30"
+				item: "actuallyadditions:black_quartz"
+				type: "item"
+			}]
+			title: "Black Quartz"
+			x: -10.0d
+			y: 1.5d
+		}
 	]
 	title: "Chapter 3: Under Pressure"
 }

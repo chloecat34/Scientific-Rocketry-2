@@ -204,7 +204,12 @@
 		}
 		{
 			dependencies: ["6C9260EEDC41F9A7"]
-			description: ["Energetic Alloy is used for the second tier of Powah Cables."]
+			description: [
+				""
+				"Energetic Alloy is used for the second tier of Powah Cables."
+				""
+				"Electrotine will require a Tesla Coil (from Create)."
+			]
 			id: "075AEB403329FD51"
 			rewards: [{
 				count: 8

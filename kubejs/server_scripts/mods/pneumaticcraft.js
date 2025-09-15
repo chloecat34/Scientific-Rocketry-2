@@ -168,4 +168,35 @@ ServerEvents.recipes((event) => {
         "#forge:ingots/compressed_iron",
         "#forge:plates/compressed_iron"
     );
+
+    // TPP
+    event.remove({ output: "pneumaticcraft:thermopneumatic_processing_plant" });
+
+    event.shaped("pneumaticcraft:thermopneumatic_processing_plant", ["AAA", "BCB", "ADA"], {
+        A: "pneumaticcraft:reinforced_stone_slab",
+        B: "pneumaticcraft:small_tank",
+        C: "pneumaticcraft:pressure_tube",
+        D: "immersiveengineering:radiator",
+    });
+
+    // Refinery controller
+    event.remove({ output: "pneumaticcraft:refinery" });
+
+    event.shaped("pneumaticcraft:refinery", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/cinderslime",
+        B: "#forge:gears/cinderslime",
+        C: "pneumaticcraft:small_tank",
+        D: "actuallyadditions:restonia_crystal_block",
+        E: "immersiveengineering:radiator",
+    });
+
+    // Refinery output
+    event.remove({output: "pneumaticcraft:refinery_output"});
+
+    event.shaped("pneumaticcraft:refinery_output", ["ABA", "CDC", "ABA"], {
+        A: "pneumaticcraft:reinforced_stone_slab",
+        B: "#forge:plates/cinderslime",
+        C: "#thermal:glass/hardened",
+        D: "pneumaticcraft:small_tank"
+    })
 });
