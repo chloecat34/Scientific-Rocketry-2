@@ -232,10 +232,9 @@ ServerEvents.recipes((event) => {
         .centrifuge(Fluid.of("actuallyadditions:canola_oil", 80), "actuallyadditions:canola")
         .energy(800);
 
-    event.recipes.thermal.refinery(
-        [Fluid.of("actuallyadditions:refined_canola_oil", 80)],
-        Fluid.of("actuallyadditions:canola_oil", 80)
-    ).energy(800);
+    event.recipes.thermal
+        .refinery([Fluid.of("actuallyadditions:refined_canola_oil", 80)], Fluid.of("actuallyadditions:canola_oil", 80))
+        .energy(800);
 
     event.recipes.thermal
         .brewer(Fluid.of("actuallyadditions:crystallized_oil", 1000), [
@@ -255,4 +254,66 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal.compression_fuel(Fluid.of("actuallyadditions:refined_canola_oil", 1000)).energy(200000);
     event.recipes.thermal.compression_fuel(Fluid.of("actuallyadditions:crystallized_oil", 1000)).energy(800000);
     event.recipes.thermal.compression_fuel(Fluid.of("actuallyadditions:empowered_oil", 1000)).energy(1600000);
+
+    // Canola IE support
+    event.custom({
+        type: "immersiveengineering:squeezer",
+        energy: 3200,
+        fluid: {
+            amount: 80,
+            fluid: "actuallyadditions:canola_oil",
+        },
+        input: {
+            item: "actuallyadditions:canola",
+        },
+    });
+
+    event.custom({
+        type: "immersiveengineering:refinery",
+        energy: 120,
+        input0: {
+            amount: 8,
+            tag: "forge:canola_oil",
+        },
+        result: {
+            amount: 8,
+            fluid: "actuallyadditions:refined_canola_oil",
+        },
+    });
+
+    event.custom({
+        type: "immersiveengineering:mixer",
+        energy: 3200,
+        fluid: {
+            amount: 1000,
+            tag: "forge:refined_canola_oil",
+        },
+        inputs: [
+            {
+                item: "actuallyadditions:crystallized_canola_seed",
+            },
+        ],
+        result: {
+            amount: 1000,
+            fluid: "actuallyadditions:crystallized_oil",
+        },
+    });
+
+    event.custom({
+        type: "immersiveengineering:mixer",
+        energy: 3200,
+        fluid: {
+            amount: 1000,
+            tag: "forge:crystallized_oil",
+        },
+        inputs: [
+            {
+                item: "actuallyadditions:empowered_canola_seed",
+            },
+        ],
+        result: {
+            amount: 1000,
+            fluid: "actuallyadditions:empowered_oil",
+        },
+    });
 });
