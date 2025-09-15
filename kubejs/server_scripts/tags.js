@@ -59,4 +59,6 @@ ServerEvents.tags("fluid", (event) => {
     event.add("forge:empowered_oil", "actuallyadditions:empowered_oil");
     event.add("forge:menril_resin", "integrateddynamics:menril_resin");
     event.add("forge:molten_electrotine", "kubejs:molten_electrotine");
+    event.add("forge:blazing_blood", "tconstruct:blazing_blood");
+    event.add("forge:molten_compressed_iron", "kubejs:molten_compressed_iron");
 });

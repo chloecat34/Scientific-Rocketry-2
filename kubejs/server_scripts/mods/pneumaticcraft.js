@@ -7,23 +7,22 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "pneumaticcraft:reinforced_stone" });
 
     event.custom({
-        type: "tconstruct:casting_basin",
-        cast: {
-            item: "immersiveengineering:concrete_leaded",
-        },
-        cast_consumed: true,
-        cooling_time: 80,
+        type: "immersiveengineering:bottling_machine",
         fluid: {
             amount: 45,
-            fluid: "kubejs:molten_compressed_iron",
+            tag: "forge:molten_compressed_iron"
         },
-        result: "pneumaticcraft:reinforced_stone",
+        inputs: [
+            {
+                item: "immersiveengineering:concrete_leaded"
+            }
+        ],
+        results: [
+            {
+                item: "pneumaticcraft:reinforced_stone"
+            }
+        ]
     });
-
-    event.recipes.createFilling("pneumaticcraft:reinforced_stone", [
-        "immersiveengineering:concrete_leaded",
-        Fluid.of("kubejs:molten_compressed_iron", 45),
-    ]);
 
     event.custom({
         type: "pneumaticcraft:thermo_plant",

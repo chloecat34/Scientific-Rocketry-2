@@ -17,6 +17,24 @@ ServerEvents.recipes((event) => {
         .energy(2000);
 
     event.custom({
+        type: "immersiveengineering:bottling_machine",
+        fluid: {
+            amount: 125,
+            tag: "forge:creosote",
+        },
+        inputs: [
+            {
+                tag: "minecraft:planks",
+            },
+        ],
+        results: [
+            {
+                item: "immersiveengineering:treated_wood_horizontal",
+            },
+        ],
+    });
+
+    event.custom({
         type: "pneumaticcraft:thermo_plant",
         exothermic: false,
         fluid_input: {
@@ -479,43 +497,39 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "immersiveengineering:steel_scaffolding_standard" });
     event.remove({ output: "immersiveengineering:alu_scaffolding_standard" });
 
-    event.shaped("3x immersiveengineering:treated_scaffold", [
-        "AAA",
-        " B ",
-        "B B"
-    ], {
-        "A": "#forge:treated_wood",
-        "B": "#forge:rods/treated_wood"
+    event.shaped("3x immersiveengineering:treated_scaffold", ["AAA", " B ", "B B"], {
+        A: "#forge:treated_wood",
+        B: "#forge:rods/treated_wood",
     });
 
-    event.shaped("3x immersiveengineering:steel_scaffolding_standard", [
-        "AAA",
-        " B ",
-        "B B"
-    ], {
-        "A": "#forge:ingots/steel",
-        "B": "#forge:rods/steel"
+    event.shaped("3x immersiveengineering:steel_scaffolding_standard", ["AAA", " B ", "B B"], {
+        A: "#forge:ingots/steel",
+        B: "#forge:rods/steel",
     });
 
-    event.shaped("3x immersiveengineering:alu_scaffolding_standard", [
-        "AAA",
-        " B ",
-        "B B"
-    ], {
-        "A": "#forge:ingots/aluminum",
-        "B": "#forge:rods/aluminum"
+    event.shaped("3x immersiveengineering:alu_scaffolding_standard", ["AAA", " B ", "B B"], {
+        A: "#forge:ingots/aluminum",
+        B: "#forge:rods/aluminum",
     });
 
     // Sheetmetals
-    ["copper", "aluminum", "lead", "silver", "nickel", "uranium", "constantan", "electrum", "steel", "iron", "gold"].forEach(material => {
-        event.remove({output: `immersiveengineering:sheetmetal_${material}`});
+    [
+        "copper",
+        "aluminum",
+        "lead",
+        "silver",
+        "nickel",
+        "uranium",
+        "constantan",
+        "electrum",
+        "steel",
+        "iron",
+        "gold",
+    ].forEach((material) => {
+        event.remove({ output: `immersiveengineering:sheetmetal_${material}` });
 
-        event.shaped(`2x immersiveengineering:sheetmetal_${material}`, [
-            " A ",
-            "A A",
-            " A "
-        ], {
-            "A": `#forge:plates/${material}`
+        event.shaped(`2x immersiveengineering:sheetmetal_${material}`, [" A ", "A A", " A "], {
+            A: `#forge:plates/${material}`,
         });
     });
 });

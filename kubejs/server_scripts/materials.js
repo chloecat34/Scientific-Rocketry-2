@@ -59,6 +59,24 @@ ServerEvents.recipes((event) => {
         },
     });
 
+    event.custom({
+        type: "immersiveengineering:bottling_machine",
+        fluid: {
+            amount: 300,
+            tag: "forge:redstone",
+        },
+        inputs: [
+            {
+                tag: "forge:ingots/copper",
+            },
+        ],
+        results: [
+            {
+                item: "kubejs:red_alloy_ingot",
+            },
+        ],
+    });
+
     // Blue alloy
     event.recipes.createFilling("kubejs:blue_alloy_ingot", [
         "#forge:ingots/tin",
@@ -87,6 +105,24 @@ ServerEvents.recipes((event) => {
         temperature: {
             min_temp: 273,
         },
+    });
+
+    event.custom({
+        type: "immersiveengineering:bottling_machine",
+        fluid: {
+            amount: 300,
+            tag: "forge:molten_electrotine",
+        },
+        inputs: [
+            {
+                tag: "forge:ingots/tin",
+            },
+        ],
+        results: [
+            {
+                item: "kubejs:blue_alloy_ingot",
+            },
+        ],
     });
 
     // Pulsating alloy
@@ -172,18 +208,18 @@ ServerEvents.recipes((event) => {
         type: "immersiveengineering:bottling_machine",
         fluid: {
             amount: 250,
-            tag: "forge:ender"
+            tag: "forge:ender",
         },
         inputs: [
             {
-                item: "kubejs:amethyst_dust"
-            }
+                item: "kubejs:amethyst_dust",
+            },
         ],
         results: [
             {
-                item: "kubejs:vibrating_powder"
-            }
-        ]
+                item: "kubejs:vibrating_powder",
+            },
+        ],
     });
 
     event.custom({
@@ -207,7 +243,9 @@ ServerEvents.recipes((event) => {
         },
     });
 
-    event.recipes.thermal.bottler("kubejs:vibrating_powder", ["#forge:dusts/amethyst", Fluid.of("thermal:ender", 250)]).energy(4800);
+    event.recipes.thermal
+        .bottler("kubejs:vibrating_powder", ["#forge:dusts/amethyst", Fluid.of("thermal:ender", 250)])
+        .energy(4800);
 
     // Remove rose gold from arc furnace recipes
     event.remove({ id: "immersiveengineering:arcfurnace/alloy_rose_gold" });

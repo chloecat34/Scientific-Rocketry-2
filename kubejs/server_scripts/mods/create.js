@@ -50,6 +50,24 @@ ServerEvents.recipes((event) => {
         .energy(8000);
 
     event.custom({
+        type: "immersiveengineering:bottling_machine",
+        fluid: {
+            amount: 400,
+            tag: "forge:redstone"
+        },
+        inputs: [
+            {
+                tag: "forge:gems/quartz"
+            }
+        ],
+        results: [
+            {
+                item: "create:rose_quartz"
+            }
+        ]
+    });
+
+    event.custom({
         type: "pneumaticcraft:thermo_plant",
         exothermic: false,
         fluid_input: {
@@ -428,6 +446,24 @@ ServerEvents.recipes((event) => {
         },
     });
 
+    event.custom({
+        type: "immersiveengineering:bottling_machine",
+        fluid: {
+            amount: 1000,
+            tag: "forge:blazing_blood",
+        },
+        inputs: [
+            {
+                item: "create:empty_blaze_burner",
+            },
+        ],
+        results: [
+            {
+                item: "create:blaze_burner",
+            },
+        ],
+    });
+
     event.recipes.thermal
         .bottler("create:blaze_burner", ["create:empty_blaze_burner", Fluid.of("tconstruct:blazing_blood", 1000)])
         .energy(9600);
@@ -445,4 +481,7 @@ ServerEvents.recipes((event) => {
 
     // Empty fan catalyst
     event.replaceInput({ output: "create_connected:empty_fan_catalyst" }, "#forge:ingots/brass", "#forge:plates/brass");
+
+    // Remove dust recipes from create in the fluid encapsulator
+    event.remove({ input: "create:cinder_flour", type: "thermal:bottler" });
 });
