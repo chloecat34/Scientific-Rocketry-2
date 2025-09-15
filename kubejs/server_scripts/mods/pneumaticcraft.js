@@ -10,18 +10,18 @@ ServerEvents.recipes((event) => {
         type: "immersiveengineering:bottling_machine",
         fluid: {
             amount: 45,
-            tag: "forge:molten_compressed_iron"
+            tag: "forge:molten_compressed_iron",
         },
         inputs: [
             {
-                item: "immersiveengineering:concrete_leaded"
-            }
+                item: "immersiveengineering:concrete_leaded",
+            },
         ],
         results: [
             {
-                item: "pneumaticcraft:reinforced_stone"
-            }
-        ]
+                item: "pneumaticcraft:reinforced_stone",
+            },
+        ],
     });
 
     event.custom({
@@ -60,8 +60,8 @@ ServerEvents.recipes((event) => {
         fluid: {
             type: "pneumaticcraft:fluid",
             amount: 1000,
-            fluid: "actuallyadditions:canola_oil"
-        }
+            fluid: "actuallyadditions:canola_oil",
+        },
     });
 
     event.custom({
@@ -71,8 +71,8 @@ ServerEvents.recipes((event) => {
         fluid: {
             type: "pneumaticcraft:fluid",
             amount: 1000,
-            fluid: "actuallyadditions:refined_canola_oil"
-        }
+            fluid: "actuallyadditions:refined_canola_oil",
+        },
     });
 
     event.custom({
@@ -82,8 +82,8 @@ ServerEvents.recipes((event) => {
         fluid: {
             type: "pneumaticcraft:fluid",
             amount: 1000,
-            fluid: "actuallyadditions:crystallized_oil"
-        }
+            fluid: "actuallyadditions:crystallized_oil",
+        },
     });
 
     event.custom({
@@ -93,7 +93,79 @@ ServerEvents.recipes((event) => {
         fluid: {
             type: "pneumaticcraft:fluid",
             amount: 1000,
-            fluid: "actuallyadditions:empowered_oil"
-        }
+            fluid: "actuallyadditions:empowered_oil",
+        },
     });
+
+    // Pressure tube
+    event.remove({ output: "pneumaticcraft:pressure_tube" });
+
+    event.shaped("6x pneumaticcraft:pressure_tube", ["ABA"], {
+        A: "#forge:plates/compressed_iron",
+        B: "#thermal:glass/hardened",
+    });
+
+    // Rotational compressor
+    event.remove({ output: "compressedcreativity:rotational_compressor" });
+
+    event.shaped("compressedcreativity:rotational_compressor", ["ABA", "CDC", "EFE"], {
+        A: "#forge:plates/aluminum",
+        B: "create:propeller",
+        C: "pneumaticcraft:pressure_tube",
+        D: "compressedcreativity:compressed_iron_casing",
+        E: "create:precision_mechanism",
+        F: "immersiveengineering:generator",
+    });
+
+    // Liquid compressor
+    event.remove({ output: "pneumaticcraft:liquid_compressor" });
+
+    event.shaped("pneumaticcraft:liquid_compressor", ["ABA", "CDC", "EFE"], {
+        A: "#forge:plates/aluminum",
+        B: "pneumaticcraft:small_tank",
+        C: "pneumaticcraft:pressure_tube",
+        D: "compressedcreativity:compressed_iron_casing",
+        E: "kubejs:heat_mechanism",
+        F: "immersiveengineering:generator",
+    });
+
+    // Small fluid tank
+    event.remove({ output: "pneumaticcraft:small_tank" });
+
+    event.shaped("pneumaticcraft:small_tank", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/compressed_iron",
+        B: "thermal:cured_rubber",
+        C: "minecraft:iron_bars",
+        D: "#thermal:glass/hardened",
+    });
+
+    // Pressure chamber glass
+    event.replaceInput(
+        { output: "pneumaticcraft:pressure_chamber_glass" },
+        "#c:glass_blocks",
+        "#thermal:glass/hardened"
+    );
+
+    // Pressure chamber valve
+    event.remove({ output: "pneumaticcraft:pressure_chamber_valve" });
+
+    event.shaped("2x pneumaticcraft:pressure_chamber_valve", [" A ", "ABA", " A "], {
+        A: "pneumaticcraft:pressure_chamber_wall",
+        B: "pneumaticcraft:pressure_tube",
+    });
+
+    // Pressure chamber interface
+    event.remove({ output: "pneumaticcraft:pressure_chamber_interface" });
+
+    event.shaped("2x pneumaticcraft:pressure_chamber_interface", [" A ", "ABA", " A "], {
+        A: "pneumaticcraft:pressure_chamber_wall",
+        B: "pneumaticcraft:omnidirectional_hopper",
+    });
+
+    // Omnidirectional hopper
+    event.replaceInput(
+        { output: "pneumaticcraft:omnidirectional_hopper" },
+        "#forge:ingots/compressed_iron",
+        "#forge:plates/compressed_iron"
+    );
 });

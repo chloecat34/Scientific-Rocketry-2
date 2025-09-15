@@ -7,6 +7,67 @@
 	id: "626413B87F1C4AFD"
 	order_index: 2
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			dependencies: ["014611E2E11520B2"]
+			description: ["The next major mod you need to get into is Pneumaticcraft Repressurized. You must blow up Electrical Steel, made in your new Arc Furnace, to get Compressed Steel. This is lossy, but you will unlock a better recipe later."]
+			id: "2D651C179BCA88DF"
+			rewards: [{
+				count: 16
+				id: "339882FA28374102"
+				item: "pneumaticcraft:ingot_iron_compressed"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "71EFC10F858F15DF"
+				item: "pneumaticcraft:ingot_iron_compressed"
+				type: "item"
+			}]
+			title: "Explosive Crafting"
+			x: -10.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2D651C179BCA88DF"]
+			description: [
+				"&7&oWhat to choose...&r"
+				""
+				"You will need to set up a Compressor to make Compressed Air. Right now you have two choices, either the Liquid Compressor, which runs off liquid fuel, or the Rotational Compressor, which uses Create Stress. Both have their pros and cons."
+				""
+				"You will need to set up some redstone to make sure your Compressors stop running once enough pressure is in the system. Otherwise, you risk having them explode!"
+			]
+			id: "75D667F5733E05F6"
+			rewards: [{
+				count: 4
+				id: "179A3E13A48439D3"
+				item: "pneumaticcraft:security_upgrade"
+				type: "item"
+			}]
+			tasks: [{
+				id: "58F538FF3DDD07A5"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "compressedcreativity:rotational_compressor"
+							}
+							{
+								Count: 1b
+								id: "pneumaticcraft:liquid_compressor"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "Compressors Galore"
+			x: -9.0d
+			y: -0.5d
+		}
+	]
 	title: "Chapter 3: Under Pressure"
 }

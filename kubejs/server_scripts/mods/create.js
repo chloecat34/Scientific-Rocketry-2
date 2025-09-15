@@ -195,6 +195,29 @@ ServerEvents.recipes((event) => {
     // Train casing
     event.recipes.mekanism.combining("create:railway_casing", "create:brass_casing", "create:sturdy_sheet");
 
+    // Compressed steel casing
+    event.remove({ output: "compressedcreativity:compressed_iron_casing" });
+
+    event.custom({
+        type: "create:item_application",
+        ingredients: [
+            {
+                item: "create:railway_casing",
+            },
+
+            {
+                tag: "forge:plates/compressed_iron",
+            },
+        ],
+        results: [
+            {
+                item: "compressedcreativity:compressed_iron_casing",
+            },
+        ],
+    });
+
+    event.recipes.mekanism.combining("compressedcreativity:compressed_iron_casing", "create:railway_casing", "#forge:plates/compressed_iron");
+
     // Crushing wheels
     event.remove({ output: "create:crushing_wheel" });
 
