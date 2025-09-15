@@ -169,4 +169,7 @@ ServerEvents.recipes((event) => {
             "#integrateddynamics:menril_logs"
         )
         .energy(1000);
+
+    // Menril pyrolysis
+    event.recipes.thermal.pyrolyzer(["minecraft:charcoal", Fluid.of("integrateddynamics:menril_resin", 500)], "#integrateddynamics:menril_logs").energy(2000);
 });
