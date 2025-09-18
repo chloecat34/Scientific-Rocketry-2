@@ -36,4 +36,24 @@ ServerEvents.recipes((event) => {
 
     event.shapeless("mbd2:aluminum_input_hatch", ["mbd2:aluminum_output_hatch"]);
     event.shapeless("mbd2:aluminum_output_hatch", ["mbd2:aluminum_input_hatch"]);
+
+    // Steel energy hatch
+    event.shaped("mbd2:steel_energy_input_hatch", ["ABA", "BCB", "ABA"], {
+        A: "#forge:plates/steel",
+        B: "createaddition:capacitor",
+        C: "createaddition:modular_accumulator",
+    });
+
+    event.shapeless("mbd2:steel_energy_input_hatch", ["mbd2:steel_energy_output_hatch"]);
+    event.shapeless("mbd2:steel_energy_output_hatch", ["mbd2:steel_energy_input_hatch"]);
+
+    // Aluminum energy hatch
+    event.shaped("mbd2:aluminum_energy_input_hatch", ["ABA", "BCB", "ABA"], {
+        A: "#forge:plates/aluminum",
+        B: "immersiveengineering:component_electronic_adv",
+        C: "immersiveengineering:capacitor_hv",
+    });
+
+    event.shapeless("mbd2:aluminum_energy_input_hatch", ["mbd2:aluminum_energy_output_hatch"]);
+    event.shapeless("mbd2:aluminum_energy_output_hatch", ["mbd2:aluminum_energy_input_hatch"]);
 });

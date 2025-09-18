@@ -169,4 +169,8 @@ ItemEvents.tooltip((event) => {
     addTooltip("mbd2:steel_output_hatch", "Stores 16,000 mb", Text.aqua);
     addTooltip("mbd2:aluminum_input_hatch", "Stores 32,000 mb", Text.aqua);
     addTooltip("mbd2:aluminum_output_hatch", "Stores 32,000 mb", Text.aqua);
+    addTooltip("mbd2:steel_energy_input_hatch", "Stores 40k RF, accepts 512 RF/t", Text.aqua);
+    addTooltip("mbd2:steel_energy_output_hatch", "Stores 40k RF/t, outputs 512 RF/t", Text.aqua);
+    addTooltip("mbd2:aluminum_energy_input_hatch", "Stores 320k RF, accepts 2048 RF/t", Text.aqua);
+    addTooltip("mbd2:aluminum_energy_output_hatch", "Stores 320k RF/t, outputs 2048 RF/t", Text.aqua);
 });

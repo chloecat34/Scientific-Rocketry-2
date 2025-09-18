@@ -47,6 +47,18 @@ ServerEvents.tags("block", (event) => {
         event.add("forge:mbd_fluid_hatch", block);
         event.add("forge:mbd_fluid_output_hatch", block);
     });
+
+    ["mbd2:steel_energy_input_hatch", "mbd2:aluminum_energy_input_hatch"].forEach((block) => {
+        event.add("forge:mbd_hatch", block);
+        event.add("forge:mbd_energy_hatch", block);
+        event.add("forge:mbd_energy_input_hatch", block);
+    });
+
+    ["mbd2:steel_energy_output_hatch", "mbd2:aluminum_energy_output_hatch"].forEach((block) => {
+        event.add("forge:mbd_hatch", block);
+        event.add("forge:mbd_energy_hatch", block);
+        event.add("forge:mbd_energy_output_hatch", block);
+    });
 });
 
 ServerEvents.tags("fluid", (event) => {

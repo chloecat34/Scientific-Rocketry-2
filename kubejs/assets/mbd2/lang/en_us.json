@@ -8,5 +8,9 @@
     "block.mbd2.steel_input_hatch": "Steel Fluid Input Hatch",
     "block.mbd2.steel_output_hatch": "Steel Fluid Output Hatch",
     "block.mbd2.aluminum_input_hatch": "Aluminum Fluid Input Hatch",
-    "block.mbd2.aluminum_output_hatch": "Aluminum Fluid Output Hatch"
+    "block.mbd2.aluminum_output_hatch": "Aluminum Fluid Output Hatch",
+    "block.mbd2.steel_energy_input_hatch": "Steel Energy Input Hatch",
+    "block.mbd2.steel_energy_output_hatch": "Steel Energy Output Hatch",
+    "block.mbd2.aluminum_energy_input_hatch": "Aluminum Energy Input Hatch",
+    "block.mbd2.aluminum_energy_output_hatch": "Aluminum Energy Output Hatch"
 }
