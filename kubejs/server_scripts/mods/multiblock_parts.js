@@ -7,7 +7,7 @@ ServerEvents.recipes((event) => {
         D: "#forge:gears/cobalt",
     });
 
-    // Bronze fluid input
+    // Bronze fluid hatch
     event.shaped("mbd2:bronze_input_hatch", ["ABA", "BCB", "ABA"], {
         A: "#forge:plates/bronze",
         B: "tconstruct:seared_glass",
@@ -26,4 +26,14 @@ ServerEvents.recipes((event) => {
 
     event.shapeless("mbd2:steel_input_hatch", ["mbd2:steel_output_hatch"]);
     event.shapeless("mbd2:steel_output_hatch", ["mbd2:steel_input_hatch"]);
+
+    // Aluminum fluid hatch
+    event.shaped("mbd2:aluminum_input_hatch", ["ABA", "BCB", "ABA"], {
+        A: "#forge:plates/aluminum",
+        B: "#thermal:glass/hardened",
+        C: "pneumaticcraft:small_tank",
+    });
+
+    event.shapeless("mbd2:aluminum_input_hatch", ["mbd2:aluminum_output_hatch"]);
+    event.shapeless("mbd2:aluminum_output_hatch", ["mbd2:aluminum_input_hatch"]);
 });

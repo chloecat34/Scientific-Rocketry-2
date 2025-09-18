@@ -6,5 +6,7 @@
     "block.mbd2.bronze_input_hatch": "Bronze Fluid Input Hatch",
     "block.mbd2.bronze_output_hatch": "Bronze Fluid Output Hatch",
     "block.mbd2.steel_input_hatch": "Steel Fluid Input Hatch",
-    "block.mbd2.steel_output_hatch": "Steel Fluid Output Hatch"
+    "block.mbd2.steel_output_hatch": "Steel Fluid Output Hatch",
+    "block.mbd2.aluminum_input_hatch": "Aluminum Fluid Input Hatch",
+    "block.mbd2.aluminum_output_hatch": "Aluminum Fluid Output Hatch"
 }

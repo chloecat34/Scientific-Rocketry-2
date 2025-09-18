@@ -167,4 +167,6 @@ ItemEvents.tooltip((event) => {
     addTooltip("mbd2:bronze_output_hatch", "Stores 8,000 mb", Text.aqua);
     addTooltip("mbd2:steel_input_hatch", "Stores 16,000 mb", Text.aqua);
     addTooltip("mbd2:steel_output_hatch", "Stores 16,000 mb", Text.aqua);
+    addTooltip("mbd2:aluminum_input_hatch", "Stores 32,000 mb", Text.aqua);
+    addTooltip("mbd2:aluminum_output_hatch", "Stores 32,000 mb", Text.aqua);
 });
