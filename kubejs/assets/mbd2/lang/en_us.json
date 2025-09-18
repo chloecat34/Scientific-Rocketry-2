@@ -12,5 +12,7 @@
     "block.mbd2.steel_energy_input_hatch": "Steel Energy Input Hatch",
     "block.mbd2.steel_energy_output_hatch": "Steel Energy Output Hatch",
     "block.mbd2.aluminum_energy_input_hatch": "Aluminum Energy Input Hatch",
-    "block.mbd2.aluminum_energy_output_hatch": "Aluminum Energy Output Hatch"
+    "block.mbd2.aluminum_energy_output_hatch": "Aluminum Energy Output Hatch",
+    "block.mbd2.bronze_input_bus": "Bronze Item Input Bus",
+    "block.mbd2.bronze_output_bus": "Bronze Item Output Bus"
 }

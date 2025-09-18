@@ -56,4 +56,14 @@ ServerEvents.recipes((event) => {
 
     event.shapeless("mbd2:aluminum_energy_input_hatch", ["mbd2:aluminum_energy_output_hatch"]);
     event.shapeless("mbd2:aluminum_energy_output_hatch", ["mbd2:aluminum_energy_input_hatch"]);
+
+    // Bronze input bus
+    event.shaped("mbd2:bronze_input_bus", ["ABA", "BCB", "ABA"], {
+        A: "#forge:plates/bronze",
+        B: "#forge:treated_wood",
+        C: "create:item_vault",
+    });
+
+    event.shapeless("mbd2:bronze_input_bus", ["mbd2:bronze_output_bus"]);
+    event.shapeless("mbd2:bronze_output_bus", ["mbd2:bronze_input_bus"]);
 });
