@@ -3,6 +3,8 @@
     "mbd2.diesel_generator_fuels": "Diesel Generator Fuels",
     "mbd2.lava_enricher": "Lava Enricher",
     "block.mbd2.lava_enricher": "Lava Enricher",
+    "mbd2.fluid_drilling_rig": "Fluid Drilling Rig",
+    "block.mbd2.fluid_drilling_rig": "Fluid Drilling Rig",
     "block.mbd2.bronze_input_hatch": "Bronze Fluid Input Hatch",
     "block.mbd2.bronze_output_hatch": "Bronze Fluid Output Hatch",
     "block.mbd2.steel_input_hatch": "Steel Fluid Input Hatch",
