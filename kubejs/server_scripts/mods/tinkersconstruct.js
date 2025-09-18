@@ -87,4 +87,7 @@ ServerEvents.recipes((event) => {
 
     // Remove the gravel recipe in the induction smelter bc of the conflict
     event.remove({ id: "thermal:machines/smelter/smelter_gravel" });
+
+    // Enderslime sapling
+    event.recipes.create.filling("tconstruct:ender_slime_sapling", ["tconstruct:sky_slime_sapling", Fluid.of("thermal:ender", 1000)]);
 });

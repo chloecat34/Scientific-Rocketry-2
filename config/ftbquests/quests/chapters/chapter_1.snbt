@@ -659,6 +659,31 @@
 			x: 6.0d
 			y: -2.0d
 		}
+		{
+			dependencies: ["12FB1FD9B86207D7"]
+			description: [
+				"Slime Trees have a few tricky aspects when setting up with the Arboreal Extractor. First, to work with the extractor, they need the corresponding type of Slimy Dirt."
+				""
+				"Second, you can use artificially created trees with the Arboreal Extractor as long as they have enough logs and leaves."
+				""
+				"Finally, Enderslime Saplings can be crafted using Skyslime Saplings and Resonant Ender, so you don't need to go to the End."
+			]
+			icon: "tconstruct:earth_slime_sapling"
+			id: "2748E41CC2B4A5D0"
+			rewards: [{
+				id: "65747F5D1DB902DE"
+				item: "tconstruct:sky_slime_sapling"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2B80BC91DB527F90"
+				title: "Slime Trees"
+				type: "checkmark"
+			}]
+			title: "A Note on Slime Trees"
+			x: 4.0d
+			y: -4.0d
+		}
 	]
 	title: "Chapter 1: Crash Landing"
 }

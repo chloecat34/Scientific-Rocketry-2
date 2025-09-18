@@ -7,6 +7,16 @@ ServerEvents.recipes((event) => {
         D: "#forge:gears/cobalt",
     });
 
+    // Fluid drilling rig controller
+    event.recipes.createMechanicalCrafting("mbd2:fluid_drilling_rig", ["AABAA", "ACDCA", "BEFEB", "ACDCA", "AABAA"], {
+        A: "#forge:sheetmetals/steel",
+        B: "immersiveengineering:heavy_engineering",
+        C: "#forge:plates/knightslime",
+        D: "compressedcreativity:compressed_iron_casing",
+        E: "pneumaticcraft:gas_lift",
+        F: "pneumaticcraft:small_tank"
+    });
+
     // Bronze fluid hatch
     event.shaped("mbd2:bronze_input_hatch", ["ABA", "BCB", "ABA"], {
         A: "#forge:plates/bronze",
