@@ -44,6 +44,7 @@ StartupEvents.registry("item", (event) => {
     event.create("hepatizon_gear").displayName("Hepatizon Gear").tag("forge:gears").tag("forge:gears/hepatizon");
 
     event.create("zinc_rod").displayName("Zinc Rod").tag("forge:rods").tag("forge:rods/zinc");
+    event.create("compressed_iron_rod").displayName("Compressed Steel Rod").tag("forge:rods").tag("forge:rods/compressed_iron");
 
     event
         .create("coagulated_blood")

@@ -161,4 +161,10 @@ ItemEvents.tooltip((event) => {
         "Spawns in Bamboo Jungles",
         Text.aqua
     );
+
+    // MBD2 hatches
+    addTooltip("mbd2:bronze_input_hatch", "Stores 8,000 mb", Text.aqua);
+    addTooltip("mbd2:bronze_output_hatch", "Stores 8,000 mb", Text.aqua);
+    addTooltip("mbd2:steel_input_hatch", "Stores 16,000 mb", Text.aqua);
+    addTooltip("mbd2:steel_output_hatch", "Stores 16,000 mb", Text.aqua);
 });

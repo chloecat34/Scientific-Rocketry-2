@@ -1,0 +1,23 @@
+{
+    "type": "pneumaticcraft:pressure_chamber",
+    "inputs": [
+        {
+            "item": "pneumaticcraft:plastic"
+        },
+        {
+            "item": "immersiveengineering:circuit_board"
+        },
+        {
+            "type": "pneumaticcraft:stacked_item",
+            "item": "actuallyadditions:restonia_crystal",
+            "count": 2
+        }
+    ],
+    "pressure": 2.0,
+    "results": [
+        {
+            "item": "pneumaticcraft:empty_pcb",
+            "count": 2
+        }
+    ]
+}

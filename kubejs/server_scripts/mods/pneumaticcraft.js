@@ -207,7 +207,7 @@ ServerEvents.recipes((event) => {
     event.shaped("6x pneumaticcraft:thermal_lagging", ["ABA", "BCB", "ABA"], {
         A: "thermal:black_rockwool",
         B: "thermal:cured_rubber",
-        C: "actuallyadditions:void_crystal_block"
+        C: "actuallyadditions:void_crystal_block",
     });
 
     // Vortex tube
@@ -231,12 +231,64 @@ ServerEvents.recipes((event) => {
     });
 
     // Heat frame
-    event.remove({ output: "pneumaticcraft:heat_frame"});
+    event.remove({ output: "pneumaticcraft:heat_frame" });
 
     event.shaped("pneumaticcraft:heat_frame", ["AAA", "BCB", "DDD"], {
         A: "#forge:plates/compressed_iron",
         B: "kubejs:heat_mechanism",
         C: "#forge:gears/knightslime",
-        D: "#forge:storage_blocks/compressed_iron"
-    })
+        D: "#forge:storage_blocks/compressed_iron",
+    });
+
+    // Turbine rotor
+    event.remove({ output: "pneumaticcraft:turbine_blade" });
+    event.remove({ output: "pneumaticcraft:turbine_rotor" });
+
+    event.custom({
+        type: "pneumaticcraft:pressure_chamber",
+        inputs: [
+            {
+                item: "thermal:redstone_servo",
+            },
+            {
+                type: "pneumaticcraft:stacked_item",
+                item: "pneumaticcraft:plastic",
+                count: 2,
+            },
+            {
+                type: "pneumaticcraft:stacked_item",
+                tag: "forge:rods/compressed_iron",
+                count: 3,
+            },
+        ],
+        pressure: 4.0,
+        results: [
+            {
+                item: "pneumaticcraft:turbine_blade",
+            },
+        ],
+    });
+
+    event.shaped("pneumaticcraft:turbine_rotor", [" A ", " B ", "A A"], {
+        A: "pneumaticcraft:turbine_blade",
+        B: "#forge:rods/compressed_iron",
+    });
+
+    // Fluid mixer
+    event.remove({ output: "pneumaticcraft:fluid_mixer" });
+
+    event.shaped("pneumaticcraft:fluid_mixer", ["ABA", "CDC", "BEB"], {
+        A: "actuallyadditions:basic_coil",
+        B: "pneumaticcraft:small_tank",
+        C: "compressedcreativity:compressed_iron_casing",
+        D: "pneumaticcraft:turbine_rotor",
+        E: "pneumaticcraft:pressure_tube",
+    });
+
+    // Liquid hopper
+    event.replaceInput(
+        { output: "pneumaticcraft:liquid_hopper" },
+        "minecraft:hopper",
+        "pneumaticcraft:omnidirectional_hopper"
+    );
 });

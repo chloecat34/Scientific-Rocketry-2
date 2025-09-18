@@ -193,7 +193,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:coins/gold", "tconstruct:molten_gold", 30, 1600);
     crucibleMelting("#forge:gears/gold", "tconstruct:molten_gold", 360, 4800 * 4);
     crucibleMelting("#forge:plates/gold", "tconstruct:molten_gold", 90, 4800);
-    crucibleMelting("#forge:rods/gold", "tconstruct:molten_gold", 45, 2400);
+    addBothMelterRecipes("createaddition:gold_rod", "tconstruct:molten_gold", 45, 14, 700, 2400);
     addBothMelterRecipes("createaddition:gold_wire", "tconstruct:molten_gold", 45, 14, 700, 2400);
     crucibleMelting("#forge:sheetmetals/gold", "tconstruct:molten_gold", 180, 4800);
     chillerBlockCasting("minecraft:gold_block", "tconstruct:molten_gold", 810, 4800 * 9);
@@ -205,7 +205,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:coins/copper", "tconstruct:molten_copper", 30, 1600);
     crucibleMelting("#forge:gears/copper", "tconstruct:molten_copper", 360, 4800 * 4);
     crucibleMelting("#forge:plates/copper", "tconstruct:molten_copper", 90, 4800);
-    crucibleMelting("#forge:rods/copper", "tconstruct:molten_copper", 45, 2400);
+    addBothMelterRecipes("createaddition:copper_rod", "tconstruct:molten_copper", 45, 18, 500, 2400);
     crucibleMelting("#forge:wires/copper", "tconstruct:molten_copper", 45, 2400);
     crucibleMelting("#forge:sheetmetals/copper", "tconstruct:molten_copper", 180, 4800);
     chillerBlockCasting("minecraft:copper_block", "tconstruct:molten_copper", 810, 4800 * 9);
@@ -418,7 +418,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:nuggets/zinc", "tconstruct:molten_zinc", 10, 600);
     crucibleMelting("#forge:storage_blocks/zinc", "tconstruct:molten_zinc", 810, 4800 * 9);
     crucibleMelting("#forge:plates/zinc", "tconstruct:molten_zinc", 90, 4800);
-    crucibleMelting("#forge:rods/zinc", "tconstruct:molten_zinc", 45, 2400);
+    addBothMelterRecipes("kubejs:zinc_rod", "tconstruct:molten_zinc", 45, 14, 420, 2400);
     chillerIngotCasting("#forge:ingots/zinc", "tconstruct:molten_zinc", 90, 4800);
     chillerBlockCasting("create:zinc_block", "tconstruct:molten_zinc", 810, 4800 * 9);
 
@@ -442,7 +442,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:ingots/brass", "tconstruct:molten_brass", 90, 4800);
     crucibleMelting("#forge:nuggets/brass", "tconstruct:molten_brass", 10, 600);
     crucibleMelting("#forge:storage_blocks/brass", "tconstruct:molten_brass", 810, 4800 * 9);
-    crucibleMelting("#forge:rods/brass", "tconstruct:molten_brass", 45, 2400);
+    addBothMelterRecipes("createaddition:brass_rod", "tconstruct:molten_brass", 45, 16, 605, 2400);
     crucibleMelting("#forge:plates/brass", "tconstruct:molten_brass", 90, 4800);
     chillerIngotCasting("#forge:ingots/brass", "tconstruct:molten_brass", 90, 4800);
     chillerBlockCasting("create:brass_block", "tconstruct:molten_brass", 810, 4800 * 9);
@@ -455,6 +455,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:gears/electrum", "tconstruct:molten_electrum", 360, 4800 * 4);
     crucibleMelting("#forge:plates/electrum", "tconstruct:molten_electrum", 90, 4800);
     crucibleMelting("#forge:wires/electrum", "tconstruct:molten_electrum", 45, 2400);
+    addBothMelterRecipes("createaddition:electrum_rod", "tconstruct:molten_electrum", 45, 14, 760, 2400);
     crucibleMelting("#forge:sheetmetals/electrum", "tconstruct:molten_electrum", 180, 4800);
     chillerBlockCasting("thermal:electrum_block", "tconstruct:molten_electrum", 810, 4800 * 9);
 
@@ -487,6 +488,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:gears/steel", "tconstruct:molten_steel", 360, 4800 * 4);
     crucibleMelting("#forge:plates/steel", "tconstruct:molten_steel", 90, 4800);
     crucibleMelting("#forge:wires/steel", "tconstruct:molten_steel", 45, 2400);
+    crucibleMelting("#forge:rods/steel", "tconstruct:molten_steel", 45, 2400);
     crucibleMelting("#forge:sheetmetals/steel", "tconstruct:molten_steel", 180, 4800);
     chillerBlockCasting("thermal:steel_block", "tconstruct:molten_steel", 810, 4800 * 9);
 
@@ -735,6 +737,7 @@ ServerEvents.recipes((event) => {
     // Molten compressed steel
     addBothMelterRecipes("pneumaticcraft:ingot_iron_compressed", "kubejs:molten_compressed_iron", 90, 60, 1200, 4800);
     addBothMelterRecipes("kubejs:compressed_iron_plate", "kubejs:molten_compressed_iron", 90, 60, 1200, 4800);
+    addBothMelterRecipes("kubejs:compressed_iron_rod", "kubejs:molten_compressed_iron", 45, 15, 1200, 2400);
     addBothMelterRecipes("pneumaticcraft:compressed_iron_gear", "kubejs:molten_compressed_iron", 360, 120, 1200, 4800 * 4);
     addBothMelterRecipes("pneumaticcraft:compressed_iron_block", "kubejs:molten_compressed_iron", 810, 200, 1200, 4800 * 9);
     chillerIngotCasting("#forge:ingots/compressed_iron", "kubejs:molten_compressed_iron", 90, 4800);

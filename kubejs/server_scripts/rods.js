@@ -18,6 +18,7 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/electrum", "createaddition:electrum_rod"],
         ["#forge:ingots/brass", "createaddition:brass_rod"],
         ["#forge:ingots/zinc", "kubejs:zinc_rod", true],
+        ["#forge:ingots/compressed_iron", "kubejs:compressed_iron_rod", true],
     ].forEach((entry) => {
         const [ingot, rod, createRecipe] = entry;
 
