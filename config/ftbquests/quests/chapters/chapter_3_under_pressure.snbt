@@ -400,6 +400,12 @@
 				"You can also run recipes that need freezing temperatures using the cold size of the Vortex Tube."
 			]
 			id: "1B081FE120E93C1B"
+			rewards: [{
+				count: 6
+				id: "18B76CF56EA4546E"
+				item: "pneumaticcraft:thermal_lagging"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "7449BE53D5ADECBE"
@@ -422,6 +428,47 @@
 			title: "Heat Management"
 			x: -6.0d
 			y: 1.5d
+		}
+		{
+			dependencies: ["53A1FA71742C664B"]
+			description: ["The Thermopneumatic Processing Plant uses Heat and Pressure to craft new items and fluids. You will first need it to convert LPG and Coal into Liquid Plastic, as well as Diesel and Redstone into Lubricant."]
+			id: "52194E07563DEB30"
+			rewards: [{
+				count: 4
+				id: "1A5C54959666EC8E"
+				item: "pneumaticcraft:speed_upgrade"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5ABB475659D12CFE"
+				item: "pneumaticcraft:thermopneumatic_processing_plant"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["52194E07563DEB30"]
+			description: [
+				"You can make Plastic Sheets by either waiting for Liquid Plastic to solidify in-world, or by using a Heat Frame with a low temperature. "
+				""
+				"Lower temperatures can lead to a bonus output."
+			]
+			id: "08ACA73A65767D7E"
+			rewards: [{
+				count: 16
+				id: "17DAA57AAE30E7B4"
+				item: "pneumaticcraft:plastic"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7F893211C8F26FBE"
+				item: "pneumaticcraft:plastic"
+				type: "item"
+			}]
+			title: "Plastic"
+			x: -4.0d
+			y: -0.5d
 		}
 	]
 	title: "Chapter 3: Under Pressure"
