@@ -73,7 +73,7 @@ StartupEvents.registry("block", (event) => {
 
     event
         .create("energetic_alloy_block")
-        .displayName("Energetic Alloy Block")
+        .displayName("§6Energetic Alloy Block")
         .material("metal")
         .hardness(4.0)
         .resistance(20.0)
@@ -85,7 +85,7 @@ StartupEvents.registry("block", (event) => {
 
     event
         .create("vibrant_alloy_block")
-        .displayName("Vibrant Alloy Block")
+        .displayName("§aVibrant Alloy Block")
         .material("metal")
         .hardness(5.0)
         .resistance(30.0)
@@ -121,7 +121,7 @@ StartupEvents.registry("block", (event) => {
 
     event
         .create("purple_alloy_block")
-        .displayName("Purple Alloy Block")
+        .displayName("§5Purple Alloy Block")
         .material("metal")
         .hardness(4.5)
         .resistance(30.0)
@@ -145,7 +145,7 @@ StartupEvents.registry("block", (event) => {
 
     event
         .create("pulsating_alloy_block")
-        .displayName("Pulsating Alloy Block")
+        .displayName("§3Pulsating Alloy Block")
         .material("metal")
         .hardness(2.5)
         .resistance(15.0)
@@ -157,7 +157,7 @@ StartupEvents.registry("block", (event) => {
 
     event
         .create("electrotine_block")
-        .displayName("Electrotine Block")
+        .displayName("§9Electrotine Block")
         .material("metal")
         .hardness(2.5)
         .resistance(10.0)

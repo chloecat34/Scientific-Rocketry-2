@@ -77,19 +77,19 @@ StartupEvents.registry("item", (event) => {
 
     event.create("soul_sand_dust").displayName("Soul Sand Dust").tag("forge:dusts/soul_sand");
 
-    event.create("electrotine").displayName("Electrotine Dust").tag("forge:dusts/electrotine");
+    event.create("electrotine").displayName("§9Electrotine Dust").tag("forge:dusts/electrotine");
 
     event.create("amethyst_dust").displayName("Amethyst Dust").tag("forge:dusts/amethyst");
 
-    event.create("vibrating_powder").displayName("Vibrating Powder");
+    event.create("vibrating_powder").displayName("§aVibrating Powder");
 
-    event.create("energetic_blend").displayName("Energetic Blend");
+    event.create("energetic_blend").displayName("§6Energetic Blend");
 
-    event.create("pulsating_crystal").displayName("Pulsating Crystal");
-    event.create("vibrant_crystal").displayName("Vibrant Crystal");
+    event.create("pulsating_crystal").displayName("§3Pulsating Crystal");
+    event.create("vibrant_crystal").displayName("§aVibrant Crystal");
 
-    event.create("energetic_alloy_coil").displayName("Energetic Alloy Coil");
-    event.create("vibrant_alloy_coil").displayName("Vibrant Alloy Coil");
+    event.create("energetic_alloy_coil").displayName("§6Energetic Alloy Coil");
+    event.create("vibrant_alloy_coil").displayName("§aVibrant Alloy Coil");
 
     // Register materials with ingots, nuggets, plates, and gears
     let materials = [
@@ -105,15 +105,25 @@ StartupEvents.registry("item", (event) => {
         "ardite"
     ];
 
+    // Map ingots to the formatting code if needed
+    let formats = {
+        "vibrant_alloy": "§a",
+        "pulsating_alloy": "§3",
+        "purple_alloy": "§5",
+        "energetic_alloy": "§6"
+    };
+
     let wires = ["red_alloy", "energetic_alloy", "vibrant_alloy"];
 
     materials.forEach((material) => {
         let materialName = material.split("_").map(capitalize).join(" ");
 
+        const formatting = material in formats ? formats[material] : "";
+
         for (const type of ["ingot", "nugget", "plate", "gear"]) {
             let result = event
                 .create(`${material}_${type}`)
-                .displayName(`${materialName} ${capitalize(type)}`)
+                .displayName(`${formatting}${materialName} ${capitalize(type)}`)
                 .tag(`forge:${type}s`)
                 .tag(`forge:${type}s/${material}`);
 
@@ -125,7 +135,7 @@ StartupEvents.registry("item", (event) => {
         if (wires.indexOf(material) !== -1) {
             event
                 .create(`${material}_wire`)
-                .displayName(`${materialName} Wire`)
+                .displayName(`${formatting}${materialName} Wire`)
                 .tag("forge:wires")
                 .tag(`forge:wires/${material}`);
         }
