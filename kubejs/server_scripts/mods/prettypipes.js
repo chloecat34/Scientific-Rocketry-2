@@ -149,4 +149,39 @@ ServerEvents.recipes((event) => {
 
         event.shapeless(fluid, [base, "thermal:cured_rubber", "thermal:cured_rubber"]);
     });
+
+    // Item terminal
+    event.remove({ output: "prettypipes:item_terminal" });
+
+    event.shaped("prettypipes:item_terminal", ["ABC", "DEF", "CBA"], {
+        A: "#forge:gems/diamond",
+        B: "create:mechanical_arm",
+        C: "#forge:gears/steel",
+        D: "prettypipes:high_retrieval_module",
+        E: "create:brass_casing",
+        F: "prettypipes:high_extraction_module",
+    });
+
+    // Crafting terminal
+    event.remove({ output: "prettypipes:crafting_terminal" });
+
+    event.shaped("prettypipes:crafting_terminal", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/steel",
+        B: "create:mechanical_arm",
+        C: "create:mechanical_crafter",
+        D: "prettypipes:item_terminal",
+        E: "#forge:gears/steel",
+    });
+
+    // Pipe pressurizer
+    event.remove({ output: "prettypipes:pressurizer" });
+
+    event.recipes.createMechanicalCrafting("prettypipes:pressurizer", [" ABA ", "ACDCA", "CEFEC", "ACDCA", " ABA "], {
+        A: "#forge:plates/invar",
+        B: "#forge:plates/blue_alloy",
+        C: "prettypipes:high_speed_module",
+        D: "create:precision_mechanism",
+        E: "immersiveengineering:coil_mv",
+        F: "#forge:storage_blocks/red_alloy",
+    });
 });
