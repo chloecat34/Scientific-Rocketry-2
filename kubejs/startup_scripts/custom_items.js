@@ -43,6 +43,9 @@ StartupEvents.registry("item", (event) => {
     event.create("hepatizon_plate").displayName("Hepatizon Plate").tag("forge:plates").tag("forge:plates/hepatizon");
     event.create("hepatizon_gear").displayName("Hepatizon Gear").tag("forge:gears").tag("forge:gears/hepatizon");
 
+    event.create("queens_slime_plate").displayName("Queen's Slime Plate").tag("forge:plates").tag("forge:plates/queens_slime");
+    event.create("queens_slime_gear").displayName("Queen's Slime Gear").tag("forge:gears").tag("forge:gears/queens_slime");
+
     event.create("zinc_rod").displayName("Zinc Rod").tag("forge:rods").tag("forge:rods/zinc");
     event.create("compressed_iron_rod").displayName("Compressed Steel Rod").tag("forge:rods").tag("forge:rods/compressed_iron");
 

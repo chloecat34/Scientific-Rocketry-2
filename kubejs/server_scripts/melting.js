@@ -321,6 +321,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:ingots/queens_slime", "tconstruct:molten_queens_slime", 90, 4800);
     crucibleMelting("#forge:nuggets/queens_slime", "tconstruct:molten_queens_slime", 10, 600);
     crucibleMelting("#forge:storage_blocks/queens_slime", "tconstruct:molten_queens_slime", 810, 4800 * 9);
+    addBothMelterRecipes("kubejs:queens_slime_plate", "tconstruct:molten_queens_slime", 90, 68, 1150, 4800);
+    addBothMelterRecipes("kubejs:queens_slime_gear", "tconstruct:molten_queens_slime", 360, 160, 1150, 4800 * 4);
     chillerBlockCasting("tconstruct:queens_slime_block", "tconstruct:molten_queens_slime", 810, 4800 * 9);
 
     // Molten cinderslime

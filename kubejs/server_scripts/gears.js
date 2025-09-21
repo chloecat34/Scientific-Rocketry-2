@@ -83,7 +83,8 @@ ServerEvents.recipes((event) => {
         "hepatizon",
         "cinderslime",
         "slimesteel",
-        "knightslime"
+        "knightslime",
+        "queens_slime"
     ];
     kubejsGears.forEach((ingot) =>
         standardizeGears(ingot, `kubejs:${ingot}_gear`)
