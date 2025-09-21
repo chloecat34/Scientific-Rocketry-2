@@ -53,18 +53,18 @@ ServerEvents.recipes((event) => {
         type: "immersiveengineering:bottling_machine",
         fluid: {
             amount: 400,
-            tag: "forge:redstone"
+            tag: "forge:redstone",
         },
         inputs: [
             {
-                tag: "forge:gems/quartz"
-            }
+                tag: "forge:gems/quartz",
+            },
         ],
         results: [
             {
-                item: "create:rose_quartz"
-            }
-        ]
+                item: "create:rose_quartz",
+            },
+        ],
     });
 
     event.custom({
@@ -216,7 +216,11 @@ ServerEvents.recipes((event) => {
         ],
     });
 
-    event.recipes.mekanism.combining("compressedcreativity:compressed_iron_casing", "create:railway_casing", "#forge:plates/compressed_iron");
+    event.recipes.mekanism.combining(
+        "compressedcreativity:compressed_iron_casing",
+        "create:railway_casing",
+        "#forge:plates/compressed_iron"
+    );
 
     // Crushing wheels
     event.remove({ output: "create:crushing_wheel" });
@@ -507,4 +511,16 @@ ServerEvents.recipes((event) => {
 
     // Remove dust recipes from create in the fluid encapsulator
     event.remove({ input: "create:cinder_flour", type: "thermal:bottler" });
+
+    // Jetpack
+    event.remove({ output: "create_jetpack:jetpack" });
+
+    event.recipes.createMechanicalCrafting("create_jetpack:jetpack", [" ABA ", "ACDCA", "AEFEA", " E E "], {
+        A: "#forge:plates/aluminum",
+        B: "create:shaft",
+        C: "create:precision_mechanism",
+        D: "pneumaticcraft:air_canister",
+        E: "create:smart_chute",
+        F: "create:blaze_burner",
+    });
 });

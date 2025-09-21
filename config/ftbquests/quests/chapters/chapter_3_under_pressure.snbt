@@ -495,6 +495,19 @@
 			x: -3.0d
 			y: -0.5d
 		}
+		{
+			dependencies: ["3F73F687A32B9195"]
+			description: ["Building Gadgets is a mod that adds new tools that use RF to help you out with building. They can place lots of blocks, delete blocks, exchange them with each other, or more."]
+			id: "3056F74A4D37A1BE"
+			tasks: [{
+				id: "1FA974E0C55FBC81"
+				item: "buildinggadgets2:gadget_building"
+				type: "item"
+			}]
+			title: "Building Gadgets"
+			x: -9.0d
+			y: 2.5d
+		}
 	]
 	title: "Chapter 3: Under Pressure"
 }

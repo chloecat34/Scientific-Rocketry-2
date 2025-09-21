@@ -291,4 +291,14 @@ ServerEvents.recipes((event) => {
         "minecraft:hopper",
         "pneumaticcraft:omnidirectional_hopper"
     );
+
+    // Air canister
+    event.remove({ output: "pneumaticcraft:air_canister" });
+
+    event.shaped("pneumaticcraft:air_canister", ["ABA", "CDC", "CDC"], {
+        A: "thermal:cured_rubber",
+        B: "pneumaticcraft:pressure_tube",
+        C: "#forge:plates/compressed_iron",
+        D: "actuallyadditions:restonia_crystal",
+    });
 });

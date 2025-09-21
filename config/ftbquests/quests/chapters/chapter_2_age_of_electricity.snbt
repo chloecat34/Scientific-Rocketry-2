@@ -697,6 +697,36 @@
 			x: 4.0d
 			y: 0.0d
 		}
+		{
+			dependencies: ["6B574C7F507B18CB"]
+			description: ["The Scanner lets you scan for ores and structures using power. You can craft various modules to determine what to search for."]
+			id: "597124DE5AE1C805"
+			rewards: [{
+				id: "7D78C5D00B5B8AC1"
+				item: "scannable:range_module"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "24765C8F879D1BFD"
+					item: {
+						Count: 1
+						id: "scannable:scanner"
+						tag: {
+							energy: 5000
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "78DE465530262CDD"
+					item: "scannable:blank_module"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
 	]
 	title: "Chapter 2: Age of Electricity"
 }
