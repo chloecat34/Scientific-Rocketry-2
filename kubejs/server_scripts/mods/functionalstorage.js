@@ -50,5 +50,6 @@ ServerEvents.recipes((event) => {
     // Fluid drawers
     ["functionalstorage:fluid_1", "functionalstorage:fluid_2", "functionalstorage:fluid_4"].forEach((drawer) => {
         event.replaceInput({ output: drawer }, "minecraft:bucket", "pneumaticcraft:small_tank");
+        event.replaceInput({ output: drawer }, "#minecraft:planks", "pneumaticcraft:reinforced_bricks");
     });
 });
