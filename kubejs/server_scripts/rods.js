@@ -18,13 +18,11 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/electrum", "createaddition:electrum_rod"],
         ["#forge:ingots/brass", "createaddition:brass_rod"],
         ["#forge:ingots/zinc", "kubejs:zinc_rod", true],
-        ["#forge:ingots/compressed_iron", "kubejs:compressed_iron_rod", true],
+        ["#forge:ingots/compressed_iron", "kubejs:compressed_iron_rod", true, true],
     ].forEach((entry) => {
-        const [ingot, rod, createRecipe] = entry;
+        const [ingot, rod, createRecipe, ieRecipe] = entry;
 
-        event.recipes.thermal
-            .press(`2x ${rod}`, [ingot, "kubejs:rod_die"])
-            .energy(2400);
+        event.recipes.thermal.press(`2x ${rod}`, [ingot, "kubejs:rod_die"]).energy(2400);
 
         if (createRecipe) {
             event.custom({
@@ -35,6 +33,21 @@ ServerEvents.recipes((event) => {
                 result: {
                     item: rod,
                     count: 2,
+                },
+            });
+        }
+
+        if (ieRecipe) {
+            event.custom({
+                type: "immersiveengineering:metal_press",
+                energy: 2400,
+                input: {
+                    tag: ingot.slice(1, ingot.length),
+                },
+                mold: "immersiveengineering:mold_rod",
+                result: {
+                    item: rod,
+                    count: 2
                 },
             });
         }

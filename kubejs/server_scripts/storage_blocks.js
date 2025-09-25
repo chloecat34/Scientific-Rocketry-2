@@ -167,4 +167,6 @@ ServerEvents.recipes((event) => {
     addPacking("pneumaticcraft:ingot_iron_compressed", "pneumaticcraft:compressed_iron_block");
     addPacking("kubejs:ardite_nugget", "kubejs:ardite_ingot");
     addPacking("kubejs:ardite_ingot", "kubejs:ardite_block");
+    addPacking("kubejs:stainless_steel_nugget", "kubejs:stainless_steel_ingot");
+    addPacking("kubejs:stainless_steel_ingot", "kubejs:stainless_steel_block");
 });

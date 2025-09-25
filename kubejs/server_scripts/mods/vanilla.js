@@ -107,4 +107,7 @@ ServerEvents.recipes((event) => {
             fluid: "thermal:ender"
         }
     });
+
+    // Egg recipe
+    event.recipes.createSplashing(Item.of("minecraft:egg").withChance(0.75), "create:dough");
 });

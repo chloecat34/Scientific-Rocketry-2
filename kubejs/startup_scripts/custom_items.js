@@ -102,7 +102,8 @@ StartupEvents.registry("item", (event) => {
         "blue_alloy",
         "purple_alloy",
         "pulsating_alloy",
-        "ardite"
+        "ardite",
+        "stainless_steel"
     ];
 
     // Map ingots to the formatting code if needed
