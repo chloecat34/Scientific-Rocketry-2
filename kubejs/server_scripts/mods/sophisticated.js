@@ -286,4 +286,155 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "sophisticatedstorage:storage_link" });
 
     event.shapeless("3x sophisticatedstorage:storage_link", ["sophisticatedstorage:controller", "create:transmitter"]);
+
+    // Disable recipes that turn backpack into storage upgrades and vice versa
+    let upgrades = [
+        "pickup_upgrade",
+        "advanced_pickup_upgrade",
+        "filter_upgrade",
+        "advanced_filter_upgrade",
+        "magnet_upgrade",
+        "advanced_magnet_upgrade",
+        "feeding_upgrade",
+        "advanced_feeding_upgrade",
+        "compacting_upgrade",
+        "advanced_compacting_upgrade",
+        "void_upgrade",
+        "advanced_void_upgrade",
+        "smelting_upgrade",
+        "auto_smelting_upgrade",
+        "smoking_upgrade",
+        "auto_smoking_upgrade",
+        "blasting_upgrade",
+        "auto_blasting_upgrade",
+        "crafting_upgrade",
+        "stonecutter_upgrade",
+        "stack_downgrade_tier_1",
+        "stack_downgrade_tier_2",
+        "stack_downgrade_tier_3",
+        "stack_upgrade_omega_tier",
+        "jukebox_upgrade",
+        "advanced_jukebox_upgrade",
+        "alchemy_upgrade",
+        "advanced_alchemy_upgrade",
+        "chipped_botanist_workbench_upgrade",
+        "chipped_glassblower_upgrade",
+        "chipped_carpenters_table_upgrade",
+        "chipped_loom_table_upgrade",
+        "chipped_mason_table_upgrade",
+        "chipped_alchemy_bench_upgrade",
+        "chipped_tinkering_table_upgrade",
+    ].forEach((upgrade) => {
+        event.remove({ id: `sophisticatedstorage:storage_${upgrade}_from_backpack_${upgrade}` });
+        event.remove({ id: `sophisticatedstorage:backpack_${upgrade}_from_storage_${upgrade}` });
+    });
+
+    upgrades = [
+        ["tier_1_plus", "starter_tier"],
+        ["tier_2", "tier_1"],
+        ["tier_3", "tier_2"],
+        ["tier_4", "tier_3"],
+        ["tier_5", "tier_4"],
+    ].forEach((entry) => {
+        const upgrade1 = `storage_stack_upgrade_${entry[0]}`;
+        const upgrade2 = `backpack_stack_upgrade_${entry[1]}`;
+
+        event.remove({ id: `sophisticatedstorage:${upgrade1}_from_${upgrade2}` });
+        event.remove({ id: `sophisticatedstorage:${upgrade2}_from_${upgrade1}` });
+    });
+
+    // Backpack recipes
+    event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:copper_backpack" });
+    event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:iron_backpack" });
+    event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:gold_backpack" });
+    event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:diamond_backpack" });
+    event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:netherite_backpack" });
+
+    event.custom({
+        type: "sophisticatedbackpacks:backpack_upgrade",
+        pattern: ["ABA", "CDC", "ABA"],
+        key: {
+            A: {
+                tag: "forge:plates/bronze",
+            },
+            B: {
+                tag: "forge:gears/bronze",
+            },
+            C: {
+                item: "create:electron_tube",
+            },
+            D: {
+                item: "sophisticatedbackpacks:backpack",
+            },
+        },
+        result: {
+            item: "sophisticatedbackpacks:copper_backpack",
+        },
+    });
+
+    event.custom({
+        type: "sophisticatedbackpacks:backpack_upgrade",
+        pattern: ["ABA", "CDC", "ABA"],
+        key: {
+            A: {
+                tag: "forge:plates/steel",
+            },
+            B: {
+                tag: "forge:gears/steel",
+            },
+            C: {
+                item: "functionalstorage:copper_upgrade",
+            },
+            D: {
+                item: "sophisticatedbackpacks:copper_backpack",
+            },
+        },
+        result: {
+            item: "sophisticatedbackpacks:iron_backpack",
+        },
+    });
+
+    event.custom({
+        type: "sophisticatedbackpacks:backpack_upgrade",
+        pattern: ["ABA", "CDC", "ABA"],
+        key: {
+            A: {
+                tag: "forge:plates/vibrant_alloy",
+            },
+            B: {
+                tag: "forge:gears/vibrant_alloy",
+            },
+            C: {
+                item: "functionalstorage:gold_upgrade",
+            },
+            D: {
+                item: "sophisticatedbackpacks:iron_backpack",
+            },
+        },
+        result: {
+            item: "sophisticatedbackpacks:gold_backpack",
+        },
+    });
+
+    event.custom({
+        type: "sophisticatedbackpacks:backpack_upgrade",
+        pattern: ["ABA", "CDC", "ABA"],
+        key: {
+            A: {
+                tag: "forge:plates/stainless_steel",
+            },
+            B: {
+                tag: "forge:gears/stainless_steel",
+            },
+            C: {
+                item: "functionalstorage:diamond_upgrade",
+            },
+            D: {
+                item: "sophisticatedbackpacks:gold_backpack",
+            },
+        },
+        result: {
+            item: "sophisticatedbackpacks:diamond_backpack",
+        },
+    });
 });
