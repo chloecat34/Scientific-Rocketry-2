@@ -523,4 +523,7 @@ ServerEvents.recipes((event) => {
         E: "create:smart_chute",
         F: "create:blaze_burner",
     });
+
+    // Netherite jetpack
+    event.remove({id: "create_jetpack:netherite_jetpack"});
 });
