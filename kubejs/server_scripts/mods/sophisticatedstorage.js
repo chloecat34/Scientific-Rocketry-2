@@ -130,4 +130,117 @@ ServerEvents.recipes((event) => {
             },
         });
     });
+
+    // Tier upgrades
+    let tiers = ["basic", "copper", "iron", "gold", "diamond", "netherite"];
+
+    tiers.forEach((tier1) => {
+        tiers.forEach((tier2) => {
+            event.remove({ output: `sophisticatedstorage:${tier1}_to_${tier2}_tier_upgrade` });
+        });
+    });
+
+    event.shaped("sophisticatedstorage:basic_to_copper_tier_upgrade", ["AAA", "ABA", "AAA"], {
+        A: "#forge:plates/copper",
+        B: "minecraft:redstone_torch",
+    });
+
+    event.shaped("sophisticatedstorage:basic_to_iron_tier_upgrade", ["AAA", "ABA", "AAA"], {
+        A: "#forge:plates/iron",
+        B: "sophisticatedstorage:basic_to_copper_tier_upgrade",
+    });
+
+    event.shaped("sophisticatedstorage:copper_to_iron_tier_upgrade", ["AAA", "ABA", "AAA"], {
+        A: "#forge:plates/iron",
+        B: "#forge:ingots/copper",
+    });
+
+    event.shaped("sophisticatedstorage:basic_to_gold_tier_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/electrum",
+        B: "#forge:gears/rose_gold",
+        C: "create:electron_tube",
+        D: "sophisticatedstorage:basic_to_iron_tier_upgrade",
+    });
+
+    event.shaped("sophisticatedstorage:copper_to_gold_tier_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/electrum",
+        B: "#forge:gears/rose_gold",
+        C: "create:electron_tube",
+        D: "sophisticatedstorage:copper_to_iron_tier_upgrade",
+    });
+
+    event.shaped("sophisticatedstorage:iron_to_gold_tier_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/electrum",
+        B: "#forge:gears/rose_gold",
+        C: "create:electron_tube",
+        D: "#forge:ingots/iron",
+    });
+
+    event.shaped("sophisticatedstorage:basic_to_diamond_tier_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/steel",
+        B: "#forge:gears/blue_alloy",
+        C: "#forge:gems/diamond",
+        D: "sophisticatedstorage:basic_to_gold_tier_upgrade",
+    });
+
+    event.shaped("sophisticatedstorage:copper_to_diamond_tier_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/steel",
+        B: "#forge:gears/blue_alloy",
+        C: "#forge:gems/diamond",
+        D: "sophisticatedstorage:copper_to_gold_tier_upgrade",
+    });
+
+    event.shaped("sophisticatedstorage:iron_to_diamond_tier_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/steel",
+        B: "#forge:gears/blue_alloy",
+        C: "#forge:gems/diamond",
+        D: "sophisticatedstorage:iron_to_gold_tier_upgrade",
+    });
+
+    event.shaped("sophisticatedstorage:gold_to_diamond_tier_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/steel",
+        B: "#forge:gears/blue_alloy",
+        C: "#forge:gems/diamond",
+        D: "#forge:ingots/gold",
+    });
+
+    event.shaped("sophisticatedstorage:basic_to_netherite_tier_upgrade", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/hepatizon",
+        B: "actuallyadditions:void_crystal_block",
+        C: "#forge:gems/emerald",
+        D: "sophisticatedstorage:basic_to_diamond_tier_upgrade",
+        E: "#forge:gears/netherite"
+    });
+
+    event.shaped("sophisticatedstorage:copper_to_netherite_tier_upgrade", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/hepatizon",
+        B: "actuallyadditions:void_crystal_block",
+        C: "#forge:gems/emerald",
+        D: "sophisticatedstorage:copper_to_diamond_tier_upgrade",
+        E: "#forge:gears/netherite"
+    });
+
+    event.shaped("sophisticatedstorage:iron_to_netherite_tier_upgrade", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/hepatizon",
+        B: "actuallyadditions:void_crystal_block",
+        C: "#forge:gems/emerald",
+        D: "sophisticatedstorage:iron_to_diamond_tier_upgrade",
+        E: "#forge:gears/netherite"
+    });
+
+    event.shaped("sophisticatedstorage:gold_to_netherite_tier_upgrade", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/hepatizon",
+        B: "actuallyadditions:void_crystal_block",
+        C: "#forge:gems/emerald",
+        D: "sophisticatedstorage:gold_to_diamond_tier_upgrade",
+        E: "#forge:gears/netherite"
+    });
+
+    event.shaped("sophisticatedstorage:diamond_to_netherite_tier_upgrade", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/hepatizon",
+        B: "actuallyadditions:void_crystal_block",
+        C: "#forge:gems/emerald",
+        D: "#forge:gems/diamond",
+        E: "#forge:gears/netherite"
+    });
 });
