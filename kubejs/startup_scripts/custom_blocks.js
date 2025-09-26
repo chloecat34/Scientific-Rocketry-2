@@ -26,7 +26,7 @@ StartupEvents.registry("block", (event) => {
     event
         .create("ardite_block")
         .displayName("Ardite Block")
-        .material("stone")
+        .material("metal")
         .hardness(5.0)
         .resistance(30.0)
         .tag("forge:storage_blocks")
@@ -170,11 +170,34 @@ StartupEvents.registry("block", (event) => {
     event
         .create("electrotine_block")
         .displayName("§9Electrotine Block")
-        .material("metal")
+        .material("stone")
         .hardness(2.5)
         .resistance(10.0)
         .tag("forge:storage_blocks")
         .tag("forge:storage_blocks/electrotine")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
+
+    event
+        .create("glod_crystal_block")
+        .displayName("Glod Crystal Block")
+        .material("stone")
+        .hardness(2.5)
+        .resistance(20)
+        .tag("forge:storage_blocks")
+        .tag("actuallyadditions:crystal_blocks")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
+
+    event
+        .create("empowered_glod_crystal_block")
+        .displayName("Empowered Glod Crystal Block")
+        .material("stone")
+        .hardness(3.5)
+        .resistance(30)
+        .tag("forge:storage_blocks")
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_iron_tool");

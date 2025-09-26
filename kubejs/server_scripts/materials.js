@@ -145,7 +145,7 @@ ServerEvents.recipes((event) => {
         },
         pressure: 2.0,
         temperature: {
-            max_temp: 273,
+            max_temp: 173,
         },
     });
 
@@ -237,7 +237,7 @@ ServerEvents.recipes((event) => {
         },
         pressure: 2.0,
         temperature: {
-            max_temp: 273,
+            max_temp: 173,
         },
     });
 

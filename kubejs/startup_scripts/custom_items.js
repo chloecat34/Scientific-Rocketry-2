@@ -91,6 +91,9 @@ StartupEvents.registry("item", (event) => {
     event.create("energetic_alloy_coil").displayName("§6Energetic Alloy Coil");
     event.create("vibrant_alloy_coil").displayName("§aVibrant Alloy Coil");
 
+    event.create("glod_crystal").displayName("Glod Crystal").tag("actuallyadditions:crystals");
+    event.create("empowered_glod_crystal").displayName("Empowered Glod Crystal").glow(true);
+
     // Register materials with ingots, nuggets, plates, and gears
     let materials = [
         "red_alloy",

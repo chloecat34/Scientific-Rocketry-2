@@ -185,6 +185,28 @@ ServerEvents.recipes((event) => {
         },
     });
 
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 1000,
+        ingredient: {
+            tag: "forge:ingots/energetic_alloy",
+        },
+        result: {
+            item: "kubejs:glod_crystal",
+        },
+    });
+
+    event.custom({
+        type: "actuallyadditions:laser",
+        energy: 10000,
+        ingredient: {
+            tag: "forge:storage_blocks/energetic_alloy",
+        },
+        result: {
+            item: "kubejs:glod_crystal_block",
+        },
+    });
+
     // Extra electrotine recipe
     event.custom({
         type: "actuallyadditions:laser",
@@ -333,5 +355,14 @@ ServerEvents.recipes((event) => {
         B: "actuallyadditions:palis_crystal",
         C: "kubejs:vibrant_alloy_coil",
         D: "actuallyadditions:basic_coil",
+    });
+
+    // Ring
+    event.remove({ output: "actuallyadditions:ring" });
+
+    event.shaped("actuallyadditions:ring", ["ABA", "BCB", "ABA"], {
+        A: "actuallyadditions:enori_crystal",
+        B: "kubejs:glod_crystal",
+        C: "tconstruct:ichor_slime_crystal",
     });
 });

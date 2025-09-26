@@ -169,4 +169,6 @@ ServerEvents.recipes((event) => {
     addPacking("kubejs:ardite_ingot", "kubejs:ardite_block");
     addPacking("kubejs:stainless_steel_nugget", "kubejs:stainless_steel_ingot");
     addPacking("kubejs:stainless_steel_ingot", "kubejs:stainless_steel_block");
+    addPacking("kubejs:glod_crystal", "kubejs:glod_crystal_block");
+    addPacking("kubejs:empowered_glod_crystal", "kubejs:empowered_glod_crystal_block");
 });

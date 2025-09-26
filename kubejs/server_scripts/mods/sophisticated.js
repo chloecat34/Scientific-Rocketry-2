@@ -437,4 +437,101 @@ ServerEvents.recipes((event) => {
             item: "sophisticatedbackpacks:diamond_backpack",
         },
     });
+
+    // Upgrade base
+    event.remove({ output: "sophisticatedstorage:upgrade_base" });
+    event.remove({ output: "sophisticatedbackpacks:upgrade_base" });
+
+    event.shaped("sophisticatedstorage:upgrade_base", ["ABA", "BAB", "ABA"], {
+        A: "#forge:treated_wood",
+        B: "#forge:plates/iron",
+    });
+
+    event.shaped("sophisticatedbackpacks:upgrade_base", ["ABA", "BCB", "ABA"], {
+        A: "#forge:fabric_hemp",
+        B: "#forge:plates/steel",
+        C: "create:brass_casing",
+    });
+
+    // Magnet upgrades
+    event.remove({ output: "sophisticatedstorage:magnet_upgrade" });
+    event.remove({ output: "sophisticatedstorage:advanced_magnet_upgrade" });
+    event.remove({ output: "sophisticatedbackpacks:magnet_upgrade" });
+    event.remove({ output: "sophisticatedbackpacks:advanced_magnet_upgrade" });
+
+    event.shaped("sophisticatedstorage:magnet_upgrade", ["ABA", "BCB", "D E"], {
+        A: "#forge:plates/amethyst_bronze",
+        B: "actuallyadditions:enori_crystal",
+        C: "sophisticatedstorage:pickup_upgrade",
+        D: "#forge:ingots/red_alloy",
+        E: "#forge:ingots/blue_alloy",
+    });
+
+    event.shaped("sophisticatedstorage:advanced_magnet_upgrade", ["ABA", "BCB", "D E"], {
+        A: "#forge:plates/vibrant_alloy",
+        B: "kubejs:glod_crystal",
+        C: "sophisticatedstorage:magnet_upgrade",
+        D: "#forge:ingots/red_alloy",
+        E: "#forge:ingots/blue_alloy",
+    });
+
+    event.shaped("sophisticatedbackpacks:magnet_upgrade", ["ABA", "BCB", "D E"], {
+        A: "#forge:plates/amethyst_bronze",
+        B: "actuallyadditions:enori_crystal",
+        C: "sophisticatedbackpacks:pickup_upgrade",
+        D: "#forge:ingots/red_alloy",
+        E: "#forge:ingots/blue_alloy",
+    });
+
+    event.shaped("sophisticatedbackpacks:advanced_magnet_upgrade", ["ABA", "BCB", "D E"], {
+        A: "#forge:plates/vibrant_alloy",
+        B: "kubejs:glod_crystal",
+        C: "sophisticatedbackpacks:magnet_upgrade",
+        D: "#forge:ingots/red_alloy",
+        E: "#forge:ingots/blue_alloy",
+    });
+
+    // Feeding upgrade
+    event.replaceInput(
+        { output: "sophisticatedbackpacks:feeding_upgrade" },
+        "minecraft:ender_pearl",
+        "tconstruct:pig_iron_ingot"
+    );
+    event.replaceInput(
+        { output: "sophisticatedstorage:feeding_upgrade" },
+        "minecraft:ender_pearl",
+        "tconstruct:pig_iron_ingot"
+    );
+
+    // Void upgrade
+    event.remove({ output: "sophisticatedbackpacks:void_upgrade" });
+    event.remove({ output: "sophisticatedstorage:void_upgrade" });
+
+    event.shaped("sophisticatedbackpacks:void_upgrade", ["ABA", "BCB", "ABA"], {
+        A: "#forge:dusts/redstone",
+        B: "#forge:obsidian",
+        C: "sophisticatedbackpacks:upgrade_base",
+    });
+
+    event.shaped("sophisticatedstorage:void_upgrade", ["ABA", "BCB", "ABA"], {
+        A: "#forge:dusts/redstone",
+        B: "#forge:obsidian",
+        C: "sophisticatedstorage:upgrade_base",
+    });
+
+    // Refill upgrade
+    event.replaceInput(
+        { output: "sophisticatedbackpacks:refill_upgrade" },
+        "minecraft:ender_pearl",
+        "create:mechanical_arm"
+    );
+
+    // Inception upgrade TODO
+    event.remove({ output: "sophisticatedbackpacks:inception_upgrade" });
+
+    // Everlasting upgrade TODO
+    event.remove({ output: "sophisticatedbackpacks:everlasting_upgrade" });
+
+    // Storage tool
+    event.replaceInput({output: "sophisticatedstorage:storage_tool"}, "minecraft:ender_pearl", "create:transmitter")
 });

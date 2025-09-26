@@ -52,14 +52,10 @@ ServerEvents.recipes((event) => {
     // Blast furnace
     event.remove({ output: "minecraft:blast_furnace" });
 
-    event.shaped("minecraft:blast_furnace", [
-        "AAA",
-        "ABA",
-        "CCC"
-    ], {
+    event.shaped("minecraft:blast_furnace", ["AAA", "ABA", "CCC"], {
         A: "#forge:plates/iron",
         B: "minecraft:furnace",
-        C: "minecraft:smooth_stone"
+        C: "minecraft:smooth_stone",
     });
 
     // Ender eye (WIP)
@@ -76,38 +72,45 @@ ServerEvents.recipes((event) => {
     // Enchanting table
     event.remove({ output: "minecraft:enchanting_table" });
 
-    event.recipes.shaped("minecraft:enchanting_table", [
-        " A ",
-        "BCB",
-        "DDD"
-    ], {
+    event.recipes.shaped("minecraft:enchanting_table", [" A ", "BCB", "DDD"], {
         A: "minecraft:book",
         B: "#forge:gems/diamond",
         C: "#forge:gears/hepatizon",
-        D: "minecraft:obsidian"
+        D: "minecraft:obsidian",
     });
 
     // Resonant ender
     event.custom({
         type: "immersiveengineering:refinery",
         catalyst: {
-            item: "tconstruct:sky_slime_crystal"
+            item: "tconstruct:sky_slime_crystal",
         },
         energy: 120,
         input0: {
             amount: 8,
-            tag: "forge:menril_resin"
+            tag: "forge:menril_resin",
         },
         input1: {
             amount: 8,
-            tag: "forge:molten_electrotine"
+            tag: "forge:molten_electrotine",
         },
         result: {
             amount: 16,
-            fluid: "thermal:ender"
-        }
+            fluid: "thermal:ender",
+        },
     });
 
     // Egg recipe
     event.recipes.createSplashing(Item.of("minecraft:egg").withChance(0.75), "create:dough");
+
+    // Stonecutter
+    event.replaceInput({ output: "minecraft:stonecutter" }, "#forge:ingots/iron", "thermal:saw_blade");
+
+    // Smithing table
+    event.remove({ output: "minecraft:smithing_table" });
+
+    event.shaped("minecraft:smithing_table", ["AA", "BB", "BB"], {
+        A: "#forge:plates/iron",
+        B: "#forge:treated_wood",
+    });
 });

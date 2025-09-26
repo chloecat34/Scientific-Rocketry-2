@@ -150,7 +150,7 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal
         .insolator(
             [
-                "6x integrateddynamics:menril_log",
+                Item.of("integrateddynamics:menril_log").withChance(6.0),
                 Item.of("integrateddynamics:menril_sapling").withChance(0.1),
                 Item.of("integrateddynamics:menril_berries").withChance(0.5),
             ],
@@ -171,5 +171,10 @@ ServerEvents.recipes((event) => {
         .energy(1000);
 
     // Menril pyrolysis
-    event.recipes.thermal.pyrolyzer(["minecraft:charcoal", Fluid.of("integrateddynamics:menril_resin", 500)], "#integrateddynamics:menril_logs").energy(2000);
+    event.recipes.thermal
+        .pyrolyzer(
+            ["minecraft:charcoal", Fluid.of("integrateddynamics:menril_resin", 500)],
+            "#integrateddynamics:menril_logs"
+        )
+        .energy(2000);
 });
