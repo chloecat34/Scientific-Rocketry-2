@@ -10,7 +10,7 @@
         "tag": "forge:plates/blue_alloy"
     },
     "item_output": {
-        "count": 4,
+        "count": 2,
         "item": "pneumaticcraft:upgrade_matrix"
     },
     "pressure": 2.0,
