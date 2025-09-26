@@ -31,6 +31,11 @@ ServerEvents.recipes((event) => {
         B: "ppfluids:fluid_pipe",
     });
 
+    event.shaped("4x curvy_pipes:large_fluid_pipe", ["ABA"], {
+        A: "#forge:plates/stainless_steel",
+        B: "ppfluids:fluid_pipe",
+    });
+
     event.shaped("4x curvy_pipes:tiny_energy_pipe", ["ABA"], {
         A: "#forge:plates/red_alloy",
         B: "powah:energy_cable_starter",

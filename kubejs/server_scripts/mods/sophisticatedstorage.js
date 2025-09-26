@@ -209,7 +209,7 @@ ServerEvents.recipes((event) => {
         B: "actuallyadditions:void_crystal_block",
         C: "#forge:gems/emerald",
         D: "sophisticatedstorage:basic_to_diamond_tier_upgrade",
-        E: "#forge:gears/netherite"
+        E: "#forge:gears/netherite",
     });
 
     event.shaped("sophisticatedstorage:copper_to_netherite_tier_upgrade", ["ABA", "CDC", "AEA"], {
@@ -217,7 +217,7 @@ ServerEvents.recipes((event) => {
         B: "actuallyadditions:void_crystal_block",
         C: "#forge:gems/emerald",
         D: "sophisticatedstorage:copper_to_diamond_tier_upgrade",
-        E: "#forge:gears/netherite"
+        E: "#forge:gears/netherite",
     });
 
     event.shaped("sophisticatedstorage:iron_to_netherite_tier_upgrade", ["ABA", "CDC", "AEA"], {
@@ -225,7 +225,7 @@ ServerEvents.recipes((event) => {
         B: "actuallyadditions:void_crystal_block",
         C: "#forge:gems/emerald",
         D: "sophisticatedstorage:iron_to_diamond_tier_upgrade",
-        E: "#forge:gears/netherite"
+        E: "#forge:gears/netherite",
     });
 
     event.shaped("sophisticatedstorage:gold_to_netherite_tier_upgrade", ["ABA", "CDC", "AEA"], {
@@ -233,7 +233,7 @@ ServerEvents.recipes((event) => {
         B: "actuallyadditions:void_crystal_block",
         C: "#forge:gems/emerald",
         D: "sophisticatedstorage:gold_to_diamond_tier_upgrade",
-        E: "#forge:gears/netherite"
+        E: "#forge:gears/netherite",
     });
 
     event.shaped("sophisticatedstorage:diamond_to_netherite_tier_upgrade", ["ABA", "CDC", "AEA"], {
@@ -241,6 +241,49 @@ ServerEvents.recipes((event) => {
         B: "actuallyadditions:void_crystal_block",
         C: "#forge:gems/emerald",
         D: "#forge:gems/diamond",
-        E: "#forge:gears/netherite"
+        E: "#forge:gears/netherite",
     });
+
+    // Storage blocks
+    event.remove({ output: "sophisticatedstorage:controller" });
+    event.remove({ output: "sophisticatedstorage:storage_io" });
+    event.remove({ output: "sophisticatedstorage:storage_input" });
+    event.remove({ output: "sophisticatedstorage:storage_output" });
+
+    event.shaped("sophisticatedstorage:controller", ["ABA", "CDC", "AEA"], {
+        A: "minecraft:smooth_stone",
+        B: "#forge:gems/diamond",
+        C: "#sophisticatedstorage:base_tier_wooden_storage",
+        D: "create:precision_mechanism",
+        E: "#forge:gears/red_alloy",
+    });
+
+    event.shaped("sophisticatedstorage:storage_io", ["ABA", "CDE", "ABA"], {
+        A: "minecraft:smooth_stone",
+        B: "#forge:treated_wood",
+        C: "create:electron_tube",
+        D: "#sophisticatedstorage:base_tier_wooden_storage",
+        E: "#forge:plates/brass",
+    });
+
+    event.shaped("sophisticatedstorage:storage_input", ["ACA", "BDB", "AEA"], {
+        A: "minecraft:smooth_stone",
+        B: "#forge:treated_wood",
+        C: "create:electron_tube",
+        D: "#sophisticatedstorage:base_tier_wooden_storage",
+        E: "#forge:plates/brass",
+    });
+
+    event.shaped("sophisticatedstorage:storage_output", ["AEA", "BDB", "ACA"], {
+        A: "minecraft:smooth_stone",
+        B: "#forge:treated_wood",
+        C: "create:electron_tube",
+        D: "#sophisticatedstorage:base_tier_wooden_storage",
+        E: "#forge:plates/brass",
+    });
+
+    // Storage link
+    event.remove({ output: "sophisticatedstorage:storage_link" });
+
+    event.shapeless("3x sophisticatedstorage:storage_link", ["sophisticatedstorage:controller", "create:transmitter"]);
 });
