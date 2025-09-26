@@ -18,8 +18,16 @@ ServerEvents.recipes((event) => {
 
         const baseTier = `sophisticatedstorage:${part1}${part2}`;
         const copperTier = `sophisticatedstorage:${part1}copper_${part2}`;
+        const ironTier = `sophisticatedstorage:${part1}iron_${part2}`;
+        const goldTier = `sophisticatedstorage:${part1}gold_${part2}`;
+        const diamondTier = `sophisticatedstorage:${part1}diamond_${part2}`;
+        const netheriteTier = `sophisticatedstorage:${part1}netherite_${part2}`;
 
         event.remove({ mod: "sophisticatedstorage", output: copperTier });
+        event.remove({ mod: "sophisticatedstorage", output: ironTier });
+        event.remove({ mod: "sophisticatedstorage", output: goldTier });
+        event.remove({ mod: "sophisticatedstorage", output: diamondTier });
+        event.remove({ mod: "sophisticatedstorage", output: netheriteTier });
 
         event.custom({
             type: "sophisticatedstorage:storage_tier_upgrade",
@@ -34,6 +42,91 @@ ServerEvents.recipes((event) => {
             },
             result: {
                 item: copperTier,
+            },
+        });
+
+        event.custom({
+            type: "sophisticatedstorage:storage_tier_upgrade",
+            pattern: ["AAA", "ABA", "AAA"],
+            key: {
+                A: {
+                    tag: "forge:plates/iron",
+                },
+                B: {
+                    item: copperTier,
+                },
+            },
+            result: {
+                item: ironTier,
+            },
+        });
+
+        event.custom({
+            type: "sophisticatedstorage:storage_tier_upgrade",
+            pattern: ["ABA", "CDC", "ABA"],
+            key: {
+                A: {
+                    tag: "forge:plates/electrum",
+                },
+                B: {
+                    tag: "forge:gears/rose_gold",
+                },
+                C: {
+                    item: "create:electron_tube",
+                },
+                D: {
+                    item: ironTier,
+                },
+            },
+            result: {
+                item: goldTier,
+            },
+        });
+
+        event.custom({
+            type: "sophisticatedstorage:storage_tier_upgrade",
+            pattern: ["ABA", "CDC", "ABA"],
+            key: {
+                A: {
+                    tag: "forge:plates/steel",
+                },
+                B: {
+                    tag: "forge:gears/blue_alloy",
+                },
+                C: {
+                    tag: "forge:gems/diamond",
+                },
+                D: {
+                    item: goldTier,
+                },
+            },
+            result: {
+                item: diamondTier,
+            },
+        });
+
+        event.custom({
+            type: "sophisticatedstorage:storage_tier_upgrade",
+            pattern: ["ABA", "CDC", "AEA"],
+            key: {
+                A: {
+                    tag: "forge:plates/hepatizon",
+                },
+                B: {
+                    item: "actuallyadditions:void_crystal_block",
+                },
+                C: {
+                    tag: "forge:gems/emerald",
+                },
+                D: {
+                    item: diamondTier,
+                },
+                E: {
+                    tag: "forge:gears/netherite",
+                },
+            },
+            result: {
+                item: netheriteTier,
             },
         });
     });
