@@ -5,7 +5,7 @@
   "color": "ff0000",
   "armorPoints": 4,
   "enchantability": 15,
-  "craftingMaterial": "tag:forge:ingots/adamantium",
+  "craftingMaterial": "null",
   "creative": false,
   "rarity": 0,
   "toughness": 0.0,

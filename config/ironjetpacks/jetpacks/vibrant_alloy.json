@@ -5,7 +5,7 @@
   "color": "d7ff7d",
   "armorPoints": 2,
   "enchantability": 12,
-  "craftingMaterial": "tag:forge:ingots/vibrant_alloy",
+  "craftingMaterial": "null",
   "creative": false,
   "rarity": 0,
   "toughness": 0.0,

@@ -129,7 +129,11 @@ JEIEvents.hideItems((event) => {
         "integratedtunnels:part_exporter_energy",
         "integratedtunnels:part_importer_world_energy",
         "integratedtunnels:part_exporter_world_energy",
-        "mekanism:dirty_netherite_scrap"
+        "mekanism:dirty_netherite_scrap",
+        "ironjetpacks:basic_coil",
+        "ironjetpacks:advanced_coil",
+        "ironjetpacks:elite_coil",
+        "ironjetpacks:ultimate_coil",
     ];
 
     itemsToRemove.forEach((item) => event.hide(item));
@@ -148,7 +152,7 @@ JEIEvents.addItems((event) => {
         "tconstruct:knightslime_block",
         "tconstruct:soulsteel_nugget",
         "tconstruct:soulsteel_ingot",
-        "tconstruct:soulsteel_block"
+        "tconstruct:soulsteel_block",
     ].forEach((item) => event.add(Item.of(item)));
 });
 

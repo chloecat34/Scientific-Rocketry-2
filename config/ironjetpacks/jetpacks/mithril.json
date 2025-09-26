@@ -5,7 +5,7 @@
   "color": "51caea",
   "armorPoints": 3,
   "enchantability": 15,
-  "craftingMaterial": "tag:forge:ingots/mithril",
+  "craftingMaterial": "null",
   "creative": false,
   "rarity": 0,
   "toughness": 0.0,

@@ -5,7 +5,7 @@
   "color": "11082a",
   "armorPoints": 4,
   "enchantability": 12,
-  "craftingMaterial": "tag:forge:ingots/starsteel",
+  "craftingMaterial": "null",
   "creative": false,
   "rarity": 0,
   "toughness": 0.0,
