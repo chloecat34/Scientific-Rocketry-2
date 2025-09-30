@@ -533,5 +533,15 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "sophisticatedbackpacks:everlasting_upgrade" });
 
     // Storage tool
-    event.replaceInput({output: "sophisticatedstorage:storage_tool"}, "minecraft:ender_pearl", "create:transmitter")
+    event.replaceInput({ output: "sophisticatedstorage:storage_tool" }, "minecraft:ender_pearl", "create:transmitter");
+
+    // Battery upgrade
+    event.remove({ output: "sophisticatedbackpacks:battery_upgrade" });
+
+    event.shaped("sophisticatedbackpacks:battery_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/electrum",
+        B: "#forge:storage_blocks/redstone",
+        C: "immersiveengineering:capacitor_mv",
+        D: "sophisticatedbackpacks:upgrade_base",
+    });
 });

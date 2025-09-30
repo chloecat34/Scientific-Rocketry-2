@@ -61,4 +61,22 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "integratedtunnels:part_exporter_energy" });
     event.remove({ output: "integratedtunnels:part_importer_world_energy" });
     event.remove({ output: "integratedtunnels:part_exporter_world_energy" });
+
+    // ID cable
+    event.remove({ output: "integrateddynamics:logic_cable" });
+
+    event.recipes
+        .createSequencedAssembly([Item.of("integrateddynamics:cable", 2)], "prettypipes:pipe", [
+            event.recipes.createCutting("kubejs:incomplete_logic_cable", "kubejs:incomplete_logic_cable"),
+            event.recipes.createFilling("kubejs:incomplete_logic_cable", [
+                "kubejs:incomplete_logic_cable",
+                Fluid.of("kubejs:molten_restonia", 100),
+            ]),
+            event.recipes.createFilling("kubejs:incomplete_logic_cable", [
+                "kubejs:incomplete_logic_cable",
+                Fluid.of("integrateddynamics:menril_resin", 250),
+            ]),
+        ])
+        .transitionalItem("kubejs:incomplete_logic_cable")
+        .loops(1);
 });

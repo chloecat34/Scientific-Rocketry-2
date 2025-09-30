@@ -5,6 +5,21 @@ const molten = [
     "kubejs:molten_pulsating_alloy",
     "kubejs:molten_vibrant_alloy",
     "kubejs:molten_compressed_iron",
+    "kubejs:molten_restonia",
+    "kubejs:molten_palis",
+    "kubejs:molten_enori",
+    "kubejs:molten_void",
+    "kubejs:molten_diamatine",
+    "kubejs:molten_emeradic",
+    "kubejs:molten_glod",
+    "kubejs:molten_red_alloy",
+    "kubejs:molten_blue_alloy",
+    "kubejs:molten_purple_alloy",
+    "kubejs:molten_redstone_alloy",
+    "kubejs:molten_electrical_steel",
+    "kubejs:molten_energetic_alloy",
+    "kubejs:molten_ardite",
+    "kubejs:molten_stainless_steel",
 ];
 
 PlayerEvents.tick((event) => {

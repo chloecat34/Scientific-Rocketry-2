@@ -75,6 +75,8 @@ StartupEvents.registry("item", (event) => {
 
     event.create("incomplete_adv_electronic_component").displayName("Incomplete Advanced Electronic Component");
 
+    event.create("incomplete_logic_cable").displayName("Incomplete Logic Cable");
+
     event.create("soul_sand_dust").displayName("Soul Sand Dust").tag("forge:dusts/soul_sand");
 
     event.create("electrotine").displayName("§9Electrotine Dust").tag("forge:dusts/electrotine");

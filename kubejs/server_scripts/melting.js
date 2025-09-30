@@ -91,6 +91,38 @@ ServerEvents.recipes((event) => {
         });
     };
 
+    const addTinkersGemCastingRecipe = (item, fluid, time) => {
+        event.custom({
+            type: "tconstruct:casting_table",
+            cast: {
+                tag: "tconstruct:casts/multi_use/gem",
+            },
+            cooling_time: time,
+            fluid: {
+                amount: 100,
+                fluid: fluid,
+            },
+            result: {
+                item: item,
+            },
+        });
+
+        event.custom({
+            type: "tconstruct:casting_table",
+            cast: {
+                tag: "tconstruct:casts/single_use/gem",
+            },
+            cooling_time: time,
+            fluid: {
+                amount: 100,
+                fluid: fluid,
+            },
+            result: {
+                item: item,
+            },
+        });
+    };
+
     const addTinkersNuggetCastingRecipe = (item, fluid, time) => {
         event.custom({
             type: "tconstruct:casting_table",
@@ -348,7 +380,6 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("tconstruct:knightslime_block", "tconstruct:molten_knightslime", 810, 216, 1200, 4800 * 9);
     addBothMelterRecipes("tconstruct:knightslime_nugget", "tconstruct:molten_knightslime", 10, 24, 1200, 600);
     chillerBlockCasting("tconstruct:knightslime_block", "tconstruct:molten_knightslime", 810, 4800 * 9);
-    chillerIngotCasting("tconstruct:knightslime_ingot", "tconstruct:molten_knightslime", 90, 4800);
     addTinkersBlockCastingRecipe("tconstruct:knightslime_block","tconstruct:molten_knightslime", 810, 160);
     addTinkersIngotCastingRecipe("tconstruct:knightslime_ingot","tconstruct:molten_knightslime", 90, 50);
     addTinkersNuggetCastingRecipe("tconstruct:knightslime_nugget","tconstruct:molten_knightslime", 10, 10);
@@ -746,4 +777,60 @@ ServerEvents.recipes((event) => {
     chillerBlockCasting("pneumaticcraft:compressed_iron_block", "kubejs:molten_compressed_iron", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("pneumaticcraft:compressed_iron_block", "kubejs:molten_compressed_iron", 810, 160);
     addTinkersIngotCastingRecipe("pneumaticcraft:ingot_iron_compressed", "kubejs:molten_compressed_iron", 50);
+
+    // Molten
+    addBothMelterRecipes("actuallyadditions:restonia_crystal", "kubejs:molten_restonia", 100, 80, 1200, 4800);
+    addBothMelterRecipes("actuallyadditions:restonia_crystal_block", "kubejs:molten_restonia", 900, 280, 1200, 4800 * 9);
+    chillerGemCasting("actuallyadditions:restonia_crystal", "kubejs:molten_restonia", 100, 4800);
+    chillerBlockCasting("actuallyadditions:restonia_crystal_block", "kubejs:molten_restonia", 900, 4800 * 9);
+    addTinkersBlockCastingRecipe("actuallyadditions:restonia_crystal_block", "kubejs:molten_restonia", 900, 160);
+    addTinkersGemCastingRecipe("actuallyadditions:restonia_crystal", "kubejs:molten_restonia", 100, 50);
+
+    // Molten palis
+    addBothMelterRecipes("actuallyadditions:palis_crystal", "kubejs:molten_palis", 100, 80, 1200, 4800);
+    addBothMelterRecipes("actuallyadditions:palis_crystal_block", "kubejs:molten_palis", 900, 280, 1200, 4800 * 9);
+    chillerGemCasting("actuallyadditions:palis_crystal", "kubejs:molten_palis", 100, 4800);
+    chillerBlockCasting("actuallyadditions:palis_crystal_block", "kubejs:molten_palis", 900, 4800 * 9);
+    addTinkersBlockCastingRecipe("actuallyadditions:palis_crystal_block", "kubejs:molten_palis", 900, 160);
+    addTinkersGemCastingRecipe("actuallyadditions:palis_crystal", "kubejs:molten_palis", 100, 50);
+
+    // Molten enori
+    addBothMelterRecipes("actuallyadditions:enori_crystal", "kubejs:molten_enori", 100, 80, 1200, 4800);
+    addBothMelterRecipes("actuallyadditions:enori_crystal_block", "kubejs:molten_enori", 900, 280, 1200, 4800 * 9);
+    chillerGemCasting("actuallyadditions:enori_crystal", "kubejs:molten_enori", 100, 4800);
+    chillerBlockCasting("actuallyadditions:enori_crystal_block", "kubejs:molten_enori", 900, 4800 * 9);
+    addTinkersBlockCastingRecipe("actuallyadditions:enori_crystal_block", "kubejs:molten_enori", 900, 160);
+    addTinkersGemCastingRecipe("actuallyadditions:enori_crystal", "kubejs:molten_enori", 100, 50);
+
+    // Molten void
+    addBothMelterRecipes("actuallyadditions:void_crystal", "kubejs:molten_void", 100, 80, 1200, 4800);
+    addBothMelterRecipes("actuallyadditions:void_crystal_block", "kubejs:molten_void", 900, 280, 1200, 4800 * 9);
+    chillerGemCasting("actuallyadditions:void_crystal", "kubejs:molten_void", 100, 4800);
+    chillerBlockCasting("actuallyadditions:void_crystal_block", "kubejs:molten_void", 900, 4800 * 9);
+    addTinkersBlockCastingRecipe("actuallyadditions:void_crystal_block", "kubejs:molten_void", 900, 160);
+    addTinkersGemCastingRecipe("actuallyadditions:void_crystal", "kubejs:molten_void", 100, 50);
+
+    // Molten diamatine
+    addBothMelterRecipes("actuallyadditions:diamatine_crystal", "kubejs:molten_diamatine", 100, 80, 1200, 4800);
+    addBothMelterRecipes("actuallyadditions:diamatine_crystal_block", "kubejs:molten_diamatine", 900, 280, 1200, 4800 * 9);
+    chillerGemCasting("actuallyadditions:diamatine_crystal", "kubejs:molten_diamatine", 100, 4800);
+    chillerBlockCasting("actuallyadditions:diamatine_crystal_block", "kubejs:molten_diamatine", 900, 4800 * 9);
+    addTinkersBlockCastingRecipe("actuallyadditions:diamatine_crystal_block", "kubejs:molten_diamatine", 900, 160);
+    addTinkersGemCastingRecipe("actuallyadditions:diamatine_crystal", "kubejs:molten_diamatine", 100, 50);
+
+    // Molten emeradic
+    addBothMelterRecipes("actuallyadditions:emeradic_crystal", "kubejs:molten_emeradic", 100, 80, 1200, 4800);
+    addBothMelterRecipes("actuallyadditions:emeradic_crystal_block", "kubejs:molten_emeradic", 900, 280, 1200, 4800 * 9);
+    chillerGemCasting("actuallyadditions:emeradic_crystal", "kubejs:molten_emeradic", 100, 4800);
+    chillerBlockCasting("actuallyadditions:emeradic_crystal_block", "kubejs:molten_emeradic", 900, 4800 * 9);
+    addTinkersBlockCastingRecipe("actuallyadditions:emeradic_crystal_block", "kubejs:molten_emeradic", 900, 160);
+    addTinkersGemCastingRecipe("actuallyadditions:emeradic_crystal", "kubejs:molten_emeradic", 100, 50);
+
+    // Molten glod
+    addBothMelterRecipes("kubejs:glod_crystal", "kubejs:molten_glod", 100, 80, 1200, 4800);
+    addBothMelterRecipes("kubejs:glod_crystal_block", "kubejs:molten_glod", 900, 280, 1200, 4800 * 9);
+    chillerGemCasting("kubejs:glod_crystal", "kubejs:molten_glod", 100, 4800);
+    chillerBlockCasting("kubejs:glod_crystal_block", "kubejs:molten_glod", 900, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:glod_crystal_block", "kubejs:molten_glod", 900, 160);
+    addTinkersGemCastingRecipe("kubejs:glod_crystal", "kubejs:molten_glod", 100, 50);
 });

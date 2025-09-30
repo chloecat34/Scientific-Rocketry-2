@@ -1,9 +1,5 @@
 StartupEvents.registry("fluid", (event) => {
-    event
-        .create("kubejs:molten_sulfur")
-        .thickTexture(0xafb915)
-        .bucketColor(0xafb915)
-        .displayName("Molten Sulfur");
+    event.create("kubejs:molten_sulfur").thickTexture(0xafb915).bucketColor(0xafb915).displayName("Molten Sulfur");
 
     event
         .create("kubejs:molten_electrotine")
@@ -31,4 +27,106 @@ StartupEvents.registry("fluid", (event) => {
         .thickTexture(0x7d7d7d)
         .bucketColor(0x7d7d7d)
         .displayName("Molten Compressed Steel");
+
+    // Molten AA crystals
+    event
+        .create("kubejs:molten_restonia")
+        .stillTexture("kubejs:fluid/molten_restonia_still")
+        .flowingTexture("kubejs:fluid/molten_restonia_flow")
+        .bucketColor(0xc92020)
+        .displayName("Molten Restonia");
+
+    event
+        .create("kubejs:molten_enori")
+        .stillTexture("kubejs:fluid/molten_enori_still")
+        .flowingTexture("kubejs:fluid/molten_enori_flow")
+        .bucketColor(0xc7c7c7)
+        .displayName("Molten Enori");
+
+    event
+        .create("kubejs:molten_palis")
+        .stillTexture("kubejs:fluid/molten_palis_still")
+        .flowingTexture("kubejs:fluid/molten_palis_flow")
+        .bucketColor(0x4a6bf3)
+        .displayName("Molten Palis");
+
+    event
+        .create("kubejs:molten_void")
+        .stillTexture("kubejs:fluid/molten_void_still")
+        .flowingTexture("kubejs:fluid/molten_void_flow")
+        .bucketColor(0x2a2c36)
+        .displayName("Molten Void");
+
+    event
+        .create("kubejs:molten_diamatine")
+        .stillTexture("kubejs:fluid/molten_diamatine_still")
+        .flowingTexture("kubejs:fluid/molten_diamatine_flow")
+        .bucketColor(0x2dd5d8)
+        .displayName("Molten Diamatine");
+
+    event
+        .create("kubejs:molten_emeradic")
+        .stillTexture("kubejs:fluid/molten_emeradic_still")
+        .flowingTexture("kubejs:fluid/molten_emeradic_flow")
+        .bucketColor(0x5fff67)
+        .displayName("Molten Emeradic");
+
+    event
+        .create("kubejs:molten_glod")
+        .stillTexture("kubejs:fluid/molten_glod_still")
+        .flowingTexture("kubejs:fluid/molten_glod_flow")
+        .bucketColor(0xece634)
+        .displayName("Molten Glod");
+
+    // Molten kubejs metals
+    event
+        .create("kubejs:molten_red_alloy")
+        .stillTexture("kubejs:fluid/molten_red_alloy_still")
+        .flowingTexture("kubejs:fluid/molten_red_alloy_flow")
+        .bucketColor(0xcd1212)
+        .displayName("Molten Red Alloy");
+    event
+        .create("kubejs:molten_blue_alloy")
+        .stillTexture("kubejs:fluid/molten_blue_alloy_still")
+        .flowingTexture("kubejs:fluid/molten_blue_alloy_flow")
+        .bucketColor(0x2722cb)
+        .displayName("Molten Blue Alloy");
+    event
+        .create("kubejs:molten_purple_alloy")
+        .stillTexture("kubejs:fluid/molten_purple_alloy_still")
+        .flowingTexture("kubejs:fluid/molten_purple_alloy_flow")
+        .bucketColor(0x8c22cb)
+        .displayName("Molten Purple Alloy");
+    event
+        .create("kubejs:molten_redstone_alloy")
+        .stillTexture("kubejs:fluid/molten_redstone_alloy_still")
+        .flowingTexture("kubejs:fluid/molten_redstone_alloy_flow")
+        .bucketColor(0x8b0000)
+        .displayName("Molten Redstone Alloy");
+    event
+        .create("kubejs:molten_electrical_steel")
+        .stillTexture("kubejs:fluid/molten_electrical_steek_still")
+        .flowingTexture("kubejs:fluid/molten_electrical_steel_flow")
+        .bucketColor(0xc9bfb1)
+        .displayName("Molten Electrical Steel");
+    event
+        .create("kubejs:molten_energetic_alloy")
+        .stillTexture("kubejs:fluid/molten_energetic_alloy_still")
+        .flowingTexture("kubejs:fluid/molten_energetic_alloy_flow")
+        .bucketColor(0xffd79d)
+        .displayName("Molten Energetic Alloy");
+
+    event
+        .create("kubejs:molten_ardite")
+        .stillTexture("kubejs:fluid/molten_ardite_still")
+        .flowingTexture("kubejs:fluid/molten_ardite_flow")
+        .bucketColor(0xff6900)
+        .displayName("Molten Ardite");
+
+    event
+        .create("kubejs:molten_stainless_steel")
+        .stillTexture("kubejs:fluid/molten_stainless_steek_still")
+        .flowingTexture("kubejs:fluid/molten_stainless_steel_flow")
+        .bucketColor(0xc9dde2)
+        .displayName("Molten Stainless Steel");
 });
