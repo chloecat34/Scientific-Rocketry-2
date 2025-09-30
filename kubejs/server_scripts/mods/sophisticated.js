@@ -344,11 +344,18 @@ ServerEvents.recipes((event) => {
     });
 
     // Backpack recipes
+    event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:backpack" });
     event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:copper_backpack" });
     event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:iron_backpack" });
     event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:gold_backpack" });
     event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:diamond_backpack" });
     event.remove({ mod: "sophisticatedbackpacks", output: "sophisticatedbackpacks:netherite_backpack" });
+
+    event.shaped("sophisticatedbackpacks:backpack", ["ABA", "ACA", "BBB"], {
+        A: "immersiveengineering:hemp_fabric",
+        B: "kubejs:treated_leather",
+        C: "sophisticatedstorage:basic_to_iron_tier_upgrade",
+    });
 
     event.custom({
         type: "sophisticatedbackpacks:backpack_upgrade",
@@ -450,7 +457,7 @@ ServerEvents.recipes((event) => {
     event.shaped("sophisticatedbackpacks:upgrade_base", ["ABA", "BCB", "ABA"], {
         A: "#forge:fabric_hemp",
         B: "#forge:plates/steel",
-        C: "create:brass_casing",
+        C: "kubejs:treated_leather",
     });
 
     // Magnet upgrades

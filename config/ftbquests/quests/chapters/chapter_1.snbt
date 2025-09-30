@@ -684,6 +684,126 @@
 			x: 4.0d
 			y: -4.0d
 		}
+		{
+			dependencies: ["524C16049CA1C2D3"]
+			description: [
+				"Pretty Pipes is a logistics mod where you can use pipes with different modules to automate item/fluid transport. "
+				""
+				"Later, you can use the Item Terminal to access all your items across different inventories."
+			]
+			id: "79753F9D036627BE"
+			rewards: [{
+				count: 8
+				id: "27DD1230CFD2EB62"
+				item: "prettypipes:blank_module"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1FF64DB559E5ED6E"
+				item: "prettypipes:pipe"
+				type: "item"
+			}]
+			title: "Pretty Pipes"
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["79753F9D036627BE"]
+			description: [
+				"Curvy Pipes is a unique logistics mod that lets you set up pipes that curve around blocks. They have various options for filtering, as well as multiple tiers."
+				""
+				"In this pack, you unlock higher tiers of pipe as you progress through the pack."
+			]
+			id: "46B6835B6EB829AF"
+			rewards: [{
+				count: 16
+				id: "5648F49A209C7D3C"
+				item: "curvy_pipes:tiny_fluid_pipe"
+				type: "item"
+			}]
+			tasks: [{
+				id: "606DD47DCDA18202"
+				item: "curvy_pipes:tiny_item_pipe"
+				type: "item"
+			}]
+			title: "Curvy Pipes"
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["31BDC4E9DEDDC05C"]
+			description: [
+				"Connecting a Storage Controller to many different drawers is a very powerful way to store items produced from your automation. "
+				""
+				"You can even put the drawers further apart, or upgrade them for enhanced storage and functionality."
+			]
+			id: "3C1F1D70B411E22F"
+			rewards: [{
+				id: "72691ED87462741B"
+				item: "functionalstorage:copper_upgrade"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "73C8D5F8E9FB65D5"
+					item: "functionalstorage:storage_controller"
+					type: "item"
+				}
+				{
+					id: "68F8BC890C584284"
+					item: {
+						Count: 1
+						id: "functionalstorage:linking_tool"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "Drawer Systems"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2AF2FE528AA4774D"]
+			description: [
+				"Sophisticated Backpacks adds several tiers of upgrade-able backpack that can store lots of items and help you manage your inventory. "
+				""
+				"The higher tiers can be pretty powerful, but aren't craftable without higher tier technology."
+			]
+			id: "1FBEEE20EB119048"
+			rewards: [{
+				count: 8
+				id: "2A0035221E5934DE"
+				item: "minecraft:leather"
+				type: "item"
+			}]
+			tasks: [{
+				id: "119A11614FE87719"
+				item: "sophisticatedbackpacks:backpack"
+				type: "item"
+			}]
+			title: "Backpacks"
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0A2374E7D318F3D0"]
+			description: ["Sophisticated Storage adds a variety of new inventories for storing all of your items. They can be upgraded to hold more items and accept more specialized upgrades to boost functionality."]
+			id: "6C7D37615A24523E"
+			rewards: [{
+				id: "24A997A88C5967AF"
+				item: "sophisticatedstorage:basic_to_copper_tier_upgrade"
+				type: "item"
+			}]
+			tasks: [{
+				id: "41994FB160708060"
+				item: "sophisticatedstorage:basic_tier_upgrade"
+				type: "item"
+			}]
+			title: "Sophisticated Storage"
+			x: -1.0d
+			y: -3.0d
+		}
 	]
 	title: "Chapter 1: Crash Landing"
 }

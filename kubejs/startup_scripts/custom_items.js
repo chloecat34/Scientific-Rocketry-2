@@ -63,6 +63,8 @@ StartupEvents.registry("item", (event) => {
 
     event.create("blast_brick").displayName("Blast Brick");
 
+    event.create("treated_leather").displayName("Treated Leather");
+
     event.create("manyullyn_plate").displayName("Manyullyn Plate").tag("forge:plates").tag("forge:plates/manyullyn");
 
     event.create("manyullyn_gear").displayName("Manyullyn Gear").tag("forge:gears").tag("forge:gears/manyullyn");

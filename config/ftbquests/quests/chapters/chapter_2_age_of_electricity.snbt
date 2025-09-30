@@ -590,8 +590,8 @@
 				}
 			]
 			title: "Diesel Generator"
-			x: 4.0d
-			y: 2.0d
+			x: 5.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["7C8B2A6CBE209314"]
@@ -726,6 +726,85 @@
 			]
 			x: -2.0d
 			y: 1.0d
+		}
+		{
+			dependencies: ["577BD027309EC30B"]
+			description: ["The Jetpack is added by Create and lets you fly using either Create (by spinning it up with a shaft) or PneumaticCraft pressure."]
+			id: "2AD32DE71C008AA2"
+			rewards: [{
+				count: 16
+				id: "7A5E948AAC226B66"
+				item: "immersiveengineering:plate_aluminum"
+				type: "item"
+			}]
+			tasks: [{
+				id: "24BA456E6B12BA4A"
+				item: {
+					Count: 1
+					id: "create_jetpack:jetpack"
+					tag: {
+						Air: 900
+					}
+				}
+				type: "item"
+			}]
+			title: "Jetpacks"
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["2AD32DE71C008AA2"]
+			description: [
+				"Iron Jetpacks adds several customized tiers of RF-powered jetpacks to the pack. Vibrant Alloy is the first tier. "
+				""
+				"It might not yet be a strict upgrade to the Create Jetpack, but you can use it with Batteries, so keep that in mind."
+			]
+			id: "2B19B5E47A66DCE9"
+			rewards: [{
+				id: "66C442F5380247CA"
+				item: {
+					Count: 1
+					id: "actuallyadditions:double_battery"
+					tag: {
+						Charged: 1b
+						Energy: 350000.0d
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "018E6DF4D307381B"
+				item: {
+					Count: 1
+					id: "ironjetpacks:jetpack"
+					tag: {
+						Id: "ironjetpacks:vibrant_alloy"
+						Throttle: 1.0d
+					}
+				}
+				type: "item"
+			}]
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["014611E2E11520B2"]
+			description: ["The Electric Motor lets you turn RF into Create's Stress Units. You might not &owant&r this yet, depending on your power source, but it is more useful later on."]
+			id: "7D9C9EB9DD931737"
+			rewards: [{
+				count: 4
+				id: "0F98947D456ECFF3"
+				item: "immersiveengineering:component_electronic_adv"
+				type: "item"
+			}]
+			tasks: [{
+				id: "375547BA623587A0"
+				item: "createaddition:electric_motor"
+				type: "item"
+			}]
+			title: "RF to Stress"
+			x: 4.0d
+			y: 2.0d
 		}
 	]
 	title: "Chapter 2: Age of Electricity"
