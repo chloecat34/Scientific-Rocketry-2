@@ -806,6 +806,25 @@
 			x: 4.0d
 			y: 2.0d
 		}
+		{
+			dependencies: ["5862FCB0880BDC1D"]
+			description: ["The Pipe Pressurizer uses RF to speed up your Pretty Pipes network, making items move much faster."]
+			id: "4F0C6A804F79E0EC"
+			rewards: [{
+				count: 4
+				id: "404BC13B3971758E"
+				item: "prettypipes:high_extraction_module"
+				type: "item"
+			}]
+			tasks: [{
+				id: "52BC2FF153679A02"
+				item: "prettypipes:pressurizer"
+				type: "item"
+			}]
+			title: "Fast Pipes!"
+			x: -1.0d
+			y: 2.0d
+		}
 	]
 	title: "Chapter 2: Age of Electricity"
 }
