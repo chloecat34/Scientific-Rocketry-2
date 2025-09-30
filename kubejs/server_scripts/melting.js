@@ -833,4 +833,102 @@ ServerEvents.recipes((event) => {
     chillerBlockCasting("kubejs:glod_crystal_block", "kubejs:molten_glod", 900, 4800 * 9);
     addTinkersBlockCastingRecipe("kubejs:glod_crystal_block", "kubejs:molten_glod", 900, 160);
     addTinkersGemCastingRecipe("kubejs:glod_crystal", "kubejs:molten_glod", 100, 50);
+
+    // Molten red alloy
+    addBothMelterRecipes("kubejs:red_alloy_ingot", "kubejs:molten_red_alloy", 90, 48, 600, 4800);
+    addBothMelterRecipes("kubejs:red_alloy_nugget", "kubejs:molten_red_alloy", 10, 16, 600, 600);
+    addBothMelterRecipes("kubejs:red_alloy_block", "kubejs:molten_red_alloy", 810, 160, 600, 4800 * 9);
+    addBothMelterRecipes("kubejs:red_alloy_plate", "kubejs:molten_red_alloy", 90, 48, 600, 4800);
+    addBothMelterRecipes("kubejs:red_alloy_gear", "kubejs:molten_red_alloy", 360, 96, 600, 4800 * 4);
+    addBothMelterRecipes("kubejs:red_alloy_wire", "kubejs:molten_red_alloy", 45, 12, 600, 2400);
+    chillerIngotCasting("kubejs:red_alloy_ingot", "kubejs:molten_red_alloy", 90, 4800);
+    chillerBlockCasting("kubejs:red_alloy_block", "kubejs:molten_red_alloy", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:red_alloy_block", "kubejs:molten_red_alloy", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:red_alloy_ingot", "kubejs:molten_red_alloy", 50);
+    addTinkersNuggetCastingRecipe("kubejs:red_alloy_nugget", "kubejs:molten_red_alloy", 50);
+
+    // Molten blue alloy
+    addBothMelterRecipes("kubejs:blue_alloy_ingot", "kubejs:molten_blue_alloy", 90, 48, 600, 4800);
+    addBothMelterRecipes("kubejs:blue_alloy_nugget", "kubejs:molten_blue_alloy", 10, 16, 600, 600);
+    addBothMelterRecipes("kubejs:blue_alloy_block", "kubejs:molten_blue_alloy", 810, 160, 600, 4800 * 9);
+    addBothMelterRecipes("kubejs:blue_alloy_plate", "kubejs:molten_blue_alloy", 90, 48, 600, 4800);
+    addBothMelterRecipes("kubejs:blue_alloy_gear", "kubejs:molten_blue_alloy", 360, 96, 600, 4800 * 4);
+    chillerIngotCasting("kubejs:blue_alloy_ingot", "kubejs:molten_blue_alloy", 90, 4800);
+    chillerBlockCasting("kubejs:blue_alloy_block", "kubejs:molten_blue_alloy", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:blue_alloy_block", "kubejs:molten_blue_alloy", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:blue_alloy_ingot", "kubejs:molten_blue_alloy", 50);
+    addTinkersNuggetCastingRecipe("kubejs:blue_alloy_nugget", "kubejs:molten_blue_alloy", 50);
+
+    // Molten purple alloy
+    addBothMelterRecipes("kubejs:purple_alloy_ingot", "kubejs:molten_purple_alloy", 90, 48, 1200, 4800);
+    addBothMelterRecipes("kubejs:purple_alloy_nugget", "kubejs:molten_purple_alloy", 10, 16, 1200, 600);
+    addBothMelterRecipes("kubejs:purple_alloy_block", "kubejs:molten_purple_alloy", 810, 160, 1200, 4800 * 9);
+    addBothMelterRecipes("kubejs:purple_alloy_plate", "kubejs:molten_purple_alloy", 90, 48, 1200, 4800);
+    addBothMelterRecipes("kubejs:purple_alloy_gear", "kubejs:molten_purple_alloy", 360, 96, 1200, 4800 * 4);
+    chillerIngotCasting("kubejs:purple_alloy_ingot", "kubejs:molten_purple_alloy", 90, 4800);
+    chillerBlockCasting("kubejs:purple_alloy_block", "kubejs:molten_purple_alloy", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:purple_alloy_block", "kubejs:molten_purple_alloy", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:purple_alloy_ingot", "kubejs:molten_purple_alloy", 50);
+    addTinkersNuggetCastingRecipe("kubejs:purple_alloy_nugget", "kubejs:molten_purple_alloy", 50);
+
+    // Molten redstone alloy
+    addBothMelterRecipes("kubejs:redstone_alloy_ingot", "kubejs:molten_redstone_alloy", 90, 60, 800, 4800);
+    addBothMelterRecipes("kubejs:redstone_alloy_nugget", "kubejs:molten_redstone_alloy", 10, 20, 800, 600);
+    addBothMelterRecipes("kubejs:redstone_alloy_block", "kubejs:molten_redstone_alloy", 810, 180, 800, 4800 * 9);
+    addBothMelterRecipes("kubejs:redstone_alloy_plate", "kubejs:molten_redstone_alloy", 90, 60, 800, 4800);
+    addBothMelterRecipes("kubejs:redstone_alloy_gear", "kubejs:molten_redstone_alloy", 360, 120, 800, 4800 * 4);
+    chillerIngotCasting("kubejs:redstone_alloy_ingot", "kubejs:molten_redstone_alloy", 90, 4800);
+    chillerBlockCasting("kubejs:redstone_alloy_block", "kubejs:molten_redstone_alloy", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:redstone_alloy_block", "kubejs:molten_redstone_alloy", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:redstone_alloy_ingot", "kubejs:molten_redstone_alloy", 50);
+    addTinkersNuggetCastingRecipe("kubejs:redstone_alloy_nugget", "kubejs:molten_redstone_alloy", 50);
+
+    // Molten electrical steel
+    addBothMelterRecipes("kubejs:electrical_steel_ingot", "kubejs:molten_electrical_steel", 90, 60, 1100, 4800);
+    addBothMelterRecipes("kubejs:electrical_steel_nugget", "kubejs:molten_electrical_steel", 10, 20, 1100, 600);
+    addBothMelterRecipes("kubejs:electrical_steel_block", "kubejs:molten_electrical_steel", 810, 180, 1100, 4800 * 9);
+    addBothMelterRecipes("kubejs:electrical_steel_plate", "kubejs:molten_electrical_steel", 90, 60, 1100, 4800);
+    addBothMelterRecipes("kubejs:electrical_steel_gear", "kubejs:molten_electrical_steel", 360, 120, 1100, 4800 * 4);
+    chillerIngotCasting("kubejs:electrical_steel_ingot", "kubejs:molten_electrical_steel", 90, 4800);
+    chillerBlockCasting("kubejs:electrical_steel_block", "kubejs:molten_electrical_steel", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:electrical_steel_block", "kubejs:molten_electrical_steel", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:electrical_steel_ingot", "kubejs:molten_electrical_steel", 50);
+    addTinkersNuggetCastingRecipe("kubejs:electrical_steel_nugget", "kubejs:molten_electrical_steel", 50);
+
+    // Molten energetic alloy
+    addBothMelterRecipes("kubejs:energetic_alloy_ingot", "kubejs:molten_energetic_alloy", 90, 60, 850, 4800);
+    addBothMelterRecipes("kubejs:energetic_alloy_plate", "kubejs:molten_energetic_alloy", 90, 60, 850, 4800);
+    addBothMelterRecipes("kubejs:energetic_alloy_nugget", "kubejs:molten_energetic_alloy", 10, 20, 850, 600);
+    addBothMelterRecipes("kubejs:energetic_alloy_gear", "kubejs:molten_energetic_alloy", 360, 120, 850, 4800 * 4);
+    addBothMelterRecipes("kubejs:energetic_alloy_block", "kubejs:molten_energetic_alloy", 810, 200, 850, 4800 * 9);
+    addBothMelterRecipes("kubejs:energetic_alloy_wire", "kubejs:molten_energetic_alloy", 45, 15, 850, 2400);
+    chillerIngotCasting("#forge:ingots/energetic_alloy", "kubejs:molten_energetic_alloy", 90, 4800);
+    chillerBlockCasting("kubejs:energetic_alloy_block", "kubejs:molten_energetic_alloy", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:energetic_alloy_block", "kubejs:molten_energetic_alloy", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:energetic_alloy_ingot", "kubejs:molten_energetic_alloy", 50);
+    addTinkersNuggetCastingRecipe("kubejs:energetic_alloy_nugget", "kubejs:molten_energetic_alloy", 10);
+
+    // Molten ardite
+    addBothMelterRecipes("kubejs:ardite_ingot", "kubejs:molten_ardite", 90, 60, 950, 4800);
+    addBothMelterRecipes("kubejs:ardite_plate", "kubejs:molten_ardite", 90, 60, 950, 4800);
+    addBothMelterRecipes("kubejs:ardite_nugget", "kubejs:molten_ardite", 10, 20, 950, 600);
+    addBothMelterRecipes("kubejs:ardite_gear", "kubejs:molten_ardite", 360, 120, 950, 4800 * 4);
+    addBothMelterRecipes("kubejs:ardite_block", "kubejs:molten_ardite", 810, 200, 950, 4800 * 9);
+    chillerIngotCasting("#forge:ingots/ardite", "kubejs:molten_ardite", 90, 4800);
+    chillerBlockCasting("kubejs:ardite_block", "kubejs:molten_ardite", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:ardite_block", "kubejs:molten_ardite", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:ardite_ingot", "kubejs:molten_ardite", 50);
+    addTinkersNuggetCastingRecipe("kubejs:ardite_nugget", "kubejs:molten_ardite", 10);
+
+    // Molten stainless steel
+    addBothMelterRecipes("kubejs:stainless_steel_ingot", "kubejs:molten_stainless_steel", 90, 60, 1400, 4800);
+    addBothMelterRecipes("kubejs:stainless_steel_nugget", "kubejs:molten_stainless_steel", 10, 20, 1400, 600);
+    addBothMelterRecipes("kubejs:stainless_steel_block", "kubejs:molten_stainless_steel", 810, 180, 1400, 4800 * 9);
+    addBothMelterRecipes("kubejs:stainless_steel_plate", "kubejs:molten_stainless_steel", 90, 60, 1400, 4800);
+    addBothMelterRecipes("kubejs:stainless_steel_gear", "kubejs:molten_stainless_steel", 360, 120, 1400, 4800 * 4);
+    chillerIngotCasting("kubejs:stainless_steel_ingot", "kubejs:molten_stainless_steel", 90, 4800);
+    chillerBlockCasting("kubejs:stainless_steel_block", "kubejs:molten_stainless_steel", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:stainless_steel_block", "kubejs:molten_stainless_steel", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:stainless_steel_ingot", "kubejs:molten_stainless_steel", 50);
+    addTinkersNuggetCastingRecipe("kubejs:stainless_steel_nugget", "kubejs:molten_stainless_steel", 50);
 });

@@ -24,7 +24,8 @@ StartupEvents.registry("fluid", (event) => {
 
     event
         .create("kubejs:molten_compressed_iron")
-        .thickTexture(0x7d7d7d)
+        .stillTexture("kubejs:fluid/molten_compressed_iron_still")
+        .flowingTexture("kubejs:fluid/molten_compressed_iron_flow")
         .bucketColor(0x7d7d7d)
         .displayName("Molten Compressed Steel");
 
@@ -105,7 +106,7 @@ StartupEvents.registry("fluid", (event) => {
         .displayName("Molten Redstone Alloy");
     event
         .create("kubejs:molten_electrical_steel")
-        .stillTexture("kubejs:fluid/molten_electrical_steek_still")
+        .stillTexture("kubejs:fluid/molten_electrical_steel_still")
         .flowingTexture("kubejs:fluid/molten_electrical_steel_flow")
         .bucketColor(0xc9bfb1)
         .displayName("Molten Electrical Steel");
@@ -114,7 +115,7 @@ StartupEvents.registry("fluid", (event) => {
         .stillTexture("kubejs:fluid/molten_energetic_alloy_still")
         .flowingTexture("kubejs:fluid/molten_energetic_alloy_flow")
         .bucketColor(0xffd79d)
-        .displayName("Molten Energetic Alloy");
+        .displayName("§6Molten Energetic Alloy");
 
     event
         .create("kubejs:molten_ardite")
@@ -125,7 +126,7 @@ StartupEvents.registry("fluid", (event) => {
 
     event
         .create("kubejs:molten_stainless_steel")
-        .stillTexture("kubejs:fluid/molten_stainless_steek_still")
+        .stillTexture("kubejs:fluid/molten_stainless_steel_still")
         .flowingTexture("kubejs:fluid/molten_stainless_steel_flow")
         .bucketColor(0xc9dde2)
         .displayName("Molten Stainless Steel");

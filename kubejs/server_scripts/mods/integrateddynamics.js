@@ -63,7 +63,7 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "integratedtunnels:part_exporter_world_energy" });
 
     // ID cable
-    event.remove({ output: "integrateddynamics:logic_cable" });
+    event.remove({ output: "integrateddynamics:cable" });
 
     event.recipes
         .createSequencedAssembly([Item.of("integrateddynamics:cable", 2)], "prettypipes:pipe", [
