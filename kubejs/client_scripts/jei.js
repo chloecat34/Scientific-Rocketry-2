@@ -134,6 +134,7 @@ JEIEvents.hideItems((event) => {
         "ironjetpacks:advanced_coil",
         "ironjetpacks:elite_coil",
         "ironjetpacks:ultimate_coil",
+        "compressedcreativity:brass_gilded_lapis_lazuli"
     ];
 
     itemsToRemove.forEach((item) => event.hide(item));

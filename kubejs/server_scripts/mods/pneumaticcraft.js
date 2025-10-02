@@ -301,4 +301,41 @@ ServerEvents.recipes((event) => {
         C: "#forge:plates/compressed_iron",
         D: "actuallyadditions:restonia_crystal",
     });
+
+    // Brass coated lapis
+    event.remove({ output: "compressedcreativity:brass_gilded_lapis_lazuli" });
+    event.remove({ output: "compressedcreativity:brass_coated_upgrade_matrix" });
+
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 180,
+            fluid: "tconstruct:molten_brass",
+        },
+        item_input: {
+            item: "pneumaticcraft:upgrade_matrix",
+        },
+        item_output: {
+            count: 1,
+            item: "compressedcreativity:brass_coated_upgrade_matrix",
+        },
+        pressure: 3.0,
+        temperature: {
+            min_temp: 573,
+        },
+    });
+
+    // Upgrade matrix fluid transposer
+    event.recipes.thermal
+        .bottler("2x pneumaticcraft:upgrade_matrix", ["#forge:plates/blue_alloy", Fluid.of("minecraft:water", 1000)])
+        .energy(8000);
+
+    event.recipes.thermal
+        .bottler("compressedcreativity:brass_coated_upgrade_matrix", [
+            "pneumaticcraft:upgrade_matrix",
+            Fluid.of("tconstruct:molten_brass", 180),
+        ])
+        .energy(12000);
 });

@@ -54,6 +54,13 @@ ServerEvents.recipes((event) => {
         },
     });
 
+    event.recipes.thermal
+        .bottler("integratedterminals:menril_glass", [
+            "thermal:obsidian_glass",
+            Fluid.of("integrateddynamics:menril_resin", 1000),
+        ])
+        .energy(12000);
+
     // Disable integrated tunnels energy transport
     event.remove({ output: "integratedtunnels:part_interface_energy" });
     event.remove({ output: "integratedtunnels:part_interface_filter_energy" });
