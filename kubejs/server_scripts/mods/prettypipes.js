@@ -98,6 +98,14 @@ ServerEvents.recipes((event) => {
     event.replaceInput({ output: "prettypipes:tag_filter_modifier" }, "#minecraft:iron_ores", "#forge:gears/iron");
 
     // Filter module
+    event.remove({ output: "prettypipes:low_filter_module" });
+
+    event.shaped("prettypipes:low_filter_module", [" A ", "BCB", " B "], {
+        A: "create:brass_funnel",
+        B: "#forge:dusts/redstone",
+        C: "prettypipes:blank_module",
+    });
+
     event.remove({ output: "prettypipes:medium_filter_module" });
 
     event.shaped("prettypipes:medium_filter_module", ["AAA", "ABA", "ACA"], {

@@ -338,4 +338,51 @@ ServerEvents.recipes((event) => {
             Fluid.of("tconstruct:molten_brass", 180),
         ])
         .energy(12000);
+
+    // Capacitor/transistor
+    event.custom({
+        type: "pneumaticcraft:pressure_chamber",
+        inputs: [
+            {
+                item: "pneumaticcraft:plastic",
+            },
+            {
+                type: "pneumaticcraft:stacked_item",
+                item: "kubejs:energetic_alloy_wire",
+                count: 2,
+            },
+            {
+                item: "actuallyadditions:palis_crystal",
+            },
+        ],
+        pressure: 2.0,
+        results: [
+            {
+                item: "pneumaticcraft:capacitor",
+            },
+        ],
+    });
+
+    event.custom({
+        type: "pneumaticcraft:pressure_chamber",
+        inputs: [
+            {
+                item: "pneumaticcraft:plastic",
+            },
+            {
+                type: "pneumaticcraft:stacked_item",
+                item: "kubejs:vibrant_alloy_wire",
+                count: 2,
+            },
+            {
+                item: "actuallyadditions:restonia_crystal",
+            },
+        ],
+        pressure: 2.0,
+        results: [
+            {
+                item: "pneumaticcraft:transistor",
+            },
+        ],
+    });
 });

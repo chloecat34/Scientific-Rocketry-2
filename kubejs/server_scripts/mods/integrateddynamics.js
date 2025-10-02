@@ -86,4 +86,176 @@ ServerEvents.recipes((event) => {
         ])
         .transitionalItem("kubejs:incomplete_logic_cable")
         .loops(1);
+
+    // Variable card
+    event.remove({ output: "integrateddynamics:variable" });
+
+    event.custom({
+        type: "pneumaticcraft:pressure_chamber",
+        inputs: [
+            {
+                item: "pneumaticcraft:upgrade_matrix",
+            },
+            {
+                type: "pneumaticcraft:stacked_item",
+                item: "integrateddynamics:crystalized_menril_chunk",
+                count: 4,
+            },
+            {
+                item: "immersiveengineering:component_electronic",
+            },
+        ],
+        pressure: 3.0,
+        results: [
+            {
+                item: "integrateddynamics:variable",
+                count: 6,
+            },
+        ],
+    });
+
+    // Variable transformers
+    event.remove({ output: "integrateddynamics:variable_transformer_input" });
+    event.remove({ output: "integrateddynamics:variable_transformer_output" });
+
+    event.custom({
+        type: "pneumaticcraft:pressure_chamber",
+        inputs: [
+            {
+                type: "pneumaticcraft:stacked_item",
+                item: "integrateddynamics:variable",
+                count: 2,
+            },
+            {
+                type: "pneumaticcraft:stacked_item",
+                item: "integrateddynamics:crystalized_menril_chunk",
+                count: 2,
+            },
+            {
+                item: "kubejs:queens_slime_gear",
+            },
+        ],
+        pressure: 3.0,
+        results: [
+            {
+                item: "integrateddynamics:variable_transformer_input",
+                count: 4,
+            },
+        ],
+    });
+
+    event.custom({
+        type: "pneumaticcraft:pressure_chamber",
+        inputs: [
+            {
+                type: "pneumaticcraft:stacked_item",
+                item: "integrateddynamics:variable",
+                count: 2,
+            },
+            {
+                type: "pneumaticcraft:stacked_item",
+                item: "integrateddynamics:crystalized_menril_chunk",
+                count: 2,
+            },
+            {
+                item: "kubejs:slimesteel_gear",
+            },
+        ],
+        pressure: 3.0,
+        results: [
+            {
+                item: "integrateddynamics:variable_transformer_output",
+                count: 4,
+            },
+        ],
+    });
+
+    // Item interface
+    event.remove({ output: "integratedtunnels:part_interface_item" });
+
+    event.shaped("2x integratedtunnels:part_interface_item", ["ABA", "AAA"], {
+        A: "integrateddynamics:crystalized_menril_chunk",
+        B: "create:item_vault",
+    });
+
+    // Fluid interface
+    event.remove({ output: "integratedtunnels:part_interface_fluid" });
+
+    event.shaped("2x integratedtunnels:part_interface_fluid", ["ABA", "AAA"], {
+        A: "integrateddynamics:crystalized_menril_chunk",
+        B: "create:fluid_tank",
+    });
+
+    // Filtering interfaces
+    event.replaceInput(
+        { output: "integratedtunnels:part_interface_filter_item" },
+        "minecraft:hopper",
+        "create:brass_funnel"
+    );
+
+    event.replaceInput(
+        { output: "integratedtunnels:part_interface_filter_fluid" },
+        "minecraft:hopper",
+        "create:smart_fluid_pipe"
+    );
+
+    // Energy battery
+    event.remove({ id: "integrateddynamics:crafting/energy_battery" });
+
+    event.shaped(Item.of("integrateddynamics:energy_battery", "{energy:0}"), ["ABA", "CDC", "ABA"], {
+        A: "integrateddynamics:crystalized_menril_chunk",
+        B: "integrateddynamics:crystalized_menril_block",
+        C: "integratedterminals:menril_glass",
+        D: "immersiveengineering:capacitor_hv",
+    });
+
+    // Generator
+    event.remove({ output: "integrateddynamics:coal_generator" });
+
+    event.shaped("integrateddynamics:coal_generator", ["ABA", "CDC", "AEA"], {
+        A: "integrateddynamics:crystalized_menril_chunk",
+        B: "actuallyadditions:restonia_crystal",
+        C: "actuallyadditions:basic_coil",
+        D: "integrateddynamics:energy_battery",
+        E: "immersiveengineering:generator",
+    });
+
+    // Logic programmer
+    event.remove({ id: "integrateddynamics:crafting/logic_programmer" });
+
+    event.recipes.createMechanicalCrafting(
+        "integrateddynamics:logic_programmer",
+        ["ABCBA", "BDEFB", "CGHGC", "BFIDB", "ABCBA"],
+        {
+            A: "integrateddynamics:crystalized_menril_block",
+            B: "integrateddynamics:crystalized_menril_chunk",
+            C: "integratedterminals:menril_glass",
+            D: "pneumaticcraft:capacitor",
+            E: "actuallyadditions:palis_crystal_block",
+            F: "pneumaticcraft:transistor",
+            G: "#forge:gears/pulsating_alloy",
+            H: "immersiveengineering:logic_unit",
+            I: "immersiveengineering:component_electronic_adv",
+        }
+    );
+
+    // Variable store
+    event.remove({ output: "integrateddynamics:variablestore" });
+
+    event.shaped("integrateddynamics:variablestore", ["ABA", "CDC", "ABA"], {
+        A: "integrateddynamics:crystalized_menril_chunk",
+        B: "integrateddynamics:crystalized_menril_block",
+        C: "integrateddynamics:variable",
+        D: "sophisticatedstorage:basic_to_gold_tier_upgrade",
+    });
+
+    // Static light panel
+    event.remove({ output: "integrateddynamics:part_static_light_panel" });
+
+    event.shaped("integrateddynamics:part_static_light_panel", [" AB", "ACD", " AB"], {
+        A: "integrateddynamics:crystalized_menril_chunk",
+        B: "#forge:plates/glowing_brass",
+        C: "integrateddynamics:variable_transformer_output",
+        D: "immersiveengineering:electron_tube",
+    });
 });

@@ -525,5 +525,21 @@ ServerEvents.recipes((event) => {
     });
 
     // Netherite jetpack
-    event.remove({id: "create_jetpack:netherite_jetpack"});
+    event.remove({ id: "create_jetpack:netherite_jetpack" });
+
+    // Fluid tank
+    event.remove({ output: "create:fluid_tank" });
+
+    event.shaped("create:fluid_tank", [" A ", "ABA", " A "], {
+        A: "#forge:plates/copper",
+        B: "#forge:barrels/wooden",
+    });
+
+    // Item vault
+    event.remove({ id: "create:crafting/kinetics/item_vault" });
+
+    event.shaped("create:item_vault", [" A ", "ABA", " A "], {
+        A: "#forge:plates/iron",
+        B: "#forge:barrels/wooden",
+    });
 });

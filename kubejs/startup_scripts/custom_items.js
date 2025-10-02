@@ -110,7 +110,8 @@ StartupEvents.registry("item", (event) => {
         "purple_alloy",
         "pulsating_alloy",
         "ardite",
-        "stainless_steel"
+        "stainless_steel",
+        "glowing_brass"
     ];
 
     // Map ingots to the formatting code if needed
@@ -118,7 +119,8 @@ StartupEvents.registry("item", (event) => {
         "vibrant_alloy": "§a",
         "pulsating_alloy": "§3",
         "purple_alloy": "§5",
-        "energetic_alloy": "§6"
+        "energetic_alloy": "§6",
+        "glowing_brass": "§e"
     };
 
     let wires = ["red_alloy", "energetic_alloy", "vibrant_alloy"];

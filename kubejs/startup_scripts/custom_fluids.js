@@ -116,6 +116,12 @@ StartupEvents.registry("fluid", (event) => {
         .flowingTexture("kubejs:fluid/molten_energetic_alloy_flow")
         .bucketColor(0xffd79d)
         .displayName("§6Molten Energetic Alloy");
+    event
+        .create("kubejs:molten_glowing_brass")
+        .stillTexture("kubejs:fluid/molten_glowing_brass_still")
+        .flowingTexture("kubejs:fluid/molten_glowing_brass_flow")
+        .bucketColor(0xffdb83)
+        .displayName("§eMolten Glowing Brass");
 
     event
         .create("kubejs:molten_ardite")
