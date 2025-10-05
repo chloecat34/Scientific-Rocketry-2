@@ -542,4 +542,7 @@ ServerEvents.recipes((event) => {
         A: "#forge:plates/iron",
         B: "#forge:barrels/wooden",
     });
+
+    // Electron tube
+    event.replaceInput({ output: "create:electron_tube" }, "#forge:plates/iron", "#forge:plates/glowing_brass");
 });

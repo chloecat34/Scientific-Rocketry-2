@@ -635,4 +635,53 @@ ServerEvents.recipes((event) => {
         51200,
         100
     );
+
+    // Glowing brass
+    event.recipes.create.filling("kubejs:glowing_brass_ingot", [
+        "create:brass_ingot",
+        Fluid.of("thermal:glowstone", 250),
+    ]);
+
+    event.recipes.thermal
+        .smelter("2x kubejs:glowing_brass_ingot", ["#forge:ingots/brass", "minecraft:glowstone_dust"])
+        .energy(4800);
+
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 125,
+            fluid: "thermal:glowstone",
+        },
+        item_input: {
+            tag: "forge:ingots/brass",
+        },
+        item_output: {
+            count: 1,
+            item: "kubejs:glowing_brass_ingot",
+        },
+        pressure: 2.0,
+        temperature: {
+            min_temp: 273,
+        },
+    });
+
+    event.custom({
+        type: "immersiveengineering:bottling_machine",
+        fluid: {
+            amount: 200,
+            tag: "forge:glowstone",
+        },
+        inputs: [
+            {
+                tag: "forge:ingots/brass",
+            },
+        ],
+        results: [
+            {
+                item: "kubejs:glowing_brass_ingot",
+            },
+        ],
+    });
 });

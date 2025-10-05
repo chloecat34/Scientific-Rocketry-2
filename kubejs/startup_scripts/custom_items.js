@@ -28,6 +28,8 @@ StartupEvents.registry("item", (event) => {
 
     event.create("cobalt_gear").displayName("Cobalt Gear").tag("forge:gears").tag("forge:gears/cobalt");
 
+    event.create("brass_gear").displayName("Brass Gear").tag("forge:gears").tag("forge:gears/brass");
+
     event.create("cinderslime_plate").displayName("Cinderslime Plate").tag("forge:plates").tag("forge:plates/cinderslime");
     event.create("cinderslime_gear").displayName("Cinderslime Gear").tag("forge:gears").tag("forge:gears/cinderslime");
 

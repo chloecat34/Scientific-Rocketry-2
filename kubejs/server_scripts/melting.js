@@ -475,6 +475,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:ingots/brass", "tconstruct:molten_brass", 90, 4800);
     crucibleMelting("#forge:nuggets/brass", "tconstruct:molten_brass", 10, 600);
     crucibleMelting("#forge:storage_blocks/brass", "tconstruct:molten_brass", 810, 4800 * 9);
+    crucibleMelting("#forge:gears/brass", "tconstruct:molten_brass", 360, 4800 * 4);
     addBothMelterRecipes("createaddition:brass_rod", "tconstruct:molten_brass", 45, 16, 605, 2400);
     crucibleMelting("#forge:plates/brass", "tconstruct:molten_brass", 90, 4800);
     chillerIngotCasting("#forge:ingots/brass", "tconstruct:molten_brass", 90, 4800);
