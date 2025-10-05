@@ -61,6 +61,35 @@ ServerEvents.recipes((event) => {
         ])
         .energy(12000);
 
+    // Mendesite
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 1000,
+            fluid: "integrateddynamics:menril_resin",
+        },
+        item_input: {
+            item: "create:andesite_alloy_block",
+        },
+        item_output: {
+            count: 1,
+            item: "integratedscripting:mendesite",
+        },
+        pressure: 3.0,
+        temperature: {
+            min_temp: 573,
+        },
+    });
+
+    event.recipes.thermal
+        .bottler("integratedscripting:mendesite", [
+            "create:andesite_alloy_block",
+            Fluid.of("integrateddynamics:menril_resin", 1000),
+        ])
+        .energy(12000);
+
     // Disable integrated tunnels energy transport
     event.remove({ output: "integratedtunnels:part_interface_energy" });
     event.remove({ output: "integratedtunnels:part_interface_filter_energy" });
@@ -258,4 +287,51 @@ ServerEvents.recipes((event) => {
         C: "integrateddynamics:variable_transformer_output",
         D: "immersiveengineering:electron_tube",
     });
+
+    // Display panel
+    event.remove({ output: "integrateddynamics:part_display_panel" });
+
+    event.shaped("integrateddynamics:part_display_panel", ["ABA", "CDC", "ABA"], {
+        A: "actuallyadditions:palis_crystal",
+        B: "integrateddynamics:menril_berries",
+        C: "integrateddynamics:part_static_light_panel",
+        D: "integrateddynamics:variable_transformer_output",
+    });
+
+    // Storage terminal
+    event.remove({ output: "integratedterminals:part_terminal_storage" });
+
+    event.shaped("integratedterminals:part_terminal_storage", ["ABA", "CDE", "AFA"], {
+        A: "#forge:plates/energetic_alloy",
+        B: "integratedterminals:menril_glass",
+        C: "integrateddynamics:variable_transformer_output",
+        D: "integrateddynamics:part_display_panel",
+        E: "integrateddynamics:variable_transformer_input",
+        F: "prettypipes:item_terminal",
+    });
+
+    // Crafting job terminal
+    event.remove({ output: "integratedterminals:part_terminal_crafting_job" });
+
+    event.shaped("integratedterminals:part_terminal_crafting_job", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/aluminum",
+        B: "integratedterminals:menril_glass",
+        C: "#forge:gears/glowing_brass",
+        D: "integrateddynamics:part_display_panel",
+        E: "prettypipes:crafting_terminal",
+    });
+
+    // Portable storage terminal
+    event.remove({ output: "integratedterminals:terminal_storage_portable" });
+
+    event.shaped("integratedterminals:terminal_storage_portable", ["ABA", "CDC", "AEA"], {
+        A: "integrateddynamics:crystalized_chorus_chunk",
+        B: "integratedterminals:chorus_glass",
+        C: "integrateddynamics:logic_director",
+        D: "integratedterminals:part_terminal_storage",
+        E: "ae2:fluix_pearl",
+    });
+
+    // Disable proto chorus
+    event.remove({output: "integrateddynamics:proto_chorus"});
 });
