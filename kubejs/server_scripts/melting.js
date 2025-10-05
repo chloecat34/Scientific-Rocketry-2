@@ -481,6 +481,18 @@ ServerEvents.recipes((event) => {
     chillerIngotCasting("#forge:ingots/brass", "tconstruct:molten_brass", 90, 4800);
     chillerBlockCasting("create:brass_block", "tconstruct:molten_brass", 810, 4800 * 9);
 
+    // Molten glowing brass
+    addBothMelterRecipes("kubejs:glowing_brass_ingot", "kubejs:molten_glowing_brass", 52, 605, 90, 4800);
+    addBothMelterRecipes("kubejs:glowing_brass_nugget", "kubejs:molten_glowing_brass", 16, 605, 10, 600);
+    addBothMelterRecipes("kubejs:glowing_brass_block", "kubejs:molten_glowing_brass", 160, 605, 810, 4800 * 9);
+    addBothMelterRecipes("kubejs:glowing_brass_gear", "kubejs:molten_glowing_brass", 104, 605, 360, 4800 * 4);
+    addBothMelterRecipes("kubejs:glowing_brass_plate", "kubejs:molten_glowing_brass", 52, 605, 90, 4800);
+    chillerIngotCasting("#forge:ingots/glowing_brass", "kubejs:molten_glowing_brass", 90, 4800);
+    chillerBlockCasting("kubejs:glowing_brass_block", "kubejs:molten_glowing_brass", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:glowing_brass_block", "kubejs:molten_glowing_brass", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:glowing_brass_ingot", "kubejs:molten_glowing_brass", 50);
+    addTinkersNuggetCastingRecipe("kubejs:glowing_brass_nugget", "kubejs:molten_glowing_brass", 10);
+
     // Molten electrum
     crucibleMelting("#forge:ingots/electrum", "tconstruct:molten_electrum", 90, 4800);
     crucibleMelting("#forge:nuggets/electrum", "tconstruct:molten_electrum", 10, 600);
