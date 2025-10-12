@@ -450,4 +450,23 @@ ServerEvents.recipes((event) => {
         B: "actuallyadditions:restonia_crystal",
         C: "integrateddynamics:part_static_light_panel",
     });
+
+    // Crafting interface
+    event.remove({ output: "integratedcrafting:part_interface_crafting" });
+
+    event.shaped("integratedcrafting:part_interface_crafting", ["ABA", "CDE", "ABA"], {
+        A: "#forge:plates/electrical_steel",
+        B: "create:mechanical_crafter",
+        C: "integrateddynamics:variable_transformer_output",
+        D: "actuallyadditions:iron_casing",
+        E: "integrateddynamics:variable_transformer_input",
+    });
+
+    // Crafting writer
+    event.remove({ output: "integratedcrafting:part_crafting_writer" });
+
+    event.shaped("integratedcrafting:part_crafting_writer", [" A ", "ABA", " A "], {
+        A: "create:mechanical_crafter",
+        B: "integrateddynamics:variable_transformer_output",
+    });
 });
