@@ -823,6 +823,20 @@
 			x: 8.0d
 			y: -3.0d
 		}
+		{
+			id: "3BDB0E2040A54150"
+			tasks: [{
+				id: "7E286F9073E38F75"
+				item: {
+					Count: 1
+					id: "tiab:time_in_a_bottle"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
 	]
 	title: "Chapter 1: Crash Landing"
 }
