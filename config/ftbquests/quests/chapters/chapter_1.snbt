@@ -824,7 +824,18 @@
 			y: -3.0d
 		}
 		{
+			dependencies: ["31BDC4E9DEDDC05C"]
+			description: [
+				"The Time in a Bottle is a powerful item that lets you tick-acclerate machines. You have to build up time by keeping it in your inventory, and you can only have one per player."
+				""
+				"It is available pretty early on, since it will get most of its utility from the earlygame. Make sure not to over-rely on it, as hopping around your base speeding up machines isn't a sustainable strategy, and &osome machines cannot be sped up!&r"
+			]
 			id: "3BDB0E2040A54150"
+			rewards: [{
+				id: "3BCC03D1D8AC815C"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			tasks: [{
 				id: "7E286F9073E38F75"
 				item: {
