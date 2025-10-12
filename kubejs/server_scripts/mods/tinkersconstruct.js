@@ -82,12 +82,32 @@ ServerEvents.recipes((event) => {
         .smelter("2x tconstruct:seared_brick", ["#forge:sand", "#forge:gravel", "#forge:clay"])
         .energy(4800);
 
-    event.remove({id: "tconstruct:smeltery/casting/seared/brick_composite"});
-    event.remove({id: "tconstruct:smeltery/casting/scorched/brick_composite"});
+    event.remove({ id: "tconstruct:smeltery/casting/seared/brick_composite" });
+    event.remove({ id: "tconstruct:smeltery/casting/scorched/brick_composite" });
 
     // Remove the gravel recipe in the induction smelter bc of the conflict
     event.remove({ id: "thermal:machines/smelter/smelter_gravel" });
 
     // Enderslime sapling
-    event.recipes.create.filling("tconstruct:ender_slime_sapling", ["tconstruct:sky_slime_sapling", Fluid.of("thermal:ender", 1000)]);
+    event.recipes.create.filling("tconstruct:ender_slime_sapling", [
+        "tconstruct:sky_slime_sapling",
+        Fluid.of("thermal:ender", 1000),
+    ]);
+
+    // Crystal alt recipes
+    event.recipes.thermal
+        .crystallizer("tconstruct:earth_slime_crystal", [Fluid.of("tconstruct:earth_slime", 250), "minecraft:amethyst_shard"])
+        .energy(10000);
+
+    event.recipes.thermal
+        .crystallizer("tconstruct:sky_slime_crystal", [Fluid.of("tconstruct:sky_slime", 250), "minecraft:amethyst_shard"])
+        .energy(10000);
+
+    event.recipes.thermal
+        .crystallizer("tconstruct:ichor_slime_crystal", [Fluid.of("tconstruct:ichor", 250), "minecraft:amethyst_shard"])
+        .energy(10000);
+
+    event.recipes.thermal
+        .crystallizer("tconstruct:ender_slime_crystal", [Fluid.of("tconstruct:ender_slime", 250), "minecraft:amethyst_shard"])
+        .energy(10000);
 });
