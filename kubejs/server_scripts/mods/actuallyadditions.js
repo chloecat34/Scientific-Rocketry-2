@@ -339,6 +339,49 @@ ServerEvents.recipes((event) => {
         },
     });
 
+    // PNC support
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 1000,
+            fluid: "actuallyadditions:refined_canola_oil",
+        },
+        item_input: {
+            item: "actuallyadditions:crystallized_canola_seed",
+        },
+        fluid_output: {
+            amount: 1000,
+            fluid: "actuallyadditions:crystallized_oil",
+        },
+        pressure: 3.0,
+        temperature: {
+            min_temp: 373,
+        },
+    });
+
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 1000,
+            fluid: "actuallyadditions:crystallized_oil",
+        },
+        item_input: {
+            item: "actuallyadditions:empowered_canola_seed",
+        },
+        fluid_output: {
+            amount: 1000,
+            fluid: "actuallyadditions:empowered_oil",
+        },
+        pressure: 4.0,
+        temperature: {
+            min_temp: 773,
+        },
+    });
+
     // Coils
     event.remove({ output: "actuallyadditions:basic_coil" });
     event.remove({ output: "actuallyadditions:advanced_coil" });

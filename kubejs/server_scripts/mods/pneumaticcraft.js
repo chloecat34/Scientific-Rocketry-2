@@ -385,4 +385,45 @@ ServerEvents.recipes((event) => {
             },
         ],
     });
+
+    // Lubricant thermal
+    event.recipes.thermal
+        .brewer(Fluid.of("pneumaticcraft:lubricant", 1000), [
+            Fluid.of("pneumaticcraft:biodiesel", 1000),
+            "minecraft:redstone",
+        ])
+        .energy(8000);
+
+    event.recipes.thermal
+        .brewer(Fluid.of("pneumaticcraft:lubricant", 1000), [
+            Fluid.of("immersiveengineering:biodiesel", 1000),
+            "minecraft:redstone",
+        ])
+        .energy(8000);
+
+    event.recipes.thermal
+        .brewer(Fluid.of("pneumaticcraft:lubricant", 1000), [
+            Fluid.of("pneumaticcraft:diesel", 1000),
+            "minecraft:redstone",
+        ])
+        .energy(8000);
+
+    // Liquid plastic
+    event.recipes.thermal
+        .brewer(Fluid.of("pneumaticcraft:plastic", 1000), [Fluid.of("pneumaticcraft:lpg", 100), "#minecraft:coals"])
+        .energy(8000);
+
+    event.recipes.thermal
+        .brewer(Fluid.of("pneumaticcraft:plastic", 1000), [
+            Fluid.of("immersiveengineering:biodiesel", 100),
+            "#minecraft:coals",
+        ])
+        .energy(8000);
+
+    event.recipes.thermal
+        .brewer(Fluid.of("pneumaticcraft:plastic", 1000), [
+            Fluid.of("pneumaticcraft:biodiesel", 100),
+            "#minecraft:coals",
+        ])
+        .energy(8000);
 });

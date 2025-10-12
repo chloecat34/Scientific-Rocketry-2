@@ -551,13 +551,13 @@ ServerEvents.recipes((event) => {
     );
 
     // Treated leather
-    event.recipes.create.filling("kubejs:treated_leather", ["minecraft:leather", Fluid.of("immersiveengineering:creosote", 250)]);
+    event.recipes.create.filling("kubejs:treated_leather", [
+        "minecraft:leather",
+        Fluid.of("immersiveengineering:creosote", 250),
+    ]);
 
     event.recipes.thermal
-        .bottler("kubejs:treated_leather", [
-            "minecraft:leather",
-            Fluid.of("immersiveengineering:creosote", 250),
-        ])
+        .bottler("kubejs:treated_leather", ["minecraft:leather", Fluid.of("immersiveengineering:creosote", 250)])
         .energy(4000);
 
     event.custom({
@@ -597,4 +597,33 @@ ServerEvents.recipes((event) => {
             min_temp: 273,
         },
     });
+
+    // Redstone acid
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 250,
+            fluid: "minecraft:water",
+        },
+        item_input: {
+            item: "minecraft:redstone",
+        },
+        fluid_output: {
+            amount: 250,
+            fluid: "immersiveengineering:redstone_acid",
+        },
+        pressure: 2.0,
+        temperature: {
+            min_temp: 573,
+        },
+    });
+
+    event.recipes.thermal
+        .brewer(Fluid.of("immersiveengineering:redstone_acid", 250), [
+            Fluid.of("minecraft:water", 250),
+            "minecraft:redstone",
+        ])
+        .energy(8000);
 });
