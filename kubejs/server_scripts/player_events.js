@@ -20,6 +20,8 @@ const molten = [
     "kubejs:molten_energetic_alloy",
     "kubejs:molten_ardite",
     "kubejs:molten_stainless_steel",
+    "kubejs:molten_glowing_brass",
+    "kubejs:molten_andesite_alloy"
 ];
 
 PlayerEvents.tick((event) => {

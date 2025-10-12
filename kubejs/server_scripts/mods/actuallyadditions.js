@@ -232,10 +232,10 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "actuallyadditions:iron_casing" });
 
     event.shaped("actuallyadditions:iron_casing", ["ABA", "CDC", "ABA"], {
-        A: "#forge:plates/aluminum",
-        B: "#forge:rods/treated_wood",
+        A: "#forge:sheetmetals/aluminum",
+        B: "kubejs:energetic_alloy_coil",
         C: "#forge:gems/black_quartz",
-        D: "#forge:gears/electrical_steel",
+        D: "immersiveengineering:heavy_engineering",
     });
 
     // Atomic reconstructor

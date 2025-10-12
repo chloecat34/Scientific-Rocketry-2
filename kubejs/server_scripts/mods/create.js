@@ -12,6 +12,11 @@ ServerEvents.recipes((event) => {
     // Replace andesite alloy in induction smelter
     event.recipes.thermal.smelter("create:andesite_alloy", ["minecraft:andesite", "#forge:nuggets/zinc"], 0, 3200);
 
+    // Batching recipe
+    event.recipes.thermal.smelter("9x create:andesite_alloy", ["9x minecraft:andesite", "#forge:ingots/zinc"], 0, 32000);
+
+    event.recipes.create.mixing("9x create:andesite_alloy", ["9x minecraft:andesite", "#forge:ingots/zinc"]).heated();
+
     // Water wheel
     event.remove({ output: "create:water_wheel" });
 

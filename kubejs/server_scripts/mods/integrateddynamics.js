@@ -63,32 +63,23 @@ ServerEvents.recipes((event) => {
 
     // Mendesite
     event.custom({
-        type: "pneumaticcraft:thermo_plant",
-        exothermic: false,
-        fluid_input: {
+        type: "pneumaticcraft:fluid_mixer",
+        input1: {
             type: "pneumaticcraft:fluid",
-            amount: 1000,
+            amount: 500,
             fluid: "integrateddynamics:menril_resin",
         },
-        item_input: {
-            item: "create:andesite_alloy_block",
+        input2: {
+            type: "pneumaticcraft:fluid",
+            amount: 90,
+            fluid: "kubejs:molten_andesite_alloy",
         },
         item_output: {
-            count: 1,
             item: "integratedscripting:mendesite",
         },
-        pressure: 3.0,
-        temperature: {
-            min_temp: 573,
-        },
+        pressure: 2.0,
+        time: 200,
     });
-
-    event.recipes.thermal
-        .bottler("integratedscripting:mendesite", [
-            "create:andesite_alloy_block",
-            Fluid.of("integrateddynamics:menril_resin", 1000),
-        ])
-        .energy(12000);
 
     // Disable integrated tunnels energy transport
     event.remove({ output: "integratedtunnels:part_interface_energy" });
@@ -333,5 +324,130 @@ ServerEvents.recipes((event) => {
     });
 
     // Disable proto chorus
-    event.remove({output: "integrateddynamics:proto_chorus"});
+    event.remove({ output: "integrateddynamics:proto_chorus" });
+
+    // Scripting terminal
+    event.remove({ output: "integratedscripting:part_terminal_scripting" });
+
+    event.shaped("integratedscripting:part_terminal_scripting", ["ABA", "CDE", "AFA"], {
+        A: "#forge:plates/redstone_alloy",
+        B: "integratedscripting:mendesite",
+        C: "integrateddynamics:variable_transformer_output",
+        D: "integrateddynamics:part_display_panel",
+        E: "integrateddynamics:variable_transformer_input",
+        F: "integratedscripting:scripting_disk",
+    });
+
+    // Block reader
+    event.remove({ output: "integrateddynamics:part_block_reader" });
+
+    event.shaped("integrateddynamics:part_block_reader", [" A ", "BCB", " A "], {
+        A: "integratedscripting:mendesite",
+        B: "tconstruct:seared_brick",
+        C: "integrateddynamics:variable_transformer_input",
+    });
+
+    // Entity reader
+    event.remove({ output: "integrateddynamics:part_entity_reader" });
+
+    event.shaped("integrateddynamics:part_entity_reader", [" A ", "BCB", " A "], {
+        A: "#forge:foods/meat/raw",
+        B: "kubejs:treated_leather",
+        C: "integrateddynamics:variable_transformer_input",
+    });
+
+    // Entity writer
+    event.remove({ output: "integrateddynamics:part_entity_writer" });
+
+    event.shaped("integrateddynamics:part_entity_writer", [" A ", "BCB", " A "], {
+        A: "#forge:foods/meat/raw",
+        B: "kubejs:treated_leather",
+        C: "integrateddynamics:variable_transformer_output",
+    });
+
+    // Extra-dimensional reader
+    event.remove({ output: "integrateddynamics:part_extradimensional_reader" });
+
+    event.shaped("integrateddynamics:part_extradimensional_reader", [" A ", "BCB", " A "], {
+        A: "kubejs:pulsating_crystal",
+        B: "kubejs:vibrant_crystal",
+        C: "integrateddynamics:variable_transformer_input",
+    });
+
+    // Fluid reader
+    event.remove({ output: "integrateddynamics:part_fluid_reader" });
+
+    event.shaped("integrateddynamics:part_fluid_reader", [" A ", "BCB", " A "], {
+        A: "create:fluid_tank",
+        B: "minecraft:bucket",
+        C: "integrateddynamics:variable_transformer_input",
+    });
+
+    // Inventory reader
+    event.remove({ output: "integrateddynamics:part_inventory_reader" });
+
+    event.shaped("integrateddynamics:part_inventory_reader", [" A ", "ABA", " A "], {
+        A: "create:item_vault",
+        B: "integrateddynamics:variable_transformer_input",
+    });
+
+    // Inventory writer
+    event.remove({ output: "integrateddynamics:part_inventory_writer" });
+
+    event.shaped("integrateddynamics:part_inventory_writer", [" A ", "ABA", " A "], {
+        A: "create:item_vault",
+        B: "integrateddynamics:variable_transformer_output",
+    });
+
+    // Machine reader
+    event.remove({ output: "integrateddynamics:part_machine_reader" });
+
+    event.shaped("integrateddynamics:part_machine_reader", [" A ", "BCB", " A "], {
+        A: "create:electron_tube",
+        B: "createaddition:capacitor",
+        C: "integrateddynamics:variable_transformer_input",
+    });
+
+    // Machine writer
+    event.remove({ output: "integrateddynamics:part_machine_writer" });
+
+    event.shaped("integrateddynamics:part_machine_writer", [" A ", "BCB", " A "], {
+        A: "create:electron_tube",
+        B: "createaddition:capacitor",
+        C: "integrateddynamics:variable_transformer_output",
+    });
+
+    // Redstone reader
+    event.remove({ output: "integrateddynamics:part_redstone_reader" });
+
+    event.shaped("integrateddynamics:part_redstone_reader", [" A ", "ABA", " A "], {
+        A: "#forge:plates/red_alloy",
+        B: "integrateddynamics:variable_transformer_input",
+    });
+
+    // Redstone writer
+    event.remove({ output: "integrateddynamics:part_redstone_writer" });
+
+    event.shaped("integrateddynamics:part_redstone_writer", [" A ", "ABA", " A "], {
+        A: "#forge:plates/red_alloy",
+        B: "integrateddynamics:variable_transformer_output",
+    });
+
+    // World reader
+    event.remove({ output: "integrateddynamics:part_world_reader" });
+
+    event.shaped("integrateddynamics:part_world_reader", [" A ", "BCB", " A "], {
+        A: "tconstruct:scorched_brick",
+        B: "create:sturdy_sheet",
+        C: "integrateddynamics:variable_transformer_input",
+    });
+
+    // Dynamic light panel
+    event.remove({ output: "integrateddynamics:part_dynamic_light_panel" });
+
+    event.shaped("integrateddynamics:part_dynamic_light_panel", ["ABA", "BCB", "ABA"], {
+        A: "#forge:plates/glowing_brass",
+        B: "actuallyadditions:restonia_crystal",
+        C: "integrateddynamics:part_static_light_panel",
+    });
 });

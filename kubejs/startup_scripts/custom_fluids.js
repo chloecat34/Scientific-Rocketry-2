@@ -136,4 +136,17 @@ StartupEvents.registry("fluid", (event) => {
         .flowingTexture("kubejs:fluid/molten_stainless_steel_flow")
         .bucketColor(0xc9dde2)
         .displayName("Molten Stainless Steel");
+
+    event
+        .create("kubejs:molten_andesite_alloy")
+        .stillTexture("kubejs:fluid/molten_andesite_alloy_still")
+        .flowingTexture("kubejs:fluid/molten_andesite_alloy_flow")
+        .bucketColor(0xc9caba)
+        .displayName("Molten Andesite Alloy");
+
+    event
+        .create("kubejs:molten_andesite")
+        .thickTexture(0xc4c5c0)
+        .bucketColor(0xc4c5c0)
+        .displayName("Molten Andesite");
 });

@@ -493,6 +493,27 @@ ServerEvents.recipes((event) => {
     addTinkersIngotCastingRecipe("kubejs:glowing_brass_ingot", "kubejs:molten_glowing_brass", 50);
     addTinkersNuggetCastingRecipe("kubejs:glowing_brass_nugget", "kubejs:molten_glowing_brass", 10);
 
+    // Glowing brass smeltery recipe
+    event.custom({
+        type: "tconstruct:alloy",
+        inputs: [
+            {
+                amount: 90,
+                tag: "forge:molten_brass",
+            },
+
+            {
+                amount: 250,
+                tag: "forge:glowstone",
+            },
+        ],
+        result: {
+            amount: 90,
+            fluid: "kubejs:molten_glowing_brass",
+        },
+        temperature: 700,
+    });
+
     // Molten electrum
     crucibleMelting("#forge:ingots/electrum", "tconstruct:molten_electrum", 90, 4800);
     crucibleMelting("#forge:nuggets/electrum", "tconstruct:molten_electrum", 10, 600);
@@ -978,5 +999,39 @@ ServerEvents.recipes((event) => {
     chillerBlockCasting("kubejs:stainless_steel_block", "kubejs:molten_stainless_steel", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("kubejs:stainless_steel_block", "kubejs:molten_stainless_steel", 810, 160);
     addTinkersIngotCastingRecipe("kubejs:stainless_steel_ingot", "kubejs:molten_stainless_steel", 50);
-    addTinkersNuggetCastingRecipe("kubejs:stainless_steel_nugget", "kubejs:molten_stainless_steel", 50);
+    addTinkersNuggetCastingRecipe("kubejs:stainless_steel_nugget", "kubejs:molten_stainless_steel", 10);
+
+    // Molten andesite alloy
+    addBothMelterRecipes("create:andesite_alloy", "kubejs:molten_andesite_alloy", 90, 44, 500, 4800);
+    addBothMelterRecipes("create:andesite_alloy_block", "kubejs:molten_andesite_alloy", 90, 132, 500, 4800 * 9);
+    chillerIngotCasting("create:andesite_alloy", "kubejs:molten_andesite_alloy", 90, 4800);
+    chillerBlockCasting("create:andesite_alloy_block", "kubejs:molten_andesite_alloy", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("create:andesite_alloy_block", "kubejs:molten_andesite_alloy", 810, 160);
+    addTinkersIngotCastingRecipe("create:andesite_alloy", "kubejs:molten_andesite_alloy", 90, 50);
+
+    // Andesite alloy smeltery recipe
+    event.custom({
+        type: "tconstruct:alloy",
+        inputs: [
+            {
+                amount: 1000,
+                tag: "forge:molten_andesite",
+            },
+
+            {
+                amount: 90,
+                tag: "forge:molten_zinc",
+            },
+        ],
+        result: {
+            amount: 90,
+            fluid: "kubejs:molten_andesite_alloy",
+        },
+        temperature: 700,
+    });
+
+    // Molten andesite
+    addBothMelterRecipes("minecraft:andesite", "kubejs:molten_andesite", 1000, 132, 600, 19200);
+    chillerBlockCasting("minecraft:andesite", "kubejs:molten_andesite", 1000, 8000);
+    addTinkersBlockCastingRecipe("minecraft:andesite", "kubejs:molten_andesite", 1000, 100);
 });

@@ -96,7 +96,7 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "thermal:redstone_servo" });
 
     event.shaped("thermal:redstone_servo", ["ABA", " B ", "ABA"], {
-        A: "#forge:plates/red_alloy",
+        A: "#forge:plates/redstone_alloy",
         B: "#forge:rods/aluminum",
     });
 

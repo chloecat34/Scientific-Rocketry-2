@@ -17,7 +17,7 @@ ServerEvents.recipes((event) => {
     event.shaped("ironjetpacks:strap", ["ABA", "CDC", "ABA"], {
         A: "#forge:plates/aluminum",
         B: "#forge:plates/vibrant_alloy",
-        C: "minecraft:leather",
+        C: "kubejs:treated_leather",
         D: "create_jetpack:netherite_jetpack",
     });
 
