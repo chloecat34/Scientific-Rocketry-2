@@ -804,6 +804,25 @@
 			x: -1.0d
 			y: -3.0d
 		}
+		{
+			dependencies: ["508CE71920CDF407"]
+			description: ["Rehooked adds several tiers of grappling hooks to help you navigate the world. The Iron Hook is a good early option."]
+			id: "16B59A18363D8218"
+			rewards: [{
+				count: 8
+				id: "47193A3E833C82DA"
+				item: "thermal:steel_plate"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4F1D611DD8E87E2D"
+				item: "rehooked:iron_hook"
+				type: "item"
+			}]
+			title: "Hooks"
+			x: 8.0d
+			y: -3.0d
+		}
 	]
 	title: "Chapter 1: Crash Landing"
 }
