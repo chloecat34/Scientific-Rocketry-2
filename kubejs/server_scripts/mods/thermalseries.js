@@ -34,6 +34,12 @@ ServerEvents.recipes((event) => {
         B: "#forge:wires/aluminum",
     });
 
+    // Wire die
+    event.shaped("kubejs:sheetmetal_die", [" A ", "ABA", " A "], {
+        A: "#forge:plates/invar",
+        B: "#forge:sheetmetals/aluminum",
+    });
+
     // Gearworking die
     event.replaceInput(
         { output: "thermal:press_gear_die" },

@@ -6,6 +6,8 @@ StartupEvents.registry("item", (event) => {
 
     event.create("wire_die").displayName("Wire Die").tag("thermal:crafting/dies");
 
+    event.create("sheetmetal_die").displayName("Sheetmetal Die").tag("thermal:crafting/dies");
+
     event.create("chiller_plate_cast").displayName("Plate Cast").tag("thermal:crafting/casts");
 
     event.create("zinc_dust").displayName("Zinc Dust").tag("forge:dusts").tag("forge:dusts/zinc");
@@ -30,26 +32,54 @@ StartupEvents.registry("item", (event) => {
 
     event.create("brass_gear").displayName("Brass Gear").tag("forge:gears").tag("forge:gears/brass");
 
-    event.create("cinderslime_plate").displayName("Cinderslime Plate").tag("forge:plates").tag("forge:plates/cinderslime");
+    event
+        .create("cinderslime_plate")
+        .displayName("Cinderslime Plate")
+        .tag("forge:plates")
+        .tag("forge:plates/cinderslime");
     event.create("cinderslime_gear").displayName("Cinderslime Gear").tag("forge:gears").tag("forge:gears/cinderslime");
 
     event.create("slimesteel_plate").displayName("Slimesteel Plate").tag("forge:plates").tag("forge:plates/slimesteel");
     event.create("slimesteel_gear").displayName("Slimesteel Gear").tag("forge:gears").tag("forge:gears/slimesteel");
 
-    event.create("knightslime_plate").displayName("Knightslime Plate").tag("forge:plates").tag("forge:plates/knightslime");
+    event
+        .create("knightslime_plate")
+        .displayName("Knightslime Plate")
+        .tag("forge:plates")
+        .tag("forge:plates/knightslime");
     event.create("knightslime_gear").displayName("Knightslime Gear").tag("forge:gears").tag("forge:gears/knightslime");
 
-    event.create("amethyst_bronze_plate").displayName("Amethyst Bronze Plate").tag("forge:plates").tag("forge:plates/amethyst_bronze");
-    event.create("amethyst_bronze_gear").displayName("Amethyst Bronze Gear").tag("forge:gears").tag("forge:gears/amethyst_bronze");
+    event
+        .create("amethyst_bronze_plate")
+        .displayName("Amethyst Bronze Plate")
+        .tag("forge:plates")
+        .tag("forge:plates/amethyst_bronze");
+    event
+        .create("amethyst_bronze_gear")
+        .displayName("Amethyst Bronze Gear")
+        .tag("forge:gears")
+        .tag("forge:gears/amethyst_bronze");
 
     event.create("hepatizon_plate").displayName("Hepatizon Plate").tag("forge:plates").tag("forge:plates/hepatizon");
     event.create("hepatizon_gear").displayName("Hepatizon Gear").tag("forge:gears").tag("forge:gears/hepatizon");
 
-    event.create("queens_slime_plate").displayName("Queen's Slime Plate").tag("forge:plates").tag("forge:plates/queens_slime");
-    event.create("queens_slime_gear").displayName("Queen's Slime Gear").tag("forge:gears").tag("forge:gears/queens_slime");
+    event
+        .create("queens_slime_plate")
+        .displayName("Queen's Slime Plate")
+        .tag("forge:plates")
+        .tag("forge:plates/queens_slime");
+    event
+        .create("queens_slime_gear")
+        .displayName("Queen's Slime Gear")
+        .tag("forge:gears")
+        .tag("forge:gears/queens_slime");
 
     event.create("zinc_rod").displayName("Zinc Rod").tag("forge:rods").tag("forge:rods/zinc");
-    event.create("compressed_iron_rod").displayName("Compressed Steel Rod").tag("forge:rods").tag("forge:rods/compressed_iron");
+    event
+        .create("compressed_iron_rod")
+        .displayName("Compressed Steel Rod")
+        .tag("forge:rods")
+        .tag("forge:rods/compressed_iron");
 
     event
         .create("coagulated_blood")
@@ -113,16 +143,16 @@ StartupEvents.registry("item", (event) => {
         "pulsating_alloy",
         "ardite",
         "stainless_steel",
-        "glowing_brass"
+        "glowing_brass",
     ];
 
     // Map ingots to the formatting code if needed
     let formats = {
-        "vibrant_alloy": "§a",
-        "pulsating_alloy": "§3",
-        "purple_alloy": "§5",
-        "energetic_alloy": "§6",
-        "glowing_brass": "§e"
+        vibrant_alloy: "§a",
+        pulsating_alloy: "§3",
+        purple_alloy: "§5",
+        energetic_alloy: "§6",
+        glowing_brass: "§e",
     };
 
     let wires = ["red_alloy", "energetic_alloy", "vibrant_alloy"];

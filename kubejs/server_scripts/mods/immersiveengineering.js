@@ -541,6 +541,14 @@ ServerEvents.recipes((event) => {
         event.shaped(`2x immersiveengineering:sheetmetal_${material}`, [" A ", "A A", " A "], {
             A: `#forge:plates/${material}`,
         });
+
+        // Add sheetmetal die recipe
+        event.recipes.thermal
+            .press(`immersiveengineering:sheetmetal_${material}`, [
+                `2x #forge:plates/${material}`,
+                "kubejs:sheetmetal_die",
+            ])
+            .energy(2400);
     });
 
     // Tough fabric
