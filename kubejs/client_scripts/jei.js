@@ -137,10 +137,33 @@ JEIEvents.hideItems((event) => {
         "compressedcreativity:brass_gilded_lapis_lazuli",
         "integrateddynamics:proto_chorus",
         "rehooked:blaze_chain",
-        "rehooked:ender_chain"
+        "rehooked:ender_chain",
     ];
 
     itemsToRemove.forEach((item) => event.hide(item));
+
+    // Disable mycelial generators
+    [
+        "reactor",
+        "furnace",
+        "slimey",
+        "culinary",
+        "potion",
+        "disenchantment",
+        "ender",
+        "explosive",
+        "frosty",
+        "halitosis",
+        "magma",
+        "pink",
+        "netherstar",
+        "death",
+        "rocket",
+        "crimed",
+        "meatallurgic",
+    ].forEach((gen) => {
+        event.hide(`industrialforegoing:mycelial_${gen}`);
+    });
 });
 
 JEIEvents.hideFluids((event) => {
