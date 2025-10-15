@@ -138,6 +138,8 @@ JEIEvents.hideItems((event) => {
         "integrateddynamics:proto_chorus",
         "rehooked:blaze_chain",
         "rehooked:ender_chain",
+        "immersiveengineering:coal_coke",
+        "tconstruct:molten_ender_bucket"
     ];
 
     itemsToRemove.forEach((item) => event.hide(item));
