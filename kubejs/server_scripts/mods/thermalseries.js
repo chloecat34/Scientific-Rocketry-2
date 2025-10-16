@@ -18,9 +18,7 @@ ServerEvents.recipes((event) => {
         "thermal:signalum_ingot",
         "thermal:lumium_ingot",
         "thermal:enderium_ingot",
-    ].forEach((item) =>
-        event.remove({ input: "minecraft:fire_charge", output: item })
-    );
+    ].forEach((item) => event.remove({ input: "minecraft:fire_charge", output: item }));
 
     // Rod die
     event.shaped("kubejs:rod_die", [" A ", "ABA", " A "], {
@@ -41,11 +39,7 @@ ServerEvents.recipes((event) => {
     });
 
     // Gearworking die
-    event.replaceInput(
-        { output: "thermal:press_gear_die" },
-        "#forge:gears/diamond",
-        "#forge:gears/constantan"
-    );
+    event.replaceInput({ output: "thermal:press_gear_die" }, "#forge:gears/diamond", "#forge:gears/constantan");
 
     // Remove rod cast
     event.remove({ output: "thermal:chiller_rod_cast" });
@@ -64,28 +58,17 @@ ServerEvents.recipes((event) => {
 
     event.recipes.createMixing;
 
-    event.recipes.createCompacting("thermal:rubber", [
-        Fluid.of("thermal:latex", 250),
-    ]);
-    event.recipes.createCompacting("thermal:rubber", [
-        Fluid.of("thermal:resin", 500),
-    ]);
-    event.recipes.thermal
-        .chiller("thermal:rubber", Fluid.of("thermal:latex", 250))
-        .energy(2400);
-    event.recipes.thermal
-        .chiller("thermal:rubber", Fluid.of("thermal:resin", 500))
-        .energy(2400);
+    event.recipes.createCompacting("thermal:rubber", [Fluid.of("thermal:latex", 250)]);
+    event.recipes.createCompacting("thermal:rubber", [Fluid.of("thermal:resin", 500)]);
+    event.recipes.thermal.chiller("thermal:rubber", Fluid.of("thermal:latex", 250)).energy(2400);
+    event.recipes.thermal.chiller("thermal:rubber", Fluid.of("thermal:resin", 500)).energy(2400);
 
     event.remove({
         output: "thermal:cured_rubber",
         type: "minecraft:smelting",
     });
 
-    event.recipes.createMixing("thermal:cured_rubber", [
-        Fluid.of("kubejs:molten_sulfur", 125),
-        "thermal:rubber",
-    ]);
+    event.recipes.createMixing("thermal:cured_rubber", [Fluid.of("kubejs:molten_sulfur", 125), "thermal:rubber"]);
 
     // Arboreal extractor
     event.remove({ output: "thermal:device_tree_extractor" });
@@ -116,4 +99,14 @@ ServerEvents.recipes((event) => {
         D: "create:mechanical_drill",
         E: "thermal:redstone_servo",
     });
+
+    // Cured rubber boostable
+    event.remove({ id: "thermal:machines/smelter/smelter_cured_rubber" });
+
+    event.recipes.thermal
+        .smelter(Item.of("thermal:cured_rubber").withChance(4.0), [
+            ["#forge:gems/sulfur", "#forge:dusts/sulfur"],
+            "2x thermal:rubber",
+        ])
+        .energy(3200);
 });
