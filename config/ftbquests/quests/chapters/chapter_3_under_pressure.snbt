@@ -557,6 +557,44 @@
 			x: -4.0d
 			y: 1.5d
 		}
+		{
+			dependencies: ["3F73F687A32B9195"]
+			description: [
+				"Laser IO is a logistics mod that lets you transfer items, fluids, and chemicals using Laser Nodes. You can connect Laser Nodes using a Laser Wrench, and use different Cards to control logistics and filtering."
+				""
+				"Energy Cards are disabled for balance reasons."
+			]
+			id: "748F33CA4ADCA473"
+			rewards: [{
+				id: "435BEBC1F4E26794"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						Parent: {
+							Items: [ ]
+							Size: 15
+						}
+					}
+					id: "laserio:card_holder"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "300A3395A853802A"
+					item: "laserio:laser_node"
+					type: "item"
+				}
+				{
+					id: "701F70DE0ED11BD1"
+					item: "laserio:laser_connector"
+					type: "item"
+				}
+			]
+			title: "Laser IO"
+			x: -10.0d
+			y: 2.5d
+		}
 	]
 	title: "Chapter 3: Under Pressure"
 }

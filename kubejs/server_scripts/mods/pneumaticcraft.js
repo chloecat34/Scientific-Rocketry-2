@@ -354,6 +354,9 @@ ServerEvents.recipes((event) => {
             {
                 item: "actuallyadditions:palis_crystal",
             },
+            {
+                item: "createaddition:capacitor"
+            }
         ],
         pressure: 2.0,
         results: [
@@ -377,6 +380,9 @@ ServerEvents.recipes((event) => {
             {
                 item: "actuallyadditions:restonia_crystal",
             },
+            {
+                item: "immersiveengineering:electron_tube"
+            }
         ],
         pressure: 2.0,
         results: [

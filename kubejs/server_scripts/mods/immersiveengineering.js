@@ -362,7 +362,7 @@ ServerEvents.recipes((event) => {
         .heated();
 
     event.recipes.thermal
-        .smelter("2x immersiveengineering:insulating_glass", [
+        .smelter(Item.of("immersiveengineering:insulating_glass").withChance(2.0), [
             "2x immersiveengineering:slag_glass",
             "#forge:dusts/iron",
         ])

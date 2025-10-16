@@ -139,7 +139,9 @@ JEIEvents.hideItems((event) => {
         "rehooked:blaze_chain",
         "rehooked:ender_chain",
         "immersiveengineering:coal_coke",
-        "tconstruct:molten_ender_bucket"
+        "tconstruct:molten_ender_bucket",
+        "laserio:logic_chip_raw",
+        "laserio:card_energy",
     ];
 
     itemsToRemove.forEach((item) => event.hide(item));

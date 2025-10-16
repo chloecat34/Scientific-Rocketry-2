@@ -113,4 +113,7 @@ ServerEvents.recipes((event) => {
         A: "#forge:plates/iron",
         B: "#forge:treated_wood",
     });
+
+    // Observer
+    event.replaceInput({ output: "minecraft:observer" }, "#forge:gems/quartz", "create:electron_tube");
 });
