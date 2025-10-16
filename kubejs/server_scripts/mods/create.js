@@ -13,7 +13,12 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal.smelter("create:andesite_alloy", ["minecraft:andesite", "#forge:nuggets/zinc"], 0, 3200);
 
     // Batching recipe
-    event.recipes.thermal.smelter("9x create:andesite_alloy", ["9x minecraft:andesite", "#forge:ingots/zinc"], 0, 32000);
+    event.recipes.thermal.smelter(
+        "9x create:andesite_alloy",
+        ["9x minecraft:andesite", "#forge:ingots/zinc"],
+        0,
+        32000
+    );
 
     event.recipes.create.mixing("9x create:andesite_alloy", ["9x minecraft:andesite", "#forge:ingots/zinc"]).heated();
 
@@ -550,4 +555,7 @@ ServerEvents.recipes((event) => {
 
     // Electron tube
     event.replaceInput({ output: "create:electron_tube" }, "#forge:plates/iron", "#forge:plates/glowing_brass");
+
+    // Remote lens
+    event.replaceInput({ output: "railways:remote_lens" }, "minecraft:ender_eye", "create:transmitter");
 });
