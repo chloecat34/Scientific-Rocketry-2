@@ -109,4 +109,31 @@ ServerEvents.recipes((event) => {
             "2x thermal:rubber",
         ])
         .energy(3200);
+
+    // Hive hopper
+    event.replaceInput({ output: "thermal:device_hive_extractor" }, "#minecraft:planks", "#forge:treated_wood");
+    event.replaceInput({ output: "thermal:device_fisher" }, "#minecraft:planks", "#forge:treated_wood");
+    event.replaceInput({ output: "thermal:device_composter" }, "#minecraft:planks", "#forge:treated_wood");
+
+    // Phyto soil infuser
+    event.remove({ output: "thermal:device_soil_infuser" });
+
+    event.shaped("thermal:device_soil_infuser", ["ABA", "CDC", "AEA"], {
+        A: "#forge:treated_wood",
+        B: "immersiveengineering:light_bulb",
+        C: "#thermal:glass/hardened",
+        D: "thermal:phytosoil",
+        E: "immersiveengineering:component_electronic",
+    });
+
+    // Aqueous accumulator
+    event.remove({output: "thermal:device_water_gen"});
+
+    event.shaped("thermal:device_water_gen", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/constantan",
+        B: "#forge:gears/aluminum",
+        C: "#thermal:glass/hardened",
+        D: "immersiveengineering:fluid_pump",
+        E: "thermal:redstone_servo"
+    })
 });

@@ -410,6 +410,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:nuggets/aluminum", "tconstruct:molten_aluminum", 10, 600);
     crucibleMelting("#forge:storage_blocks/aluminum", "tconstruct:molten_aluminum", 810, 4800 * 9);
     crucibleMelting("#forge:plates/aluminum", "tconstruct:molten_aluminum", 90, 4800);
+    crucibleMelting("#forge:gears/aluminum", "tconstruct:molten_aluminum", 360, 4800 * 4);
     crucibleMelting("#forge:rods/aluminum", "tconstruct:molten_aluminum", 45, 2400);
     crucibleMelting("#forge:wires/aluminum", "tconstruct:molten_aluminum", 45, 2400);
     crucibleMelting("#forge:sheetmetals/aluminum", "tconstruct:molten_aluminum", 180, 4800);

@@ -31,6 +31,7 @@ StartupEvents.registry("item", (event) => {
     event.create("cobalt_gear").displayName("Cobalt Gear").tag("forge:gears").tag("forge:gears/cobalt");
 
     event.create("brass_gear").displayName("Brass Gear").tag("forge:gears").tag("forge:gears/brass");
+    event.create("aluminum_gear").displayName("Aluminum Gear").tag("forge:gears").tag("forge:gears/aluminum");
 
     event
         .create("cinderslime_plate")

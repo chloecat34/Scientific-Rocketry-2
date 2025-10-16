@@ -411,7 +411,7 @@ ServerEvents.recipes((event) => {
 
     event.shaped("immersiveengineering:cloche", ["ABA", "ACA", "DED"], {
         A: "#forge:plates/vibrant_alloy",
-        B: "immersiveengineering:light_bulb",
+        B: "thermal:device_soil_infuser",
         C: "#forge:gears/vibrant_alloy",
         D: "#forge:treated_wood",
         E: "actuallyadditions:farmer",

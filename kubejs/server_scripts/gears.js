@@ -31,9 +31,7 @@ ServerEvents.recipes((event) => {
 
         // Add thermal recipes
         if (!event.containsRecipe({ output: gear, type: "thermal:press" })) {
-            event.recipes.thermal
-                .press(gear, [`4x ${ingotTag}`, "thermal:press_gear_die"])
-                .energy(2400);
+            event.recipes.thermal.press(gear, [`4x ${ingotTag}`, "thermal:press_gear_die"]).energy(2400);
         }
     }
 
@@ -87,11 +85,10 @@ ServerEvents.recipes((event) => {
         "queens_slime",
         "stainless_steel",
         "brass",
-        "glowing_brass"
+        "glowing_brass",
+        "aluminum",
     ];
-    kubejsGears.forEach((ingot) =>
-        standardizeGears(ingot, `kubejs:${ingot}_gear`)
-    );
+    kubejsGears.forEach((ingot) => standardizeGears(ingot, `kubejs:${ingot}_gear`));
 
     // Get rid of the gem gears
     ["lapis", "diamond", "emerald", "quartz"].forEach((gem) =>
@@ -126,7 +123,7 @@ ServerEvents.recipes((event) => {
         "prismalium",
         "melodium",
         "stellarium",
-        "copper"
+        "copper",
     ]
         .concat(kubejsGears)
         .forEach((ingot) => {

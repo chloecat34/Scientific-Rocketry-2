@@ -595,6 +595,29 @@
 			x: -10.0d
 			y: 2.5d
 		}
+		{
+			dependencies: ["52194E07563DEB30"]
+			description: [
+				"Travel Anchors allow you to teleport around your base, making it easier to get around. When standing on one, you can teleport to nearby Travel Anchors."
+				""
+				"A Travel Staff lets you teleport to them while not standing on one."
+			]
+			id: "44EBC6B393F7767D"
+			rewards: [{
+				count: 3
+				id: "3478130878BFA48D"
+				item: "travelanchors:travel_anchor"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4F1BA65117F283FB"
+				item: "travelanchors:travel_anchor"
+				type: "item"
+			}]
+			title: "Travel Anchors"
+			x: -5.0d
+			y: -1.5d
+		}
 	]
 	title: "Chapter 3: Under Pressure"
 }
