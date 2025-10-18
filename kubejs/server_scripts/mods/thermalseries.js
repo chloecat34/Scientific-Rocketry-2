@@ -127,13 +127,84 @@ ServerEvents.recipes((event) => {
     });
 
     // Aqueous accumulator
-    event.remove({output: "thermal:device_water_gen"});
+    event.remove({ output: "thermal:device_water_gen" });
 
     event.shaped("thermal:device_water_gen", ["ABA", "CDC", "AEA"], {
         A: "#forge:plates/constantan",
         B: "#forge:gears/aluminum",
         C: "#thermal:glass/hardened",
         D: "immersiveengineering:fluid_pump",
-        E: "thermal:redstone_servo"
-    })
+        E: "thermal:redstone_servo",
+    });
+
+    // Vacuumulator
+    event.remove({ output: "thermal:device_collector" });
+
+    event.shaped("thermal:device_collector", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/pulsating_alloy",
+        B: "kubejs:pulsating_crystal",
+        C: "#thermal:glass/hardened",
+        D: "minecraft:hopper",
+        E: "thermal:redstone_servo",
+    });
+
+    // Insightful crystal
+    event.remove({ output: "thermal:xp_crystal" });
+
+    event.shaped("thermal:xp_crystal", [" A ", "BCB", " A "], {
+        A: "actuallyadditions:palis_crystal",
+        B: "actuallyadditions:emeradic_crystal",
+        C: "create:experience_block",
+    });
+
+    // Insightful Condenser
+    event.remove({ output: "thermal:device_xp_condenser" });
+
+    event.shaped("thermal:device_xp_condenser", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/purple_alloy",
+        B: "create:experience_block",
+        C: "#thermal:glass/hardened",
+        D: "thermal:xp_crystal",
+        E: "thermal:redstone_servo",
+    });
+
+    // Nullifier
+    event.remove({ output: "thermal:device_nullifier" });
+
+    event.shaped("thermal:device_nullifier", ["ABA", "CDE", "AFA"], {
+        A: "#forge:plates/invar",
+        B: "#forge:gears/lead",
+        C: "trashcans:item_trash_can",
+        D: "thermal:machine_null_augment",
+        E: "trashcans:liquid_trash_can",
+        F: "thermal:redstone_servo",
+    });
+
+    // Decoctive diffuser
+    event.remove({ output: "thermal:device_potion_diffuser" });
+
+    event.shaped("thermal:device_potion_diffuser", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/mithril",
+        B: "#forge:gears/knightslime",
+        C: "#thermal:glass/hardened",
+        D: "minecraft:glass_bottle",
+        E: "thermal:redstone_servo",
+    });
+
+    // Item filter
+    event.remove({ output: "thermal:item_filter_augment" });
+
+    event.shaped("thermal:item_filter_augment", [" A ", "ABA", " A "], {
+        A: "#forge:plates/invar",
+        B: "create:brass_funnel",
+    });
+
+    // Fluid filter
+    event.remove({ output: "thermal:fluid_filter_augment" });
+
+    event.shaped("thermal:fluid_filter_augment", [" A ", "BCB", " A "], {
+        A: "thermal:cured_rubber",
+        B: "#forge:plates/constantan",
+        C: "create:smart_fluid_pipe",
+    });
 });
