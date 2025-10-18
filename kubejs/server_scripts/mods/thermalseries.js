@@ -207,4 +207,56 @@ ServerEvents.recipes((event) => {
         B: "#forge:plates/constantan",
         C: "create:smart_fluid_pipe",
     });
+
+    // Knowledge concentrator
+    event.replaceInput(
+        { output: "thermal:xp_storage_augment" },
+        "#forge:nuggets/gold",
+        "actuallyadditions:emeradic_crystal"
+    );
+
+    // Remove satchel
+    event.remove({ output: "thermal:satchel" });
+
+    // Auxiliary cactus
+    event.replaceInput(
+        { output: "thermal:machine_null_augment" },
+        "#forge:nuggets/iron",
+        "actuallyadditions:void_crystal"
+    );
+
+    // Reservoir
+    event.remove({ output: "thermal:fluid_reservoir" });
+
+    event.shaped("thermal:fluid_reservoir", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/constantan",
+        B: "thermal:cured_rubber",
+        C: "#thermal:glass/hardened",
+        D: "pneumaticcraft:small_tank",
+        E: "thermal:redstone_servo",
+    });
+
+    // Watering can
+    event.replaceInput({ output: "thermal:watering_can" }, "#forge:ingots/copper", "#forge:plates/bronze");
+
+    // Potion infuser
+    event.remove({ output: "thermal:potion_infuser" });
+
+    event.shaped("thermal:potion_infuser", ["ABA", "CDC", " C "], {
+        A: "thermal:cured_rubber",
+        B: "minecraft:glass_bottle",
+        C: "#forge:plates/mithril",
+        D: "#forge:gears/mithril",
+    });
+
+    // Alchemical quiver
+    event.remove({ output: "thermal:potion_quiver" });
+
+    event.shaped("thermal:potion_quiver", ["A A", "BCD", "EAE"], {
+        A: "#forge:plates/mithril",
+        B: "minecraft:glass_bottle",
+        C: "#forge:gears/mithril",
+        D: "minecraft:string",
+        E: "thermal:cured_rubber",
+    });
 });

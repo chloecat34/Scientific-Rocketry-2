@@ -142,6 +142,7 @@ JEIEvents.hideItems((event) => {
         "tconstruct:molten_ender_bucket",
         "laserio:logic_chip_raw",
         "laserio:card_energy",
+        "thermal:satchel"
     ];
 
     itemsToRemove.forEach((item) => event.hide(item));
