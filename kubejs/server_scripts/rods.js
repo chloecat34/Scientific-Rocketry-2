@@ -19,6 +19,7 @@ ServerEvents.recipes((event) => {
         ["#forge:ingots/brass", "createaddition:brass_rod"],
         ["#forge:ingots/zinc", "kubejs:zinc_rod", true],
         ["#forge:ingots/compressed_iron", "kubejs:compressed_iron_rod", true, true],
+        ["#forge:ingots/stainless_steel", "kubejs:stainless_steel_rod", true, true],
     ].forEach((entry) => {
         const [ingot, rod, createRecipe, ieRecipe] = entry;
 
@@ -47,7 +48,7 @@ ServerEvents.recipes((event) => {
                 mold: "immersiveengineering:mold_rod",
                 result: {
                     item: rod,
-                    count: 2
+                    count: 2,
                 },
             });
         }

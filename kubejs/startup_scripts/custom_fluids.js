@@ -153,4 +153,12 @@ StartupEvents.registry("fluid", (event) => {
         .bucketColor(0xe7eff1)
         .gaseous()
         .displayName("Air");
+
+    event
+        .create("kubejs:nether_air")
+        .stillTexture("kubejs:fluid/nether_air_still")
+        .flowingTexture("kubejs:fluid/nether_air_flow")
+        .bucketColor(0xa49595)
+        .gaseous()
+        .displayName("Nether Air");
 });

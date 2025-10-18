@@ -359,7 +359,7 @@
 			description: [
 				"&7&o*insert slime HRT joke here*&r"
 				""
-				"What happens when you combine hot and cold? You are about to find out."
+				"What happens when you combine hot and cold? You're about to find out."
 				""
 				"Skyslime is cold to the touch, while Cinderslime is red hot. These ingots and their alloy will prove very useful to heat management."
 			]
@@ -486,6 +486,7 @@
 				item: "immersiveengineering:plate_duroplast"
 				type: "item"
 			}]
+			subtitle: "yes the quest title is a GT:NH reference"
 			tasks: [{
 				id: "5CA2904A0BCEBE35"
 				item: "pneumaticcraft:empty_pcb"
@@ -617,6 +618,68 @@
 			title: "Travel Anchors"
 			x: -5.0d
 			y: -1.5d
+		}
+		{
+			dependencies: ["1F34E156F7D49612"]
+			description: ["The Air Collector is a multiblock that lets you collect Air from the atmosphere of the current dimension. Different dimensions will have different results."]
+			id: "54D52E12AF41A529"
+			rewards: [{
+				count: 2
+				id: "149F8582E2820A7B"
+				item: "pneumaticcraft:medium_tank"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "3006ECCB464BDD71"
+					item: "mbd2:air_collector"
+					type: "item"
+				}
+				{
+					count: 25L
+					id: "65922A34210413C2"
+					item: { Count: 25, id: "kubejs:air_filter_casing" }
+					type: "item"
+				}
+				{
+					count: 60L
+					id: "7B7A923FB7B9761B"
+					item: { Count: 60, id: "immersiveengineering:steel_scaffolding_standard" }
+					type: "item"
+				}
+				{
+					count: 25L
+					id: "2F15A5A4BDDB3803"
+					item: { Count: 25, id: "immersiveengineering:sheetmetal_steel" }
+					type: "item"
+				}
+				{
+					count: 40L
+					id: "02B51816CB42FE2D"
+					item: { Count: 40, id: "immersiveengineering:sheetmetal_aluminum" }
+					type: "item"
+				}
+				{
+					count: 7L
+					id: "247E9F16B22CF39B"
+					item: { Count: 7, id: "immersiveengineering:light_engineering" }
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "1FAAFB0B40AF1E00"
+					item: { Count: 12, id: "thermal:obsidian_glass" }
+					type: "item"
+				}
+				{
+					id: "657A442A04C2EFCC"
+					item: "kubejs:air_bucket"
+					type: "item"
+				}
+			]
+			title: "Air Collector"
+			x: -2.0d
+			y: -0.5d
 		}
 	]
 	title: "Chapter 3: Under Pressure"

@@ -96,4 +96,23 @@ ServerEvents.recipes((event) => {
 
     event.shapeless("mbd2:aluminum_input_bus", ["mbd2:aluminum_output_bus"]);
     event.shapeless("mbd2:aluminum_output_bus", ["mbd2:aluminum_input_bus"]);
+
+    // Air filter casing
+    event.shaped("2x kubejs:air_filter_casing", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/steel",
+        B: "#immersiveengineering:scaffoldings/aluminum",
+        C: "pneumaticcraft:air_grate_module",
+        D: "pneumaticcraft:turbine_rotor",
+    });
+
+    // Air collector
+    event.recipes.createMechanicalCrafting("mbd2:air_collector", ["AABAA", "ACDCA", "BEFEB", "ACGCA", "AABAA"], {
+        A: "#forge:sheetmetals/aluminum",
+        B: "pneumaticcraft:pressure_chamber_glass",
+        C: "pneumaticcraft:air_grate_module",
+        D: "immersiveengineering:light_engineering",
+        E: "pneumaticcraft:medium_tank",
+        F: "#forge:gears/compressed_iron",
+        G: "compressedcreativity:rotational_compressor",
+    });
 });

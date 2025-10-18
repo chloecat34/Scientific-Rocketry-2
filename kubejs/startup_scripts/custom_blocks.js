@@ -213,4 +213,14 @@ StartupEvents.registry("block", (event) => {
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_iron_tool");
+
+    event
+        .create("air_filter_casing")
+        .displayName("Air Filter Casing")
+        .material("metal")
+        .hardness(2.5)
+        .resistance(30.0)
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
 });

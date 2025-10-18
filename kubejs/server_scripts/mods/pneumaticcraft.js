@@ -355,8 +355,8 @@ ServerEvents.recipes((event) => {
                 item: "actuallyadditions:palis_crystal",
             },
             {
-                item: "createaddition:capacitor"
-            }
+                item: "createaddition:capacitor",
+            },
         ],
         pressure: 2.0,
         results: [
@@ -381,8 +381,8 @@ ServerEvents.recipes((event) => {
                 item: "actuallyadditions:restonia_crystal",
             },
             {
-                item: "immersiveengineering:electron_tube"
-            }
+                item: "immersiveengineering:electron_tube",
+            },
         ],
         pressure: 2.0,
         results: [
@@ -432,4 +432,14 @@ ServerEvents.recipes((event) => {
             "#minecraft:coals",
         ])
         .energy(8000);
+
+    // Medium fluid tank
+    event.remove({ output: "pneumaticcraft:medium_tank" });
+
+    event.shaped("pneumaticcraft:medium_tank", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/aluminum",
+        B: "pneumaticcraft:small_tank",
+        C: "pneumaticcraft:plastic",
+        D: "#forge:gears/blue_alloy",
+    });
 });

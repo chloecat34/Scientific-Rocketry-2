@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "immersiveengineering:block/metal/sheetmetal_aluminum",
+    "front": "mbd2:block/air_collector",
+    "side": "immersiveengineering:block/metal/sheetmetal_aluminum"
+  }
+}

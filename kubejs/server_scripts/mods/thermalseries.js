@@ -85,8 +85,13 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "thermal:redstone_servo" });
 
     event.shaped("thermal:redstone_servo", ["ABA", " B ", "ABA"], {
-        A: "#forge:plates/redstone_alloy",
+        A: "#forge:plates/red_alloy",
         B: "#forge:rods/aluminum",
+    });
+
+    event.shaped("2x thermal:redstone_servo", ["ABA", " B ", "ABA"], {
+        A: "#forge:plates/redstone_alloy",
+        B: "#forge:rods/stainless_steel",
     });
 
     // Igneous extruder

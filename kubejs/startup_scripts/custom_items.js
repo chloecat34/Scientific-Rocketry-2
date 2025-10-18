@@ -76,6 +76,7 @@ StartupEvents.registry("item", (event) => {
         .tag("forge:gears/queens_slime");
 
     event.create("zinc_rod").displayName("Zinc Rod").tag("forge:rods").tag("forge:rods/zinc");
+    event.create("stainless_steel_rod").displayName("Stainless Steel Rod").tag("forge:rods").tag("forge:rods/stainless_steel");
     event
         .create("compressed_iron_rod")
         .displayName("Compressed Steel Rod")
