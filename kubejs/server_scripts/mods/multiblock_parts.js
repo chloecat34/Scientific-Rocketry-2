@@ -14,7 +14,7 @@ ServerEvents.recipes((event) => {
         C: "#forge:plates/knightslime",
         D: "compressedcreativity:compressed_iron_casing",
         E: "pneumaticcraft:gas_lift",
-        F: "pneumaticcraft:small_tank"
+        F: "pneumaticcraft:small_tank",
     });
 
     // Bronze fluid hatch
@@ -76,4 +76,24 @@ ServerEvents.recipes((event) => {
 
     event.shapeless("mbd2:bronze_input_bus", ["mbd2:bronze_output_bus"]);
     event.shapeless("mbd2:bronze_output_bus", ["mbd2:bronze_input_bus"]);
+
+    // Steel input bus
+    event.shaped("mbd2:steel_input_bus", ["ABA", "BCB", "ABA"], {
+        A: "#forge:plates/steel",
+        B: "prettypipes:high_speed_module",
+        C: "sophisticatedstorage:basic_to_gold_tier_upgrade",
+    });
+
+    event.shapeless("mbd2:steel_input_bus", ["mbd2:steel_output_bus"]);
+    event.shapeless("mbd2:steel_output_bus", ["mbd2:steel_input_bus"]);
+
+    // Aluminum input bus
+    event.shaped("mbd2:aluminum_input_bus", ["ABA", "BCB", "ABA"], {
+        A: "#forge:plates/aluminum",
+        B: "laserio:logic_chip",
+        C: "sophisticatedstorage:basic_to_diamond_tier_upgrade",
+    });
+
+    event.shapeless("mbd2:aluminum_input_bus", ["mbd2:aluminum_output_bus"]);
+    event.shapeless("mbd2:aluminum_output_bus", ["mbd2:aluminum_input_bus"]);
 });

@@ -175,4 +175,8 @@ ItemEvents.tooltip((event) => {
     addTooltip("mbd2:aluminum_energy_output_hatch", "Stores 320k RF/t, outputs 2048 RF/t", Text.aqua);
     addTooltip("mbd2:bronze_input_bus", "Stores 1 stack", Text.aqua);
     addTooltip("mbd2:bronze_output_bus", "Stores 1 stack", Text.aqua);
+    addTooltip("mbd2:steel_input_bus", "Stores 4 stacks", Text.aqua);
+    addTooltip("mbd2:steel_output_bus", "Stores 4 stacks", Text.aqua);
+    addTooltip("mbd2:aluminum_input_bus", "Stores 8 stacks", Text.aqua);
+    addTooltip("mbd2:aluminum_output_bus", "Stores 8 stacks", Text.aqua);
 });

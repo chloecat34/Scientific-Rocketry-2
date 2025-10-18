@@ -144,9 +144,13 @@ StartupEvents.registry("fluid", (event) => {
         .bucketColor(0xc9caba)
         .displayName("Molten Andesite Alloy");
 
+    event.create("kubejs:molten_andesite").thickTexture(0xc4c5c0).bucketColor(0xc4c5c0).displayName("Molten Andesite");
+
     event
-        .create("kubejs:molten_andesite")
-        .thickTexture(0xc4c5c0)
-        .bucketColor(0xc4c5c0)
-        .displayName("Molten Andesite");
+        .create("kubejs:air")
+        .stillTexture("kubejs:fluid/air_still")
+        .flowingTexture("kubejs:fluid/air_flow")
+        .bucketColor(0xe7eff1)
+        .gaseous()
+        .displayName("Air");
 });

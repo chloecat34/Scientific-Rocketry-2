@@ -60,13 +60,13 @@ ServerEvents.tags("block", (event) => {
         event.add("forge:mbd_energy_output_hatch", block);
     });
 
-    ["mbd2:bronze_input_bus"].forEach((block) => {
+    ["mbd2:bronze_input_bus", "mbd2:steel_input_bus", "mbd2:aluminum_input_bus"].forEach((block) => {
         event.add("forge:mbd_hatch", block);
         event.add("forge:mbd_item_hatch", block);
         event.add("forge:mbd_item_input_hatch", block);
     });
 
-    ["mbd2:bronze_output_bus"].forEach((block) => {
+    ["mbd2:bronze_output_bus", "mbd2:steel_output_bus", "mbd2:aluminum_output_bus"].forEach((block) => {
         event.add("forge:mbd_hatch", block);
         event.add("forge:mbd_item_hatch", block);
         event.add("forge:mbd_item_output_hatch", block);
