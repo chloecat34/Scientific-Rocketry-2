@@ -56,7 +56,7 @@ ServerEvents.recipes((event) => {
 
     event.recipes.createFilling("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 400)]);
     event.recipes.thermal
-        .bottler("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 400)])
+        .bottler("create:rose_quartz", ["#forge:gems/quartz", Fluid.of("thermal:redstone", 200)])
         .energy(8000);
 
     event.custom({
@@ -82,7 +82,7 @@ ServerEvents.recipes((event) => {
         exothermic: false,
         fluid_input: {
             type: "pneumaticcraft:fluid",
-            amount: 400,
+            amount: 200,
             fluid: "thermal:redstone",
         },
         item_input: {

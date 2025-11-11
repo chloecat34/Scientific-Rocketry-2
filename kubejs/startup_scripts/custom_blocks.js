@@ -223,4 +223,35 @@ StartupEvents.registry("block", (event) => {
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_iron_tool");
+
+    event
+        .create("hepatizon_sheetmetal")
+        .displayName("Hepatizon Sheetmetal")
+        .material("metal")
+        .hardness(4.0)
+        .resistance(120.0)
+        .requiresTool(true)
+        .tag("forge:sheetmetals/hepatizon")
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs/diamond_tool");
+
+    event
+        .create("industrial_centrifuge_wall")
+        .displayName("Industrial Centrifuge Wall")
+        .material("metal")
+        .hardness(4.0)
+        .resistance(120.0)
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
+
+    event
+        .create("industrial_centrifuge_core")
+        .displayName("Industrial Centrifuge Core")
+        .material("metal")
+        .hardness(8.0)
+        .resistance(480.0)
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
 });

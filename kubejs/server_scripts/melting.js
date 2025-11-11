@@ -346,6 +346,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:nuggets/hepatizon", "tconstruct:molten_hepatizon", 10, 600);
     crucibleMelting("#forge:storage_blocks/hepatizon", "tconstruct:molten_hepatizon", 810, 4800 * 9);
     addBothMelterRecipes("kubejs:hepatizon_plate", "tconstruct:molten_hepatizon", 90, 76, 1400, 4800);
+    addBothMelterRecipes("kubejs:hepatizon_sheetmetal", "tconstruct:molten_hepatizon", 180, 100, 1400, 4800 * 2);
     addBothMelterRecipes("kubejs:hepatizon_gear", "tconstruct:molten_hepatizon", 360, 172, 1400, 4800 * 4);
     chillerBlockCasting("tconstruct:hepatizon_block", "tconstruct:molten_hepatizon", 810, 4800 * 9);
 
@@ -414,6 +415,30 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:rods/aluminum", "tconstruct:molten_aluminum", 45, 2400);
     crucibleMelting("#forge:wires/aluminum", "tconstruct:molten_aluminum", 45, 2400);
     crucibleMelting("#forge:sheetmetals/aluminum", "tconstruct:molten_aluminum", 180, 4800);
+    addBothMelterRecipes(
+        "immersiveengineering:alu_scaffolding_standard",
+        "tconstruct:molten_aluminum",
+        135,
+        56,
+        425,
+        7200
+    );
+    addBothMelterRecipes(
+        "immersiveengineering:alu_scaffolding_grate_top",
+        "tconstruct:molten_aluminum",
+        135,
+        56,
+        425,
+        7200
+    );
+    addBothMelterRecipes(
+        "immersiveengineering:alu_scaffolding_wooden_top",
+        "tconstruct:molten_aluminum",
+        135,
+        56,
+        425,
+        7200
+    );
     chillerBlockCasting("immersiveengineering:storage_aluminum", "tconstruct:molten_aluminum", 810, 4800 * 9);
 
     // Molten lead
@@ -559,6 +584,30 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:rods/steel", "tconstruct:molten_steel", 45, 2400);
     crucibleMelting("#forge:sheetmetals/steel", "tconstruct:molten_steel", 180, 4800);
     chillerBlockCasting("thermal:steel_block", "tconstruct:molten_steel", 810, 4800 * 9);
+    addBothMelterRecipes(
+        "immersiveengineering:steel_scaffolding_standard",
+        "tconstruct:molten_steel",
+        135,
+        76,
+        950,
+        7200
+    );
+    addBothMelterRecipes(
+        "immersiveengineering:steel_scaffolding_grate_top",
+        "tconstruct:molten_steel",
+        135,
+        76,
+        950,
+        7200
+    );
+    addBothMelterRecipes(
+        "immersiveengineering:steel_scaffolding_wooden_top",
+        "tconstruct:molten_steel",
+        135,
+        76,
+        950,
+        7200
+    );
 
     // Molten enderium
     crucibleMelting("#forge:ingots/enderium", "tconstruct:molten_enderium", 90, 4800);
