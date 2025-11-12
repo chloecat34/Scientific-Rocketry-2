@@ -7,6 +7,8 @@
     "block.mbd2.fluid_drilling_rig": "Fluid Drilling Rig",
     "mbd2.air_collecting": "Air Collecting",
     "block.mbd2.air_collector": "Air Collector",
+    "mbd2.industrial_centrifuging": "Industrial Centrifuging",
+    "block.mbd2.industrial_centrifuge": "Industrial Centrifuge",
     "block.mbd2.bronze_input_hatch": "Bronze Fluid Input Hatch",
     "block.mbd2.bronze_output_hatch": "Bronze Fluid Output Hatch",
     "block.mbd2.steel_input_hatch": "Steel Fluid Input Hatch",

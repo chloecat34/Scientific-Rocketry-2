@@ -131,4 +131,19 @@ ServerEvents.recipes((event) => {
         C: "#forge:heavy_platings/aluminum",
         D: "#forge:gears/aluminum",
     });
+
+    event.recipes.createMechanicalCrafting(
+        "mbd2:industrial_centrifuge",
+        ["AABAA", "ACDCA", "BEFEB", "AGHGA", "AABAA"],
+        {
+            A: "#forge:sheetmetals/compressed_iron",
+            B: "#forge:heavy_platings/hepatizon",
+            C: "pneumaticcraft:medium_tank",
+            D: "pneumaticcraft:turbine_rotor",
+            E: "createaddition:electric_motor",
+            F: "actuallyadditions:iron_casing",
+            G: "#forge:gears/purple_alloy",
+            H: "compressedcreativity:rotational_compressor",
+        }
+    );
 });

@@ -349,6 +349,7 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("kubejs:hepatizon_plate", "tconstruct:molten_hepatizon", 90, 76, 1400, 4800);
     addBothMelterRecipes("kubejs:hepatizon_sheetmetal", "tconstruct:molten_hepatizon", 180, 100, 1400, 4800 * 2);
     addBothMelterRecipes("kubejs:hepatizon_gear", "tconstruct:molten_hepatizon", 360, 172, 1400, 4800 * 4);
+    addBothMelterRecipes("kubejs:hepatizon_heavy_plating", "tconstruct:molten_hepatizon", 720, 300, 1400, 4800 * 8);
     chillerBlockCasting("tconstruct:hepatizon_block", "tconstruct:molten_hepatizon", 810, 4800 * 9);
 
     // Molten queen's slime
@@ -416,6 +417,8 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:rods/aluminum", "tconstruct:molten_aluminum", 45, 2400);
     crucibleMelting("#forge:wires/aluminum", "tconstruct:molten_aluminum", 45, 2400);
     crucibleMelting("#forge:sheetmetals/aluminum", "tconstruct:molten_aluminum", 180, 4800);
+
+    addBothMelterRecipes("kubejs:aluminum_heavy_plating", "tconstruct:molten_aluminum", 720, 300, 425, 4800 * 8);
     addBothMelterRecipes(
         "immersiveengineering:alu_scaffolding_standard",
         "tconstruct:molten_aluminum",
@@ -872,7 +875,14 @@ ServerEvents.recipes((event) => {
         1200,
         4800 * 9
     );
-    addBothMelterRecipes("kubejs:compressed_iron_sheetmetal", "kubejs:molten_compressed_iron", 180, 100, 1200, 4800 * 2);
+    addBothMelterRecipes(
+        "kubejs:compressed_iron_sheetmetal",
+        "kubejs:molten_compressed_iron",
+        180,
+        100,
+        1200,
+        4800 * 2
+    );
     chillerIngotCasting("#forge:ingots/compressed_iron", "kubejs:molten_compressed_iron", 90, 4800);
     chillerBlockCasting("pneumaticcraft:compressed_iron_block", "kubejs:molten_compressed_iron", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("pneumaticcraft:compressed_iron_block", "kubejs:molten_compressed_iron", 810, 160);

@@ -103,7 +103,7 @@ ServerEvents.recipes((event) => {
     ].forEach((ingot) => standardizePlates(ingot, `kubejs:${ingot}_plate`));
 
     // Heavy plates
-    ["aluminum"].forEach((material) => {
+    ["aluminum", "hepatizon"].forEach((material) => {
         event.custom({
             type: "pneumaticcraft:pressure_chamber",
             inputs: [
@@ -112,6 +112,9 @@ ServerEvents.recipes((event) => {
                     tag: `forge:sheetmetals/${material}`,
                     count: 4,
                 },
+                {
+                    item: "immersiveengineering:gunpowder_barrel"
+                }
             ],
             pressure: 4.5,
             results: [

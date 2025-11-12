@@ -190,7 +190,7 @@ StartupEvents.registry("item", (event) => {
     });
 
     // Heavy plating
-    ["aluminum"].forEach((material) => {
+    ["aluminum", "hepatizon"].forEach((material) => {
         let materialName = material.split("_").map(capitalize).join(" ");
 
         event
