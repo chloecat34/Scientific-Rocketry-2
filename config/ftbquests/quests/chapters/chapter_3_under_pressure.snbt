@@ -687,7 +687,11 @@
 		}
 		{
 			dependencies: ["54D52E12AF41A529"]
-			description: ["The Industrial Centrifuge is a multiblock that, among other things, lets you centrifuge Air into Nitrogen and Oxygen. You can get a better yield + some byproducts later on using Liquid Air Distillation."]
+			description: [
+				"The Industrial Centrifuge is a multiblock that, among other things, lets you centrifuge Air into Nitrogen and Oxygen. "
+				""
+				"You can get a better yield + some byproducts later on using Liquid Air Distillation."
+			]
 			id: "4D3E1C7D6FF1A423"
 			rewards: [{
 				count: 8
@@ -729,6 +733,11 @@
 					count: 18L
 					id: "69D73BD5129A06CF"
 					item: { Count: 18, id: "compressedcreativity:compressed_iron_casing" }
+					type: "item"
+				}
+				{
+					id: "12F2543218AF9240"
+					item: "kubejs:nitrogen_bucket"
 					type: "item"
 				}
 			]
