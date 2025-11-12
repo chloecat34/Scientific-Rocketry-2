@@ -621,11 +621,15 @@
 		}
 		{
 			dependencies: ["1F34E156F7D49612"]
-			description: ["The Air Collector is a multiblock that lets you collect Air from the atmosphere of the current dimension. Different dimensions will have different results."]
+			description: [
+				"The Air Collector is a multiblock that lets you collect Air from the atmosphere of the current dimension. Different dimensions will have different results."
+				""
+				"The Light Engineering Blocks on the sides can be replaced with hatches."
+			]
 			id: "54D52E12AF41A529"
 			rewards: [{
 				count: 2
-				id: "149F8582E2820A7B"
+				id: "58AD161C8E197386"
 				item: "pneumaticcraft:medium_tank"
 				type: "item"
 			}]
@@ -660,9 +664,9 @@
 					type: "item"
 				}
 				{
-					count: 7L
+					count: 4L
 					id: "247E9F16B22CF39B"
-					item: { Count: 7, id: "immersiveengineering:light_engineering" }
+					item: "immersiveengineering:light_engineering"
 					type: "item"
 				}
 				{
@@ -679,6 +683,57 @@
 			]
 			title: "Air Collector"
 			x: -2.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["54D52E12AF41A529"]
+			description: ["The Industrial Centrifuge is a multiblock that, among other things, lets you centrifuge Air into Nitrogen and Oxygen. You can get a better yield + some byproducts later on using Liquid Air Distillation."]
+			id: "4D3E1C7D6FF1A423"
+			rewards: [{
+				count: 8
+				id: "775A795C7D014DE9"
+				item: "pneumaticcraft:turbine_rotor"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "2C42FC557C3830E3"
+					item: "mbd2:industrial_centrifuge"
+					type: "item"
+				}
+				{
+					count: 42L
+					id: "29BFACB038F35F57"
+					item: { Count: 42, id: "mbd2:industrial_centrifuge" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "311CFE07976A1C18"
+					item: { Count: 5, id: "kubejs:industrial_centrifuge_core" }
+					type: "item"
+				}
+				{
+					count: 52L
+					id: "6EF2D7A2A17258D3"
+					item: { Count: 52, id: "kubejs:hepatizon_sheetmetal" }
+					type: "item"
+				}
+				{
+					count: 11L
+					id: "77F4C0D1E165FCC9"
+					item: { Count: 11, id: "immersiveengineering:heavy_engineering" }
+					type: "item"
+				}
+				{
+					count: 18L
+					id: "69D73BD5129A06CF"
+					item: { Count: 18, id: "compressedcreativity:compressed_iron_casing" }
+					type: "item"
+				}
+			]
+			title: "Industrial Centrifuge"
+			x: -1.0d
 			y: -0.5d
 		}
 	]
