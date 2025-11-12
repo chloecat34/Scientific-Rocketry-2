@@ -537,7 +537,7 @@ ServerEvents.recipes((event) => {
         "gold",
         "hepatizon",
         "manyullyn",
-        "compressed_iron"
+        "compressed_iron",
     ].forEach((material) => {
         event.remove({ output: `immersiveengineering:sheetmetal_${material}` });
 
@@ -547,10 +547,7 @@ ServerEvents.recipes((event) => {
 
         // Add sheetmetal die recipe
         event.recipes.thermal
-            .press(`#forge:sheetmetals/${material}`, [
-                `2x #forge:ingots/${material}`,
-                "kubejs:sheetmetal_die",
-            ])
+            .press(`#forge:sheetmetals/${material}`, [`2x #forge:ingots/${material}`, "kubejs:sheetmetal_die"])
             .energy(2400);
     });
 
