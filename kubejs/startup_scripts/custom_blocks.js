@@ -236,6 +236,28 @@ StartupEvents.registry("block", (event) => {
         .tagBlock("minecraft:needs/diamond_tool");
 
     event
+        .create("manyullyn_sheetmetal")
+        .displayName("Manyullyn Sheetmetal")
+        .material("metal")
+        .hardness(4.0)
+        .resistance(120.0)
+        .requiresTool(true)
+        .tag("forge:sheetmetals/manyullyn")
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs/diamond_tool");
+
+    event
+        .create("compressed_iron_sheetmetal")
+        .displayName("Compressed Steel Sheetmetal")
+        .material("metal")
+        .hardness(4.0)
+        .resistance(120.0)
+        .requiresTool(true)
+        .tag("forge:sheetmetals/compressed_iron")
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs/diamond_tool");
+
+    event
         .create("industrial_centrifuge_wall")
         .displayName("Industrial Centrifuge Wall")
         .material("metal")

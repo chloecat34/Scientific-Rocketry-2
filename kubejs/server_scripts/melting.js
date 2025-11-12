@@ -339,6 +339,7 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:storage_blocks/manyullyn", "tconstruct:molten_manyullyn", 810, 4800 * 9);
     addBothMelterRecipes("kubejs:manyullyn_plate", "tconstruct:molten_manyullyn", 90, 72, 1200, 4800);
     addBothMelterRecipes("kubejs:manyullyn_gear", "tconstruct:molten_manyullyn", 360, 160, 1200, 4800 * 4);
+    addBothMelterRecipes("kubejs:manyullyn_sheetmetal", "tconstruct:molten_manyullyn", 180, 100, 1200, 4800 * 2);
     chillerBlockCasting("tconstruct:manyullyn_block", "tconstruct:molten_manyullyn", 810, 4800 * 9);
 
     // Molten hepatizon
@@ -871,6 +872,7 @@ ServerEvents.recipes((event) => {
         1200,
         4800 * 9
     );
+    addBothMelterRecipes("kubejs:compressed_iron_sheetmetal", "kubejs:molten_compressed_iron", 180, 100, 1200, 4800 * 2);
     chillerIngotCasting("#forge:ingots/compressed_iron", "kubejs:molten_compressed_iron", 90, 4800);
     chillerBlockCasting("pneumaticcraft:compressed_iron_block", "kubejs:molten_compressed_iron", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("pneumaticcraft:compressed_iron_block", "kubejs:molten_compressed_iron", 810, 160);

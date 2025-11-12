@@ -76,7 +76,11 @@ StartupEvents.registry("item", (event) => {
         .tag("forge:gears/queens_slime");
 
     event.create("zinc_rod").displayName("Zinc Rod").tag("forge:rods").tag("forge:rods/zinc");
-    event.create("stainless_steel_rod").displayName("Stainless Steel Rod").tag("forge:rods").tag("forge:rods/stainless_steel");
+    event
+        .create("stainless_steel_rod")
+        .displayName("Stainless Steel Rod")
+        .tag("forge:rods")
+        .tag("forge:rods/stainless_steel");
     event
         .create("compressed_iron_rod")
         .displayName("Compressed Steel Rod")
@@ -183,5 +187,16 @@ StartupEvents.registry("item", (event) => {
                 .tag("forge:wires")
                 .tag(`forge:wires/${material}`);
         }
+    });
+
+    // Heavy plating
+    ["aluminum"].forEach((material) => {
+        let materialName = material.split("_").map(capitalize).join(" ");
+
+        event
+            .create(`${material}_heavy_plating`)
+            .displayName(`${materialName} Heavy Plating`)
+            .tag("forge:heavy_platings")
+            .tag(`forge:heavy_platings/${material}`);
     });
 });

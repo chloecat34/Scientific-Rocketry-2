@@ -115,4 +115,20 @@ ServerEvents.recipes((event) => {
         F: "#forge:gears/compressed_iron",
         G: "compressedcreativity:rotational_compressor",
     });
+
+    // Industrial centrifuge
+    event.shaped("kubejs:industrial_centrifuge_core", ["ABA", "CDC", "AEA"], {
+        A: "#forge:sheetmetals/manyullyn",
+        B: "#forge:gears/knightslime",
+        C: "#forge:plates/knightslime",
+        D: "pneumaticcraft:turbine_rotor",
+        E: "create:precision_mechanism",
+    });
+
+    event.shaped("4x kubejs:industrial_centrifuge_wall", ["ABA", "CDC", "ABA"], {
+        A: "#forge:sheetmetals/compressed_iron",
+        B: "pneumaticcraft:reinforced_bricks",
+        C: "#forge:heavy_platings/aluminum",
+        D: "#forge:gears/aluminum",
+    });
 });

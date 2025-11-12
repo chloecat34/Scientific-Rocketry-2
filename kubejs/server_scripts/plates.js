@@ -39,8 +39,8 @@ ServerEvents.recipes((event) => {
 
     // Get rid of extra steel plate recipe
     event.remove({ output: "thermal:steel_plate", type: "create:pressing" });
-    event.remove({ id: "createaddition:pressing/aluminum_ingot"});
-    event.remove({ id: "createaddition:pressing/uranium_ingot"});
+    event.remove({ id: "createaddition:pressing/aluminum_ingot" });
+    event.remove({ id: "createaddition:pressing/uranium_ingot" });
 
     // Thermal plates
     [
@@ -69,14 +69,10 @@ ServerEvents.recipes((event) => {
     );
 
     // IE plates
-    ["aluminum", "uranium"].forEach((ingot) =>
-        standardizePlates(ingot, `immersiveengineering:plate_${ingot}`)
-    );
+    ["aluminum", "uranium"].forEach((ingot) => standardizePlates(ingot, `immersiveengineering:plate_${ingot}`));
 
     // Ad Astra plates
-    ["desh", "ostrum", "calorite"].forEach((ingot) =>
-        standardizePlates(ingot, `ad_astra:${ingot}_plate`)
-    );
+    ["desh", "ostrum", "calorite"].forEach((ingot) => standardizePlates(ingot, `ad_astra:${ingot}_plate`));
 
     standardizePlates("brass", "create:brass_sheet");
     standardizePlates("zinc", "createaddition:zinc_sheet");
@@ -103,6 +99,26 @@ ServerEvents.recipes((event) => {
         "knightslime",
         "queens_slime",
         "stainless_steel",
-        "glowing_brass"
+        "glowing_brass",
     ].forEach((ingot) => standardizePlates(ingot, `kubejs:${ingot}_plate`));
+
+    // Heavy plates
+    ["aluminum"].forEach((material) => {
+        event.custom({
+            type: "pneumaticcraft:pressure_chamber",
+            inputs: [
+                {
+                    type: "pneumaticcraft:stacked_item",
+                    tag: `forge:sheetmetals/${material}`,
+                    count: 4,
+                },
+            ],
+            pressure: 4.5,
+            results: [
+                {
+                    item: `kubejs:${material}_heavy_plating`,
+                },
+            ],
+        });
+    });
 });

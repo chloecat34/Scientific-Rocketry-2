@@ -26,9 +26,9 @@ ServerEvents.recipes((event) => {
     ].forEach((entry) => {
         const [plate, wire] = entry;
 
-        event.recipes.thermal
-            .press(`2x ${wire}`, [plate, "kubejs:wire_die"])
-            .energy(2400);
+        const ingot = `#forge:ingots/${plate.split("/")[1]}`;
+
+        event.recipes.thermal.press(`2x ${wire}`, [ingot, "kubejs:wire_die"]).energy(2400);
 
         if (
             !event.containsRecipe({
