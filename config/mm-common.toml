@@ -1,0 +1,12 @@
+#Enables the Debug Tool Item's functionality (Disable when on server)
+debugTool = true
+#Splits JEI recipe viewer categroies by the structure they belong to.
+splitRecipesJei = true
+#The default value of 'autoPush' (when not set) on ports that support automatic extract to nearby storages
+portsAutoExtractByDefault = false
+
+#Preview features that are not yet stable or ready for use.
+[preview_features]
+	#Blueprint screen (JEI structure view with more fancy buttons)
+	previewBlueprintScreen = true
+

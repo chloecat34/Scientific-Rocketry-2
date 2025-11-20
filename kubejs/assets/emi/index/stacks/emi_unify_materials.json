@@ -40,7 +40,9 @@
         "thermal:sulfur_ore",
         "thermal:deepslate_sulfur_ore",
         "immersiveengineering:dust_saltpeter",
-        "mekanism:dust_obsidian"
+        "mekanism:dust_obsidian",
+        "tconstruct:steel_ingot",
+        "tconstruct:steel_nugget"
 	],
 	"disable": true
 }

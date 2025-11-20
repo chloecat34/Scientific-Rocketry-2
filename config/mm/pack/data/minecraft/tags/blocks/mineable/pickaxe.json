@@ -1,0 +1,7 @@
+{
+  "values": [
+    "mm:lava_enricher",
+    "mm:lava_enricher_fluid_input",
+    "mm:lava_enricher_fluid_output"
+  ]
+}

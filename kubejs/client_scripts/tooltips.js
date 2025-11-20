@@ -178,5 +178,5 @@ ItemEvents.tooltip((event) => {
     addTooltip("mbd2:steel_input_bus", "Stores 4 stacks", Text.aqua);
     addTooltip("mbd2:steel_output_bus", "Stores 4 stacks", Text.aqua);
     addTooltip("mbd2:aluminum_input_bus", "Stores 8 stacks", Text.aqua);
-    addTooltip("mbd2:aluminum_output_bus", "Stores 8 stacks", Text.aqua);
+    addTooltip("mbd2:aluminum_output_bus", "Stores 8 stacks ", Text.aqua);
 });

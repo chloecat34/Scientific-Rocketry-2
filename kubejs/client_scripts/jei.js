@@ -142,7 +142,8 @@ JEIEvents.hideItems((event) => {
         "tconstruct:molten_ender_bucket",
         "laserio:logic_chip_raw",
         "laserio:card_energy",
-        "thermal:satchel"
+        "thermal:satchel",
+        "tconstruct:nether_grout",
     ];
 
     itemsToRemove.forEach((item) => event.hide(item));
@@ -172,22 +173,5 @@ JEIEvents.hideItems((event) => {
 });
 
 JEIEvents.hideFluids((event) => {
-    ["estrogen:molten_slime", "estrogen:molten_amethyst", "tconstruct:molten_ender"].forEach((fluid) =>
-        event.hide(fluid)
-    );
-});
-
-JEIEvents.addItems((event) => {
-    [
-        "tconstruct:knightslime_nugget",
-        "tconstruct:knightslime_ingot",
-        "tconstruct:knightslime_block",
-        "tconstruct:soulsteel_nugget",
-        "tconstruct:soulsteel_ingot",
-        "tconstruct:soulsteel_block",
-    ].forEach((item) => event.add(Item.of(item)));
-});
-
-JEIEvents.addFluids((event) => {
-    ["tconstruct:molten_knightslime", "tconstruct:molten_soulsteel"].forEach((fluid) => event.add(fluid));
+    ["tconstruct:molten_ender"].forEach((fluid) => event.hide(fluid));
 });
