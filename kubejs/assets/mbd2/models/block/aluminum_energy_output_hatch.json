@@ -1,6 +1,0 @@
-{
-    "parent": "minecraft:block/cube_all",
-    "textures": {
-        "all": "mbd2:block/aluminum_energy_output_hatch"
-    }
-}

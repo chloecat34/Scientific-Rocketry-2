@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "top": "tconstruct:block/foundry/scorched/bricks",
-    "front": "mbd2:block/lava_enricher",
-    "side": "tconstruct:block/foundry/scorched/bricks"
-  }
-}

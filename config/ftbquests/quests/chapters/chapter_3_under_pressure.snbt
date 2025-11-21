@@ -623,7 +623,7 @@
 					type: "item"
 				}
 				{
-					count: 4L
+					count: 5L
 					id: "247E9F16B22CF39B"
 					item: "immersiveengineering:light_engineering"
 					type: "item"
@@ -676,12 +676,6 @@
 					type: "item"
 				}
 				{
-					count: 42L
-					id: "29BFACB038F35F57"
-					item: { Count: 42, id: "mbd2:industrial_centrifuge" }
-					type: "item"
-				}
-				{
 					count: 5L
 					id: "311CFE07976A1C18"
 					item: { Count: 5, id: "kubejs:industrial_centrifuge_core" }
@@ -724,6 +718,12 @@
 				{
 					id: "0085595FAB3C2D70"
 					item: "kubejs:nitrogen_bucket"
+					type: "item"
+				}
+				{
+					count: 44L
+					id: "336A8E62F22426C6"
+					item: { Count: 44, id: "kubejs:industrial_centrifuge_wall" }
 					type: "item"
 				}
 			]

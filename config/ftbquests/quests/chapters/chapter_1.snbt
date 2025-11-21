@@ -640,17 +640,6 @@
 					type: "item"
 				}
 				{
-					count: 2L
-					id: "11E7A17E649724E2"
-					item: { Count: 2, id: "mbd2:bronze_input_hatch" }
-					type: "item"
-				}
-				{
-					id: "67EFE433836E63C9"
-					item: "mbd2:bronze_output_hatch"
-					type: "item"
-				}
-				{
 					id: "56FE766E3F790BAA"
 					item: "mm:lava_enricher"
 					type: "item"
