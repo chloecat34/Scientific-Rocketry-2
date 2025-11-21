@@ -635,11 +635,6 @@
 					type: "item"
 				}
 				{
-					id: "657A442A04C2EFCC"
-					item: "kubejs:air_bucket"
-					type: "item"
-				}
-				{
 					id: "682A9DED8234442F"
 					item: "mm:air_collector_fluid_output"
 					type: "item"
@@ -647,6 +642,11 @@
 				{
 					id: "6290745088837F37"
 					item: "mm:air_collector_energy_input"
+					type: "item"
+				}
+				{
+					id: "60DADF0E5CE2BE2E"
+					item: "kubejs:air_bucket"
 					type: "item"
 				}
 			]
@@ -716,14 +716,14 @@
 					type: "item"
 				}
 				{
-					id: "0085595FAB3C2D70"
-					item: "kubejs:nitrogen_bucket"
-					type: "item"
-				}
-				{
 					count: 44L
 					id: "336A8E62F22426C6"
 					item: { Count: 44, id: "kubejs:industrial_centrifuge_wall" }
+					type: "item"
+				}
+				{
+					id: "3ACCF77E743ED98D"
+					item: "kubejs:nitrogen_bucket"
 					type: "item"
 				}
 			]
