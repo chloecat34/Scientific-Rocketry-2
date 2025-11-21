@@ -215,6 +215,7 @@
 				""
 				"All the recipes use power, as well as a catalyst item that does not get consumed and determines which fluids are produced. All recipes also have a specific dimension that they run in."
 			]
+			icon: "mm:fluid_drilling_rig"
 			id: "72D6F16404461F03"
 			rewards: [{
 				count: 16
@@ -223,11 +224,6 @@
 				type: "item"
 			}]
 			tasks: [
-				{
-					id: "4B76B9441F7BFD03"
-					item: "mbd2:fluid_drilling_rig"
-					type: "item"
-				}
 				{
 					count: 53L
 					id: "006959B79B7B3189"
@@ -259,64 +255,27 @@
 					type: "item"
 				}
 				{
-					id: "7605817D71078C60"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [{
-								Count: 1b
-								id: "mbd2:bronze_input_bus"
-							}]
-						}
-					}
+					id: "29DBA80B5A9E7C8F"
+					item: "mm:fluid_drilling_rig"
 					type: "item"
 				}
 				{
-					id: "72FEB414A84DF326"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "mbd2:bronze_output_hatch"
-								}
-								{
-									Count: 1b
-									id: "mbd2:steel_output_hatch"
-								}
-								{
-									Count: 1b
-									id: "mbd2:aluminum_output_hatch"
-								}
-							]
-						}
-					}
+					id: "51803D9CDCB4D80F"
+					item: "mm:fluid_drilling_rig_item_input"
 					type: "item"
 				}
 				{
-					id: "32924BDC8583ED29"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "mbd2:steel_energy_input_hatch"
-								}
-								{
-									Count: 1b
-									id: "mbd2:aluminum_energy_input_hatch"
-								}
-							]
-						}
-					}
+					id: "7FDD78E9A056511C"
+					item: "mm:fluid_drilling_rig_energy_input"
+					type: "item"
+				}
+				{
+					id: "28681DCAC407A237"
+					item: "mm:fluid_drilling_rig_fluid_output"
 					type: "item"
 				}
 			]
+			title: "Fluid Drilling Rig"
 			x: -7.0d
 			y: -1.5d
 		}
@@ -636,7 +595,7 @@
 			tasks: [
 				{
 					id: "3006ECCB464BDD71"
-					item: "mbd2:air_collector"
+					item: "mm:air_collector"
 					type: "item"
 				}
 				{
@@ -680,6 +639,16 @@
 					item: "kubejs:air_bucket"
 					type: "item"
 				}
+				{
+					id: "682A9DED8234442F"
+					item: "mm:air_collector_fluid_output"
+					type: "item"
+				}
+				{
+					id: "6290745088837F37"
+					item: "mm:air_collector_energy_input"
+					type: "item"
+				}
 			]
 			title: "Air Collector"
 			x: -2.0d
@@ -701,6 +670,7 @@
 			}]
 			tasks: [
 				{
+					icon: "mm:industrial_centrifuge"
 					id: "2C42FC557C3830E3"
 					item: "mbd2:industrial_centrifuge"
 					type: "item"
@@ -736,7 +706,23 @@
 					type: "item"
 				}
 				{
-					id: "3685C438EC2E1306"
+					id: "08C6669F19589DDA"
+					item: "mm:industrial_centrifuge_fluid_input"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7BE65FA00C2E4AA1"
+					item: { Count: 2, id: "mm:industrial_centrifuge_fluid_output" }
+					type: "item"
+				}
+				{
+					id: "7DD71250572DCD27"
+					item: "mm:industrial_centrifuge_energy_input"
+					type: "item"
+				}
+				{
+					id: "0085595FAB3C2D70"
 					item: "kubejs:nitrogen_bucket"
 					type: "item"
 				}
@@ -744,6 +730,28 @@
 			title: "Industrial Centrifuge"
 			x: -1.0d
 			y: -0.5d
+		}
+		{
+			dependencies: ["72D6F16404461F03"]
+			description: [
+				"This isn't shown in JEI, but there are a few quirks with the recipes for this multiblock."
+				""
+				"The RF usage/production for every multiblock represents RF/t."
+				""
+				"For each recipe, it requires a specific dimension:"
+				""
+				"Water -> Overworld"
+				"Crude Oil -> Overworld"
+				"Lava -> The Nether"
+			]
+			id: "23FD5594AABD8D4C"
+			tasks: [{
+				id: "58452BE6B95AD1EC"
+				title: "Fluid Drilling Recipes"
+				type: "checkmark"
+			}]
+			x: -7.0d
+			y: -2.5d
 		}
 	]
 	title: "Chapter 3: Under Pressure"

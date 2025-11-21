@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "mm:block/industrial_centrifuge",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "mm:block/industrial_centrifuge",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "mm:block/industrial_centrifuge"
+    },
+    "facing=west": {
+      "model": "mm:block/industrial_centrifuge",
+      "y": 90
+    }
+  }
+}

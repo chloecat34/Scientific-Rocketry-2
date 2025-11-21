@@ -598,9 +598,9 @@
 			description: [
 				"The Lava Enricher is the first multiblock you must construct. It lets you make Blazing Blood from Lava and Ichor, and is your first source of Blazing Blood."
 				""
-				"You can view the multiblock preview in JEI. There are 3 blocks where you can place hatches, and you can place any fluid hatch there."
+				"Currently the JEI preview doesn't work. This is seemingly due to a bug with the mod, so hopefully it will get fixed soon."
 			]
-			icon: "mbd2:lava_enricher"
+			icon: "mm:lava_enricher"
 			id: "17F0A261342B5731"
 			rewards: [{
 				count: 16
@@ -609,11 +609,6 @@
 				type: "item"
 			}]
 			tasks: [
-				{
-					id: "45709519C4F14866"
-					item: "mbd2:lava_enricher"
-					type: "item"
-				}
 				{
 					count: 49L
 					id: "517549EA5F01ABED"
@@ -655,7 +650,24 @@
 					item: "mbd2:bronze_output_hatch"
 					type: "item"
 				}
+				{
+					id: "56FE766E3F790BAA"
+					item: "mm:lava_enricher"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3EC3BDC4BFCF219A"
+					item: { Count: 2, id: "mm:lava_enricher_fluid_input" }
+					type: "item"
+				}
+				{
+					id: "65F2BF1DDFC5ABBA"
+					item: "mm:lava_enricher_fluid_output"
+					type: "item"
+				}
 			]
+			title: "Lava Enricher"
 			x: 6.0d
 			y: -2.0d
 		}

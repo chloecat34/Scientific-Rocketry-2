@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mm:block/industrial_centrifuge_fluid_input"
+    }
+  }
+}

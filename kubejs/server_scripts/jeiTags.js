@@ -1,4 +1,8 @@
-JEIEvents.hideItems((event) => {
+ServerEvents.tags("item", (event) => {
+    const hideItem = (item) => {
+        event.add("c:hidden_from_recipe_viewers", item);
+    };
+
     const itemsToRemove = [
         "ad_astra:compressor",
         "ad_astra:etrionic_blast_furnace",
@@ -144,9 +148,15 @@ JEIEvents.hideItems((event) => {
         "laserio:card_energy",
         "thermal:satchel",
         "tconstruct:nether_grout",
+        "mm:fluid_drilling_rig_item_output",
+        "mm:fluid_drilling_rig_fluid_input",
+        "mm:fluid_drilling_rig_energy_output",
+        "mm:air_collector_fluid_input",
+        "mm:air_collector_energy_output",
+        "mm:industrial_centrifuge_energy_output"
     ];
 
-    itemsToRemove.forEach((item) => event.hide(item));
+    itemsToRemove.forEach((item) => hideItem(item));
 
     // Disable mycelial generators
     [
@@ -168,10 +178,12 @@ JEIEvents.hideItems((event) => {
         "crimed",
         "meatallurgic",
     ].forEach((gen) => {
-        event.hide(`industrialforegoing:mycelial_${gen}`);
+        hideItem(`industrialforegoing:mycelial_${gen}`);
     });
 });
 
-JEIEvents.hideFluids((event) => {
-    ["tconstruct:molten_ender"].forEach((fluid) => event.hide(fluid));
+ServerEvents.tags("fluid", (event) => {
+    const hideFluid = (fluid) => event.add("c:hidden_from_recipe_viewers", fluid);
+
+    hideFluid("tconstruct:molten_ender");
 });

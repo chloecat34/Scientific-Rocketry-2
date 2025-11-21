@@ -1,0 +1,39 @@
+{
+    "ticks": 10,
+    "structureId": "mm:fluid_drilling_rig",
+    "conditions": [
+        {
+            "type": "mm:dimension",
+            "dimension": "minecraft:overworld"
+        }
+    ],
+    "inputs": [
+        {
+            "type": "mm:input/consume",
+            "per_tick": true,
+            "ingredient": {
+                "type": "mm:energy",
+                "amount": 512
+            }
+        },
+        {
+            "type": "mm:input/consume",
+            "chance": 0,
+            "ingredient": {
+                "type": "mm:item",
+                "item": "create:mechanical_pump",
+                "count": 1
+            }
+        }
+    ],
+    "outputs": [
+        {
+            "type": "mm:output/simple",
+            "ingredient": {
+                "type": "mm:fluid",
+                "fluid": "minecraft:water",
+                "amount": 10000
+            }
+        }
+    ]
+}

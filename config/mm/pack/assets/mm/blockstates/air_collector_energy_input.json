@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mm:block/air_collector_energy_input"
+    }
+  }
+}

@@ -340,6 +340,7 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("kubejs:manyullyn_plate", "tconstruct:molten_manyullyn", 90, 72, 1200, 4800);
     addBothMelterRecipes("kubejs:manyullyn_gear", "tconstruct:molten_manyullyn", 360, 160, 1200, 4800 * 4);
     addBothMelterRecipes("kubejs:manyullyn_sheetmetal", "tconstruct:molten_manyullyn", 180, 100, 1200, 4800 * 2);
+    addBothMelterRecipes("kubejs:manyullyn_heavy_plating", "tconstruct:molten_manyullyn", 720, 300, 1200, 4800 * 8);
     chillerBlockCasting("tconstruct:manyullyn_block", "tconstruct:molten_manyullyn", 810, 4800 * 9);
 
     // Molten hepatizon

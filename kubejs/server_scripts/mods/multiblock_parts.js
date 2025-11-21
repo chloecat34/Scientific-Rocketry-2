@@ -1,13 +1,4 @@
 ServerEvents.recipes((event) => {
-    // Fluid drilling rig controller
-    event.recipes.createMechanicalCrafting("mbd2:fluid_drilling_rig", ["AABAA", "ACDCA", "BEFEB", "ACDCA", "AABAA"], {
-        A: "#forge:sheetmetals/steel",
-        B: "immersiveengineering:heavy_engineering",
-        C: "#forge:plates/knightslime",
-        D: "compressedcreativity:compressed_iron_casing",
-        E: "pneumaticcraft:gas_lift",
-        F: "pneumaticcraft:small_tank",
-    });
 
     // Steel fluid hatch
     event.shaped("mbd2:steel_input_hatch", ["ABA", "BCB", "ABA"], {
@@ -78,54 +69,4 @@ ServerEvents.recipes((event) => {
 
     event.shapeless("mbd2:aluminum_input_bus", ["mbd2:aluminum_output_bus"]);
     event.shapeless("mbd2:aluminum_output_bus", ["mbd2:aluminum_input_bus"]);
-
-    // Air filter casing
-    event.shaped("2x kubejs:air_filter_casing", ["ABA", "CDC", "ABA"], {
-        A: "#forge:plates/steel",
-        B: "#immersiveengineering:scaffoldings/aluminum",
-        C: "pneumaticcraft:air_grate_module",
-        D: "pneumaticcraft:turbine_rotor",
-    });
-
-    // Air collector
-    event.recipes.createMechanicalCrafting("mbd2:air_collector", ["AABAA", "ACDCA", "BEFEB", "ACGCA", "AABAA"], {
-        A: "#forge:sheetmetals/aluminum",
-        B: "pneumaticcraft:pressure_chamber_glass",
-        C: "pneumaticcraft:air_grate_module",
-        D: "immersiveengineering:light_engineering",
-        E: "pneumaticcraft:medium_tank",
-        F: "#forge:gears/compressed_iron",
-        G: "compressedcreativity:rotational_compressor",
-    });
-
-    // Industrial centrifuge
-    event.shaped("kubejs:industrial_centrifuge_core", ["ABA", "CDC", "AEA"], {
-        A: "#forge:sheetmetals/manyullyn",
-        B: "#forge:gears/knightslime",
-        C: "#forge:plates/knightslime",
-        D: "pneumaticcraft:turbine_rotor",
-        E: "create:precision_mechanism",
-    });
-
-    event.shaped("4x kubejs:industrial_centrifuge_wall", ["ABA", "CDC", "ABA"], {
-        A: "#forge:sheetmetals/compressed_iron",
-        B: "pneumaticcraft:reinforced_bricks",
-        C: "#forge:heavy_platings/aluminum",
-        D: "#forge:gears/aluminum",
-    });
-
-    event.recipes.createMechanicalCrafting(
-        "mbd2:industrial_centrifuge",
-        ["AABAA", "ACDCA", "BEFEB", "AGHGA", "AABAA"],
-        {
-            A: "#forge:sheetmetals/compressed_iron",
-            B: "#forge:heavy_platings/hepatizon",
-            C: "pneumaticcraft:medium_tank",
-            D: "pneumaticcraft:turbine_rotor",
-            E: "createaddition:electric_motor",
-            F: "actuallyadditions:iron_casing",
-            G: "#forge:gears/purple_alloy",
-            H: "compressedcreativity:rotational_compressor",
-        }
-    );
 });

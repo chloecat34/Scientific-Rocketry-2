@@ -103,7 +103,7 @@ ServerEvents.recipes((event) => {
     ].forEach((ingot) => standardizePlates(ingot, `kubejs:${ingot}_plate`));
 
     // Heavy plates
-    ["aluminum", "hepatizon"].forEach((material) => {
+    ["aluminum", "hepatizon", "manyullyn"].forEach((material) => {
         event.custom({
             type: "pneumaticcraft:pressure_chamber",
             inputs: [
