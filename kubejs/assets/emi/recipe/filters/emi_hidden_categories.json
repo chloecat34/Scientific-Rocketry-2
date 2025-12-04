@@ -11,6 +11,24 @@
         },
         {
             "category": "industrialforegoing:ore_sieve"
+        },
+        {
+            "category": "gtceu:bedrock_fluid_diagram"
+        },
+        {
+            "category": "gtceu:macerator_recycling"
+        },
+        {
+            "category": "gtceu:arc_furnace_recycling"
+        },
+        {
+            "category": "gtceu:forming_press"
+        },
+        {
+            "category": "gtceu:scanner"
+        },
+        {
+            "category": "gtceu:brewery"
         }
 	]
 }
