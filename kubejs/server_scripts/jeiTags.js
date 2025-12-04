@@ -48,6 +48,7 @@ ServerEvents.tags("item", (event) => {
         "create:crushed_raw_aluminum",
         "create:crushed_raw_uranium",
         "create:crushed_raw_nickel",
+        "create:crushed_raw_platinum",
         "thermal:sulfur_ore",
         "thermal:deepslate_sulfur_ore",
         "mekanism:chemical_washer",
