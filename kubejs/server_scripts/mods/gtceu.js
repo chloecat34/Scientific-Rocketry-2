@@ -105,6 +105,33 @@ ServerEvents.recipes((event) => {
     event.shapeless("gtceu:lv_energy_output_hatch", ["gtceu:lv_energy_input_hatch"]);
     event.shapeless("gtceu:lv_energy_input_hatch", ["gtceu:lv_energy_output_hatch"]);
 
+    // Aluminum hatches
+    event.shaped("gtceu:mv_input_bus", ["ABA", "BCB", "ABA"], {
+        A: "#forge:sheetmetals/aluminum",
+        B: "#thermal:glass/hardened",
+        C: "sophisticatedstorage:basic_to_gold_tier_upgrade",
+    });
+
+    event.shaped("gtceu:mv_input_hatch", ["ABA", "BCB", "ABA"], {
+        A: "#forge:sheetmetals/aluminum",
+        B: "#thermal:glass/hardened",
+        C: "pneumaticcraft:small_tank",
+    });
+
+    event.shaped("gtceu:mv_energy_input_hatch", ["ABA", "CDC", "ABA"], {
+        A: "#forge:sheetmetals/aluminum",
+        B: "thermal:cured_rubber",
+        C: "kubejs:vibrant_alloy_coil",
+        D: "immersiveengineering:capacitor_mv",
+    });
+
+    event.shapeless("gtceu:mv_output_bus", ["gtceu:mv_input_bus"]);
+    event.shapeless("gtceu:mv_input_bus", ["gtceu:mv_output_bus"]);
+    event.shapeless("gtceu:mv_output_hatch", ["gtceu:mv_input_hatch"]);
+    event.shapeless("gtceu:mv_input_hatch", ["gtceu:mv_output_hatch"]);
+    event.shapeless("gtceu:mv_energy_output_hatch", ["gtceu:mv_energy_input_hatch"]);
+    event.shapeless("gtceu:mv_energy_input_hatch", ["gtceu:mv_energy_output_hatch"]);
+
     // Terminal
     event.shaped("gtceu:terminal", ["ABA", "CDC", "ABA"], {
         A: "#forge:plates/iron",
