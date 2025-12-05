@@ -492,7 +492,7 @@
 				type: "item"
 			}]
 			title: "Blazing Hot"
-			x: 7.0d
+			x: 8.0d
 			y: -2.0d
 		}
 		{
@@ -520,7 +520,7 @@
 				}
 			]
 			title: "Now We're Cooking!"
-			x: 8.0d
+			x: 9.0d
 			y: -2.0d
 		}
 		{
@@ -657,7 +657,7 @@
 				}
 			]
 			title: "Lava Enricher"
-			x: 6.0d
+			x: 7.0d
 			y: -2.0d
 		}
 		{
@@ -821,7 +821,7 @@
 				type: "item"
 			}]
 			title: "Hooks"
-			x: 8.0d
+			x: 9.0d
 			y: -3.0d
 		}
 		{

@@ -60,8 +60,8 @@ ServerEvents.recipes((event) => {
 
     event.shaped("gtceu:ulv_input_hatch", ["ABA", "BCB", "ABA"], {
         A: "#forge:plates/bronze",
-        B: "create:fluid_tank",
-        C: "immersiveengineering:crate",
+        B: "#c:glass_blocks",
+        C: "create:fluid_tank",
     });
 
     event.shaped("gtceu:ulv_energy_input_hatch", ["ABA", "CDC", "ABA"], {
@@ -77,6 +77,33 @@ ServerEvents.recipes((event) => {
     event.shapeless("gtceu:ulv_input_hatch", ["gtceu:ulv_output_hatch"]);
     event.shapeless("gtceu:ulv_energy_output_hatch", ["gtceu:ulv_energy_input_hatch"]);
     event.shapeless("gtceu:ulv_energy_input_hatch", ["gtceu:ulv_energy_output_hatch"]);
+
+    // Steel hatches
+    event.shaped("gtceu:lv_input_bus", ["ABA", "BCB", "ABA"], {
+        A: "#forge:plates/steel",
+        B: "immersiveengineering:insulating_glass",
+        C: "immersiveengineering:reinforced_crate",
+    });
+
+    event.shaped("gtceu:lv_input_hatch", ["ABA", "BCB", "ABA"], {
+        A: "#forge:plates/steel",
+        B: "immersiveengineering:insulating_glass",
+        C: "railways:fuel_tank",
+    });
+
+    event.shaped("gtceu:lv_energy_input_hatch", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/steel",
+        B: "thermal:cured_rubber",
+        C: "kubejs:energetic_alloy_coil",
+        D: "immersiveengineering:capacitor_lv",
+    });
+
+    event.shapeless("gtceu:lv_output_bus", ["gtceu:lv_input_bus"]);
+    event.shapeless("gtceu:lv_input_bus", ["gtceu:lv_output_bus"]);
+    event.shapeless("gtceu:lv_output_hatch", ["gtceu:lv_input_hatch"]);
+    event.shapeless("gtceu:lv_input_hatch", ["gtceu:lv_output_hatch"]);
+    event.shapeless("gtceu:lv_energy_output_hatch", ["gtceu:lv_energy_input_hatch"]);
+    event.shapeless("gtceu:lv_energy_input_hatch", ["gtceu:lv_energy_output_hatch"]);
 
     // Terminal
     event.shaped("gtceu:terminal", ["ABA", "CDC", "ABA"], {

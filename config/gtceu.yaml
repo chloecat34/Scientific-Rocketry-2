@@ -298,7 +298,7 @@ machines:
   # This is intended for modpack developers only, and is not playable without custom tweaks or addons.
   # Other mods can override this to true, regardless of the config file.
   # Default: false
-  highTierContent: false
+  highTierContent: true
 
   # Whether the Assembly Line should require the item inputs to be in order.
   # Default: true
@@ -555,12 +555,12 @@ compat:
     # Forge Energy to GTEU ratio for converting FE to EU.
     # Only affects converters.
     # Default: 4 FE == 1 EU
-    feToEuRatio: 1
+    feToEuRatio: 4
 
     # GTEU to Forge Energy ratio for converting EU to FE.
     # Affects native conversion and Converters.
     # Default: 4 FE == 1 EU
-    euToFeRatio: 1
+    euToFeRatio: 4
 
   # Config options regarding GTCEu compatibility with AE2
   ae2:
