@@ -1,5 +1,11 @@
 {
     "block.gtceu.lava_enricher": "Lava Enricher",
     "gtceu.lava_enricher": "Lava Enricher",
-    "material.gtceu.cosmic": "Cosmic"
+    "material.gtceu.cosmic": "Cosmic",
+    "block.gtceu.ulv_input_bus": "Bronze Input Bus",
+    "block.gtceu.ulv_output_bus": "Bronze Output Bus",
+    "block.gtceu.ulv_input_hatch": "Bronze Input Hatch",
+    "block.gtceu.ulv_output_hatch": "Bronze Output Hatch",
+    "block.gtceu.ulv_energy_input_hatch": "Bronze Energy Hatch",
+    "block.gtceu.ulv_energy_output_hatch": "Bronze Dynamo Hatch"
 }
