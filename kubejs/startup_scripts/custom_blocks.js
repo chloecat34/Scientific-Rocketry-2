@@ -258,6 +258,17 @@ StartupEvents.registry("block", (event) => {
         .tagBlock("minecraft:needs/diamond_tool");
 
     event
+        .create("stainless_steel_sheetmetal")
+        .displayName("Stainless Steel Sheetmetal")
+        .material("metal")
+        .hardness(5.0)
+        .resistance(30.0)
+        .requiresTool(true)
+        .tag("forge:sheetmetals/stainless_steel")
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs/diamond_tool");
+
+    event
         .create("industrial_centrifuge_wall")
         .displayName("Industrial Centrifuge Wall")
         .material("metal")

@@ -93,7 +93,7 @@ ServerEvents.recipes((event) => {
 
     event.shaped("gtceu:lv_energy_input_hatch", ["ABA", "CDC", "ABA"], {
         A: "#forge:plates/steel",
-        B: "thermal:cured_rubber",
+        B: "immersiveengineering:component_electronic",
         C: "kubejs:energetic_alloy_coil",
         D: "immersiveengineering:capacitor_lv",
     });
@@ -120,7 +120,7 @@ ServerEvents.recipes((event) => {
 
     event.shaped("gtceu:mv_energy_input_hatch", ["ABA", "CDC", "ABA"], {
         A: "#forge:sheetmetals/aluminum",
-        B: "thermal:cured_rubber",
+        B: "immersiveengineering:component_electronic_adv",
         C: "kubejs:vibrant_alloy_coil",
         D: "immersiveengineering:capacitor_mv",
     });
@@ -131,6 +131,33 @@ ServerEvents.recipes((event) => {
     event.shapeless("gtceu:mv_input_hatch", ["gtceu:mv_output_hatch"]);
     event.shapeless("gtceu:mv_energy_output_hatch", ["gtceu:mv_energy_input_hatch"]);
     event.shapeless("gtceu:mv_energy_input_hatch", ["gtceu:mv_energy_output_hatch"]);
+
+    // Stainless steel hatches
+    event.shaped("gtceu:hv_input_bus", ["ABA", "BCB", "ABA"], {
+        A: "#forge:sheetmetals/stainless_steel",
+        B: "#thermal:glass/hardened",
+        C: "sophisticatedstorage:basic_to_diamond_tier_upgrade",
+    });
+
+    event.shaped("gtceu:hv_input_hatch", ["ABA", "BCB", "ABA"], {
+        A: "#forge:sheetmetals/stainless_steel",
+        B: "#thermal:glass/hardened",
+        C: "pneumaticcraft:medium_tank",
+    });
+
+    event.shaped("gtceu:hv_energy_input_hatch", ["ABA", "CDC", "ABA"], {
+        A: "#forge:sheetmetals/stainless_steel",
+        B: "pneumaticcraft:printed_circuit_board",
+        C: "actuallyadditions:advanced_coil",
+        D: "immersiveengineering:capacitor_hv",
+    });
+
+    event.shapeless("gtceu:hv_output_bus", ["gtceu:hv_input_bus"]);
+    event.shapeless("gtceu:hv_input_bus", ["gtceu:hv_output_bus"]);
+    event.shapeless("gtceu:hv_output_hatch", ["gtceu:hv_input_hatch"]);
+    event.shapeless("gtceu:hv_input_hatch", ["gtceu:hv_output_hatch"]);
+    event.shapeless("gtceu:hv_energy_output_hatch", ["gtceu:hv_energy_input_hatch"]);
+    event.shapeless("gtceu:hv_energy_input_hatch", ["gtceu:hv_energy_output_hatch"]);
 
     // Terminal
     event.shaped("gtceu:terminal", ["ABA", "CDC", "ABA"], {

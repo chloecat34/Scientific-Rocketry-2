@@ -82,12 +82,11 @@ MMEvents.createProcesses((event) => {
 
 ServerEvents.recipes((event) => {
     // Industrial centrifuge
-    event.shaped("kubejs:industrial_centrifuge_core", ["ABA", "CDC", "AEA"], {
-        A: "#forge:sheetmetals/manyullyn",
-        B: "#forge:gears/knightslime",
-        C: "#forge:plates/knightslime",
-        D: "pneumaticcraft:turbine_rotor",
-        E: "create:precision_mechanism",
+    event.shaped("5x kubejs:industrial_centrifuge_core", ["ABA", "CDC", "ABA"], {
+        A: "#forge:heavy_platings/manyullyn",
+        B: "compressedcreativity:compressed_air_engine",
+        C: "#forge:gears/knightslime",
+        D: "create:precision_mechanism",
     });
 
     event.shaped("4x kubejs:industrial_centrifuge_wall", ["ABA", "CDC", "ABA"], {
