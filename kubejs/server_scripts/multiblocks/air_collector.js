@@ -39,8 +39,24 @@ MMEvents.createStructures((event) => {
 });
 
 ServerEvents.recipes((event) => {
+    event.recipes.gtceu
+        .air_collecting("air")
+        .notConsumable("minecraft:stone")
+        .outputFluids("kubejs:air 1000")
+        .dimension("minecraft:overworld")
+        .duration(20)
+        .EUt(64);
+
+    event.recipes.gtceu
+        .air_collecting("nether_air")
+        .notConsumable("minecraft:netherrack")
+        .outputFluids("kubejs:nether_air 1000")
+        .dimension("minecraft:the_nether")
+        .duration(20)
+        .EUt(64);
+
     // Air collector
-    event.recipes.createMechanicalCrafting("mm:air_collector", ["AABAA", "ACDCA", "BEFEB", "ACGCA", "AABAA"], {
+    event.recipes.createMechanicalCrafting("gtceu:air_collector", ["AABAA", "ACDCA", "BEFEB", "ACGCA", "AABAA"], {
         A: "#forge:sheetmetals/aluminum",
         B: "pneumaticcraft:pressure_chamber_glass",
         C: "pneumaticcraft:air_grate_module",
@@ -56,21 +72,5 @@ ServerEvents.recipes((event) => {
         B: "#immersiveengineering:scaffoldings/aluminum",
         C: "pneumaticcraft:air_grate_module",
         D: "pneumaticcraft:turbine_rotor",
-    });
-
-    // Fluid output
-    event.shaped("mm:air_collector_fluid_output", ["ABA", "CDC", "ABA"], {
-        A: "#forge:plates/aluminum",
-        B: "#thermal:glass/hardened",
-        C: "#forge:gears/slimesteel",
-        D: "pneumaticcraft:medium_tank",
-    });
-
-    // Energy input
-    event.shaped("mm:air_collector_energy_input", ["ABA", "CDC", "ABA"], {
-        A: "#forge:plates/aluminum",
-        B: "immersiveengineering:component_electronic_adv",
-        C: "actuallyadditions:enori_crystal",
-        D: "immersiveengineering:capacitor_hv",
     });
 });

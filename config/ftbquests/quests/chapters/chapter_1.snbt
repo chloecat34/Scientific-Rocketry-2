@@ -594,7 +594,7 @@
 			y: -5.0d
 		}
 		{
-			dependencies: ["1740ED183C620BC8"]
+			dependencies: ["07D62C05A735018B"]
 			description: [
 				"The Lava Enricher is the first multiblock you must construct. It lets you make Blazing Blood from Lava and Ichor, and is your first source of Blazing Blood."
 				""
@@ -848,6 +848,22 @@
 			}]
 			x: 3.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["1740ED183C620BC8"]
+			id: "07D62C05A735018B"
+			rewards: [{
+				id: "101617E97728E885"
+				type: "xp_levels"
+				xp_levels: 4
+			}]
+			tasks: [{
+				id: "2AEF70AC41D27363"
+				title: "A Note on Multiblocks"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: -2.0d
 		}
 	]
 	title: "Chapter 1: Crash Landing"
