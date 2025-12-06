@@ -442,4 +442,18 @@ ServerEvents.recipes((event) => {
         C: "pneumaticcraft:plastic",
         D: "#forge:gears/blue_alloy",
     });
+
+    // Engine rotor
+    event.replaceInput({ output: "compressedcreativity:engine_rotor" }, "create:shaft", "create:propeller");
+
+    // Compressed air engine
+    event.remove({ output: "compressedcreativity:compressed_air_engine" });
+
+    event.shaped("compressedcreativity:compressed_air_engine", ["ABA", "CDC", "AEA"], {
+        A: "#forge:sheetmetals/hepatizon",
+        B: "compressedcreativity:engine_rotor",
+        C: "pneumaticcraft:pressure_tube",
+        D: "createaddition:electric_motor",
+        E: "create:precision_mechanism",
+    });
 });

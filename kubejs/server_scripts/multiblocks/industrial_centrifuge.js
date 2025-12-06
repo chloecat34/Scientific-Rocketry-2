@@ -8,11 +8,12 @@ ServerEvents.recipes((event) => {
         .EUt(128);
 
     // Industrial centrifuge
-    event.shaped("5x kubejs:industrial_centrifuge_core", ["ABA", "CDC", "ABA"], {
-        A: "#forge:heavy_platings/manyullyn",
-        B: "compressedcreativity:compressed_air_engine",
-        C: "#forge:gears/knightslime",
-        D: "create:precision_mechanism",
+    event.shaped("kubejs:industrial_centrifuge_core", ["ABA", "CDC", "AEA"], {
+        A: "#forge:sheetmetals/manyullyn",
+        B: "#forge:gears/knightslime",
+        C: "create:precision_mechanism",
+        D: "#forge:heavy_platings/manyullyn",
+        E: "compressedcreativity:compressed_air_engine",
     });
 
     event.shaped("4x kubejs:industrial_centrifuge_wall", ["ABA", "CDC", "ABA"], {
