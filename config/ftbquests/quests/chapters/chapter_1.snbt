@@ -600,7 +600,7 @@
 				""
 				"Currently the JEI preview doesn't work. This is seemingly due to a bug with the mod, so hopefully it will get fixed soon."
 			]
-			icon: "mm:lava_enricher"
+			icon: "gtceu:lava_enricher"
 			id: "17F0A261342B5731"
 			rewards: [{
 				count: 16
@@ -641,18 +641,7 @@
 				}
 				{
 					id: "56FE766E3F790BAA"
-					item: "mm:lava_enricher"
-					type: "item"
-				}
-				{
-					count: 2L
-					id: "3EC3BDC4BFCF219A"
-					item: { Count: 2, id: "mm:lava_enricher_fluid_input" }
-					type: "item"
-				}
-				{
-					id: "65F2BF1DDFC5ABBA"
-					item: "mm:lava_enricher_fluid_output"
+					item: "gtceu:lava_enricher"
 					type: "item"
 				}
 			]
@@ -851,6 +840,17 @@
 		}
 		{
 			dependencies: ["1740ED183C620BC8"]
+			description: [
+				"This modpack uses GregTech to handle its multiblocks. These multiblocks have a few nuances to keep in mind."
+				""
+				"First, you will need to craft hatches for your multiblocks. While the item/fluid hatches are pretty straightforward, the energy hatches need a bit more thought. "
+				""
+				"In this pack, GregTech hatches are configured to take RF at a ratio of 4 RF to 1 EU. So if a recipe says it takes 64 EU/t, it actually takes 256 RF/t."
+				""
+				"Multiblocks that take power can overclock if given a higher-tier energy hatch, using 4x the power to run the recipe twice as fast. For example, the recipe that uses 64 EU/t (256 RF/t) runs at MV, so giving it an HV hatch would make it run at 256 EU/t (1024 RF/t) and twice as fast."
+				""
+				"You can use a Terminal to auto-build multiblocks, though this often struggles with hatch placement."
+			]
 			id: "07D62C05A735018B"
 			rewards: [{
 				id: "101617E97728E885"
@@ -864,6 +864,134 @@
 			}]
 			x: 6.0d
 			y: -2.0d
+		}
+		{
+			dependencies: ["07D62C05A735018B"]
+			description: [
+				"Cosmic tools are a custom tier of GregTech tools with the traits of being unbreakable and having a great mining speed. They are pretty cheap to craft at this stage, as long as you have Cobalt."
+				""
+				"Wrenches let you rotate or break GregTech components."
+				""
+				"Screwdrivers let you configure covers, of which there are only a few."
+				""
+				"Soft Mallets let you pause a multiblock's operation, though it requires finishing the current craft."
+				""
+				"Crowbars can remove covers."
+			]
+			id: "3EFF0A799E8ED4D0"
+			rewards: [{
+				count: 8
+				id: "0E942559401532C6"
+				item: "tconstruct:cobalt_ingot"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "6DDB1BA4ABBFD852"
+					item: {
+						Count: 1
+						id: "gtceu:cosmic_wrench"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								Mode: 2b
+							}
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								Enchantability: 10
+								HarvestLevel: 6
+								MaxDamage: 2147483646
+								ToolSpeed: 34.0f
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "07835435C8BB0092"
+					item: {
+						Count: 1
+						id: "gtceu:cosmic_screwdriver"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								Enchantability: 10
+								MaxDamage: 2147483646
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "238B8F9DF5DB0DC8"
+					item: {
+						Count: 1
+						id: "gtceu:cosmic_mallet"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								Enchantability: 10
+								MaxDamage: 2147483646
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "49FCB9AB265EC978"
+					item: {
+						Count: 1
+						id: "gtceu:cosmic_crowbar"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								Enchantability: 10
+								HarvestLevel: 6
+								MaxDamage: 2147483646
+								ToolSpeed: 34.0f
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Cosmic Tools"
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["07D62C05A735018B"]
+			description: [
+				"Machine Controllers let you control multiblock machines based on redstone. This is useful for managing your automation."
+				""
+				"You technically can't craft this yet but it is useful to know about."
+			]
+			id: "1D1A9361477058DA"
+			tasks: [{
+				id: "7B1B900F2C442862"
+				item: "gtceu:machine_controller_cover"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -1.0d
 		}
 	]
 	title: "Chapter 1: Crash Landing"

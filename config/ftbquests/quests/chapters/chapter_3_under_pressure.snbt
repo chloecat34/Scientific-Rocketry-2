@@ -215,7 +215,7 @@
 				""
 				"All the recipes use power, as well as a catalyst item that does not get consumed and determines which fluids are produced. All recipes also have a specific dimension that they run in."
 			]
-			icon: "mm:fluid_drilling_rig"
+			icon: "gtceu:fluid_drilling_rig"
 			id: "72D6F16404461F03"
 			rewards: [{
 				count: 16
@@ -256,22 +256,7 @@
 				}
 				{
 					id: "29DBA80B5A9E7C8F"
-					item: "mm:fluid_drilling_rig"
-					type: "item"
-				}
-				{
-					id: "51803D9CDCB4D80F"
-					item: "mm:fluid_drilling_rig_item_input"
-					type: "item"
-				}
-				{
-					id: "7FDD78E9A056511C"
-					item: "mm:fluid_drilling_rig_energy_input"
-					type: "item"
-				}
-				{
-					id: "28681DCAC407A237"
-					item: "mm:fluid_drilling_rig_fluid_output"
+					item: "gtceu:fluid_drilling_rig"
 					type: "item"
 				}
 			]
@@ -595,7 +580,7 @@
 			tasks: [
 				{
 					id: "3006ECCB464BDD71"
-					item: "mm:air_collector"
+					item: "gtceu:air_collector"
 					type: "item"
 				}
 				{
@@ -635,16 +620,6 @@
 					type: "item"
 				}
 				{
-					id: "682A9DED8234442F"
-					item: "mm:air_collector_fluid_output"
-					type: "item"
-				}
-				{
-					id: "6290745088837F37"
-					item: "mm:air_collector_energy_input"
-					type: "item"
-				}
-				{
 					id: "60DADF0E5CE2BE2E"
 					item: "kubejs:air_bucket"
 					type: "item"
@@ -672,7 +647,7 @@
 				{
 					icon: "mm:industrial_centrifuge"
 					id: "2C42FC557C3830E3"
-					item: "mbd2:industrial_centrifuge"
+					item: "gtceu:industrial_centrifuge"
 					type: "item"
 				}
 				{
@@ -700,19 +675,9 @@
 					type: "item"
 				}
 				{
-					id: "08C6669F19589DDA"
-					item: "mm:industrial_centrifuge_fluid_input"
-					type: "item"
-				}
-				{
 					count: 2L
 					id: "7BE65FA00C2E4AA1"
 					item: { Count: 2, id: "mm:industrial_centrifuge_fluid_output" }
-					type: "item"
-				}
-				{
-					id: "7DD71250572DCD27"
-					item: "mm:industrial_centrifuge_energy_input"
 					type: "item"
 				}
 				{
@@ -730,28 +695,6 @@
 			title: "Industrial Centrifuge"
 			x: -1.0d
 			y: -0.5d
-		}
-		{
-			dependencies: ["72D6F16404461F03"]
-			description: [
-				"This isn't shown in JEI, but there are a few quirks with the recipes for this multiblock."
-				""
-				"The RF usage/production for every multiblock represents RF/t."
-				""
-				"For each recipe, it requires a specific dimension:"
-				""
-				"Water -> Overworld"
-				"Crude Oil -> Overworld"
-				"Lava -> The Nether"
-			]
-			id: "23FD5594AABD8D4C"
-			tasks: [{
-				id: "58452BE6B95AD1EC"
-				title: "Fluid Drilling Recipes"
-				type: "checkmark"
-			}]
-			x: -7.0d
-			y: -2.5d
 		}
 	]
 	title: "Chapter 3: Under Pressure"
