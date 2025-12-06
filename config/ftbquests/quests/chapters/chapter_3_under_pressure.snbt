@@ -675,12 +675,6 @@
 					type: "item"
 				}
 				{
-					count: 2L
-					id: "7BE65FA00C2E4AA1"
-					item: { Count: 2, id: "mm:industrial_centrifuge_fluid_output" }
-					type: "item"
-				}
-				{
 					count: 44L
 					id: "336A8E62F22426C6"
 					item: { Count: 44, id: "kubejs:industrial_centrifuge_wall" }
