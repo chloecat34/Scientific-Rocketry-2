@@ -1,9 +1,6 @@
-const $RecipeLogic = Java.loadClass("com.gregtechceu.gtceu.api.machine.trait.RecipeLogic");
-const $List = Java.loadClass("java.util.List");
-
 GTCEuStartupEvents.registry("gtceu:recipe_type", (event) => {
     event
-        .create("lava_enricher")
+        .create("lava_enriching")
         .category("multiblock")
         .setEUIO("in")
         .setMaxIOSize(0, 0, 2, 1)
@@ -16,7 +13,7 @@ GTCEuStartupEvents.registry("gtceu:machine", (event) => {
     event
         .create("lava_enricher", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeType("lava_enricher")
+        .recipeType("lava_enriching")
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern((definition) =>
             FactoryBlockPattern.start()

@@ -1,6 +1,8 @@
 {
     "block.gtceu.lava_enricher": "Lava Enricher",
-    "gtceu.lava_enricher": "Lava Enricher",
+    "gtceu.lava_enriching": "Lava Enriching",
+    "block.gtceu.fluid_drilling_rig": "Fluid Drilling Rig",
+    "gtceu.fluid_drilling": "Fluid Drilling",
     "material.gtceu.cosmic": "Cosmic",
     "block.gtceu.ulv_input_bus": "Bronze Input Bus",
     "block.gtceu.ulv_output_bus": "Bronze Output Bus",
