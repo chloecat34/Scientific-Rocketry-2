@@ -21,8 +21,11 @@ const molten = [
     "kubejs:molten_ardite",
     "kubejs:molten_stainless_steel",
     "kubejs:molten_glowing_brass",
-    "kubejs:molten_andesite_alloy"
+    "kubejs:molten_andesite_alloy",
 ];
+
+// Acids still damage the player but don't cause fire damage
+const acids = ["kubejs:nitric_acid"];
 
 PlayerEvents.tick((event) => {
     let player = event.player;
@@ -37,5 +40,9 @@ PlayerEvents.tick((event) => {
     if (molten.includes(player.block.id) || molten.includes(player.block.up.id)) {
         player.setSecondsOnFire(fireSeconds);
         event.entity.attack(player.damageSources().lava(), directDamage);
+    }
+
+    if (acids.includes(player.block.id) || acids.includes(player.block.up.id)) {
+        event.entity.attack(player.damageSources().dragonBreath(), directDamage);
     }
 });

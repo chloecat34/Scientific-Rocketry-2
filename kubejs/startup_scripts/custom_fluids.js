@@ -169,4 +169,43 @@ StartupEvents.registry("fluid", (event) => {
         .bucketColor(0x44938c)
         .gaseous()
         .displayName("Nitrogen");
+
+    event
+        .create("kubejs:nitrogen_dioxide")
+        .stillTexture("kubejs:fluid/nitrogen_dioxide_still")
+        .flowingTexture("kubejs:fluid/nitrogen_dioxide_flow")
+        .bucketColor(0x96fff6)
+        .gaseous()
+        .displayName("Nitrogen Dioxide");
+
+    event
+        .create("kubejs:nitric_oxide")
+        .stillTexture("kubejs:fluid/nitric_oxide_still")
+        .flowingTexture("kubejs:fluid/nitric_oxide_flow")
+        .bucketColor(0x5dded3)
+        .gaseous()
+        .displayName("Nitric Oxide");
+
+    event
+        .create("kubejs:nitric_acid")
+        .stillTexture("kubejs:fluid/nitric_acid_still")
+        .flowingTexture("kubejs:fluid/nitric_acid_flow")
+        .bucketColor(0xe8e138)
+        .gaseous()
+        .displayName("Nitric Acid");
+
+    event
+        .create("kubejs:carbon_monoxide")
+        .stillTexture("kubejs:fluid/carbon_monoxide_still")
+        .flowingTexture("kubejs:fluid/carbon_monoxide_flow")
+        .bucketColor(0x102157)
+        .gaseous()
+        .displayName("Carbon Monoxide");
+
+    event
+        .create("kubejs:salt_water")
+        .stillTexture("kubejs:fluid/salt_water_still")
+        .flowingTexture("kubejs:fluid/salt_water_flow")
+        .bucketColor(0x072278)
+        .displayName("Salt Water");
 });

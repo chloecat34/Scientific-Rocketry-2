@@ -287,4 +287,34 @@ StartupEvents.registry("block", (event) => {
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_diamond_tool");
+
+    event
+        .create("nonconducting_casing")
+        .displayName("Nonconducting Casing")
+        .material("metal")
+        .hardness(4.0)
+        .resistance(120.0)
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
+
+    event
+        .create("restonia_conducting_block")
+        .displayName("Restonia Conducting Block")
+        .material("metal")
+        .hardness(4.0)
+        .resistance(120.0)
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
+
+    event
+        .create("electrolysis_core")
+        .displayName("Electrolysis Core")
+        .material("metal")
+        .hardness(6.0)
+        .resistance(240.0)
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
 });

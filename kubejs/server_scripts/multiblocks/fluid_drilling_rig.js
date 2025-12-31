@@ -23,6 +23,15 @@ ServerEvents.recipes((event) => {
         .duration(10)
         .EUt(128);
 
+    event.recipes.gtceu
+        .fluid_drilling(`salt_water_drilling`)
+        .notConsumable("immersiveengineering:fluid_pump")
+        .outputFluids("kubejs:salt_water 500")
+        .dimension("minecraft:overworld")
+        .biome("minecraft:is_ocean")
+        .duration(10)
+        .EUt(128);
+
     // Fluid drilling rig controller
     event.recipes.createMechanicalCrafting("gtceu:fluid_drilling_rig", ["AABAA", "ACDCA", "BEFEB", "ACDCA", "AABAA"], {
         A: "#forge:sheetmetals/steel",

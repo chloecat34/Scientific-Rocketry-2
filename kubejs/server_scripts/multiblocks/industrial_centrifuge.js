@@ -7,6 +7,13 @@ ServerEvents.recipes((event) => {
         .duration(800)
         .EUt(128);
 
+    event.recipes.gtceu
+        .industrial_centrifuge("centrifuge_nether_air")
+        .inputFluids("kubejs:nether_air 10000")
+        .outputFluids("kubejs:carbon_monoxide 4000", "mekanism:sulfur_dioxide 1000")
+        .duration(800)
+        .EUt(128);
+
     // Industrial centrifuge
     event.shaped("kubejs:industrial_centrifuge_core", ["ABA", "CDC", "AEA"], {
         A: "#forge:sheetmetals/manyullyn",

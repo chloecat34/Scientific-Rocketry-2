@@ -136,6 +136,8 @@ StartupEvents.registry("item", (event) => {
     event.create("glod_crystal").displayName("Glod Crystal").tag("actuallyadditions:crystals");
     event.create("empowered_glod_crystal").displayName("Empowered Glod Crystal").glow(true);
 
+    event.create("carbon_dust").displayName("Carbon Dust").tag("forge:dusts/carbon");
+
     // Register materials with ingots, nuggets, plates, and gears
     let materials = [
         "red_alloy",
