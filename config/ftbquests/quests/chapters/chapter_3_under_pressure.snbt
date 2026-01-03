@@ -417,30 +417,6 @@
 			y: -0.5d
 		}
 		{
-			dependencies: ["08ACA73A65767D7E"]
-			description: [
-				"Yes, making PCBs is a massive rabbit hole right now. You need both Stainless Steel and Iron III Chloride (Etching Acid)."
-				""
-				"Automating these processes will help a lot."
-			]
-			id: "1F34E156F7D49612"
-			rewards: [{
-				count: 16
-				id: "19C1F4A23D8EEB96"
-				item: "immersiveengineering:plate_duroplast"
-				type: "item"
-			}]
-			subtitle: "yes the quest title is a GT:NH reference"
-			tasks: [{
-				id: "5CA2904A0BCEBE35"
-				item: "pneumaticcraft:empty_pcb"
-				type: "item"
-			}]
-			title: "You're gonna hate this!"
-			x: -3.0d
-			y: -0.5d
-		}
-		{
 			dependencies: ["3F73F687A32B9195"]
 			description: ["Building Gadgets is a mod that adds new tools that use RF to help you out with building. They can place lots of blocks, delete blocks, exchange them with each other, or more."]
 			id: "3056F74A4D37A1BE"
@@ -564,7 +540,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["1F34E156F7D49612"]
+			dependencies: ["08ACA73A65767D7E"]
 			description: [
 				"The Air Collector is a multiblock that lets you collect Air from the atmosphere of the current dimension. Different dimensions will have different results."
 				""
@@ -626,7 +602,7 @@
 				}
 			]
 			title: "Air Collector"
-			x: -2.0d
+			x: -3.0d
 			y: -0.5d
 		}
 		{
@@ -686,7 +662,7 @@
 				}
 			]
 			title: "Industrial Centrifuge"
-			x: -1.0d
+			x: -2.0d
 			y: -0.5d
 		}
 		{

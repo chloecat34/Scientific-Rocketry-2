@@ -2,7 +2,7 @@
     "type": "pneumaticcraft:pressure_chamber",
     "inputs": [
         {
-            "item": "pneumaticcraft:plastic"
+            "item": "kubejs:stainless_steel_plate"
         },
         {
             "item": "immersiveengineering:circuit_board"

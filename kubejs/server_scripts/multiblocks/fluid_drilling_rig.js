@@ -28,7 +28,7 @@ ServerEvents.recipes((event) => {
         .notConsumable("immersiveengineering:fluid_pump")
         .outputFluids("kubejs:salt_water 500")
         .dimension("minecraft:overworld")
-        .biome("minecraft:is_ocean")
+        .biome("ocean")
         .duration(10)
         .EUt(128);
 
