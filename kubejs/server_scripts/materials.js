@@ -684,7 +684,4 @@ ServerEvents.recipes((event) => {
             },
         ],
     });
-
-    // Pewter
-    event.recipes.thermal.smelter("4x ")
 });
