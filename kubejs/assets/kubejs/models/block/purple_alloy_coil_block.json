@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/cube_bottom_top",
+    "textures": {
+        "bottom": "kubejs:block/purple_alloy_coil_block_top",
+        "side": "kubejs:block/purple_alloy_coil_block_side",
+        "top": "kubejs:block/purple_alloy_coil_block_top"
+    }
+}

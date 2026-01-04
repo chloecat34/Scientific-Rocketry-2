@@ -23,6 +23,7 @@ ServerEvents.recipes((event) => {
         ["#forge:plates/red_alloy", "kubejs:red_alloy_wire"],
         ["#forge:plates/energetic_alloy", "kubejs:energetic_alloy_wire"],
         ["#forge:plates/vibrant_alloy", "kubejs:vibrant_alloy_wire"],
+        ["#forge:plates/purple_alloy", "kubejs:purple_alloy_wire"],
     ].forEach((entry) => {
         const [plate, wire] = entry;
 

@@ -54,7 +54,7 @@ ServerEvents.recipes((event) => {
             ]),
             event.recipes.createDeploying("kubejs:incomplete_electrolysis_core", [
                 "kubejs:incomplete_electrolysis_core",
-                "immersiveengineering:tesla_coil"
+                "immersiveengineering:tesla_coil",
             ]),
             event.recipes.createDeploying("kubejs:incomplete_electrolysis_core", [
                 "kubejs:incomplete_electrolysis_core",
@@ -63,8 +63,23 @@ ServerEvents.recipes((event) => {
             event.recipes.createDeploying("kubejs:incomplete_electrolysis_core", [
                 "kubejs:incomplete_electrolysis_core",
                 "actuallyadditions:advanced_coil",
-            ])
+            ]),
         ])
         .transitionalItem("kubejs:incomplete_electrolysis_core")
         .loops(2);
+
+    // Electrolysis plant controller
+    event.recipes.createMechanicalCrafting(
+        "gtceu:electrolysis_plant",
+        ["AAAAA", "BCDCB", "EFGFE", "BCDCB", "AAAAA"],
+        {
+            A: "#forge:sheetmetals/compressed_iron",
+            B: "powah:energy_cable_hardened",
+            C: "#forge:heavy_platings/electrical_steel",
+            D: "actuallyadditions:emeradic_crystal",
+            E: "kubejs:purple_alloy_coil_block",
+            F: "pneumaticcraft:medium_tank",
+            G: "actuallyadditions:atomic_reconstructor",
+        }
+    );
 });

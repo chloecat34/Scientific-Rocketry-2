@@ -684,6 +684,42 @@
 			x: -9.0d
 			y: 0.5d
 		}
+		{
+			description: ["The Electrolysis Plant lets you electrolyze fluids into other fluids + items. For example, you can process Water into Hydrogen and Oxygen, and Salt Water into Hydrogen and Chlorine."]
+			id: "101378B9425E6BE5"
+			rewards: [{
+				count: 64
+				id: "1CDBC9BCCCA3ED4C"
+				item: "actuallyadditions:restonia_crystal"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "28082154CA3F60E7"
+					item: "gtceu:electrolysis_plant"
+					type: "item"
+				}
+				{
+					count: 84L
+					id: "0F5AF2492EC2FB98"
+					item: { Count: 84, id: "kubejs:nonconducting_casing" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "083933B7A836416D"
+					item: { Count: 4, id: "kubejs:restonia_conducting_block" }
+					type: "item"
+				}
+				{
+					id: "4CE37541AF7B571F"
+					item: "kubejs:electrolysis_core"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.5d
+		}
 	]
 	title: "Chapter 3: Under Pressure"
 }

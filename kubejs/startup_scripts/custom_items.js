@@ -140,6 +140,8 @@ StartupEvents.registry("item", (event) => {
 
     event.create("incomplete_electrolysis_core").displayName("Incomplete Electrolysis Core");
 
+    event.create("purple_alloy_coil").displayName("§5Purple Alloy Coil");
+
     // Register materials with ingots, nuggets, plates, and gears
     let materials = [
         "red_alloy",
@@ -165,7 +167,7 @@ StartupEvents.registry("item", (event) => {
         glowing_brass: "§e",
     };
 
-    let wires = ["red_alloy", "energetic_alloy", "vibrant_alloy"];
+    let wires = ["red_alloy", "energetic_alloy", "vibrant_alloy", "purple_alloy"];
 
     materials.forEach((material) => {
         let materialName = material.split("_").map(capitalize).join(" ");
@@ -194,7 +196,7 @@ StartupEvents.registry("item", (event) => {
     });
 
     // Heavy plating
-    ["aluminum", "hepatizon", "manyullyn"].forEach((material) => {
+    ["aluminum", "hepatizon", "manyullyn", "electrical_steel"].forEach((material) => {
         let materialName = material.split("_").map(capitalize).join(" ");
 
         event

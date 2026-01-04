@@ -269,6 +269,17 @@ StartupEvents.registry("block", (event) => {
         .tagBlock("minecraft:needs/diamond_tool");
 
     event
+        .create("electrical_steel_sheetmetal")
+        .displayName("Electrical Steel Sheetmetal")
+        .material("metal")
+        .hardness(5.0)
+        .resistance(30.0)
+        .requiresTool(true)
+        .tag("forge:sheetmetals/electrical_steel")
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs/diamond_tool");
+
+    event
         .create("industrial_centrifuge_wall")
         .displayName("Industrial Centrifuge Wall")
         .material("metal")
@@ -317,4 +328,14 @@ StartupEvents.registry("block", (event) => {
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_diamond_tool");
+
+    event
+        .create("purple_alloy_coil_block")
+        .displayName("§5Purple Alloy Coil Block")
+        .material("metal")
+        .hardness(5.0)
+        .resistance(30.0)
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
 });

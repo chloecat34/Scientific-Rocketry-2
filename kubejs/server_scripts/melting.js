@@ -997,6 +997,7 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("kubejs:purple_alloy_block", "kubejs:molten_purple_alloy", 810, 160, 1200, 4800 * 9);
     addBothMelterRecipes("kubejs:purple_alloy_plate", "kubejs:molten_purple_alloy", 90, 48, 1200, 4800);
     addBothMelterRecipes("kubejs:purple_alloy_gear", "kubejs:molten_purple_alloy", 360, 96, 1200, 4800 * 4);
+    addBothMelterRecipes("kubejs:purple_alloy_wire", "kubejs:molten_purple_alloy", 45, 12, 1200, 2400);
     chillerIngotCasting("kubejs:purple_alloy_ingot", "kubejs:molten_purple_alloy", 90, 4800);
     chillerBlockCasting("kubejs:purple_alloy_block", "kubejs:molten_purple_alloy", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("kubejs:purple_alloy_block", "kubejs:molten_purple_alloy", 810, 160);
@@ -1021,6 +1022,8 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("kubejs:electrical_steel_block", "kubejs:molten_electrical_steel", 810, 180, 1100, 4800 * 9);
     addBothMelterRecipes("kubejs:electrical_steel_plate", "kubejs:molten_electrical_steel", 90, 60, 1100, 4800);
     addBothMelterRecipes("kubejs:electrical_steel_gear", "kubejs:molten_electrical_steel", 360, 120, 1100, 4800 * 4);
+    addBothMelterRecipes("kubejs:electrical_steel_sheetmetal", "kubejs:molten_electrical_steel", 180, 90, 1100, 9600);
+    addBothMelterRecipes("kubejs:electrical_steel_heavy_plating", "kubejs:molten_electrical_steel", 720, 160, 1100, 4800 * 8);
     chillerIngotCasting("kubejs:electrical_steel_ingot", "kubejs:molten_electrical_steel", 90, 4800);
     chillerBlockCasting("kubejs:electrical_steel_block", "kubejs:molten_electrical_steel", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("kubejs:electrical_steel_block", "kubejs:molten_electrical_steel", 810, 160);
