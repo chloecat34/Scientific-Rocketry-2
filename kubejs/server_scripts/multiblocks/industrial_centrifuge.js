@@ -4,14 +4,14 @@ ServerEvents.recipes((event) => {
         .industrial_centrifuge("centrifuge_air")
         .inputFluids("kubejs:air 10000")
         .outputFluids("kubejs:nitrogen 4000", "mekanism:oxygen 1000")
-        .duration(800)
+        .duration(200)
         .EUt(128);
 
     event.recipes.gtceu
         .industrial_centrifuge("centrifuge_nether_air")
         .inputFluids("kubejs:nether_air 10000")
         .outputFluids("kubejs:carbon_monoxide 4000", "mekanism:sulfur_dioxide 1000")
-        .duration(800)
+        .duration(200)
         .EUt(128);
 
     // Industrial centrifuge
