@@ -71,7 +71,9 @@
         "/gtceu:(ev|iv|luv|zpm|uv|uhv|uev|uiv|uxv|opv|max)_.*/",
         "/gtceu:(lv|mv|hv|ev|iv|luv|zpm|uv|uhv|uev|uiv|uxv|opv|max)_.*centrifuge/",
         "/gtceu:(lv|mv|hv|ev|iv|luv|zpm|uv|uhv|uev|uiv|uxv|opv|max)_.*_collector/",
-        "immersiveengineering:alloy_smelter"
+        "immersiveengineering:alloy_smelter",
+        "/tconstruct:fake_.*/",
+        "/estrogen:molten_.*/"
     ],
     "disable": true
 }

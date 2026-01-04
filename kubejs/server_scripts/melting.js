@@ -1074,6 +1074,13 @@ ServerEvents.recipes((event) => {
     addTinkersBlockCastingRecipe("create:andesite_alloy_block", "kubejs:molten_andesite_alloy", 810, 160);
     addTinkersIngotCastingRecipe("create:andesite_alloy", "kubejs:molten_andesite_alloy", 90, 50);
 
+    // Molten knightmetal
+    crucibleMelting("#forge:ingots/knightmetal", "tconstruct:molten_knightmetal", 90, 4800);
+    crucibleMelting("#forge:nuggets/knightmetal", "tconstruct:molten_knightmetal", 10, 600);
+    crucibleMelting("#forge:storage_blocks/knightmetal", "tconstruct:molten_knightmetal", 810, 4800 * 9);
+    chillerIngotCasting("#forge:ingots/knightmetal", "tconstruct:molten_knightmetal", 90, 4800);
+    chillerBlockCasting("#forge:storage_blocks/knightmetal", "tconstruct:molten_knightmetal", 810, 4800 * 9);
+
     // Andesite alloy smeltery recipe
     event.custom({
         type: "tconstruct:alloy",

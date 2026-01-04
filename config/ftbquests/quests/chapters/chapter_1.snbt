@@ -993,6 +993,25 @@
 			x: 6.0d
 			y: -1.0d
 		}
+		{
+			dependencies: ["31BDC4E9DEDDC05C"]
+			description: ["Unfortunately, I only have 201 berries..."]
+			id: "594D0952D6B726ED"
+			rewards: [{
+				count: 202
+				id: "66E8D91C70388170"
+				item: "thermal:strawberry"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4C8BF804577C4383"
+				item: "createestrogen:centrifuge"
+				type: "item"
+			}]
+			title: "Estrogen!"
+			x: 3.0d
+			y: 1.0d
+		}
 	]
 	title: "Chapter 1: Crash Landing"
 }

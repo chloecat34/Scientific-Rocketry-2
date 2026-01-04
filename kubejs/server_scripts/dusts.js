@@ -1,6 +1,22 @@
 ServerEvents.recipes((event) => {
     // Get instances of helper functions
-    const immersiveCrushing = global.immersiveCrushing(event);
+    const immersiveCrushing = (event) => (energy, input, result, resultCount, secondaries) => {
+        const parsedSecondaries = secondaries.map((second) => {
+            return {
+                chance: second[2],
+                output: global.createItemSelectorWithCount(second[0], second[1]),
+            };
+        });
+
+        event.custom({
+            type: "immersiveengineering:crusher",
+            energy: energy,
+            input: global.createItemSelector(input),
+            secondaries: parsedSecondaries,
+            result: global.createItemSelectorWithCount(result, resultCount),
+        });
+    };
+
 
     // Remove hammer recipes
     [
@@ -236,10 +252,17 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal
         .crystallizer("minecraft:amethyst_shard", ["#forge:dusts/amethyst", Fluid.of("minecraft:water", 2000)])
         .energy(20000);
+
     event.recipes.thermal
         .crystallizer("#forge:gems/ruby", ["#forge:dusts/ruby", Fluid.of("minecraft:water", 2000)])
         .energy(20000);
+
     event.recipes.thermal
         .crystallizer("#forge:gems/sapphire", ["#forge:dusts/sapphire", Fluid.of("minecraft:water", 2000)])
         .energy(20000);
+
+    // Testosterone powder
+    immersiveCrushing(3000, "estrogen:testosterone_chunk", "estrogen:testosterone_powder", 3, []);
+    event.recipes.thermal.pulverizer(Item.of("estrogen:testosterone_powder", 3), "estrogen:testosterone_chunk").energy(4000);
+    event.recipes.mekanismCrushing("3x estrogen:testosterone_powder", "estrogen:testosterone_chunk");
 });
