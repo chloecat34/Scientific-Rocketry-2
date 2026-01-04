@@ -138,6 +138,8 @@ StartupEvents.registry("item", (event) => {
 
     event.create("carbon_dust").displayName("Carbon Dust").tag("forge:dusts/carbon");
 
+    event.create("incomplete_electrolysis_core").displayName("Incomplete Electrolysis Core");
+
     // Register materials with ingots, nuggets, plates, and gears
     let materials = [
         "red_alloy",

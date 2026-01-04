@@ -29,4 +29,42 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:carbon_dust")
         .duration(50)
         .EUt(64);
+
+    // Nonconducting casing
+    event.recipes.shaped("4x kubejs:nonconducting_casing", ["ABA", "CDC", "ABA"], {
+        A: "thermal:cured_rubber",
+        B: "actuallyadditions:void_crystal",
+        C: "#forge:sheetmetals/compressed_iron",
+        D: "#forge:gears/invar",
+    });
+
+    // Restonia conducting block
+    event.recipes.shaped("kubejs:restonia_conducting_block", ["ABA", "CCC", "ABA"], {
+        A: "actuallyadditions:restonia_crystal",
+        B: "#forge:sheetmetals/compressed_iron",
+        C: "kubejs:vibrant_alloy_coil",
+    });
+
+    // Electrolysis core
+    event.recipes
+        .createSequencedAssembly([Item.of("kubejs:electrolysis_core")], "kubejs:restonia_conducting_block", [
+            event.recipes.createFilling("kubejs:incomplete_electrolysis_core", [
+                "kubejs:incomplete_electrolysis_core",
+                Fluid.of("kubejs:molten_restonia", 1000),
+            ]),
+            event.recipes.createDeploying("kubejs:incomplete_electrolysis_core", [
+                "kubejs:incomplete_electrolysis_core",
+                "immersiveengineering:tesla_coil"
+            ]),
+            event.recipes.createDeploying("kubejs:incomplete_electrolysis_core", [
+                "kubejs:incomplete_electrolysis_core",
+                "actuallyadditions:advanced_coil",
+            ]),
+            event.recipes.createDeploying("kubejs:incomplete_electrolysis_core", [
+                "kubejs:incomplete_electrolysis_core",
+                "actuallyadditions:advanced_coil",
+            ])
+        ])
+        .transitionalItem("kubejs:incomplete_electrolysis_core")
+        .loops(2);
 });
