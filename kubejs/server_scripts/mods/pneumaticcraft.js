@@ -454,6 +454,51 @@ ServerEvents.recipes((event) => {
         B: "compressedcreativity:engine_rotor",
         C: "pneumaticcraft:pressure_tube",
         D: "createaddition:electric_motor",
-        E: "create:precision_mechanism",
+        E: "kubejs:compressed_mechanism",
+    });
+
+    // Compressed mechanism
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 720,
+            fluid: "kubejs:molten_compressed_iron",
+        },
+        item_input: {
+            item: "kubejs:heat_mechanism",
+        },
+        item_output: {
+            count: 1,
+            item: "kubejs:compressed_mechanism",
+        },
+        pressure: 4.0,
+        temperature: {
+            min_temp: 1273,
+        },
+    });
+
+    // Air blower
+    event.remove({ output: "compressedcreativity:air_blower" });
+
+    event.shaped("compressedcreativity:air_blower", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/copper",
+        B: "create:encased_fan",
+        C: "pneumaticcraft:pressure_tube",
+        D: "create:copper_casing",
+        E: "#forge:gears/brass",
+    });
+
+    // Industrial air blower
+    event.remove({ output: "compressedcreativity:industrial_air_blower" });
+
+    event.shaped("compressedcreativity:industrial_air_blower", ["ABA", "CDC", "EFE"], {
+        A: "#forge:plates/compressed_iron",
+        B: "compressedcreativity:air_blower",
+        C: "pneumaticcraft:reinforced_pressure_tube",
+        D: "compressedcreativity:compressed_iron_casing",
+        E: "#forge:gears/compressed_iron",
+        F: "kubejs:compressed_mechanism",
     });
 });

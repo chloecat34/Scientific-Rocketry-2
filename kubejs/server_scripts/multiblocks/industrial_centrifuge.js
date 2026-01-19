@@ -18,7 +18,7 @@ ServerEvents.recipes((event) => {
     event.shaped("kubejs:industrial_centrifuge_core", ["ABA", "CDC", "AEA"], {
         A: "#forge:sheetmetals/manyullyn",
         B: "#forge:gears/knightslime",
-        C: "create:precision_mechanism",
+        C: "kubejs:compressed_mechanism",
         D: "#forge:heavy_platings/manyullyn",
         E: "compressedcreativity:compressed_air_engine",
     });

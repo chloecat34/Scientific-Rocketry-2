@@ -111,6 +111,8 @@ StartupEvents.registry("item", (event) => {
 
     event.create("incomplete_heat_mechanism").displayName("Incomplete Heat Mechanism");
 
+    event.create("compressed_mechanism").displayName("Compressed Mechanism");
+
     event.create("incomplete_electronic_component").displayName("Incomplete Electronic Component");
 
     event.create("incomplete_adv_electronic_component").displayName("Incomplete Advanced Electronic Component");
