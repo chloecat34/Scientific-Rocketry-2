@@ -37,3 +37,6 @@ config/mm/pack/.cache
 gtceu
 config/powah.json5
 config/xaerominimap_entities.json
+config/xaerominimap.txt
+config/xaerominimap_entities.json
+config/xaeroworldmap.txt
