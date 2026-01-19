@@ -663,7 +663,7 @@
 			]
 			title: "Industrial Centrifuge"
 			x: -2.0d
-			y: -0.5d
+			y: -1.5d
 		}
 		{
 			dependencies: ["3F73F687A32B9195"]
@@ -685,6 +685,7 @@
 			y: 0.5d
 		}
 		{
+			dependencies: ["54D52E12AF41A529"]
 			description: ["The Electrolysis Plant lets you electrolyze fluids into other fluids + items. For example, you can process Water into Hydrogen and Oxygen, and Salt Water into Hydrogen and Chlorine."]
 			id: "101378B9425E6BE5"
 			rewards: [{
@@ -718,9 +719,10 @@
 				}
 			]
 			x: -2.0d
-			y: 0.5d
+			y: -0.5d
 		}
 		{
+			dependencies: ["54D52E12AF41A529"]
 			description: ["The Industrial Chemical Reactor can make chemicals such as Nitric Acid."]
 			id: "314C66FA345782BE"
 			rewards: [{
@@ -761,7 +763,30 @@
 				}
 			]
 			x: -2.0d
-			y: 1.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"4D3E1C7D6FF1A423"
+				"314C66FA345782BE"
+				"101378B9425E6BE5"
+			]
+			description: ["Nitric Acid is a powerful acid used for breaking Ruby Dust down into a slurry that can be processed into Chromium."]
+			id: "72297A4ECBE9F59C"
+			rewards: [{
+				count: 16
+				id: "12BC1441B94EE5F1"
+				item: "thermal:ruby"
+				type: "item"
+			}]
+			tasks: [{
+				id: "13893DB8AD8EB062"
+				item: "kubejs:nitric_acid_bucket"
+				type: "item"
+			}]
+			title: "Nitric Acid"
+			x: -1.0d
+			y: -0.5d
 		}
 	]
 	title: "Chapter 3: Under Pressure"

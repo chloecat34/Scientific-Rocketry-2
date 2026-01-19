@@ -721,4 +721,30 @@ ServerEvents.recipes((event) => {
             infuse_type: "mekanism:carbon",
         },
     });
+
+    // Ruby slurry
+    event.custom({
+        type: "immersiveengineering:mixer",
+        energy: 6400,
+        fluid: {
+            amount: 1000,
+            tag: "forge:nitric_acid",
+        },
+        inputs: [
+            {
+                base_ingredient: {
+                    tag: "forge:dusts/ruby",
+                },
+                count: 3,
+            },
+        ],
+        result: {
+            amount: 1000,
+            fluid: "kubejs:ruby_slurry",
+        },
+    });
+
+    event.recipes.thermal
+        .brewer(Fluid.of("kubejs:ruby_slurry", 1000), [Fluid.of("kubejs:nitric_acid", 1000), "3x #forge:dusts/ruby"])
+        .energy(6400);
 });
