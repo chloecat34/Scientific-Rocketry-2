@@ -67,6 +67,13 @@ ServerEvents.recipes((event) => {
         .duration(75)
         .EUt(64);
 
+    event.recipes.gtceu
+        .electrolysis_plant("electrolyze_ruby_slurry")
+        .inputFluids("kubejs:ruby_slurry 1000", "minecraft:water 1000")
+        .outputFluids("tconstruct:molten_chromium 90", "tconstruct:molten_aluminum 180", "mekanism:oxygen 3000")
+        .duration(400)
+        .EUt(128);
+
     // Nonconducting casing
     event.recipes.shaped("4x kubejs:nonconducting_casing", ["ABA", "CDC", "ABA"], {
         A: "thermal:cured_rubber",
