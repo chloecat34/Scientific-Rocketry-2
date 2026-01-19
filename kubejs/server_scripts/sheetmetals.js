@@ -16,7 +16,8 @@ ServerEvents.recipes((event) => {
         "manyullyn",
         "compressed_iron",
         "stainless_steel",
-        "electrical_steel"
+        "electrical_steel",
+        "knightslime"
     ].forEach((material) => {
         event.remove({ output: `immersiveengineering:sheetmetal_${material}` });
 

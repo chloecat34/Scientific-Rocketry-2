@@ -58,7 +58,7 @@
         "/gtceu:.*(granite|lamp|marble).*/",
         "/gtceu:.*_(charcoal|stone|sheet|studs|mortar|helmet|chestplate|leggings|boots|dynamite)/",
         "/gtceu:.*steam.*/",
-        "/gtceu:.*_(hull|furnace|smelter|assembler|autoclave|bender|brewery|canner|bath|reactor|cutter|distillery|electrolyzer|separator|extruder|extractor|fermenter|heater|solidifier|press|scanner|lathe|mixer|packer|polarizer|engraver|sifter|macerator|crusher|combustion|turbine|pump|fisher|miner|accelerator|buffer)/",
+        "/gtceu:.*_(hull|furnace|smelter|assembler|autoclave|bender|brewery|canner|bath|cutter|distillery|electrolyzer|separator|extruder|extractor|fermenter|heater|solidifier|press|scanner|lathe|mixer|packer|polarizer|engraver|sifter|macerator|crusher|combustion|turbine|pump|fisher|miner|accelerator|buffer)/",
         "/gtceu:.*(transformer|charger).*/",
         "/gtceu:.*(compressor|wiremill|super_chest|quantum_chest|super_tank|quantum_tank|muffler_hatch|oven_hatch|pump_hatch|maintenance_hatch|passthrough_hatch|diode|target_hatch|source_hatch|monitor|boiler|oven|cracker)/",
         "/gtceu:.*_(plunger|hatch_4x|hatch_9x|dual_input_hatch|dual_output_hatch|tower|freezer|line|cleanroom|igniter|valve|multiblock_tank|tower|electromagnet|laser|funnel|brewer|station|holder|bank|switch|array|transmitter_hatch|receiver_hatch|access_hatch|component|brick|mold|spray_can|matches|matchbox|lighter|mesh|tape)/",
@@ -75,7 +75,11 @@
         "/tconstruct:fake_.*/",
         "/estrogen:molten_.*/",
         "/kubejs:incomplete_.*/",
-        "gtceu:large_centrifuge"
+        "gtceu:large_centrifuge",
+        "gtceu:lv_chemical_reactor",
+        "gtceu:mv_chemical_reactor",
+        "gtceu:hv_chemical_reactor",
+        "gtceu:large_chemical_reactor"
     ],
     "disable": true
 }

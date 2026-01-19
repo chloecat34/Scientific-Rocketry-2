@@ -9,6 +9,8 @@
     "gtceu.industrial_centrifuge": "Industrial Centrifuge",
     "block.gtceu.electrolysis_plant": "Electrolysis Plant",
     "gtceu.electrolysis_plant": "Electrolysis Plant",
+    "block.gtceu.industrial_chemical_reactor": "Industrial Chemical Reactor",
+    "gtceu.industrial_chemical_reactor": "Industrial Chemical Reactor",
     "material.gtceu.cosmic": "Cosmic",
     "block.gtceu.ulv_input_bus": "Bronze Input Bus",
     "block.gtceu.ulv_output_bus": "Bronze Output Bus",

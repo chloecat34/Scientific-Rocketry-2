@@ -720,6 +720,49 @@
 			x: -2.0d
 			y: 0.5d
 		}
+		{
+			description: ["The Industrial Chemical Reactor can make chemicals such as Nitric Acid."]
+			id: "314C66FA345782BE"
+			rewards: [{
+				count: 32
+				id: "62F3C70C467956F6"
+				item: "actuallyadditions:enori_crystal"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "6F430C9C2F07ACED"
+					item: "gtceu:industrial_chemical_reactor"
+					type: "item"
+				}
+				{
+					count: 34L
+					id: "442F425535C531DB"
+					item: { Count: 34, id: "kubejs:knightslime_sheetmetal" }
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "7EBBE33E545E94F1"
+					item: { Count: 12, id: "kubejs:hepatizon_sheetmetal" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "301A15A0E4B9B168"
+					item: { Count: 3, id: "immersiveengineering:heavy_engineering" }
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "4B6BEBDC8BB4E30E"
+					item: { Count: 12, id: "compressedcreativity:compressed_iron_casing" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.5d
+		}
 	]
 	title: "Chapter 3: Under Pressure"
 }

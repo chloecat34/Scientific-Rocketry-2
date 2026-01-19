@@ -236,6 +236,17 @@ StartupEvents.registry("block", (event) => {
         .tagBlock("minecraft:needs/diamond_tool");
 
     event
+        .create("knightslime_sheetmetal")
+        .displayName("Knightslime Sheetmetal")
+        .material("metal")
+        .hardness(4.0)
+        .resistance(120.0)
+        .requiresTool(true)
+        .tag("forge:sheetmetals/knightslime")
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs/diamond_tool");
+
+    event
         .create("manyullyn_sheetmetal")
         .displayName("Manyullyn Sheetmetal")
         .material("metal")

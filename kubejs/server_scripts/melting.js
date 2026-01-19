@@ -389,6 +389,7 @@ ServerEvents.recipes((event) => {
     addTinkersNuggetCastingRecipe("tconstruct:knightslime_nugget", "tconstruct:molten_knightslime", 10, 10);
     addBothMelterRecipes("kubejs:knightslime_plate", "tconstruct:molten_knightslime", 90, 72, 1200, 4800);
     addBothMelterRecipes("kubejs:knightslime_gear", "tconstruct:molten_knightslime", 360, 176, 1200, 4800 * 4);
+    addBothMelterRecipes("kubejs:knightslime_sheetmetal", "tconstruct:molten_knightslime", 180, 100, 1200, 4800 * 2);
 
     // Soulsteel recipes
     addBothMelterRecipes("tconstruct:soulsteel_ingot", "tconstruct:molten_soulsteel", 90, 72, 1200, 4800);

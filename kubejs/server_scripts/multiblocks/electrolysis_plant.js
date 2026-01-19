@@ -30,6 +30,20 @@ ServerEvents.recipes((event) => {
         .duration(50)
         .EUt(64);
 
+    event.recipes.gtceu
+        .electrolysis_plant("electrolyze_nitrogen_dioxide")
+        .inputFluids("kubejs:nitrogen_dioxide 1000")
+        .outputFluids("kubejs:nitrogen 1000", "mekanism:oxygen 2000")
+        .duration(75)
+        .EUt(64);
+
+    event.recipes.gtceu
+        .electrolysis_plant("electrolyze_nitric_oxide")
+        .inputFluids("kubejs:nitric_oxide 1000")
+        .outputFluids("kubejs:nitrogen 1000", "mekanism:oxygen 1000")
+        .duration(75)
+        .EUt(64);
+
     // Nonconducting casing
     event.recipes.shaped("4x kubejs:nonconducting_casing", ["ABA", "CDC", "ABA"], {
         A: "thermal:cured_rubber",
