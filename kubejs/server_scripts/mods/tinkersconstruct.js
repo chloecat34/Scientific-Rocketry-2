@@ -110,4 +110,76 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal
         .crystallizer("tconstruct:ender_slime_crystal", [Fluid.of("tconstruct:ender_slime", 250), "minecraft:amethyst_shard"])
         .energy(10000);
+
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 250,
+            fluid: "tconstruct:earth_slime",
+        },
+        item_input: {
+            item: "minecraft:amethyst_shard",
+        },
+        item_output: {
+            count: 1,
+            item: "tconstruct:earth_slime_crystal",
+        },
+        pressure: 2.0
+    });
+
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 250,
+            fluid: "tconstruct:sky_slime",
+        },
+        item_input: {
+            item: "minecraft:amethyst_shard",
+        },
+        item_output: {
+            count: 1,
+            item: "tconstruct:sky_slime_crystal",
+        },
+        pressure: 2.0
+    });
+
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 250,
+            fluid: "tconstruct:ichor",
+        },
+        item_input: {
+            item: "minecraft:amethyst_shard",
+        },
+        item_output: {
+            count: 1,
+            item: "tconstruct:ichor_slime_crystal",
+        },
+        pressure: 2.0
+    });
+
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 250,
+            fluid: "tconstruct:ender_slime",
+        },
+        item_input: {
+            item: "minecraft:amethyst_shard",
+        },
+        item_output: {
+            count: 1,
+            item: "tconstruct:ender_slime_crystal",
+        },
+        pressure: 2.0
+    });
 });

@@ -536,12 +536,26 @@ ServerEvents.recipes((event) => {
         100
     );
 
+    createArcFurnaceRecipe(
+        "#forge:ingots/red_alloy",
+        1,
+        ["#forge:silicon", "#forge:dusts/carbon"],
+        "#forge:ingots/redstone_alloy",
+        1,
+        51200,
+        100
+    );
+
     event.recipes.thermal
         .smelter("#forge:ingots/redstone_alloy", [
             "#forge:ingots/red_alloy",
             "#forge:silicon",
             "#forge:dusts/coal_coke",
         ])
+        .energy(9600);
+
+    event.recipes.thermal
+        .smelter("#forge:ingots/redstone_alloy", ["#forge:ingots/red_alloy", "#forge:silicon", "#forge:dusts/carbon"])
         .energy(9600);
 
     // Purple alloy
@@ -683,5 +697,28 @@ ServerEvents.recipes((event) => {
                 item: "kubejs:glowing_brass_ingot",
             },
         ],
+    });
+
+    // Steel with carbon dust
+    createArcFurnaceRecipe("minecraft:iron_ingot", 1, ["kubejs:carbon_dust"], "thermal:steel_ingot", 1, 102400, 200);
+
+    event.recipes.thermal.smelter("#forge:ingots/steel", ["minecraft:iron_ingot", "kubejs:carbon_dust"]).energy(4800);
+
+    // Carbon dust with mekanism
+    event.recipes.mekanismEnriching("mekanism:enriched_carbon", "kubejs:carbon_dust");
+
+    event.custom({
+        type: "mekanism:infusion_conversion",
+        input: {
+            ingredient: [
+                {
+                    item: "kubejs:carbon_dust",
+                },
+            ],
+        },
+        output: {
+            amount: 10,
+            infuse_type: "mekanism:carbon",
+        },
     });
 });

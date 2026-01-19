@@ -595,11 +595,7 @@
 		}
 		{
 			dependencies: ["07D62C05A735018B"]
-			description: [
-				"The Lava Enricher is the first multiblock you must construct. It lets you make Blazing Blood from Lava and Ichor, and is your first source of Blazing Blood."
-				""
-				"Currently the JEI preview doesn't work. This is seemingly due to a bug with the mod, so hopefully it will get fixed soon."
-			]
+			description: ["The Lava Enricher is the first multiblock you must construct. It lets you make Blazing Blood from Lava and Ichor, and is your first source of Blazing Blood."]
 			icon: "gtceu:lava_enricher"
 			id: "17F0A261342B5731"
 			rewards: [{

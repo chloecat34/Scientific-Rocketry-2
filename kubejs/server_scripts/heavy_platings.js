@@ -1,6 +1,6 @@
 ServerEvents.recipes((event) => {
     // Heavy plates
-    ["aluminum", "hepatizon", "manyullyn"].forEach((material) => {
+    ["aluminum", "hepatizon", "manyullyn", "electrical_steel"].forEach((material) => {
         event.custom({
             type: "pneumaticcraft:pressure_chamber",
             inputs: [

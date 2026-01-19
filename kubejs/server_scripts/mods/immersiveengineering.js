@@ -466,6 +466,11 @@ ServerEvents.recipes((event) => {
         B: "immersiveengineering:stick_treated",
     });
 
+    event.shaped("2x kubejs:purple_alloy_coil", ["AAA", "ABA", "AAA"], {
+        A: "#forge:wires/purple_alloy",
+        B: "immersiveengineering:stick_treated",
+    });
+
     // Core sample drill
     event.replaceInput(
         { output: "immersiveengineering:sample_drill" },
@@ -477,6 +482,11 @@ ServerEvents.recipes((event) => {
     event.replaceInput({ output: "immersiveengineering:coil_lv" }, "#forge:ingots/iron", "create:copper_casing");
     event.replaceInput({ output: "immersiveengineering:coil_mv" }, "#forge:ingots/iron", "create:brass_casing");
     event.replaceInput({ output: "immersiveengineering:coil_hv" }, "#forge:ingots/iron", "create:railway_casing");
+
+    event.shaped("kubejs:purple_alloy_coil_block", ["AAA", "ABA", "AAA"], {
+        A: "kubejs:purple_alloy_coil",
+        B: "compressedcreativity:compressed_iron_casing",
+    });
 
     // IE wiring
     event.replaceInput(
