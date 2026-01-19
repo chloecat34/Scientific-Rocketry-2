@@ -208,4 +208,10 @@ StartupEvents.registry("fluid", (event) => {
         .flowingTexture("kubejs:fluid/salt_water_flow")
         .bucketColor(0x072278)
         .displayName("Salt Water");
+
+    event
+        .create("kubejs:ruby_slurry")
+        .thinTexture(0xbb4848)
+        .bucketColor(0xbb4848)
+        .displayName("Ruby Slurry");
 });
