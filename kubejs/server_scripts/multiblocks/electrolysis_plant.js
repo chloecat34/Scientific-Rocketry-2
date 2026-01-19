@@ -23,6 +23,22 @@ ServerEvents.recipes((event) => {
         .EUt(64);
 
     event.recipes.gtceu
+        .electrolysis_plant("electrolyze_sulfur_trioxide")
+        .inputFluids("mekanism:sulfur_trioxide 1000")
+        .outputFluids("mekanism:oxygen 3000")
+        .itemOutputs("thermal:sulfur_dust")
+        .duration(60)
+        .EUt(64);
+
+    event.recipes.gtceu
+        .electrolysis_plant("electrolyze_sulfuric_acid")
+        .inputFluids("mekanism:sulfuric_acid 1000")
+        .outputFluids("mekanism:hydrogen 2000", "mekanism:oxygen 4000")
+        .itemOutputs("thermal:sulfur_dust")
+        .duration(80)
+        .EUt(64);
+
+    event.recipes.gtceu
         .electrolysis_plant("electrolyze_carbon_monoxide")
         .inputFluids("kubejs:carbon_monoxide 1000")
         .outputFluids("mekanism:oxygen 1000")
@@ -41,6 +57,13 @@ ServerEvents.recipes((event) => {
         .electrolysis_plant("electrolyze_nitric_oxide")
         .inputFluids("kubejs:nitric_oxide 1000")
         .outputFluids("kubejs:nitrogen 1000", "mekanism:oxygen 1000")
+        .duration(75)
+        .EUt(64);
+
+    event.recipes.gtceu
+        .electrolysis_plant("electrolyze_nitric_acid")
+        .inputFluids("kubejs:nitric_acid 1000")
+        .outputFluids("kubejs:nitrogen 1000", "mekanism:hydrogen 1000", "mekanism:oxygen 3000")
         .duration(75)
         .EUt(64);
 

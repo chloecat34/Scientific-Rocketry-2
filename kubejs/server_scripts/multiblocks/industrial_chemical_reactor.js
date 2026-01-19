@@ -20,6 +20,28 @@ ServerEvents.recipes((event) => {
         .duration(75)
         .EUt(48);
 
+    event.recipes.gtceu
+        .industrial_chemical_reactor("chem_sulfur_dioxide")
+        .itemInputs("thermal:sulfur_dust")
+        .inputFluids("mekanism:oxygen 2000")
+        .outputFluids("mekanism:sulfur_dioxide 1000")
+        .duration(100)
+        .EUt(64);
+
+    event.recipes.gtceu
+        .industrial_chemical_reactor("chem_sulfur_trioxide")
+        .inputFluids("mekanism:sulfur_dioxide 1000", "mekanism:oxygen 1000")
+        .outputFluids("mekanism:sulfur_trioxide 1000")
+        .duration(50)
+        .EUt(48);
+
+    event.recipes.gtceu
+        .industrial_chemical_reactor("chem_sulfuric_acid")
+        .inputFluids("mekanism:sulfur_trioxide 1000", "minecraft:water 1000")
+        .outputFluids("mekanism:sulfuric_acid 1000")
+        .duration(80)
+        .EUt(60);
+
     // Industrial chemical reactor
     event.recipes.createMechanicalCrafting(
         "gtceu:industrial_chemical_reactor",
