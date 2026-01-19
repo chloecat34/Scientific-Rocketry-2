@@ -788,6 +788,25 @@
 			x: -1.0d
 			y: -0.5d
 		}
+		{
+			dependencies: ["72297A4ECBE9F59C"]
+			description: ["You can get Chromium by electrolyzing Ruby Slurry. It is used for Stainless Steel."]
+			id: "0613310589869DB0"
+			rewards: [{
+				count: 16
+				id: "2F6B79AB6B9AC04A"
+				item: "kubejs:chromium_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "26C417B09728064F"
+				item: "kubejs:chromium_ingot"
+				type: "item"
+			}]
+			title: "Chromium"
+			x: 0.0d
+			y: -0.5d
+		}
 	]
 	title: "Chapter 3: Under Pressure"
 }

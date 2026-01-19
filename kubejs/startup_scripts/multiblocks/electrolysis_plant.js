@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", (event) => {
         .create("electrolysis_plant")
         .category("multiblock")
         .setEUIO("in")
-        .setMaxIOSize(0, 1, 2, 3)
+        .setMaxIOSize(0, 1, 1, 3)
         .setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT) //
         .setSound(GTSoundEntries.ELECTROLYZER);
