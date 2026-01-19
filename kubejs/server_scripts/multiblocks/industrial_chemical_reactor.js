@@ -21,18 +21,17 @@ ServerEvents.recipes((event) => {
         .EUt(48);
 
     // Industrial chemical reactor
-    // event.recipes.createMechanicalCrafting(
-    //     "gtceu:industrial_chemical_reactor",
-    //     ["AABAA", "ACDCA", "BEFEB", "AGHGA", "AABAA"],
-    //     {
-    //         A: "#forge:sheetmetals/compressed_iron",
-    //         B: "#forge:heavy_platings/hepatizon",
-    //         C: "pneumaticcraft:medium_tank",
-    //         D: "pneumaticcraft:turbine_rotor",
-    //         E: "createaddition:electric_motor",
-    //         F: "actuallyadditions:iron_casing",
-    //         G: "#forge:gears/purple_alloy",
-    //         H: "compressedcreativity:rotational_compressor",
-    //     }
-    // );
+    event.recipes.createMechanicalCrafting(
+        "gtceu:industrial_chemical_reactor",
+        ["AABAA", "ACDCA", "EFGFE", "ACDCA", "AABAA"],
+        {
+            A: "#forge:sheetmetals/hepatizon",
+            B: "actuallyadditions:enori_crystal_block",
+            C: "actuallyadditions:iron_casing",
+            D: "pneumaticcraft:medium_tank",
+            E: "#forge:heavy_platings/knightslime",
+            F: "kubejs:compressed_mechanism",
+            G: "pneumaticcraft:fluid_mixer",
+        }
+    );
 });
