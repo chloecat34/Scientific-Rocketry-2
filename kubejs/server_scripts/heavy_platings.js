@@ -20,5 +20,8 @@ ServerEvents.recipes((event) => {
                 },
             ],
         });
+
+        // Thermal recipe
+        event.recipes.thermal.press(`kubejs:${material}_heavy_plating`, [`4x #forge:sheetmetals/${material}`, "immersiveengineering:gunpowder_barrel"]).energy(32000);
     });
 });
