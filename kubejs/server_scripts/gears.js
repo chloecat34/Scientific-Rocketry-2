@@ -87,6 +87,7 @@ ServerEvents.recipes((event) => {
         "brass",
         "glowing_brass",
         "aluminum",
+        "chromium"
     ];
     kubejsGears.forEach((ingot) => standardizeGears(ingot, `kubejs:${ingot}_gear`));
 

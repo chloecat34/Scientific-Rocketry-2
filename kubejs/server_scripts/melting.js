@@ -479,6 +479,18 @@ ServerEvents.recipes((event) => {
     crucibleMelting("#forge:sheetmetals/nickel", "tconstruct:molten_nickel", 180, 4800);
     chillerBlockCasting("thermal:nickel_block", "tconstruct:molten_nickel", 810, 4800 * 9);
 
+    // Molten chromium
+    crucibleMelting("#forge:ingots/chromium", "tconstruct:molten_chromium", 90, 4800);
+    crucibleMelting("#forge:nuggets/chromium", "tconstruct:molten_chromium", 10, 600);
+    crucibleMelting("#forge:storage_blocks/chromium", "tconstruct:molten_chromium", 810, 4800 * 9);
+    addBothMelterRecipes("kubejs:chromium_plate", "tconstruct:molten_chromium", 90, 72, 900, 4800);
+    addBothMelterRecipes("kubejs:chromium_gear", "tconstruct:molten_chromium", 360, 176, 900, 4800 * 4);
+    chillerIngotCasting("kubejs:chromium_ingot", "tconstruct:molten_chromium", 90, 4800);
+    chillerBlockCasting("kubejs:chromium_block", "tconstruct:molten_chromium", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:chromium_block", "tconstruct:molten_chromium", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:chromium_ingot", "tconstruct:molten_chromium", 50);
+    addTinkersNuggetCastingRecipe("kubejs:chromium_nugget", "tconstruct:molten_chromium", 10);
+
     // Molten zinc
     crucibleMelting("#forge:ingots/zinc", "tconstruct:molten_zinc", 90, 4800);
     crucibleMelting("#forge:nuggets/zinc", "tconstruct:molten_zinc", 10, 600);

@@ -158,6 +158,7 @@ StartupEvents.registry("item", (event) => {
         "ardite",
         "stainless_steel",
         "glowing_brass",
+        "chromium"
     ];
 
     // Map ingots to the formatting code if needed

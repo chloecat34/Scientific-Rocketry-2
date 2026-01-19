@@ -168,6 +168,18 @@ StartupEvents.registry("block", (event) => {
         .tagBlock("minecraft:needs_iron_tool");
 
     event
+        .create("chromium_block")
+        .displayName("Chromium Block")
+        .material("metal")
+        .hardness(2.5)
+        .resistance(15.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/chromium")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
+
+    event
         .create("glowing_brass_block")
         .displayName("§eGlowing Brass Block")
         .material("metal")

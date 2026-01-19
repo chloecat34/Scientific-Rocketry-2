@@ -175,4 +175,6 @@ ServerEvents.recipes((event) => {
     addPacking("kubejs:glowing_brass_ingot", "kubejs:glowing_brass_block");
     addPacking2x2("estrogen:moth_fuzz", "estrogen:moth_wool");
     addPacking("estrogen:estrogen_pill", "estrogen:estrogen_pill_block");
+    addPacking("kubejs:chromium_nugget", "kubejs:chromium_ingot");
+    addPacking("kubejs:chromium_ingot", "kubejs:chromium_block");
 });

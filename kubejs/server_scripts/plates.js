@@ -100,5 +100,6 @@ ServerEvents.recipes((event) => {
         "queens_slime",
         "stainless_steel",
         "glowing_brass",
+        "chromium"
     ].forEach((ingot) => standardizePlates(ingot, `kubejs:${ingot}_plate`));
 });
