@@ -24,6 +24,18 @@ StartupEvents.registry("block", (event) => {
         .tagBlock("minecraft:needs_diamond_tool");
 
     event
+        .create("pyrolusite_ore")
+        .displayName("Pyrolusite Ore")
+        .material("stone")
+        .hardness(5.0)
+        .resistance(30.0)
+        .tag("forge:ores")
+        .tag("forge:ores/pyrolusite")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
+
+    event
         .create("ardite_block")
         .displayName("Ardite Block")
         .material("metal")
@@ -34,6 +46,18 @@ StartupEvents.registry("block", (event) => {
         .requiresTool(true)
         .tagBlock("mineable/pickaxe")
         .tagBlock("minecraft:needs_diamond_tool");
+
+    event
+        .create("manganese_block")
+        .displayName("Manganese Block")
+        .material("metal")
+        .hardness(5.0)
+        .resistance(30.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/manganese")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
 
     event
         .create("nether_copper_ore")

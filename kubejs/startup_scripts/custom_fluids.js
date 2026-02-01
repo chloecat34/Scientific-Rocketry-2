@@ -131,6 +131,13 @@ StartupEvents.registry("fluid", (event) => {
         .displayName("Molten Ardite");
 
     event
+        .create("kubejs:molten_manganese")
+        .stillTexture("kubejs:fluid/molten_manganese_still")
+        .flowingTexture("kubejs:fluid/molten_manganese_flow")
+        .bucketColor(0x83AB57)
+        .displayName("Molten Manganese");
+
+    event
         .create("kubejs:molten_stainless_steel")
         .stillTexture("kubejs:fluid/molten_stainless_steel_still")
         .flowingTexture("kubejs:fluid/molten_stainless_steel_flow")

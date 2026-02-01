@@ -14,7 +14,10 @@ StartupEvents.registry("item", (event) => {
 
     event.create("cobalt_dust").displayName("Cobalt Dust").tag("forge:dusts").tag("forge:dusts/cobalt");
     event.create("ardite_dust").displayName("Ardite Dust").tag("forge:dusts").tag("forge:dusts/ardite");
+    event.create("manganese_dust").displayName("Manganese Dust").tag("forge:dusts").tag("forge:dusts/manganese");
+
     event.create("raw_ardite").displayName("Raw Ardite").tag("forge:raw_materials").tag("forge:raw_materials/ardite");
+    event.create("raw_pyrolusite").displayName("Raw Pyrolusite").tag("forge:raw_materials").tag("forge:raw_materials/pyrolusite");
 
     event.create("desh_dust").displayName("Desh Dust").tag("forge:dusts").tag("forge:dusts/desh");
 
@@ -158,7 +161,8 @@ StartupEvents.registry("item", (event) => {
         "ardite",
         "stainless_steel",
         "glowing_brass",
-        "chromium"
+        "chromium",
+        "manganese"
     ];
 
     // Map ingots to the formatting code if needed

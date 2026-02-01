@@ -1,22 +1,52 @@
+// priority: 500
+// this needs high priority to avoid duplicate dust recipes
+
 ServerEvents.recipes((event) => {
+    const tagToIETag = (tag) => {
+        return tag[0] === "#" ? tag.slice(1, tag.length) : tag;
+    };
+
+    // Helper function to make an item selector for IE or other mods that use data
+    const createItemSelector = (item) => {
+        return item[0] === "#"
+            ? {
+                  tag: tagToIETag(item),
+              }
+            : {
+                  item: item,
+              };
+    };
+
+    // Helper function to make an item selector with the count for IE or other mods that use data
+    const createItemSelectorWithCount = (item, count) => {
+        return item[0] === "#"
+            ? {
+                  tag: tagToIETag(item),
+                  count: count,
+              }
+            : {
+                  item: item,
+                  count: count,
+              };
+    };
+
     // Get instances of helper functions
-    const immersiveCrushing = (event) => (energy, input, result, resultCount, secondaries) => {
+    const immersiveCrushing = (energy, input, result, resultCount, secondaries) => {
         const parsedSecondaries = secondaries.map((second) => {
             return {
                 chance: second[2],
-                output: global.createItemSelectorWithCount(second[0], second[1]),
+                output: createItemSelectorWithCount(second[0], second[1]),
             };
         });
 
         event.custom({
             type: "immersiveengineering:crusher",
             energy: energy,
-            input: global.createItemSelector(input),
+            input: createItemSelector(input),
             secondaries: parsedSecondaries,
-            result: global.createItemSelectorWithCount(result, resultCount),
+            result: createItemSelectorWithCount(result, resultCount),
         });
     };
-
 
     // Remove hammer recipes
     [
@@ -61,7 +91,7 @@ ServerEvents.recipes((event) => {
             event.recipes.createCrushing(dust, item);
         }
 
-        if (!event.containsRecipe({ output: dust, type: "immersiveengineering:crusher" })) {
+        if (!event.containsRecipe({ output: dust, type: "immersiveengineering:crusher" }) && !flags.includes(CrushingFlags.NO_IE)) {
             immersiveCrushing(3000, item, dust, 1, []);
         }
 
@@ -139,6 +169,7 @@ ServerEvents.recipes((event) => {
     standardizeCrushing("#forge:ingots/cobalt", "kubejs:cobalt_dust", ItemType.INGOT);
     standardizeCrushing("#forge:ingots/desh", "kubejs:desh_dust", ItemType.INGOT);
     standardizeCrushing("#forge:ingots/ardite", "kubejs:ardite_dust", ItemType.INGOT);
+    standardizeCrushing("#forge:ingots/manganese", "kubejs:manganese_dust", ItemType.INGOT);
     standardizeCrushing("#forge:gems/certus_quartz", "ae2:certus_quartz_dust", ItemType.GEM);
     standardizeCrushing("#forge:gems/fluix", "ae2:fluix_dust", ItemType.GEM);
     standardizeCrushing("#forge:gems/amethyst", "kubejs:amethyst_dust", ItemType.GEM);
@@ -218,6 +249,7 @@ ServerEvents.recipes((event) => {
         ["#forge:dusts/zinc", "create:zinc_ingot"],
         ["#forge:dusts/cobalt", "tconstruct:cobalt_ingot"],
         ["#forge:dusts/ardite", "kubejs:ardite_ingot"],
+        ["#forge:dusts/manganese", "kubejs:manganese_ingot"],
     ].forEach((entry) => {
         const [dust, ingot] = entry;
 
@@ -263,6 +295,8 @@ ServerEvents.recipes((event) => {
 
     // Testosterone powder
     immersiveCrushing(3000, "estrogen:testosterone_chunk", "estrogen:testosterone_powder", 3, []);
-    event.recipes.thermal.pulverizer(Item.of("estrogen:testosterone_powder", 3), "estrogen:testosterone_chunk").energy(4000);
+    event.recipes.thermal
+        .pulverizer(Item.of("estrogen:testosterone_powder", 3), "estrogen:testosterone_chunk")
+        .energy(4000);
     event.recipes.mekanismCrushing("3x estrogen:testosterone_powder", "estrogen:testosterone_chunk");
 });

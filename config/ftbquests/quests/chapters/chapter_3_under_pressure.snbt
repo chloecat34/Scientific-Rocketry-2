@@ -807,6 +807,27 @@
 			x: 0.0d
 			y: -0.5d
 		}
+		{
+			dependencies: ["0613310589869DB0"]
+			description: ["Now you can craft Stainless Steel, an important alloy for your future progression. Manganese can be found by mining Pyrolusite Ore in the Nether."]
+			id: "10E7211AA39186F7"
+			rewards: [{
+				count: 16
+				id: "2D198E51897181FB"
+				item: "kubejs:stainless_steel_ingot"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "221E48D5B77FDBE7"
+				item: "kubejs:stainless_steel_ingot"
+				type: "item"
+			}]
+			title: "Stainless Steel"
+			x: 1.5d
+			y: -0.5d
+		}
 	]
 	title: "Chapter 3: Under Pressure"
 }

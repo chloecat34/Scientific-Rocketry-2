@@ -491,6 +491,18 @@ ServerEvents.recipes((event) => {
     addTinkersIngotCastingRecipe("kubejs:chromium_ingot", "tconstruct:molten_chromium", 50);
     addTinkersNuggetCastingRecipe("kubejs:chromium_nugget", "tconstruct:molten_chromium", 10);
 
+    // Molten manganese
+    addBothMelterRecipes("kubejs:manganese_ingot", "kubejs:molten_manganese", 90, 72, 600, 4800);
+    addBothMelterRecipes("kubejs:manganese_nugget", "kubejs:molten_manganese", 10, 18, 600, 600);
+    addBothMelterRecipes("kubejs:manganese_block", "kubejs:molten_manganese", 810, 200, 600, 4800 * 9);
+    addBothMelterRecipes("kubejs:manganese_plate", "kubejs:molten_manganese", 90, 72, 600, 4800);
+    addBothMelterRecipes("kubejs:manganese_gear", "kubejs:molten_manganese", 360, 176, 600, 4800 * 4);
+    chillerIngotCasting("kubejs:manganese_ingot", "kubejs:molten_manganese", 90, 4800);
+    chillerBlockCasting("kubejs:manganese_block", "kubejs:molten_manganese", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:manganese_block", "kubejs:molten_manganese", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:manganese_ingot", "kubejs:molten_manganese", 50);
+    addTinkersNuggetCastingRecipe("kubejs:manganese_nugget", "kubejs:molten_manganese", 10);
+
     // Molten zinc
     crucibleMelting("#forge:ingots/zinc", "tconstruct:molten_zinc", 90, 4800);
     crucibleMelting("#forge:nuggets/zinc", "tconstruct:molten_zinc", 10, 600);

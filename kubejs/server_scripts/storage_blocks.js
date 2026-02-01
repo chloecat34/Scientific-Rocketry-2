@@ -177,4 +177,6 @@ ServerEvents.recipes((event) => {
     addPacking("estrogen:estrogen_pill", "estrogen:estrogen_pill_block");
     addPacking("kubejs:chromium_nugget", "kubejs:chromium_ingot");
     addPacking("kubejs:chromium_ingot", "kubejs:chromium_block");
+    addPacking("kubejs:manganese_nugget", "kubejs:manganese_ingot");
+    addPacking("kubejs:manganese_ingot", "kubejs:manganese_block");
 });

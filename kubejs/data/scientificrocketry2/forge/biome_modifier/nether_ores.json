@@ -3,7 +3,8 @@
     "biomes": "#minecraft:is_nether",
     "features": [
         "scientificrocketry2:nether_sulfur_ore",
-        "scientificrocketry2:nether_ardite_ore"
+        "scientificrocketry2:nether_ardite_ore",
+        "scientificrocketry2:nether_pyrolusite_ore"
     ],
     "step": "underground_ores"
 }

@@ -747,4 +747,23 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal
         .brewer(Fluid.of("kubejs:ruby_slurry", 1000), [Fluid.of("kubejs:nitric_acid", 1000), "3x #forge:dusts/ruby"])
         .energy(6400);
+
+    // Stainless steel
+    createArcFurnaceRecipe(
+        "minecraft:iron_ingot",
+        7,
+        ["kubejs:manganese_ingot", "kubejs:chromium_ingot"],
+        "kubejs:stainless_steel_ingot",
+        9,
+        102400,
+        200
+    );
+
+    event.recipes.thermal
+        .smelter("9x kubejs:stainless_steel_ingot", [
+            "7x minecraft:iron_ingot",
+            "kubejs:manganese_ingot",
+            "kubejs:chromium_ingot",
+        ])
+        .energy(48000);
 });

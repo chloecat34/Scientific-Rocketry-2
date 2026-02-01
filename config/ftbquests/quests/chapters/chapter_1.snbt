@@ -479,7 +479,7 @@
 		}
 		{
 			dependencies: ["17F0A261342B5731"]
-			description: ["Now that you have Cobalt and Blazing Blood, you can make a Blaze Burner, which lets you run heated mixer recipes. This is important for making the Blast Furnace."]
+			description: ["Now that you have Ardite and Blazing Blood, you can make a Blaze Burner, which lets you run heated mixer recipes. This is important for making the Blast Furnace."]
 			id: "1FC5EB9642F82968"
 			rewards: [{
 				id: "16A1A4C877853BAD"
@@ -506,6 +506,8 @@
 				item: "thermal:steel_ingot"
 				type: "item"
 			}]
+			shape: "gear"
+			size: 2.0d
 			tasks: [
 				{
 					count: 27L
@@ -520,7 +522,7 @@
 				}
 			]
 			title: "Now We're Cooking!"
-			x: 9.0d
+			x: 10.0d
 			y: -2.0d
 		}
 		{
@@ -806,8 +808,8 @@
 				type: "item"
 			}]
 			title: "Hooks"
-			x: 9.0d
-			y: -3.0d
+			x: 10.0d
+			y: -3.5d
 		}
 		{
 			dependencies: ["31BDC4E9DEDDC05C"]

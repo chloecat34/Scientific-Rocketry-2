@@ -360,6 +360,8 @@
 				item: "immersiveengineering:ingot_hop_graphite"
 				type: "item"
 			}]
+			shape: "gear"
+			size: 2.0d
 			tasks: [
 				{
 					count: 8L
@@ -499,7 +501,7 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: 2.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["014611E2E11520B2"]
@@ -521,7 +523,7 @@
 				type: "item"
 			}]
 			title: "Netherite"
-			x: 4.0d
+			x: 4.5d
 			y: 1.0d
 		}
 		{
@@ -590,7 +592,7 @@
 				}
 			]
 			title: "Diesel Generator"
-			x: 5.0d
+			x: 5.5d
 			y: 1.0d
 		}
 		{
@@ -694,7 +696,7 @@
 				}
 			]
 			title: "Excavator"
-			x: 4.0d
+			x: 4.5d
 			y: 0.0d
 		}
 		{
