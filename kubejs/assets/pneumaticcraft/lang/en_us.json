@@ -7,5 +7,8 @@
     "item.pneumaticcraft.compressed_iron_helmet": "Compressed Steel Helmet",
     "item.pneumaticcraft.compressed_iron_leggings": "Compressed Steel Leggings",
     "item.pneumaticcraft.compressed_iron_gear": "Compressed Steel Gear",
-    "item.pneumaticcraft.drill_bit_compressed_iron": "Compressed Steel Drill Bit"
+    "item.pneumaticcraft.drill_bit_compressed_iron": "Compressed Steel Drill Bit",
+    "block.pneumaticcraft.etching_acid": "Iron III Chloride",
+    "fluid_type.pneumaticcraft.etching_acid": "Iron III Chloride",
+    "item.pneumaticcraft.etching_acid_bucket": "Iron III Chloride Bucket"
 }

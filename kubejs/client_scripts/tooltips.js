@@ -146,6 +146,8 @@ ItemEvents.tooltip((event) => {
     t2OreTooltip("tconstruct:cobalt_ore", 1);
     t2OreTooltip("kubejs:raw_ardite", 1);
     t2OreTooltip("kubejs:ardite_ore", 1);
+    t3OreTooltip("kubejs:raw_pyrolusite", 1);
+    t3OreTooltip("kubejs:pyrolusite_ore", 1);
 
     // Arboreal extractor tooltip
     addTooltip(
