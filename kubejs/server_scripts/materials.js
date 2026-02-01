@@ -753,7 +753,7 @@ ServerEvents.recipes((event) => {
         type: "immersiveengineering:mixer",
         energy: 6400,
         fluid: {
-            amount: 1000,
+            amount: 3000,
             tag: "forge:hydrochloric_acid",
         },
         inputs: [
@@ -771,7 +771,7 @@ ServerEvents.recipes((event) => {
     });
 
     event.recipes.thermal
-        .brewer(Fluid.of("pneumaticcraft:etching_acid", 1000), [Fluid.of("kubejs:hydrochloric_acid", 1000), "#forge:dusts/iron"])
+        .brewer(Fluid.of("pneumaticcraft:etching_acid", 1000), [Fluid.of("kubejs:hydrochloric_acid", 3000), "#forge:dusts/iron"])
         .energy(6400);
 
     // Stainless steel
