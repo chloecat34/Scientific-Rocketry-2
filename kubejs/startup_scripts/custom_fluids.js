@@ -221,4 +221,10 @@ StartupEvents.registry("fluid", (event) => {
         .thinTexture(0xbb4848)
         .bucketColor(0xbb4848)
         .displayName("Ruby Slurry");
+
+    event
+        .create("kubejs:hydrochloric_acid")
+        .thinTexture(0x649C21)
+        .bucketColor(0x649C21)
+        .displayName("Hydrochloric Acid");
 });

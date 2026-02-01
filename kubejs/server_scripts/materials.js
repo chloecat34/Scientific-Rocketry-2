@@ -748,6 +748,32 @@ ServerEvents.recipes((event) => {
         .brewer(Fluid.of("kubejs:ruby_slurry", 1000), [Fluid.of("kubejs:nitric_acid", 1000), "3x #forge:dusts/ruby"])
         .energy(6400);
 
+    // Iron 3 chloride
+    event.custom({
+        type: "immersiveengineering:mixer",
+        energy: 6400,
+        fluid: {
+            amount: 1000,
+            tag: "forge:hydrochloric_acid",
+        },
+        inputs: [
+            {
+                base_ingredient: {
+                    tag: "forge:dusts/iron",
+                },
+                count: 1,
+            },
+        ],
+        result: {
+            amount: 1000,
+            fluid: "pneumaticcraft:etching_acid",
+        },
+    });
+
+    event.recipes.thermal
+        .brewer(Fluid.of("pneumaticcraft:etching_acid", 1000), [Fluid.of("kubejs:hydrochloric_acid", 1000), "#forge:dusts/iron"])
+        .energy(6400);
+
     // Stainless steel
     createArcFurnaceRecipe(
         "minecraft:iron_ingot",

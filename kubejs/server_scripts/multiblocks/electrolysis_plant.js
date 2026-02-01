@@ -61,6 +61,20 @@ ServerEvents.recipes((event) => {
         .EUt(64);
 
     event.recipes.gtceu
+        .electrolysis_plant("electrolyze_hydrogen_chloride")
+        .inputFluids("mekanism:hydrogen_chloride 1000")
+        .outputFluids("mekanism:hydrogen 1000", "mekanism:chlorine 1000")
+        .duration(75)
+        .EUt(64);
+
+    event.recipes.gtceu
+        .electrolysis_plant("electrolyze_hydrochloric_acid")
+        .inputFluids("kubejs:hydrochloric_acid 1000")
+        .outputFluids("mekanism:hydrogen 1000", "mekanism:chlorine 1000")
+        .duration(120)
+        .EUt(64);
+
+    event.recipes.gtceu
         .electrolysis_plant("electrolyze_nitric_acid")
         .inputFluids("kubejs:nitric_acid 1000")
         .outputFluids("kubejs:nitrogen 1000", "mekanism:hydrogen 1000", "mekanism:oxygen 3000")

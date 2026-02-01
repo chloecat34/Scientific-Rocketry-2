@@ -11,6 +11,38 @@
 	id: "43E1F33C55F5E941"
 	order_index: 3
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			dependencies: ["10E7211AA39186F7"]
+			description: ["You need Finished PCBs to go to the Moon. This is a multi-step process, starting with crafting Empty PCBs in a Pressure Chamber."]
+			id: "3C2E9831F478899C"
+			rewards: [{
+				count: 8
+				id: "1B882F248E180DAD"
+				item: "immersiveengineering:plate_duroplast"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5B188CE3D344E608"
+				item: "pneumaticcraft:empty_pcb"
+				type: "item"
+			}]
+			title: "Empty PCBs"
+			x: -8.5d
+			y: 0.0d
+		}
+		{
+			description: ["Iron III Chloride can be used to etch PCBs in an Etching Tank."]
+			id: "1EFA28E1C67A8FEC"
+			tasks: [{
+				id: "71489DA0C9ADB85D"
+				item: "pneumaticcraft:etching_acid_bucket"
+				type: "item"
+			}]
+			title: "Iron III Chloride"
+			x: -7.5d
+			y: 0.0d
+		}
+	]
 	title: "Chapter 4: The Space Program"
 }

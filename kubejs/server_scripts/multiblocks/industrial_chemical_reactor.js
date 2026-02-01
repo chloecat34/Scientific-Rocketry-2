@@ -42,6 +42,71 @@ ServerEvents.recipes((event) => {
         .duration(80)
         .EUt(60);
 
+    event.custom({
+        type: "immersiveengineering:refinery",
+        energy: 120,
+        input0: {
+            amount: 8,
+            tag: "forge:sulfur_trioxide",
+        },
+        input1: {
+            amount: 8,
+            tag: "forge:water",
+        },
+        result: {
+            amount: 8,
+            fluid: "mekanism:sulfuric_acid",
+        },
+    });
+
+    event.recipes.gtceu
+        .industrial_chemical_reactor("chem_hydrogen_chloride")
+        .inputFluids("mekanism:hydrogen 1000", "mekanism:chlorine 1000")
+        .outputFluids("mekanism:hydrogen_chloride 1000")
+        .duration(50)
+        .EUt(48);
+
+    event.custom({
+        type: "immersiveengineering:refinery",
+        energy: 120,
+        input0: {
+            amount: 8,
+            tag: "forge:hydrogen",
+        },
+        input1: {
+            amount: 8,
+            tag: "forge:chlorine",
+        },
+        result: {
+            amount: 8,
+            fluid: "mekanism:hydrogen_chloride",
+        },
+    });
+
+    event.recipes.gtceu
+        .industrial_chemical_reactor("chem_hydrochloric_acid")
+        .inputFluids("mekanism:hydrogen_chloride 1000", "minecraft:water 1000")
+        .outputFluids("kubejs:hydrochloric_acid 1000")
+        .duration(50)
+        .EUt(48);
+
+    event.custom({
+        type: "immersiveengineering:refinery",
+        energy: 120,
+        input0: {
+            amount: 8,
+            tag: "forge:hydrogen_chloride",
+        },
+        input1: {
+            amount: 8,
+            tag: "forge:water",
+        },
+        result: {
+            amount: 8,
+            fluid: "kubejs:hydrochloric_acid",
+        },
+    });
+
     // Industrial chemical reactor
     event.recipes.createMechanicalCrafting(
         "gtceu:industrial_chemical_reactor",

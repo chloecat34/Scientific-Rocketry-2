@@ -86,5 +86,10 @@ ServerEvents.tags("fluid", (event) => {
     event.add("forge:blazing_blood", "tconstruct:blazing_blood");
     event.add("forge:molten_compressed_iron", "kubejs:molten_compressed_iron");
     event.add("forge:molten_andesite", "kubejs:molten_andesite");
-    event.add("forge:nitric_acid", "kubejs:nitric_acid")
+    event.add("forge:nitric_acid", "kubejs:nitric_acid");
+    event.add("forge:hydrochloric_acid", "kubejs:hydrochloric_acid");
+    event.add("forge:hydrogen", "mekanism:hydrogen");
+    event.add("forge:chlorine", "mekanism:chlorine");
+    event.add("forge:hydrogen_chloride", "mekanism:hydrogen_chloride");
+    event.add("forge:sulfur_trioxide", "mekanism:sulfur_trioxide");
 });

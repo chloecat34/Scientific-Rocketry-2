@@ -27,7 +27,7 @@ const molten = [
 ];
 
 // Acids still damage the player but don't cause fire damage
-const acids = ["kubejs:nitric_acid", "mekanism:sulfuric_acid"];
+const acids = ["kubejs:nitric_acid", "mekanism:sulfuric_acid", "kubejs:hydrochloric_acid"];
 
 PlayerEvents.tick((event) => {
     let player = event.player;
