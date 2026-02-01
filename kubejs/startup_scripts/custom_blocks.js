@@ -72,6 +72,30 @@ StartupEvents.registry("block", (event) => {
         .tagBlock("minecraft:needs_stone_tool");
 
     event
+        .create("nether_tin_ore")
+        .displayName("Nether Tin Ore")
+        .material("stone")
+        .hardness(3.0)
+        .resistance(3.0)
+        .tag("forge:ores")
+        .tag("forge:ores/tin")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_stone_tool");
+
+    event
+        .create("nether_zinc_ore")
+        .displayName("Nether Zinc Ore")
+        .material("stone")
+        .hardness(3.0)
+        .resistance(3.0)
+        .tag("forge:ores")
+        .tag("forge:ores/zinc")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_iron_tool");
+
+    event
         .create("platinum_block")
         .displayName("Platinum Block")
         .material("metal")

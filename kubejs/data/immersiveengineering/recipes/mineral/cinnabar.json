@@ -3,19 +3,9 @@
     "dimensions": ["minecraft:overworld"],
     "fail_chance": 0.1,
     "ores": [
-        { "chance": 0.5, "output": { "tag": "forge:ores/redstone" } },
-        { "chance": 0.35, "output": { "item": "thermal:sulfur_dust" } },
-        { "chance": 0.15, "output": {"item": "thermal:cinnabar_ore" }},
-        {
-            "chance": 0.3,
-            "conditions": [
-                {
-                    "type": "forge:not",
-                    "value": { "type": "forge:tag_empty", "tag": "forge:ores/mercury" }
-                }
-            ],
-            "output": { "tag": "forge:ores/mercury" }
-        }
+        { "chance": 0.6, "output": { "tag": "forge:ores/redstone" } },
+        { "chance": 0.25, "output": { "item": "thermal:ruby_ore" } },
+        { "chance": 0.15, "output": {"item": "thermal:cinnabar_ore" }}
     ],
     "spoils": [
         { "chance": 0.2, "output": { "item": "minecraft:gravel" } },
