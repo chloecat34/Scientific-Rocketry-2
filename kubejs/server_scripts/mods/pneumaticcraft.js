@@ -615,4 +615,55 @@ ServerEvents.recipes((event) => {
             },
         ],
     });
+
+    // Mechanical visor upgrade
+    event.replaceInput(
+        { output: "compressedcreativity:mechanical_visor_upgrade" },
+        "#compressedcreativity:upgrade_components",
+        "compressedcreativity:brass_coated_upgrade_matrix"
+    );
+
+    // Pressure gauge
+    event.replaceInput(
+        { output: "pneumaticcraft:pressure_gauge" },
+        "#forge:ingots/copper",
+        "#forge:ingots/redstone_alloy"
+    );
+
+    // Module expansion card
+    event.remove({ output: "pneumaticcraft:module_expansion_card" });
+
+    event.shaped("pneumaticcraft:module_expansion_card", ["ABA", "BCB", "ABA"], {
+        A: "actuallyadditions:restonia_crystal",
+        B: "pneumaticcraft:plastic",
+        C: "immersiveengineering:circuit_board",
+    });
+
+    event.shaped("4x pneumaticcraft:module_expansion_card", ["ABA", "BCB", "ABA"], {
+        A: "actuallyadditions:restonia_crystal",
+        B: "pneumaticcraft:plastic",
+        C: "pneumaticcraft:printed_circuit_board",
+    });
+
+    // Security upgrade
+    event.remove({ output: "pneumaticcraft:security_upgrade" });
+
+    event.shaped("pneumaticcraft:security_upgrade", ["ABA", "BCB", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "create:sturdy_sheet",
+        C: "pneumaticcraft:safety_tube_module",
+    });
+
+    // Volume upgrade
+    event.replaceInput(
+        { output: "pneumaticcraft:volume_upgrade" },
+        "#pneumaticcraft:upgrade_components",
+        "pneumaticcraft:upgrade_matrix"
+    );
+
+    event.replaceInput(
+        { output: "pneumaticcraft:volume_upgrade" },
+        "#forge:ingots/compressed_iron",
+        "#forge:plates/aluminum"
+    );
 });
