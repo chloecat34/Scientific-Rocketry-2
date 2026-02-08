@@ -666,4 +666,13 @@ ServerEvents.recipes((event) => {
         "#forge:ingots/compressed_iron",
         "#forge:plates/aluminum"
     );
+
+    // Armor upgrade
+    event.remove({ output: "pneumaticcraft:armor_upgrade" });
+
+    event.shaped("pneumaticcraft:armor_upgrade", ["ABA", "BCB", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "#forge:plates/stainless_steel",
+        C: "#forge:heavy_platings/knightslime",
+    });
 });
