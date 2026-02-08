@@ -32,7 +32,7 @@
 			y: 0.0d
 		}
 		{
-			description: ["Iron III Chloride can be used to etch PCBs in an Etching Tank."]
+			description: ["Iron III Chloride can be used to etch PCBs in an Etching Tank. You can pump Salt Water from any ocean biome."]
 			id: "1EFA28E1C67A8FEC"
 			tasks: [{
 				id: "71489DA0C9ADB85D"
