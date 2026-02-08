@@ -88,6 +88,7 @@
 				""
 				"Failed PCBs can be cleaned off using Redstone Acid to return an Empty PCB."
 			]
+			icon: "pneumaticcraft:etching_tank"
 			id: "3E2605FC7B5FF93C"
 			rewards: [{
 				count: 16
@@ -108,6 +109,25 @@
 				}
 			]
 			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3E2605FC7B5FF93C"]
+			description: ["Finally, the Unassembled PCBs can be put with other items into a Pressure Chamber to craft Finished PCBs. These are very expensive, so make sure your automation is good enough!"]
+			id: "42829838C0DCC902"
+			rewards: [{
+				count: 8
+				id: "3776871D42E5FA36"
+				item: "pneumaticcraft:unassembled_pcb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0276D80A6B4F9BC0"
+				item: "pneumaticcraft:printed_circuit_board"
+				type: "item"
+			}]
+			title: "PCBs at Last!"
+			x: -3.5d
 			y: 0.0d
 		}
 	]
