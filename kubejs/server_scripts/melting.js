@@ -790,6 +790,7 @@ ServerEvents.recipes((event) => {
     addTinkersMelterRecipe("minecraft:glowstone", "thermal:glowstone", 1000, 3200, 900);
 
     // Resonant ender
+    addBothMelterRecipes("thermal:ender_pearl_dust", "thermal:ender", 250, 60, 480, 20000);
     crucibleMelting("minecraft:ender_eye", "thermal:ender", 250, 20000);
     crucibleMelting("tconstruct:enderman_head", "thermal:ender", 500, 40000);
     crucibleMelting("minecraft:dragon_head", "thermal:ender", 1000, 80000);
@@ -1049,7 +1050,14 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("kubejs:electrical_steel_plate", "kubejs:molten_electrical_steel", 90, 60, 1100, 4800);
     addBothMelterRecipes("kubejs:electrical_steel_gear", "kubejs:molten_electrical_steel", 360, 120, 1100, 4800 * 4);
     addBothMelterRecipes("kubejs:electrical_steel_sheetmetal", "kubejs:molten_electrical_steel", 180, 90, 1100, 9600);
-    addBothMelterRecipes("kubejs:electrical_steel_heavy_plating", "kubejs:molten_electrical_steel", 720, 160, 1100, 4800 * 8);
+    addBothMelterRecipes(
+        "kubejs:electrical_steel_heavy_plating",
+        "kubejs:molten_electrical_steel",
+        720,
+        160,
+        1100,
+        4800 * 8
+    );
     chillerIngotCasting("kubejs:electrical_steel_ingot", "kubejs:molten_electrical_steel", 90, 4800);
     chillerBlockCasting("kubejs:electrical_steel_block", "kubejs:molten_electrical_steel", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("kubejs:electrical_steel_block", "kubejs:molten_electrical_steel", 810, 160);
@@ -1089,7 +1097,14 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("kubejs:stainless_steel_gear", "kubejs:molten_stainless_steel", 360, 120, 1400, 4800 * 4);
     addBothMelterRecipes("kubejs:stainless_steel_rod", "kubejs:molten_stainless_steel", 45, 16, 1400, 2400);
     addBothMelterRecipes("kubejs:stainless_steel_sheetmetal", "kubejs:molten_stainless_steel", 180, 90, 1400, 4800 * 2);
-    addBothMelterRecipes("kubejs:stainless_steel_heavy_plating", "kubejs:molten_stainless_steel", 720, 160, 1400, 4800 * 8);
+    addBothMelterRecipes(
+        "kubejs:stainless_steel_heavy_plating",
+        "kubejs:molten_stainless_steel",
+        720,
+        160,
+        1400,
+        4800 * 8
+    );
     chillerIngotCasting("kubejs:stainless_steel_ingot", "kubejs:molten_stainless_steel", 90, 4800);
     chillerBlockCasting("kubejs:stainless_steel_block", "kubejs:molten_stainless_steel", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("kubejs:stainless_steel_block", "kubejs:molten_stainless_steel", 810, 160);

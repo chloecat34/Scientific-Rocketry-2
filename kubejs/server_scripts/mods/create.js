@@ -443,6 +443,8 @@ ServerEvents.recipes((event) => {
     event.replaceInput({}, "create_connected:control_chip", "create:precision_mechanism");
 
     // Blaze burner filling
+    event.remove({ output: "create:blaze_burner" });
+
     event.recipes.create.filling("create:blaze_burner", [
         "create:empty_blaze_burner",
         Fluid.of("tconstruct:blazing_blood", 1000),

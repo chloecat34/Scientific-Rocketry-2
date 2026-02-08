@@ -83,7 +83,7 @@ ServerEvents.recipes((event) => {
             "2x create:cinder_flour",
             "kubejs:soul_sand_dust",
             "#forge:dusts/coal_coke",
-            Fluid.of("minecraft:lava", 250),
+            Fluid.of("tconstruct:blazing_blood", 250),
         ])
         .heated();
     event.smelting("kubejs:blast_brick", "kubejs:blast_brick_blend");

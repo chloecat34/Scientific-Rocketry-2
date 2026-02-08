@@ -329,7 +329,7 @@
 				""
 				"The Coke Oven lets you produce Coal Coke and Creosote. Assemble a 3x3x3 multiblock out of Coke Bricks, then right-click the center block with a hammer."
 				""
-				"Gunpowder can be crafted using Coal, Niter, and Sulfur. Sulfur is found in the Nether."
+				"Gunpowder can be crafted using Coal, Niter, and Sulfur, if you don't want to hunt Creepers. Sulfur is found in the Nether."
 			]
 			icon: "immersiveengineering:cokebrick"
 			id: "4DBBB387B2E65E58"
@@ -580,20 +580,6 @@
 			title: "Wind Power"
 			x: 3.0d
 			y: -3.0d
-		}
-		{
-			dependencies: ["13079C9CB31B27D7"]
-			description: ["The modpack is designed to be played on Peaceful Mode. You won't have to fight mobs or build mob farms to progress. You can craft most mob drops without fighting."]
-			icon: "minecraft:zombie_head"
-			id: "2CC39EED6EAE563E"
-			shape: "hexagon"
-			tasks: [{
-				id: "253D21E5301378FF"
-				type: "checkmark"
-			}]
-			title: "Where are the mobs?"
-			x: -1.0d
-			y: -5.0d
 		}
 		{
 			dependencies: ["07D62C05A735018B"]

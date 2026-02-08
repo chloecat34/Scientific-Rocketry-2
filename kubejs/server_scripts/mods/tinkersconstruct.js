@@ -63,6 +63,9 @@ ServerEvents.recipes((event) => {
         .chiller("minecraft:blaze_rod", [Fluid.of("tconstruct:blazing_blood", 100), "tconstruct:rod_cast"])
         .energy(2400);
 
+    event.remove({id: "tconstruct:smeltery/entity_melting/blaze"});
+    event.remove({id: "create:conversion_0"});
+
     // Scorched bricks
     event.remove({ output: "tconstruct:nether_grout" });
     event.remove({ input: "tconstruct:nether_grout" });
