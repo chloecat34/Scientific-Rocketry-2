@@ -32,6 +32,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["3C2E9831F478899C"]
 			description: ["Iron III Chloride can be used to etch PCBs in an Etching Tank. You can pump Salt Water from any ocean biome."]
 			id: "1EFA28E1C67A8FEC"
 			tasks: [{
@@ -41,6 +42,72 @@
 			}]
 			title: "Iron III Chloride"
 			x: -7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1EFA28E1C67A8FEC"]
+			description: ["The Amadron Tablet lets you buy important blueprints. It needs to be charged with air in a Charging Station. The recipes are customized, so in this case you need Emeradic Crystals to make a PCB Blueprint."]
+			id: "6CB455194EF479FA"
+			rewards: [{
+				count: 8
+				id: "1650348C046AC148"
+				item: "actuallyadditions:emeradic_crystal"
+				type: "item"
+			}]
+			tasks: [{
+				id: "004BFB56870546CC"
+				item: "pneumaticcraft:amadron_tablet"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6CB455194EF479FA"]
+			description: ["The UV Light Box lets you process Empty PCBs using pressure. The longer you process them, the better their chance of being etched successfully rises."]
+			id: "4A6CFE4FF154B090"
+			rewards: [{
+				id: "11A0ECF852B18FD9"
+				item: "pneumaticcraft:pcb_blueprint"
+				type: "item"
+			}]
+			tasks: [{
+				id: "27723082C0EE2064"
+				item: "pneumaticcraft:uv_light_box"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A6CFE4FF154B090"]
+			description: [
+				"The Etching Tank uses Iron 3 Chloride to etch processed Empty PCBs into Unfinished PCBs. These have a percentage chance based on how long the Empty PCB was in the UV Light Box. "
+				""
+				"You can heat them to make it run faster, but it will use Iron 3 Chloride to do so."
+				""
+				"Failed PCBs can be cleaned off using Redstone Acid to return an Empty PCB."
+			]
+			id: "3E2605FC7B5FF93C"
+			rewards: [{
+				count: 16
+				id: "478365BF85EC1ADB"
+				item: "kubejs:stainless_steel_plate"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "347C02F95650F412"
+					item: "pneumaticcraft:etching_tank"
+					type: "item"
+				}
+				{
+					id: "605545340F65A62C"
+					item: "pneumaticcraft:unassembled_pcb"
+					type: "item"
+				}
+			]
+			x: -4.5d
 			y: 0.0d
 		}
 	]

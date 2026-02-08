@@ -1,6 +1,6 @@
 ServerEvents.recipes((event) => {
     // Heavy plates
-    ["aluminum", "hepatizon", "manyullyn", "electrical_steel", "knightslime"].forEach((material) => {
+    ["aluminum", "hepatizon", "manyullyn", "electrical_steel", "knightslime", "stainless_steel"].forEach((material) => {
         event.custom({
             type: "pneumaticcraft:pressure_chamber",
             inputs: [
@@ -22,6 +22,11 @@ ServerEvents.recipes((event) => {
         });
 
         // Thermal recipe
-        event.recipes.thermal.press(`kubejs:${material}_heavy_plating`, [`4x #forge:sheetmetals/${material}`, "immersiveengineering:gunpowder_barrel"]).energy(48000);
+        event.recipes.thermal
+            .press(`kubejs:${material}_heavy_plating`, [
+                `4x #forge:sheetmetals/${material}`,
+                "immersiveengineering:gunpowder_barrel",
+            ])
+            .energy(48000);
     });
 });

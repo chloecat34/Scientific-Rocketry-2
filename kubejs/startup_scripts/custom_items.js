@@ -203,7 +203,7 @@ StartupEvents.registry("item", (event) => {
     });
 
     // Heavy plating
-    ["aluminum", "hepatizon", "manyullyn", "electrical_steel", "knightslime"].forEach((material) => {
+    ["aluminum", "hepatizon", "manyullyn", "electrical_steel", "knightslime", "stainless_steel"].forEach((material) => {
         let materialName = material.split("_").map(capitalize).join(" ");
 
         event

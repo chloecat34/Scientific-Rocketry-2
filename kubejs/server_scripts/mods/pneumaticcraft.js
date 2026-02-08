@@ -501,4 +501,118 @@ ServerEvents.recipes((event) => {
         E: "#forge:gears/compressed_iron",
         F: "kubejs:compressed_mechanism",
     });
+
+    // GPS Tool
+    event.remove({ id: "pneumaticcraft:gps_tool" });
+
+    event.shaped("pneumaticcraft:gps_tool", [" A ", "BCB", "BDB"], {
+        A: "create:transmitter",
+        B: "pneumaticcraft:plastic",
+        C: "#thermal:glass/hardened",
+        D: "#forge:gems/diamond",
+    });
+
+    // Amadron tablet
+    event.remove({ output: "pneumaticcraft:amadron_tablet" });
+
+    event.shaped("pneumaticcraft:amadron_tablet", ["AAA", "BCB", "BDB"], {
+        A: "actuallyadditions:emeradic_crystal",
+        B: "#forge:plates/stainless_steel",
+        C: "pneumaticcraft:gps_tool",
+        D: "pneumaticcraft:air_canister",
+    });
+
+    // UV Light Box
+    event.remove({ output: "pneumaticcraft:uv_light_box" });
+
+    event.shaped("pneumaticcraft:uv_light_box", ["AAA", "BCB", "DED"], {
+        A: "minecraft:redstone_lamp",
+        B: "kubejs:compressed_mechanism",
+        C: "pneumaticcraft:pcb_blueprint",
+        D: "#forge:plates/stainless_steel",
+        E: "#forge:gears/stainless_steel",
+    });
+
+    // Charging station
+    event.remove({ output: "pneumaticcraft:charging_station" });
+
+    event.shaped("pneumaticcraft:charging_station", ["  A", "BCB", "DDD"], {
+        A: "pneumaticcraft:pressure_tube",
+        B: "actuallyadditions:restonia_crystal",
+        C: "immersiveengineering:charging_station",
+        D: "pneumaticcraft:reinforced_stone_slab",
+    });
+
+    // Etching tank
+    event.remove({ output: "pneumaticcraft:etching_tank" });
+
+    event.shaped("pneumaticcraft:etching_tank", ["ABA", "CDC", "EEE"], {
+        A: "kubejs:compressed_mechanism",
+        B: "#thermal:glass/hardened",
+        C: "pneumaticcraft:reinforced_brick_wall",
+        D: "pneumaticcraft:medium_tank",
+        E: "#forge:heavy_platings/stainless_steel",
+    });
+
+    // Change failed pcb reprocessing
+    event.remove({ id: "pneumaticcraft:empty_pcb_from_failed_pcb" });
+
+    event.custom({
+        type: "pneumaticcraft:thermo_plant",
+        exothermic: false,
+        fluid_input: {
+            type: "pneumaticcraft:fluid",
+            amount: 250,
+            fluid: "immersiveengineering:redstone_acid",
+        },
+        item_input: {
+            item: "pneumaticcraft:failed_pcb",
+        },
+        item_output: {
+            item: "pneumaticcraft:empty_pcb",
+        },
+        pressure: 2.0,
+    });
+
+    event.recipes.thermal
+        .bottler("pneumaticcraft:empty_pcb", [
+            "pneumaticcraft:failed_pcb",
+            Fluid.of("immersiveengineering:redstone_acid", 250),
+        ])
+        .energy(6400);
+
+    // Finished PCBs
+    event.remove({ output: "pneumaticcraft:printed_circuit_board" });
+
+    event.custom({
+        type: "pneumaticcraft:pressure_chamber",
+        inputs: [
+            {
+                item: "pneumaticcraft:unassembled_pcb",
+            },
+            {
+                type: "pneumaticcraft:stacked_item",
+                item: "pneumaticcraft:capacitor",
+                count: 2,
+            },
+            {
+                type: "pneumaticcraft:stacked_item",
+                item: "pneumaticcraft:transistor",
+                count: 2,
+            },
+            {
+                item: "kubejs:purple_alloy_coil",
+            },
+            {
+                item: "thermal:redstone_servo",
+            },
+        ],
+        pressure: 4.0,
+        results: [
+            {
+                item: "pneumaticcraft:printed_circuit_board",
+                count: 1,
+            },
+        ],
+    });
 });

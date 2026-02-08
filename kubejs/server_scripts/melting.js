@@ -1089,6 +1089,7 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("kubejs:stainless_steel_gear", "kubejs:molten_stainless_steel", 360, 120, 1400, 4800 * 4);
     addBothMelterRecipes("kubejs:stainless_steel_rod", "kubejs:molten_stainless_steel", 45, 16, 1400, 2400);
     addBothMelterRecipes("kubejs:stainless_steel_sheetmetal", "kubejs:molten_stainless_steel", 180, 90, 1400, 4800 * 2);
+    addBothMelterRecipes("kubejs:stainless_steel_heavy_plating", "kubejs:molten_stainless_steel", 720, 160, 1400, 4800 * 8);
     chillerIngotCasting("kubejs:stainless_steel_ingot", "kubejs:molten_stainless_steel", 90, 4800);
     chillerBlockCasting("kubejs:stainless_steel_block", "kubejs:molten_stainless_steel", 810, 4800 * 9);
     addTinkersBlockCastingRecipe("kubejs:stainless_steel_block", "kubejs:molten_stainless_steel", 810, 160);
