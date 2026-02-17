@@ -75,6 +75,26 @@ ServerEvents.recipes((event) => {
         ],
     });
 
+    event.custom({
+        type: "tconstruct:alloy",
+        inputs: [
+            {
+                amount: 90,
+                tag: "forge:molten_copper",
+            },
+
+            {
+                amount: 400,
+                tag: "forge:redstone",
+            },
+        ],
+        result: {
+            amount: 90,
+            fluid: "kubejs:molten_red_alloy",
+        },
+        temperature: 600,
+    });
+
     // Blue alloy
     event.recipes.createFilling("kubejs:blue_alloy_ingot", [
         "#forge:ingots/tin",
@@ -121,6 +141,26 @@ ServerEvents.recipes((event) => {
                 item: "kubejs:blue_alloy_ingot",
             },
         ],
+    });
+
+    event.custom({
+        type: "tconstruct:alloy",
+        inputs: [
+            {
+                amount: 90,
+                tag: "forge:molten_tin",
+            },
+
+            {
+                amount: 400,
+                tag: "forge:molten_electrotine",
+            },
+        ],
+        result: {
+            amount: 90,
+            fluid: "kubejs:molten_blue_alloy",
+        },
+        temperature: 600,
     });
 
     // Pulsating alloy
@@ -407,6 +447,26 @@ ServerEvents.recipes((event) => {
         51200,
         100
     );
+
+    event.custom({
+        type: "tconstruct:alloy",
+        inputs: [
+            {
+                amount: 90,
+                tag: "forge:molten_cobalt",
+            },
+
+            {
+                amount: 90,
+                tag: "forge:molten_ardite",
+            },
+        ],
+        result: {
+            amount: 90,
+            fluid: "tconstruct:molten_manyullyn",
+        },
+        temperature: 1200,
+    });
 
     // Netherite recipe
     createArcFurnaceRecipe(
@@ -697,6 +757,26 @@ ServerEvents.recipes((event) => {
                 item: "kubejs:glowing_brass_ingot",
             },
         ],
+    });
+
+    event.custom({
+        type: "tconstruct:alloy",
+        inputs: [
+            {
+                amount: 90,
+                tag: "forge:molten_brass",
+            },
+
+            {
+                amount: 250,
+                tag: "forge:glowstone",
+            },
+        ],
+        result: {
+            amount: 90,
+            fluid: "kubejs:molten_glowing_brass",
+        },
+        temperature: 700,
     });
 
     // Steel with carbon dust

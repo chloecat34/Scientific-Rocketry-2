@@ -92,4 +92,5 @@ ServerEvents.tags("fluid", (event) => {
     event.add("forge:chlorine", "mekanism:chlorine");
     event.add("forge:hydrogen_chloride", "mekanism:hydrogen_chloride");
     event.add("forge:sulfur_trioxide", "mekanism:sulfur_trioxide");
+    event.add("forge:molten_ardite", "kubejs:molten_ardite");
 });

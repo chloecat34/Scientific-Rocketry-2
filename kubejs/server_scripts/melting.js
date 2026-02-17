@@ -550,27 +550,6 @@ ServerEvents.recipes((event) => {
     addTinkersIngotCastingRecipe("kubejs:glowing_brass_ingot", "kubejs:molten_glowing_brass", 50);
     addTinkersNuggetCastingRecipe("kubejs:glowing_brass_nugget", "kubejs:molten_glowing_brass", 10);
 
-    // Glowing brass smeltery recipe
-    event.custom({
-        type: "tconstruct:alloy",
-        inputs: [
-            {
-                amount: 90,
-                tag: "forge:molten_brass",
-            },
-
-            {
-                amount: 250,
-                tag: "forge:glowstone",
-            },
-        ],
-        result: {
-            amount: 90,
-            fluid: "kubejs:molten_glowing_brass",
-        },
-        temperature: 700,
-    });
-
     // Molten electrum
     crucibleMelting("#forge:ingots/electrum", "tconstruct:molten_electrum", 90, 4800);
     crucibleMelting("#forge:nuggets/electrum", "tconstruct:molten_electrum", 10, 600);
