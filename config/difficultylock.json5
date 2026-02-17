@@ -4,7 +4,7 @@
 	// Whether Creative Mode should not be possible to select in the world creation screen.
 	"disableCreativeModeSelection": false,
 	// Priority 1: Sets the difficulty in any world to peaceful when enabled.
-	"forcePeaceful": true,
+	"forcePeaceful": false,
 	// Priority 2: Sets the difficulty in any world to easy when enabled.
 	"forceEasy": false,
 	// Priority 3: Sets the difficulty in any world to normal when enabled.
