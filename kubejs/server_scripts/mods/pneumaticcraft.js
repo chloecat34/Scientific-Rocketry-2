@@ -675,4 +675,100 @@ ServerEvents.recipes((event) => {
         B: "#forge:plates/stainless_steel",
         C: "#forge:heavy_platings/knightslime",
     });
+
+    // Block tracker upgrade
+    event.remove({ output: "pneumaticcraft:block_tracker_upgrade" });
+
+    event.shaped("pneumaticcraft:block_tracker_upgrade", ["ABA", "BCB", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "integratedscripting:mendesite",
+        C: "minecraft:fermented_spider_eye",
+    });
+
+    // Assembly line
+    event.remove({ output: "pneumaticcraft:assembly_controller" });
+
+    event.shaped("pneumaticcraft:assembly_controller", ["ABA", "CDC", "EFE"], {
+        A: "pneumaticcraft:pressure_tube",
+        B: "#thermal:glass/hardened",
+        C: "pneumaticcraft:printed_circuit_board",
+        D: "actuallyadditions:advanced_coil",
+        E: "pneumaticcraft:reinforced_stone_slab",
+        F: "#forge:heavy_platings/stainless_steel",
+    });
+
+    event.replaceInput(
+        { output: "pneumaticcraft:assembly_drill" },
+        "#forge:ingots/compressed_iron",
+        "pneumaticcraft:reinforced_stone_slab"
+    );
+
+    event.replaceInput(
+        { output: "pneumaticcraft:assembly_drill" },
+        "#forge:gems/diamond",
+        "pneumaticcraft:drill_bit_diamond"
+    );
+
+    event.remove({ id: "pneumaticcraft:assembly_io_unit_export" });
+    event.remove({ id: "pneumaticcraft:assembly_io_unit_import" });
+
+    event.shaped("pneumaticcraft:assembly_io_unit_export", ["AAB", "A  ", "CDC"], {
+        A: "pneumaticcraft:pneumatic_cylinder",
+        B: "pneumaticcraft:omnidirectional_hopper",
+        C: "pneumaticcraft:reinforced_stone_slab",
+        D: "pneumaticcraft:printed_circuit_board",
+    });
+
+    event.shaped("pneumaticcraft:assembly_io_unit_import", ["BAA", "  A", "CDC"], {
+        A: "pneumaticcraft:pneumatic_cylinder",
+        B: "pneumaticcraft:omnidirectional_hopper",
+        C: "pneumaticcraft:reinforced_stone_slab",
+        D: "pneumaticcraft:printed_circuit_board",
+    });
+
+    event.replaceInput(
+        { output: "pneumaticcraft:assembly_io_unit_export" },
+        "#forge:ingots/compressed_iron",
+        "pneumaticcraft:reinforced_stone_slab"
+    );
+
+    event.replaceInput(
+        { output: "pneumaticcraft:assembly_io_unit_export" },
+        "minecraft:hopper",
+        "pneumaticcraft:omnidirectional_hopper"
+    );
+
+    event.replaceInput(
+        { output: "pneumaticcraft:assembly_io_unit_import" },
+        "#forge:ingots/compressed_iron",
+        "pneumaticcraft:reinforced_stone_slab"
+    );
+
+    event.replaceInput(
+        { output: "pneumaticcraft:assembly_io_unit_import" },
+        "minecraft:hopper",
+        "pneumaticcraft:omnidirectional_hopper"
+    );
+
+    event.replaceInput(
+        { output: "pneumaticcraft:assembly_laser" },
+        "#forge:ingots/compressed_iron",
+        "pneumaticcraft:reinforced_stone_slab"
+    );
+
+    event.replaceInput(
+        { output: "pneumaticcraft:assembly_laser" },
+        "#forge:glass/red",
+        "actuallyadditions:atomic_reconstructor"
+    );
+
+    event.remove({ output: "pneumaticcraft:assembly_platform" });
+
+    event.shaped("pneumaticcraft:assembly_platform", ["A A", "BCB", "DED"], {
+        A: "pneumaticcraft:pneumatic_cylinder",
+        B: "pneumaticcraft:plastic",
+        C: "pneumaticcraft:printed_circuit_board",
+        D: "pneumaticcraft:reinforced_stone_slab",
+        E: "#forge:gears/stainless_steel",
+    });
 });

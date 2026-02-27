@@ -37,6 +37,7 @@
 				""
 				"This device can be powered with a Seared Heater. You can use Sand Casts to cast your molten metals into ingots or tool parts. Later on you can make gold casts."
 			]
+			icon: "tconstruct:seared_melter"
 			id: "306C19107D8BE5F5"
 			rewards: [{
 				count: 8
@@ -227,6 +228,7 @@
 		{
 			dependencies: ["789074FA6DC18EA3"]
 			description: ["&o&7To progress, I will need to make metal plates. These require a Mechanical Press, but since all other forms of stress production require plates or further tech, I will need to use my own strength to produce my first plates."]
+			icon: "create:mechanical_press"
 			id: "0A2374E7D318F3D0"
 			rewards: [{
 				count: 8
@@ -711,6 +713,7 @@
 				""
 				"You can even put the drawers further apart, or upgrade them for enhanced storage and functionality."
 			]
+			icon: "functionalstorage:storage_controller"
 			id: "3C1F1D70B411E22F"
 			rewards: [{
 				id: "72691ED87462741B"
@@ -862,6 +865,26 @@
 				""
 				"Crowbars can remove covers."
 			]
+			icon: {
+				Count: 1
+				id: "gtceu:cosmic_wrench"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: {
+						Mode: 2b
+					}
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						Enchantability: 10
+						HarvestLevel: 6
+						MaxDamage: 2147483646
+						ToolSpeed: 34.0f
+					}
+					HideFlags: 2
+					Unbreakable: 1b
+				}
+			}
 			id: "3EFF0A799E8ED4D0"
 			rewards: [{
 				count: 8

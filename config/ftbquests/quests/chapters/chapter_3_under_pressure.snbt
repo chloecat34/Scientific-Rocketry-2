@@ -75,6 +75,7 @@
 				""
 				"You can automate it using Pressure Chamber Interfaces."
 			]
+			icon: "pneumaticcraft:pressure_chamber_wall"
 			id: "3859AF2B71D3BFF7"
 			rewards: [{
 				count: 16
@@ -108,6 +109,7 @@
 		{
 			dependencies: ["2B40318BAE026813"]
 			description: ["Alongside Pneumaticcraft Repressurized, you also need to get into Actually Additions. The Atomic Reconstructor lets you zap items to turn them into new items. The recipes for the crystals are all modified."]
+			icon: "actuallyadditions:atomic_reconstructor"
 			id: "3F73F687A32B9195"
 			rewards: [{
 				id: "4540EFBD802377CD"
@@ -274,6 +276,7 @@
 				""
 				"It requires heat to run. A Vortex Tube is a good way of accomplishing this."
 			]
+			icon: "pneumaticcraft:refinery"
 			id: "53A1FA71742C664B"
 			rewards: [{
 				count: 2
@@ -344,7 +347,10 @@
 				"Many PneumaticCraft processes require Heat to operate. You can produce heat using a Vortex Tube and pressure, then transport it around using Heat Pipes. Thermal Lagging can help insulate machines to maintain their temperature."
 				""
 				"You can also run recipes that need freezing temperatures using the cold size of the Vortex Tube."
+				""
+				"If you don't like using the Vortex Tube, you can craft it into a Fuelwood Heater or External Heater for recipes that require high temperature, those may be harder to control precisely though."
 			]
+			icon: "pneumaticcraft:vortex_tube"
 			id: "1B081FE120E93C1B"
 			rewards: [{
 				count: 6
@@ -450,6 +456,7 @@
 		{
 			dependencies: ["3560FE7B67DBD5BD"]
 			description: ["Integrated Dynamics is a mod that can be used for automation and logistics. You program Variable Cards and use them to move items/fluids around or control redstone. You can even autocraft with it!"]
+			icon: "integrateddynamics:variable"
 			id: "429DCB4FB8B3E8FB"
 			rewards: [{
 				count: 32
@@ -485,6 +492,7 @@
 				""
 				"Energy Cards are disabled for balance reasons."
 			]
+			icon: "laserio:laser_node"
 			id: "748F33CA4ADCA473"
 			rewards: [{
 				id: "435BEBC1F4E26794"
@@ -546,6 +554,7 @@
 				""
 				"The Light Engineering Blocks on the sides can be replaced with hatches."
 			]
+			icon: "gtceu:air_collector"
 			id: "54D52E12AF41A529"
 			rewards: [{
 				count: 2
@@ -612,6 +621,7 @@
 				""
 				"You can get a better yield + some byproducts later on using Liquid Air Distillation."
 			]
+			icon: "gtceu:industrial_centrifuge"
 			id: "4D3E1C7D6FF1A423"
 			rewards: [{
 				count: 8
@@ -687,6 +697,7 @@
 		{
 			dependencies: ["54D52E12AF41A529"]
 			description: ["The Electrolysis Plant lets you electrolyze fluids into other fluids + items. For example, you can process Water into Hydrogen and Oxygen, and Salt Water into Hydrogen and Chlorine."]
+			icon: "gtceu:electrolysis_plant"
 			id: "101378B9425E6BE5"
 			rewards: [{
 				count: 64
@@ -724,6 +735,7 @@
 		{
 			dependencies: ["54D52E12AF41A529"]
 			description: ["The Industrial Chemical Reactor can make chemicals such as Nitric Acid."]
+			icon: "gtceu:industrial_chemical_reactor"
 			id: "314C66FA345782BE"
 			rewards: [{
 				count: 32

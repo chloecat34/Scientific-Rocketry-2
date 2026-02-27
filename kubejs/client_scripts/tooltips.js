@@ -166,4 +166,7 @@ ItemEvents.tooltip((event) => {
 
     // misc. items
     addTooltip("thermal:compost", "Made in the Batch Composter", Text.aqua);
+    addTooltip("immersiveengineering:furnace_heater", "Can produce heat for PneumaticCraft", Text.aqua);
+    addTooltip("mekanism:fuelwood_heater", "Can produce heat for PneumaticCraft", Text.aqua);
+    addTooltip("mekanism:resistive_heater", "Can produce heat for PneumaticCraft", Text.aqua);
 });

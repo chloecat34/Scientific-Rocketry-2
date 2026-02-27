@@ -615,4 +615,17 @@ ServerEvents.recipes((event) => {
             "minecraft:redstone",
         ])
         .energy(8000);
+
+    // External heater
+    event.remove({ output: "immersiveengineering:furnace_heater" });
+
+    event.shaped("immersiveengineering:furnace_heater", ["ABA", "BCB", "ADA"], {
+        A: "#forge:plates/compressed_iron",
+        B: "kubejs:vibrant_alloy_coil",
+        C: "pneumaticcraft:vortex_tube",
+        D: "create:blaze_burner",
+    });
+
+    // Blast furnace preheater
+    event.replaceInput({ output: "immersiveengineering:blastfurnace_preheater"}, "immersiveengineering:furnace_heater", "create:blaze_burner")
 });

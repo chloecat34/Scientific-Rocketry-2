@@ -130,6 +130,61 @@
 			x: -3.5d
 			y: 0.0d
 		}
+		{
+			dependencies: ["42829838C0DCC902"]
+			description: [
+				"The Assembly Controller is a multiblock that lets you make PCBs more easily, as well as unlocking more advanced PneumaticCraft devices. "
+				""
+				"You will need to buy the needed program using the Amadron Tablet."
+			]
+			icon: "pneumaticcraft:assembly_controller"
+			id: "1759FA7A477EB4F8"
+			rewards: [{
+				count: 4
+				id: "030F53A8595BED31"
+				item: "pneumaticcraft:printed_circuit_board"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "7A104790FD900401"
+					item: "pneumaticcraft:assembly_controller"
+					type: "item"
+				}
+				{
+					id: "0D0D8AC6D8504C7A"
+					item: "pneumaticcraft:assembly_drill"
+					type: "item"
+				}
+				{
+					id: "6A2414A2C4029290"
+					item: "pneumaticcraft:assembly_laser"
+					type: "item"
+				}
+				{
+					id: "05C8A9AD84107751"
+					item: "pneumaticcraft:assembly_io_unit_import"
+					type: "item"
+				}
+				{
+					id: "110C16BFE888F314"
+					item: "pneumaticcraft:assembly_io_unit_export"
+					type: "item"
+				}
+				{
+					id: "478F54BB60667758"
+					item: "pneumaticcraft:assembly_platform"
+					type: "item"
+				}
+				{
+					id: "7CAD942509113FCA"
+					item: "pneumaticcraft:assembly_program_drill_laser"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 0.0d
+		}
 	]
 	title: "Chapter 4: The Space Program"
 }
