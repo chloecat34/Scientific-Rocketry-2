@@ -150,9 +150,15 @@ ServerEvents.recipes((event) => {
         },
     });
 
-    // Thermal cultivation crops
+    event.custom({
+        type: "immersiveengineering:fertilizer",
+        growthModifier: 1.75,
+        input: {
+            item: "thermal:compost",
+        },
+    });
 
-    // Start with standard crops
+    // Thermal cultivation crops
     const standardCrops = [
         "amaranth",
         "barley",
@@ -220,5 +226,40 @@ ServerEvents.recipes((event) => {
             item: "minecraft:dirt",
         },
         time: 800,
+    });
+
+    // Thermal mushrooms
+    const mushrooms = [
+        "thermal:glowstone_mushroom_spores",
+        "thermal:gunpowder_mushroom_spores",
+        "thermal:redstone_mushroom_spores",
+        "thermal:slime_mushroom_spores",
+    ];
+
+    mushrooms.forEach((mushroom) => {
+        event.custom({
+            type: "immersiveengineering:cloche",
+            input: {
+                item: mushroom,
+            },
+            render: {
+                type: "generic",
+                block: mushroom,
+            },
+            results: [
+                {
+                    item: mushroom,
+                },
+            ],
+            soil: [
+                {
+                    item: "minecraft:mycelium",
+                },
+                {
+                    item: "minecraft:podzol",
+                },
+            ],
+            time: 480,
+        });
     });
 });
