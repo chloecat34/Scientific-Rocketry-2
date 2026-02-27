@@ -32,45 +32,12 @@ ServerEvents.tags("item", (event) => {
     ].forEach((item) => {
         event.remove("c:hidden_from_recipe_viewers", item);
     });
-});
 
-ServerEvents.tags("block", (event) => {
-    // MBD2 tags
-    ["mbd2:bronze_input_hatch", "mbd2:steel_input_hatch", "mbd2:aluminum_input_hatch"].forEach((block) => {
-        event.add("forge:mbd_hatch", block);
-        event.add("forge:mbd_fluid_hatch", block);
-        event.add("forge:mbd_fluid_input_hatch", block);
-    });
-
-    ["mbd2:bronze_output_hatch", "mbd2:steel_output_hatch", "mbd2:aluminum_output_hatch"].forEach((block) => {
-        event.add("forge:mbd_hatch", block);
-        event.add("forge:mbd_fluid_hatch", block);
-        event.add("forge:mbd_fluid_output_hatch", block);
-    });
-
-    ["mbd2:steel_energy_input_hatch", "mbd2:aluminum_energy_input_hatch"].forEach((block) => {
-        event.add("forge:mbd_hatch", block);
-        event.add("forge:mbd_energy_hatch", block);
-        event.add("forge:mbd_energy_input_hatch", block);
-    });
-
-    ["mbd2:steel_energy_output_hatch", "mbd2:aluminum_energy_output_hatch"].forEach((block) => {
-        event.add("forge:mbd_hatch", block);
-        event.add("forge:mbd_energy_hatch", block);
-        event.add("forge:mbd_energy_output_hatch", block);
-    });
-
-    ["mbd2:bronze_input_bus", "mbd2:steel_input_bus", "mbd2:aluminum_input_bus"].forEach((block) => {
-        event.add("forge:mbd_hatch", block);
-        event.add("forge:mbd_item_hatch", block);
-        event.add("forge:mbd_item_input_hatch", block);
-    });
-
-    ["mbd2:bronze_output_bus", "mbd2:steel_output_bus", "mbd2:aluminum_output_bus"].forEach((block) => {
-        event.add("forge:mbd_hatch", block);
-        event.add("forge:mbd_item_hatch", block);
-        event.add("forge:mbd_item_output_hatch", block);
-    });
+    // Thermal spores
+    event.add("forge:mushrooms", "thermal:glowstone_mushroom_spores");
+    event.add("forge:mushrooms", "thermal:gunpowder_mushroom_spores");
+    event.add("forge:mushrooms", "thermal:redstone_mushroom_spores");
+    event.add("forge:mushrooms", "thermal:slime_mushroom_spores");
 });
 
 ServerEvents.tags("fluid", (event) => {
