@@ -140,4 +140,64 @@ ServerEvents.recipes((event) => {
             ["minecraft:torchflower_seeds", Fluid.of("minecraft:water", 1000)]
         )
         .energy(20000);
+
+    // Phyto-gro for cloches
+    event.custom({
+        type: "immersiveengineering:fertilizer",
+        growthModifier: 2.0,
+        input: {
+            item: "thermal:phytogro",
+        },
+    });
+
+    // Thermal cultivation crops
+
+    // Start with standard crops
+    const standardCrops = [
+        "amaranth",
+        "barley",
+        "corn",
+        "flax",
+        "onion",
+        "radish",
+        "rice",
+        "sadiroot",
+        "spinach",
+        "bell_pepper",
+        "eggplant",
+        "green_bean",
+        "peanut",
+        "strawberry",
+        "tomato",
+    ];
+
+    standardCrops.forEach((crop) => {
+        const seed = `thermal:${crop}_seeds`;
+        const result = `thermal:${crop}`;
+
+        event.custom({
+            type: "immersiveengineering:cloche",
+            input: {
+                item: seed,
+            },
+            render: {
+                type: "generic",
+                block: result,
+            },
+            results: [
+                {
+                    count: 2,
+                    item: result,
+                },
+                {
+                    chance: 0.25,
+                    item: seed,
+                },
+            ],
+            soil: {
+                item: "minecraft:dirt",
+            },
+            time: 480,
+        });
+    });
 });
