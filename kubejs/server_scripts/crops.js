@@ -133,84 +133,11 @@ ServerEvents.recipes((event) => {
         time: 480,
     });
 
-    // Disable omega upgrades for now
-    event.remove({ output: "sophisticatedbackpacks:stack_upgrade_omega_tier" });
-    event.remove({ output: "sophisticatedstorage:stack_upgrade_omega_tier" });
-
-    // Backpack stack upgrades
-    event.remove({ output: "sophisticatedbackpacks:stack_upgrade_starter_tier" });
-    event.remove({ output: "sophisticatedbackpacks:stack_upgrade_tier_1" });
-    event.remove({ output: "sophisticatedbackpacks:stack_upgrade_tier_2" });
-    event.remove({ output: "sophisticatedbackpacks:stack_upgrade_tier_3" });
-    event.remove({ output: "sophisticatedbackpacks:stack_upgrade_tier_4" });
-
-    event.shaped("sophisticatedbackpacks:stack_upgrade_starter_tier", ["AAA", "ABA", "AAA"], {
-        A: "#forge:storage_blocks/bronze",
-        B: "sophisticatedbackpacks:upgrade_base",
-    });
-
-    event.shaped("sophisticatedbackpacks:stack_upgrade_tier_1", ["AAA", "ABA", "AAA"], {
-        A: "#forge:storage_blocks/steel",
-        B: "sophisticatedbackpacks:stack_upgrade_starter_tier",
-    });
-
-    event.shaped("sophisticatedbackpacks:stack_upgrade_tier_2", ["AAA", "ABA", "AAA"], {
-        A: "#forge:storage_blocks/energetic_alloy",
-        B: "sophisticatedbackpacks:stack_upgrade_tier_1",
-    });
-
-    event.shaped("sophisticatedbackpacks:stack_upgrade_tier_3", ["ABA", "CDC", "ABA"], {
-        A: "#forge:storage_blocks/aluminum",
-        B: "#forge:storage_blocks/knightslime",
-        C: "actuallyadditions:diamatine_crystal_block",
-        D: "sophisticatedbackpacks:stack_upgrade_tier_2",
-    });
-
-    event.shaped("sophisticatedbackpacks:stack_upgrade_tier_4", ["ABA", "CDC", "ABA"], {
-        A: "#forge:storage_blocks/stainless_steel",
-        B: "#forge:storage_blocks/netherite",
-        C: "actuallyadditions:emeradic_crystal_block",
-        D: "sophisticatedbackpacks:stack_upgrade_tier_3",
-    });
-
-    // Storage stack upgrades
-    event.remove({ output: "sophisticatedstorage:stack_upgrade_tier_1" });
-    event.remove({ output: "sophisticatedstorage:stack_upgrade_tier_1_plus" });
-    event.remove({ output: "sophisticatedstorage:stack_upgrade_tier_2" });
-    event.remove({ output: "sophisticatedstorage:stack_upgrade_tier_3" });
-    event.remove({ output: "sophisticatedstorage:stack_upgrade_tier_4" });
-    event.remove({ output: "sophisticatedstorage:stack_upgrade_tier_5" });
-
-    event.shaped("sophisticatedstorage:stack_upgrade_tier_1", ["ABA", "BCB", "ABA"], {
-        A: "#forge:treated_wood",
-        B: "#forge:plates/bronze",
-        C: "sophisticatedstorage:upgrade_base",
-    });
-
-    event.shaped("sophisticatedstorage:stack_upgrade_tier_1_plus", ["ABA", "BCB", "ABA"], {
-        A: "#forge:gears/rose_gold",
-        B: "#forge:plates/brass",
-        C: "sophisticatedstorage:stack_upgrade_tier_1",
-    });
-
-    event.shaped("sophisticatedstorage:stack_upgrade_tier_2", ["ABA", "BCB", "ABA"], {
-        A: "#forge:gears/steel",
-        B: "#forge:plates/manyullyn",
-        C: "sophisticatedstorage:stack_upgrade_tier_1_plus",
-    });
-
-    event.shaped("sophisticatedstorage:stack_upgrade_tier_3", ["ABA", "CDC", "ABA"], {
-        A: "#forge:gears/vibrant_alloy",
-        B: "#forge:storage_blocks/knightslime",
-        C: "#forge:plates/knightslime",
-        D: "sophisticatedstorage:stack_upgrade_tier_2",
-    });
-
-    event.shaped("sophisticatedstorage:stack_upgrade_tier_4", ["ABA", "BCB", "ABA"], {
-        A: "#forge:gears/stainless_steel",
-        B: "actuallyadditions:emeradic_crystal_block",
-        C: "sophisticatedstorage:stack_upgrade_tier_3",
-    });
-
-    // Tier 5 is WIP
+    // Torchflowers
+    event.recipes.thermal
+        .insolator(
+            [Item.of("minecraft:torchflower").withChance(2.0), Item.of("minecraft:torchflower_seeds").withChance(1.1)],
+            ["minecraft:torchflower_seeds", Fluid.of("minecraft:water", 1000)]
+        )
+        .energy(20000);
 });
