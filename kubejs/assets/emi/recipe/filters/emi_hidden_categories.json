@@ -29,6 +29,81 @@
         },
         {
             "category": "gtceu:brewery"
+        },
+        {
+            "category": "gtceu:alloy_smelter"
+        },
+        {
+            "category": "gtceu:mixer"
+        },
+        {
+            "category": "gtceu:assembler"
+        },
+        {
+            "category": "gtceu:centrifuge"
+        },
+        {
+            "category": "gtceu:canner"
+        },
+        {
+            "category": "gtceu:gas_turbine"
+        },
+        {
+            "category": "gtceu:combustion_generator"
+        },
+        {
+            "category": "gtceu:rock_breaker"
+        },
+        {
+            "category": "gtceu:large_boiler"
+        },
+        {
+            "category": "gtceu:lathe"
+        },
+        {
+            "category": "gtceu:steam_boiler"
+        },
+        {
+            "category": "gtceu:chem_dyes"
+        },
+        {
+            "category": "gtceu:macerator"
+        },
+        {
+            "category": "gtceu:electric_blast_furnace"
+        },
+        {
+            "category": "gtceu:chemical_bath"
+        },
+        {
+            "category": "gtceu:sifter"
+        },
+        {
+            "category": "gtceu:large_chemical_reactor"
+        },
+        {
+            "category": "gtceu:chemical_reactor"
+        },
+        {
+            "category": "gtceu:forge_hammer"
+        },
+        {
+            "category": "gtceu:extractor"
+        },
+        {
+            "category": "gtceu:ore_forging"
+        },
+        {
+            "category": "gtceu:compressor"
+        },
+        {
+            "category": "gtceu:cutter"
+        },
+        {
+            "category": "gtceu:arc_furnace"
+        },
+        {
+            "category": "gtceu:autoclave"
         }
 	]
 }
