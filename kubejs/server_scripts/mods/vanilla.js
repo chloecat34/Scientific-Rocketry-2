@@ -116,4 +116,34 @@ ServerEvents.recipes((event) => {
 
     // Observer
     event.replaceInput({ output: "minecraft:observer" }, "#forge:gems/quartz", "create:electron_tube");
+
+    // Bottle of enchanting
+    let xpTypes = [
+        "industrialforegoing:essence",
+        "pneumaticcraft:memory_essence",
+        "cofh_core:experience",
+        "sophisticatedcore:xp_still",
+    ];
+
+    xpTypes.forEach((xp) => {
+        event.custom({
+            type: "pneumaticcraft:thermo_plant",
+            exothermic: false,
+            fluid_input: {
+                type: "pneumaticcraft:fluid",
+                amount: 250,
+                fluid: xp,
+            },
+            item_input: {
+                item: "minecraft:glass_bottle",
+            },
+            item_output: {
+                count: 1,
+                item: "minecraft:experience_bottle",
+            },
+            pressure: 2.0,
+        });
+
+        event.recipes.create.filling("minecraft:experience_bottle", ["minecraft:glass_bottle", Fluid.of(xp, 250)]);
+    });
 });

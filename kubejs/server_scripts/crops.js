@@ -200,4 +200,25 @@ ServerEvents.recipes((event) => {
             time: 480,
         });
     });
+
+    // Frost melon
+    event.custom({
+        type: "immersiveengineering:cloche",
+        input: {
+            item: "thermal:frost_melon_seeds",
+        },
+        render: {
+            type: "stem",
+            block: "thermal:frost_melon",
+        },
+        results: [
+            {
+                item: "thermal:frost_melon",
+            },
+        ],
+        soil: {
+            item: "minecraft:dirt",
+        },
+        time: 800,
+    });
 });

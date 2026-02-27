@@ -369,8 +369,7 @@ ServerEvents.recipes((event) => {
         "industrialforegoing:essence",
         "pneumaticcraft:memory_essence",
         "cofh_core:experience",
-        "sophisticatedcore:xp_still",
-        "mob_grinding_utils:fluid_xp",
+        "sophisticatedcore:xp_still"
     ];
 
     xpTypes.forEach((xp) => {
@@ -381,6 +380,26 @@ ServerEvents.recipes((event) => {
     event.recipes.thermal
         .crucible(Fluid.of("pneumaticcraft:memory_essence", 60), "create:experience_nugget")
         .energy(2400);
+
+    for (let xpType of [xpTypes[0], xpTypes[2], xpTypes[3], xpTypes[4]]) {
+        event.custom({
+            type: "pneumaticcraft:thermo_plant",
+            exothermic: false,
+            fluid_input: {
+                type: "pneumaticcraft:fluid",
+                amount: 250,
+                fluid: xpType,
+            },
+            item_input: {
+                item: "create:experience_nugget",
+            },
+            item_output: {
+                count: 2,
+                item: "create:experience_nugget",
+            },
+            pressure: 3.0,
+        });
+    }
 
     // Straw
     event.remove({ output: "createaddition:straw" });
