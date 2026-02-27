@@ -38,6 +38,10 @@ ServerEvents.tags("item", (event) => {
     event.add("forge:mushrooms", "thermal:gunpowder_mushroom_spores");
     event.add("forge:mushrooms", "thermal:redstone_mushroom_spores");
     event.add("forge:mushrooms", "thermal:slime_mushroom_spores");
+
+    event.remove("forge:ingots/cobalt", "gtceu:cobalt_ingot");
+    event.remove("forge:nuggets/cobalt", "gtceu:cobalt_nugget");
+    event.remove("forge:storage_blocks/cobalt", "gtceu:cobalt_block");
 });
 
 ServerEvents.tags("fluid", (event) => {

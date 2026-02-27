@@ -771,4 +771,23 @@ ServerEvents.recipes((event) => {
         D: "pneumaticcraft:reinforced_stone_slab",
         E: "#forge:gears/stainless_steel",
     });
+
+    // Large fluid tank
+    event.replaceInput(
+        { output: "pneumaticcraft:large_tank" },
+        "#forge:gems/diamond",
+        "actuallyadditions:diamatine_crystal"
+    );
+
+    // Adv liquid compressor
+    event.remove({ output: "pneumaticcraft:advanced_liquid_compressor" });
+
+    event.shaped("pneumaticcraft:advanced_liquid_compressor", ["ABA", "CDC", "EFE"], {
+        A: "#forge:plates/cobalt",
+        B: "pneumaticcraft:large_tank",
+        C: "pneumaticcraft:advanced_pressure_tube",
+        D: "pneumaticcraft:liquid_compressor",
+        E: "#forge:sheetmetals/compressed_iron",
+        F: "pneumaticcraft:printed_circuit_board",
+    });
 });

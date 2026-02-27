@@ -73,6 +73,7 @@
         "/gtceu:(lv|mv|hv|ev|iv|luv|zpm|uv|uhv|uev|uiv|uxv|opv|max)_.*_collector/",
         "immersiveengineering:alloy_smelter",
         "/tconstruct:fake_.*/",
+        "/gtceu:cobalt.*/",
         "/estrogen:molten_.*/",
         "/kubejs:incomplete_.*/",
         "gtceu:large_centrifuge",
