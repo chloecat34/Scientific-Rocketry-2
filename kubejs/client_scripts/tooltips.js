@@ -18,7 +18,7 @@ ItemEvents.tooltip((event) => {
         "industrialforegoing:dryrubber",
         "immersiveengineering:alloybrick",
         "pneumaticcraft:air_compressor",
-        "pneumaticcraft:advanced_air_compressor"
+        "pneumaticcraft:advanced_air_compressor",
     ].forEach((item) => addRedTooltip(item, "Disabled", 1));
 
     [
@@ -150,23 +150,25 @@ ItemEvents.tooltip((event) => {
     t3OreTooltip("kubejs:pyrolusite_ore", 1);
 
     // Arboreal extractor tooltip
-    addTooltip(
-        "thermal:device_tree_extractor",
-        "Works with artificial trees",
-        Text.green,
-        1
-    );
+    addTooltip("thermal:device_tree_extractor", "Works with artificial trees", Text.green, 1);
 
     // Rubberwood tooltip
-    addTooltip(
-        "thermal:rubberwood_sapling",
-        "Spawns in Bamboo Jungles",
-        Text.aqua
-    );
+    addTooltip("thermal:rubberwood_sapling", "Spawns in Bamboo Jungles", Text.aqua);
 
     // misc. items
     addTooltip("thermal:compost", "Made in the Batch Composter", Text.aqua);
     addTooltip("immersiveengineering:furnace_heater", "Can produce heat for PneumaticCraft", Text.aqua);
     addTooltip("mekanism:fuelwood_heater", "Can produce heat for PneumaticCraft", Text.aqua);
     addTooltip("mekanism:resistive_heater", "Can produce heat for PneumaticCraft", Text.aqua);
+
+    // Items that will have a custom recipe soon but not yet
+    [
+        "sophisticatedbackpacks:stack_upgrade_omega_tier",
+        "sophisticatedbackpacks:netherite_backpack",
+        "sophisticatedstorage:stack_upgrade_omega_tier",
+        "sophisticatedstorage:stack_upgrade_tier_5",
+        "pneumaticcraft:elytra_upgrade"
+    ].forEach((item) => {
+        addTooltip(item, "This recipe will be changed/added in the future", Text.red);
+    });
 });

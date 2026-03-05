@@ -796,4 +796,43 @@ ServerEvents.recipes((event) => {
         E: "#forge:sheetmetals/stainless_steel",
         F: "pneumaticcraft:printed_circuit_board",
     });
+
+    // Charging upgrade
+    event.remove({ output: "pneumaticcraft:charging_upgrade" });
+
+    event.shaped("pneumaticcraft:charging_upgrade", ["ABA", "BCB", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "actuallyadditions:advanced_coil",
+        C: "pneumaticcraft:charging_module",
+    });
+
+    // Chunkloader upgrade
+    event.remove({ output: "pneumaticcraft:chunkloader_upgrade" });
+
+    event.shaped("pneumaticcraft:chunkloader_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "kubejs:pulsating_crystal",
+        C: "kubejs:vibrant_crystal",
+        D: "pneumaticcraft:printed_circuit_board",
+    });
+
+    // Ender visor upgrade
+    event.remove({ output: "pneumaticcraft:ender_visor_upgrade" });
+
+    event.shaped("pneumaticcraft:ender_visor_upgrade", ["ABA", "BCB", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "#forge:plates/vibrant_alloy",
+        C: "minecraft:carved_pumpkin",
+    });
+
+    // Some upgrades that just have upgrade matrices used with no other changes
+    const miscUpgrades = ["coordinate_tracker", "dispenser", "elytra", "entity_tracker"];
+
+    miscUpgrades.forEach((upgrade) => {
+        event.replaceInput(
+            { output: `pneumaticcraft:${upgrade}_upgrade` },
+            "#pneumaticcraft:upgrade_components",
+            "pneumaticcraft:upgrade_matrix"
+        );
+    });
 });
