@@ -177,6 +177,7 @@ ItemEvents.tooltip((event) => {
         "pneumaticcraft:jet_boots_upgrade_5",
         "pneumaticcraft:flux_compressor",
         "pneumaticcraft:jumping_upgrade_4",
+        "pneumaticcraft:radiation_shielding_upgrade"
     ].forEach((item) => {
         addTooltip(item, "This recipe will be changed/added in the future", Text.red);
     });

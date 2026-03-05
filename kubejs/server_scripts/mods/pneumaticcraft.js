@@ -843,7 +843,19 @@ ServerEvents.recipes((event) => {
     });
 
     // Some upgrades that just have upgrade matrices used with no other changes
-    const miscUpgrades = ["coordinate_tracker", "dispenser", "elytra", "entity_tracker", "gilded", "item_life"];
+    const miscUpgrades = [
+        "coordinate_tracker",
+        "dispenser",
+        "elytra",
+        "entity_tracker",
+        "gilded",
+        "item_life",
+        "minigun",
+        "range",
+        "scuba",
+        "standby",
+        "stomp",
+    ];
 
     miscUpgrades.forEach((upgrade) => {
         event.replaceInput(
@@ -918,4 +930,54 @@ ServerEvents.recipes((event) => {
         E: "pneumaticcraft:pneumatic_cylinder",
         F: Item.of("ironjetpacks:thruster", '{ Id: "ironjetpacks:stainless_steel" }').weakNBT(),
     });
+
+    // Magnet upgrade
+    event.remove({ output: "pneumaticcraft:magnet_upgrade" });
+
+    event.shaped("pneumaticcraft:magnet_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "actuallyadditions:restonia_crystal",
+        C: "actuallyadditions:palis_crystal",
+        D: "#forge:plates/stainless_steel",
+    });
+
+    // Night vision upgrade
+    event.remove({ output: "pneumaticcraft:night_vision_upgrade" });
+
+    event.shaped("pneumaticcraft:night_vision_upgrade", ["ABA", "CDC", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "minecraft:golden_carrot",
+        C: "#thermal:glass/hardened",
+        D: "#forge:gears/energetic_alloy",
+    });
+
+    // Item search upgrade
+    event.remove({ output: "pneumaticcraft:search_upgrade" });
+
+    event.shaped("pneumaticcraft:search_upgrade", ["ABA", "CDE", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "integratedterminals:menril_glass",
+        C: "integrateddynamics:variable_transformer_output",
+        D: "minecraft:golden_carrot",
+        E: "integrateddynamics:variable_transformer_input",
+    });
+
+    // Speed upgrade
+    event.remove({ output: "pneumaticcraft:speed_upgrade" });
+
+    event.recipes.industrialforegoing.dissolution_chamber(
+        [
+            "pneumaticcraft:upgrade_matrix",
+            "pneumaticcraft:glycerol",
+            "pneumaticcraft:upgrade_matrix",
+            "pneumaticcraft:glycerol",
+            "pneumaticcraft:glycerol",
+            "pneumaticcraft:upgrade_matrix",
+            "pneumaticcraft:glycerol",
+            "pneumaticcraft:upgrade_matrix",
+        ],
+        Fluid.of("pneumaticcraft:lubricant", 1000),
+        "2x pneumaticcraft:speed_upgrade",
+        80
+    );
 });

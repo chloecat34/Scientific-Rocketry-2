@@ -31,4 +31,16 @@ ServerEvents.recipes((event) => {
     ].forEach((gen) => {
         event.remove({ output: `industrialforegoing:mycelial_${gen}` });
     });
+
+    // Dissolution chamber
+    event.remove({ output: "industrialforegoing:dissolution_chamber" });
+
+    event.shaped("industrialforegoing:dissolution_chamber", ["ABA", "CDC", "EFE"], {
+        A: "pneumaticcraft:plastic",
+        B: "pneumaticcraft:reinforced_chest",
+        C: "actuallyadditions:basic_coil",
+        D: "actuallyadditions:iron_casing",
+        E: "#forge:gears/pulsating_alloy",
+        F: "pneumaticcraft:medium_tank",
+    });
 });
