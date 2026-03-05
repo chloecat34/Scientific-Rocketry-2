@@ -825,8 +825,21 @@ ServerEvents.recipes((event) => {
         C: "minecraft:carved_pumpkin",
     });
 
+    // Flipper upgrade
+    event.replaceInput({ output: "pneumaticcraft:flippers_upgrade" }, "#pneumaticcraft:upgrade_components", "pneumaticcraft:upgrade_matrix");
+    event.replaceInput({ output: "pneumaticcraft:flippers_upgrade" }, "minecraft:black_wool", "thermal:diving_boots");
+
+    // Inventory upgrade
+    event.remove({ output: "pneumaticcraft:inventory_upgrade" });
+
+    event.shaped("pneumaticcraft:inventory_upgrade", ["ABA", "BCB", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "#forge:treated_wood",
+        C: "immersiveengineering:reinforced_crate",
+    });
+
     // Some upgrades that just have upgrade matrices used with no other changes
-    const miscUpgrades = ["coordinate_tracker", "dispenser", "elytra", "entity_tracker"];
+    const miscUpgrades = ["coordinate_tracker", "dispenser", "elytra", "entity_tracker", "gilded", "item_life"];
 
     miscUpgrades.forEach((upgrade) => {
         event.replaceInput(
@@ -834,5 +847,16 @@ ServerEvents.recipes((event) => {
             "#pneumaticcraft:upgrade_components",
             "pneumaticcraft:upgrade_matrix"
         );
+    });
+
+    // Thermal compressor
+    event.remove({ output: "pneumaticcraft:thermal_compressor" });
+
+    event.shaped("pneumaticcraft:thermal_compressor", ["ABA", "CDC", "AEA"], {
+        A: "#forge:plates/knightslime",
+        B: "immersiveengineering:thermoelectric_generator",
+        C: "#forge:gears/cinderslime",
+        D: "pneumaticcraft:liquid_compressor",
+        E: "immersiveengineering:radiator",
     });
 });

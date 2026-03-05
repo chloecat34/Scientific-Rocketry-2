@@ -167,7 +167,15 @@ ItemEvents.tooltip((event) => {
         "sophisticatedbackpacks:netherite_backpack",
         "sophisticatedstorage:stack_upgrade_omega_tier",
         "sophisticatedstorage:stack_upgrade_tier_5",
-        "pneumaticcraft:elytra_upgrade"
+        "pneumaticcraft:elytra_upgrade",
+        "thermal:potion_infuser",
+        "thermal:potion_quiver",
+        "thermal:device_potion_diffuser",
+        "pneumaticcraft:jet_boots_upgrade_1",
+        "pneumaticcraft:jet_boots_upgrade_2",
+        "pneumaticcraft:jet_boots_upgrade_3",
+        "pneumaticcraft:jet_boots_upgrade_4",
+        "pneumaticcraft:jet_boots_upgrade_5",
     ].forEach((item) => {
         addTooltip(item, "This recipe will be changed/added in the future", Text.red);
     });
