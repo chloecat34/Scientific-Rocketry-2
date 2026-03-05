@@ -74,13 +74,15 @@
         "immersiveengineering:alloy_smelter",
         "/tconstruct:fake_.*/",
         "/gtceu:cobalt.*/",
+        "/gtceu:.*cobalt_ore/",
         "/estrogen:molten_.*/",
         "/kubejs:incomplete_.*/",
         "gtceu:large_centrifuge",
         "gtceu:lv_chemical_reactor",
         "gtceu:mv_chemical_reactor",
         "gtceu:hv_chemical_reactor",
-        "gtceu:large_chemical_reactor"
+        "gtceu:large_chemical_reactor",
+        "gtceu:raw_cobalt_block"
     ],
     "disable": true
 }

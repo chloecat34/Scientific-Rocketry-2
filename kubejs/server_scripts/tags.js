@@ -42,6 +42,22 @@ ServerEvents.tags("item", (event) => {
     event.remove("forge:ingots/cobalt", "gtceu:cobalt_ingot");
     event.remove("forge:nuggets/cobalt", "gtceu:cobalt_nugget");
     event.remove("forge:storage_blocks/cobalt", "gtceu:cobalt_block");
+    event.remove("forge:raw_materials/cobalt", "gtceu:raw_cobalt");
+    event.remove("forge:ores/cobalt", "gtceu:cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:nether_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:granite_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:end_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:diorite_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:andesite_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:red_granite_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:marble_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:deepslate_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:tuff_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:sand_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:red_sand_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:gravel_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:basalt_cobalt_ore");
+    event.remove("forge:ores/cobalt", "gtceu:blackstone_cobalt_ore");
 });
 
 ServerEvents.tags("fluid", (event) => {

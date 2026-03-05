@@ -20,12 +20,8 @@ ServerEvents.recipes((event) => {
             event.shapeless(`9x ${ingot}`, [block]);
         }
 
-        event.recipes.thermal
-            .press(block, [`9x ${ingot}`, "thermal:press_packing_3x3_die"])
-            .energy(400);
-        event.recipes.thermal
-            .press(`9x ${ingot}`, [block, "thermal:press_unpacking_die"])
-            .energy(400);
+        event.recipes.thermal.press(block, [`9x ${ingot}`, "thermal:press_packing_3x3_die"]).energy(400);
+        event.recipes.thermal.press(`9x ${ingot}`, [block, "thermal:press_unpacking_die"]).energy(400);
     }
 
     // 2x2 packing
@@ -47,24 +43,14 @@ ServerEvents.recipes((event) => {
             event.shapeless(`4x ${ingot}`, [block]);
         }
 
-        event.recipes.thermal
-            .press(block, [`4x ${ingot}`, "thermal:press_packing_2x2_die"])
-            .energy(400);
-        event.recipes.thermal
-            .press(`4x ${ingot}`, [block, "thermal:press_unpacking_die"])
-            .energy(400);
+        event.recipes.thermal.press(block, [`4x ${ingot}`, "thermal:press_packing_2x2_die"]).energy(400);
+        event.recipes.thermal.press(`4x ${ingot}`, [block, "thermal:press_unpacking_die"]).energy(400);
     }
 
     addPacking("create:andesite_alloy", "create:andesite_alloy_block");
     addPacking("minecraft:bone_meal", "minecraft:bone_block");
-    addPacking(
-        "integrateddynamics:crystalized_menril_chunk",
-        "integrateddynamics:crystalized_menril_block"
-    );
-    addPacking(
-        "integrateddynamics:crystalized_chorus_chunk",
-        "integrateddynamics:crystalized_chorus_block"
-    );
+    addPacking("integrateddynamics:crystalized_menril_chunk", "integrateddynamics:crystalized_menril_block");
+    addPacking("integrateddynamics:crystalized_chorus_chunk", "integrateddynamics:crystalized_chorus_block");
     addPacking("powah:steel_energized", "powah:energized_steel_block");
     addPacking("powah:crystal_blazing", "powah:blazing_crystal_block");
     addPacking("powah:crystal_niotic", "powah:niotic_crystal_block");
@@ -81,59 +67,25 @@ ServerEvents.recipes((event) => {
     addPacking("#forge:nuggets/cinderslime", "#forge:ingots/cinderslime");
     addPacking("#forge:ingots/soulsteel", "#forge:storage_blocks/soulsteel");
     addPacking("#forge:nuggets/soulsteel", "#forge:ingots/soulsteel");
-    addPacking(
-        "#forge:raw_materials/ostrum",
-        "#forge:storage_blocks/raw_ostrum"
-    );
+    addPacking("#forge:raw_materials/ostrum", "#forge:storage_blocks/raw_ostrum");
     addPacking("#forge:ingots/calorite", "#forge:storage_blocks/calorite");
-    addPacking(
-        "#forge:raw_materials/calorite",
-        "#forge:storage_blocks/raw_calorite"
-    );
+    addPacking("#forge:raw_materials/calorite", "#forge:storage_blocks/raw_calorite");
     addPacking("create:experience_nugget", "create:experience_block");
     addPacking2x2("tconstruct:cheese_ingot", "tconstruct:cheese_block");
-    addPacking(
-        "#forge:raw_materials/cobalt",
-        "#forge:storage_blocks/raw_cobalt"
-    );
-    addPacking2x2(
-        "tconstruct:earth_slime_crystal",
-        "tconstruct:earth_slime_crystal_block"
-    );
-    addPacking2x2(
-        "tconstruct:sky_slime_crystal",
-        "tconstruct:sky_slime_crystal_block"
-    );
-    addPacking2x2(
-        "tconstruct:ichor_slime_crystal",
-        "tconstruct:ichor_slime_crystal_block"
-    );
-    addPacking2x2(
-        "tconstruct:ender_slime_crystal",
-        "tconstruct:ender_slime_crystal_block"
-    );
-    addPacking2x2(
-        "#forge:gems/certus_quartz",
-        "#forge:storage_blocks/certus_quartz"
-    );
+    addPacking("#forge:raw_materials/cobalt", "#forge:storage_blocks/raw_cobalt");
+    addPacking2x2("tconstruct:earth_slime_crystal", "tconstruct:earth_slime_crystal_block");
+    addPacking2x2("tconstruct:sky_slime_crystal", "tconstruct:sky_slime_crystal_block");
+    addPacking2x2("tconstruct:ichor_slime_crystal", "tconstruct:ichor_slime_crystal_block");
+    addPacking2x2("tconstruct:ender_slime_crystal", "tconstruct:ender_slime_crystal_block");
+    addPacking2x2("#forge:gems/certus_quartz", "#forge:storage_blocks/certus_quartz");
     addPacking2x2("#forge:gems/fluix", "ae2:fluix_block");
     addPacking2x2("tconstruct:seared_brick", "tconstruct:seared_bricks");
     addPacking2x2("tconstruct:scorched_brick", "tconstruct:scorched_bricks");
     addPacking2x2("create:cardboard", "create:cardboard_block");
     addPacking("advanced_ae:quantum_alloy", "advanced_ae:quantum_alloy_block");
-    addPacking(
-        "createaddition:biomass_pellet",
-        "createaddition:biomass_pellet_block"
-    );
+    addPacking("createaddition:biomass_pellet", "createaddition:biomass_pellet_block");
 
-    [
-        "desh",
-        "ostrum",
-        "calorite",
-        "prismalium",
-        "melodium",
-        "stellarium",
-    ].forEach((material) => {
+    ["desh", "ostrum", "calorite", "prismalium", "melodium", "stellarium"].forEach((material) => {
         addPacking(`#forge:nuggets/${material}`, `#forge:ingots/${material}`);
     });
 
@@ -147,14 +99,8 @@ ServerEvents.recipes((event) => {
     addPacking("kubejs:energetic_alloy_ingot", "kubejs:energetic_alloy_block");
     addPacking("kubejs:vibrant_alloy_nugget", "kubejs:vibrant_alloy_ingot");
     addPacking("kubejs:vibrant_alloy_ingot", "kubejs:vibrant_alloy_block");
-    addPacking(
-        "kubejs:electrical_steel_nugget",
-        "kubejs:electrical_steel_ingot"
-    );
-    addPacking(
-        "kubejs:electrical_steel_ingot",
-        "kubejs:electrical_steel_block"
-    );
+    addPacking("kubejs:electrical_steel_nugget", "kubejs:electrical_steel_ingot");
+    addPacking("kubejs:electrical_steel_ingot", "kubejs:electrical_steel_block");
     addPacking("kubejs:redstone_alloy_nugget", "kubejs:redstone_alloy_ingot");
     addPacking("kubejs:redstone_alloy_ingot", "kubejs:redstone_alloy_block");
     addPacking("kubejs:blue_alloy_nugget", "kubejs:blue_alloy_ingot");

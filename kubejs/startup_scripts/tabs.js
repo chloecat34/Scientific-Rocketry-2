@@ -5,7 +5,8 @@ StartupEvents.modifyCreativeTab("tconstruct:general", (event) => {
         "tconstruct:knightslime_block",
         "tconstruct:soulsteel_ingot",
         "tconstruct:soulsteel_nugget",
-        "tconstruct:soulsteel_block"
+        "tconstruct:soulsteel_block",
+        "tconstruct:cobalt_ore"
     ].forEach((item) => {
         event.addAfter("tconstruct:hepatizon_block", item);
     });

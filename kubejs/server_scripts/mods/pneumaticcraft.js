@@ -779,6 +779,12 @@ ServerEvents.recipes((event) => {
         "actuallyadditions:diamatine_crystal"
     );
 
+    event.replaceInput(
+        { output: "pneumaticcraft:large_tank" },
+        "pneumaticcraft:plastic",
+        "#forge:plates/stainless_steel"
+    );
+
     // Adv liquid compressor
     event.remove({ output: "pneumaticcraft:advanced_liquid_compressor" });
 
@@ -787,7 +793,7 @@ ServerEvents.recipes((event) => {
         B: "pneumaticcraft:large_tank",
         C: "pneumaticcraft:advanced_pressure_tube",
         D: "pneumaticcraft:liquid_compressor",
-        E: "#forge:sheetmetals/compressed_iron",
+        E: "#forge:sheetmetals/stainless_steel",
         F: "pneumaticcraft:printed_circuit_board",
     });
 });
