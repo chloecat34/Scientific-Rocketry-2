@@ -853,6 +853,37 @@ ServerEvents.recipes((event) => {
         );
     });
 
+    ["jumping_upgrade_1"].forEach((upgrade) => {
+        event.replaceInput(
+            { output: `pneumaticcraft:${upgrade}` },
+            "#pneumaticcraft:upgrade_components",
+            "pneumaticcraft:upgrade_matrix"
+        );
+    });
+
+    // Jumping upgrades
+    event.remove({ output: "pneumaticcraft:jumping_upgrade_2" });
+
+    event.shaped("pneumaticcraft:jumping_upgrade_2", ["ABA", "CDC", "EFE"], {
+        A: "#forge:plates/aluminum",
+        B: "#forge:gears/aluminum",
+        C: "pneumaticcraft:pneumatic_cylinder",
+        D: "pneumaticcraft:jumping_upgrade_1",
+        E: "#forge:plates/queens_slime",
+        F: "#forge:gears/queens_slime",
+    });
+
+    event.remove({ output: "pneumaticcraft:jumping_upgrade_3" });
+
+    event.shaped("pneumaticcraft:jumping_upgrade_3", ["ABA", "CDC", "EFE"], {
+        A: "#forge:plates/stainless_steel",
+        B: "#forge:gears/stainless_steel",
+        C: "pneumaticcraft:pneumatic_cylinder",
+        D: "pneumaticcraft:jumping_upgrade_2",
+        E: "#forge:plates/knightslime",
+        F: "#forge:gears/knightslime",
+    });
+
     // Thermal compressor
     event.remove({ output: "pneumaticcraft:thermal_compressor" });
 
@@ -866,4 +897,25 @@ ServerEvents.recipes((event) => {
 
     // Disable electrostatic compressor
     event.remove({ output: "pneumaticcraft:electrostatic_compressor" });
+
+    // Jet boots
+    event.remove({ output: "pneumaticcraft:jet_boots_upgrade_1" });
+
+    event.shaped("pneumaticcraft:jet_boots_upgrade_1", ["ABA", "CDC", "ABA"], {
+        A: "pneumaticcraft:upgrade_matrix",
+        B: "pneumaticcraft:advanced_pressure_tube",
+        C: "pneumaticcraft:vortex_cannon",
+        D: Item.of("ironjetpacks:thruster", '{ Id: "ironjetpacks:vibrant_alloy" }').weakNBT(),
+    });
+
+    event.remove({ output: "pneumaticcraft:jet_boots_upgrade_2" });
+
+    event.shaped("pneumaticcraft:jet_boots_upgrade_2", ["ABA", "CDC", "EFE"], {
+        A: "#forge:plates/stainless_steel",
+        B: "#forge:gears/stainless_steel",
+        C: "pneumaticcraft:vortex_cannon",
+        D: "pneumaticcraft:jet_boots_upgrade_1",
+        E: "pneumaticcraft:pneumatic_cylinder",
+        F: Item.of("ironjetpacks:thruster", '{ Id: "ironjetpacks:stainless_steel" }').weakNBT(),
+    });
 });

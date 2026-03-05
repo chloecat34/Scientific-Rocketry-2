@@ -19,7 +19,7 @@ ItemEvents.tooltip((event) => {
         "immersiveengineering:alloybrick",
         "pneumaticcraft:air_compressor",
         "pneumaticcraft:advanced_air_compressor",
-        "pneumaticcraft:electrostatic_compressor"
+        "pneumaticcraft:electrostatic_compressor",
     ].forEach((item) => addRedTooltip(item, "Disabled", 1));
 
     [
@@ -172,11 +172,11 @@ ItemEvents.tooltip((event) => {
         "thermal:potion_infuser",
         "thermal:potion_quiver",
         "thermal:device_potion_diffuser",
-        "pneumaticcraft:jet_boots_upgrade_1",
-        "pneumaticcraft:jet_boots_upgrade_2",
         "pneumaticcraft:jet_boots_upgrade_3",
         "pneumaticcraft:jet_boots_upgrade_4",
         "pneumaticcraft:jet_boots_upgrade_5",
+        "pneumaticcraft:flux_compressor",
+        "pneumaticcraft:jumping_upgrade_4",
     ].forEach((item) => {
         addTooltip(item, "This recipe will be changed/added in the future", Text.red);
     });
