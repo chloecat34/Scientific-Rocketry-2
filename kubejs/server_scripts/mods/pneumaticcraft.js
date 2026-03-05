@@ -826,7 +826,11 @@ ServerEvents.recipes((event) => {
     });
 
     // Flipper upgrade
-    event.replaceInput({ output: "pneumaticcraft:flippers_upgrade" }, "#pneumaticcraft:upgrade_components", "pneumaticcraft:upgrade_matrix");
+    event.replaceInput(
+        { output: "pneumaticcraft:flippers_upgrade" },
+        "#pneumaticcraft:upgrade_components",
+        "pneumaticcraft:upgrade_matrix"
+    );
     event.replaceInput({ output: "pneumaticcraft:flippers_upgrade" }, "minecraft:black_wool", "thermal:diving_boots");
 
     // Inventory upgrade
@@ -859,4 +863,7 @@ ServerEvents.recipes((event) => {
         D: "pneumaticcraft:liquid_compressor",
         E: "immersiveengineering:radiator",
     });
+
+    // Disable electrostatic compressor
+    event.remove({ output: "pneumaticcraft:electrostatic_compressor" });
 });

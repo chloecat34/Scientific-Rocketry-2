@@ -19,6 +19,7 @@ ItemEvents.tooltip((event) => {
         "immersiveengineering:alloybrick",
         "pneumaticcraft:air_compressor",
         "pneumaticcraft:advanced_air_compressor",
+        "pneumaticcraft:electrostatic_compressor"
     ].forEach((item) => addRedTooltip(item, "Disabled", 1));
 
     [

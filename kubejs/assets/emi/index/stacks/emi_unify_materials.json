@@ -82,7 +82,8 @@
         "gtceu:mv_chemical_reactor",
         "gtceu:hv_chemical_reactor",
         "gtceu:large_chemical_reactor",
-        "gtceu:raw_cobalt_block"
+        "gtceu:raw_cobalt_block",
+        "pneumaticcraft:electrostatic_compressor"
     ],
     "disable": true
 }
