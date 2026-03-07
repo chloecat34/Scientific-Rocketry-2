@@ -41,5 +41,5 @@
 
 		[World.Features.Niter]
 			#Whether this feature should naturally spawn in the world.
-			Enable = false
+			Enable = true
 
