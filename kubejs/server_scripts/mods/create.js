@@ -369,7 +369,7 @@ ServerEvents.recipes((event) => {
         "industrialforegoing:essence",
         "pneumaticcraft:memory_essence",
         "cofh_core:experience",
-        "sophisticatedcore:xp_still"
+        "sophisticatedcore:xp_still",
     ];
 
     xpTypes.forEach((xp) => {
@@ -579,4 +579,12 @@ ServerEvents.recipes((event) => {
 
     // Remote lens
     event.replaceInput({ output: "railways:remote_lens" }, "minecraft:ender_eye", "create:transmitter");
+
+    // Fuel tank
+    event.remove({ output: "railways:fuel_tank" });
+
+    event.shaped("railways:fuel_tank", [" A ", "ABA", " A "], {
+        A: "#forge:plates/obsidian",
+        B: "create:fluid_tank",
+    });
 });

@@ -185,6 +185,37 @@
 			x: -2.5d
 			y: 0.0d
 		}
+		{
+			dependencies: ["42829838C0DCC902"]
+			description: ["The Stainless Steel Jetpack is the next available tier of jetpack. It is very expensive, so it isn't crucial to make it yet, though it could help you."]
+			id: "4C721F95E0774744"
+			rewards: [{
+				id: "16A027A71ADB9886"
+				item: {
+					Count: 1
+					id: "actuallyadditions:quintuple_battery"
+					tag: {
+						Charged: 1b
+						Energy: 2000000.0d
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "128BBD1DBE0ADDC8"
+				item: {
+					Count: 1
+					id: "ironjetpacks:jetpack"
+					tag: {
+						Id: "ironjetpacks:stainless_steel"
+						Throttle: 1.0d
+					}
+				}
+				type: "item"
+			}]
+			x: -3.5d
+			y: -1.0d
+		}
 	]
 	title: "Chapter 4: The Space Program"
 }

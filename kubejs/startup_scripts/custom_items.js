@@ -147,6 +147,17 @@ StartupEvents.registry("item", (event) => {
 
     event.create("purple_alloy_coil").displayName("§5Purple Alloy Coil");
 
+    // Iron jetpacks
+    event.create("vibrant_alloy_energy_cell").displayName("§aVibrant Alloy Energy Cell");
+    event.create("vibrant_alloy_thruster").displayName("§aVibrant Alloy Thruster");
+    event.create("vibrant_alloy_capacitor").displayName("§aVibrant Alloy Capacitor");
+
+    event.create("vibrant_alloy_crafting_jetpack").displayName("§aVibrant Alloy Jetpack (Crafting)");
+
+    event.create("stainless_steel_energy_cell").displayName("Stainless Steel Energy Cell");
+    event.create("stainless_steel_thruster").displayName("Stainless Steel Thruster");
+    event.create("stainless_steel_capacitor").displayName("Stainless Steel Capacitor");
+
     // Register materials with ingots, nuggets, plates, and gears
     let materials = [
         "red_alloy",

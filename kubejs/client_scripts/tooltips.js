@@ -162,6 +162,12 @@ ItemEvents.tooltip((event) => {
     addTooltip("mekanism:fuelwood_heater", "Can produce heat for PneumaticCraft", Text.aqua);
     addTooltip("mekanism:resistive_heater", "Can produce heat for PneumaticCraft", Text.aqua);
 
+    addTooltip(
+        "kubejs:vibrant_alloy_crafting_jetpack",
+        "Used for upgrading your jetpack to the next tier due to NBT issues",
+        Text.aqua
+    );
+
     // Items that will have a custom recipe soon but not yet
     [
         "sophisticatedbackpacks:stack_upgrade_omega_tier",
@@ -177,7 +183,7 @@ ItemEvents.tooltip((event) => {
         "pneumaticcraft:jet_boots_upgrade_5",
         "pneumaticcraft:flux_compressor",
         "pneumaticcraft:jumping_upgrade_4",
-        "pneumaticcraft:radiation_shielding_upgrade"
+        "pneumaticcraft:radiation_shielding_upgrade",
     ].forEach((item) => {
         addTooltip(item, "This recipe will be changed/added in the future", Text.red);
     });

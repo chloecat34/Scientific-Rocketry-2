@@ -83,7 +83,10 @@
         "gtceu:hv_chemical_reactor",
         "gtceu:large_chemical_reactor",
         "gtceu:raw_cobalt_block",
-        "pneumaticcraft:electrostatic_compressor"
+        "pneumaticcraft:electrostatic_compressor",
+        "ironjetpacks:capacitor",
+        "ironjetpacks:thruster",
+        "ironjetpacks:cell"
     ],
     "disable": true
 }

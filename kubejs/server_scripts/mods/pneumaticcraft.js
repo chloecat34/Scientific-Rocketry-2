@@ -980,4 +980,7 @@ ServerEvents.recipes((event) => {
         "2x pneumaticcraft:speed_upgrade",
         80
     );
+
+    // Remove pressure chamber etching acid
+    event.remove({id: "pneumaticcraft:pressure_chamber/etching_acid"});
 });
