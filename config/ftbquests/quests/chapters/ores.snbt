@@ -1,0 +1,334 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ores"
+	group: "47681E52ED100A64"
+	icon: "minecraft:iron_ore"
+	id: "590BF1F1CBD3370E"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			icon: "ad_astra:earth_globe"
+			id: "710F3D03BD119F51"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "7B06BA8C176FA8BB"
+				title: "Overworld Ores"
+				type: "checkmark"
+			}]
+			x: -8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			description: [""]
+			id: "1B136B9E1F101167"
+			subtitle: "Spawns at y=0 to y=256, most common at y=96"
+			tasks: [{
+				id: "0B98BC5D6E2AB98E"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			description: [""]
+			id: "555BA85FE2EB75CB"
+			subtitle: "Spawns at any y-level, most common at y=16"
+			tasks: [{
+				id: "28755FE8E18BA840"
+				item: "minecraft:raw_iron"
+				type: "item"
+			}]
+			title: "Iron"
+			x: -9.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "58DD62B0EDC6781F"
+			subtitle: "Spawns at y=-16 to y=112, most common at y=48"
+			tasks: [{
+				id: "168BD66BF15E2A12"
+				item: "minecraft:raw_copper"
+				type: "item"
+			}]
+			title: "Copper"
+			x: -10.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			description: ["This ore also spawns at any y-level in Badlands biomes."]
+			id: "3F2E18FBB70E7A78"
+			subtitle: "Spawns at y=-64 to y=32, most common at y=-16"
+			tasks: [{
+				id: "451888F39467F806"
+				item: "minecraft:raw_gold"
+				type: "item"
+			}]
+			title: "Gold"
+			x: -10.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "24D71052AEFE4997"
+			subtitle: "Spawns from y=-64 to y=15, most common at lower levels"
+			tasks: [{
+				id: "56552F54BFCCDA96"
+				item: "minecraft:redstone"
+				type: "item"
+			}]
+			title: "Redstone"
+			x: -11.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "2652D76F115E455A"
+			subtitle: "Spawns at y=-64 to y=64, most common at y=0"
+			tasks: [{
+				id: "1AABD7DC31AF5793"
+				item: "minecraft:lapis_lazuli"
+				type: "item"
+			}]
+			x: -10.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "5A2BC0CD66F7D9D2"
+			subtitle: "Spawns up to y=16, most common at lower levels"
+			tasks: [{
+				id: "3ADAF19DACC7DD19"
+				item: "minecraft:diamond"
+				type: "item"
+			}]
+			x: -10.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "48DFEEFA4B0C6A36"
+			subtitle: "Spawns in mountains at y=-16 or above, most common at higher levels"
+			tasks: [{
+				id: "6F5CDD886506C380"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			x: -9.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "51E30100AD33C12C"
+			subtitle: "Spawns at y=-16 to y=96, most common at y=40"
+			tasks: [{
+				id: "0C2D4AB86A2492CB"
+				item: "thermal:apatite"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "639690508F68C990"
+			subtitle: "Spawns at y=-16 to y=64, most common at y=24"
+			tasks: [{
+				id: "7B4071C9276DB202"
+				item: "thermal:niter"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "6DDA6624DAD89BEB"
+			subtitle: "Spawns evenly distributed from y=-20 to y=60"
+			tasks: [{
+				id: "6971A8EFC2DC63C7"
+				item: "thermal:raw_tin"
+				type: "item"
+			}]
+			title: "Tin"
+			x: -5.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "0BE7F144EDA1878C"
+			subtitle: "Spawns evenly distributed from y=-60 to y=40"
+			tasks: [{
+				id: "4A247F3646249628"
+				item: "thermal:raw_silver"
+				type: "item"
+			}]
+			title: "Silver"
+			x: -6.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "2EB57B66A2D82951"
+			subtitle: "Spawns evenly distributed from y=-60 to y=40"
+			tasks: [{
+				id: "3D6FCFA275E18B4A"
+				item: "thermal:raw_lead"
+				type: "item"
+			}]
+			title: "Lead"
+			x: -5.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "1C17C4EB33AD722C"
+			subtitle: "Spawns from y=-63 to y=20, most common at y=-21"
+			tasks: [{
+				id: "1AD389DD7D5548B7"
+				item: "thermal:ruby"
+				type: "item"
+			}]
+			x: -5.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "606A02A5CF8E0F88"
+			subtitle: "Spawns evenly distributed from y=-63 to y=70"
+			tasks: [{
+				id: "141AE953F8FE7AD0"
+				item: "create:raw_zinc"
+				type: "item"
+			}]
+			title: "Zinc"
+			x: -6.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["710F3D03BD119F51"]
+			id: "57B77DEC846858DE"
+			subtitle: "Spawns around y=40 or above"
+			tasks: [{
+				id: "3C37B76DA3DB118D"
+				item: "immersiveengineering:raw_aluminum"
+				type: "item"
+			}]
+			title: "Bauxite"
+			x: -7.0d
+			y: -0.5d
+		}
+		{
+			icon: "minecraft:netherrack"
+			id: "40B45078253A278B"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "3E6525DCD7ECCBA3"
+				title: "Nether"
+				type: "checkmark"
+			}]
+			title: "Nether Ores"
+			x: 0.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "68EB9932B3963D9C"
+			subtitle: "Spawns uniformly from y=10 to y=118"
+			tasks: [{
+				id: "65928CF2F6923C63"
+				item: "minecraft:quartz"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "29EA45950494A9F8"
+			subtitle: "Spawns uniformly from y=10 to y=118"
+			tasks: [{
+				id: "1BA686A3F8DF0856"
+				item: "minecraft:raw_gold"
+				type: "item"
+			}]
+			title: "Gold"
+			x: -1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			icon: "minecraft:ancient_debris"
+			id: "06606B406A7A3CB3"
+			subtitle: "Spawns from y=8 to y=24, most common at y=16"
+			tasks: [{
+				id: "40B3CD06B352080A"
+				item: "minecraft:netherite_scrap"
+				type: "item"
+			}]
+			title: "Ancient Debris"
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "21C2CFA3147D9A44"
+			subtitle: "Spawns uniformly from y=8 to y=120"
+			tasks: [{
+				id: "755C048CBAE74B9D"
+				item: "thermal:sulfur"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "2CDD88CAFF8D20BC"
+			subtitle: "Spawns uniformly from y=8 to y=120"
+			tasks: [{
+				id: "5ABB6DFEFAAB4B0A"
+				item: "kubejs:raw_ardite"
+				type: "item"
+			}]
+			title: "Ardite"
+			x: 2.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "23FC558EE8D0B6EF"
+			subtitle: "Spawns from y=8 to y=120, but is most common at y=20"
+			tasks: [{
+				id: "036C3C38E27D4F36"
+				item: "tconstruct:raw_cobalt"
+				type: "item"
+			}]
+			title: "Cobalt"
+			x: 0.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "3EFCC74E6DFE3ABE"
+			subtitle: "Spawns uniformly from y=8 to y=50"
+			tasks: [{
+				id: "2E1FF657B6FC2046"
+				item: "kubejs:raw_pyrolusite"
+				type: "item"
+			}]
+			title: "Pyrolusite"
+			x: 2.5d
+			y: -3.0d
+		}
+	]
+	title: "Ore Generation"
+}
