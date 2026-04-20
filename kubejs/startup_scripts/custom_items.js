@@ -173,7 +173,9 @@ StartupEvents.registry("item", (event) => {
         "stainless_steel",
         "glowing_brass",
         "chromium",
-        "manganese"
+        "manganese",
+        "mithril",
+        "titanium"
     ];
 
     // Map ingots to the formatting code if needed
@@ -183,9 +185,10 @@ StartupEvents.registry("item", (event) => {
         purple_alloy: "§5",
         energetic_alloy: "§6",
         glowing_brass: "§e",
+        mithril: "§3"
     };
 
-    let wires = ["red_alloy", "energetic_alloy", "vibrant_alloy", "purple_alloy"];
+    let wires = ["red_alloy", "energetic_alloy", "vibrant_alloy", "purple_alloy", "mithril"];
 
     materials.forEach((material) => {
         let materialName = material.split("_").map(capitalize).join(" ");

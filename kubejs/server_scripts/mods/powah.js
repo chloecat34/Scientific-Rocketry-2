@@ -12,6 +12,7 @@ ServerEvents.recipes((event) => {
     event.remove({ output: "powah:energy_cable_starter" });
     event.remove({ output: "powah:energy_cable_basic" });
     event.remove({ output: "powah:energy_cable_hardened" });
+    event.remove({ output: "powah:energy_cable_blazing" });
 
     event.shaped("8x powah:energy_cable_starter", ["ABA", "CDC", "ABA"], {
         A: "#forge:plates/red_alloy",
@@ -46,5 +47,19 @@ ServerEvents.recipes((event) => {
         B: "thermal:cured_rubber",
         C: "powah:energy_cable_basic",
         D: "createaddition:capacitor",
+    });
+
+    event.shaped("8x powah:energy_cable_blazing", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/mithril",
+        B: "thermal:cured_rubber",
+        C: "#forge:wires/mithril",
+        D: "pneumaticcraft:capacitor",
+    });
+
+    event.shaped("8x powah:energy_cable_blazing", ["ABA", "CDC", "ABA"], {
+        A: "#forge:plates/mithril",
+        B: "thermal:cured_rubber",
+        C: "powah:energy_cable_hardened",
+        D: "pneumaticcraft:capacitor",
     });
 });

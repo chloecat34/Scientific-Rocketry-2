@@ -1130,4 +1130,28 @@ ServerEvents.recipes((event) => {
     addBothMelterRecipes("minecraft:andesite", "kubejs:molten_andesite", 1000, 132, 600, 19200);
     chillerBlockCasting("minecraft:andesite", "kubejs:molten_andesite", 1000, 8000);
     addTinkersBlockCastingRecipe("minecraft:andesite", "kubejs:molten_andesite", 1000, 100);
+
+    // Molten titanium
+    addBothMelterRecipes("kubejs:titanium_ingot", "kubejs:molten_titanium", 90, 60, 1700, 4800);
+    addBothMelterRecipes("kubejs:titanium_nugget", "kubejs:molten_titanium", 10, 20, 1700, 600);
+    addBothMelterRecipes("kubejs:titanium_block", "kubejs:molten_titanium", 810, 180, 1700, 4800 * 9);
+    addBothMelterRecipes("kubejs:titanium_plate", "kubejs:molten_titanium", 90, 60, 1700, 4800);
+    addBothMelterRecipes("kubejs:titanium_gear", "kubejs:molten_titanium", 360, 120, 1700, 4800 * 4);
+    chillerIngotCasting("kubejs:titanium_ingot", "kubejs:molten_titanium", 90, 4800);
+    chillerBlockCasting("kubejs:titanium_block", "kubejs:molten_titanium", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:titanium_block", "kubejs:molten_titanium", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:titanium_ingot", "kubejs:molten_titanium", 50);
+    addTinkersNuggetCastingRecipe("kubejs:titanium_nugget", "kubejs:molten_titanium", 10);
+
+    // Molten mithril
+    addBothMelterRecipes("kubejs:mithril_ingot", "kubejs:molten_mithril", 90, 60, 1300, 4800);
+    addBothMelterRecipes("kubejs:mithril_nugget", "kubejs:molten_mithril", 10, 20, 1300, 600);
+    addBothMelterRecipes("kubejs:mithril_block", "kubejs:molten_mithril", 810, 180, 1300, 4800 * 9);
+    addBothMelterRecipes("kubejs:mithril_plate", "kubejs:molten_mithril", 90, 60, 1300, 4800);
+    addBothMelterRecipes("kubejs:mithril_gear", "kubejs:molten_mithril", 360, 120, 1300, 4800 * 4);
+    chillerIngotCasting("kubejs:mithril_ingot", "kubejs:molten_mithril", 90, 4800);
+    chillerBlockCasting("kubejs:mithril_block", "kubejs:molten_mithril", 810, 4800 * 9);
+    addTinkersBlockCastingRecipe("kubejs:mithril_block", "kubejs:molten_mithril", 810, 160);
+    addTinkersIngotCastingRecipe("kubejs:mithril_ingot", "kubejs:molten_mithril", 50);
+    addTinkersNuggetCastingRecipe("kubejs:mithril_nugget", "kubejs:molten_mithril", 10);
 });

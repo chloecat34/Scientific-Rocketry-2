@@ -855,11 +855,22 @@ ServerEvents.recipes((event) => {
         "scuba",
         "standby",
         "stomp",
+        "radiation_shielding",
     ];
 
     miscUpgrades.forEach((upgrade) => {
         event.replaceInput(
             { output: `pneumaticcraft:${upgrade}_upgrade` },
+            "#pneumaticcraft:upgrade_components",
+            "pneumaticcraft:upgrade_matrix"
+        );
+    });
+
+    const miscUpgradesAdAstra = ["acid_rain_proof", "gravity_normalizing", "space_breathing", "space_fire_proof"];
+
+    miscUpgradesAdAstra.forEach((upgrade) => {
+        event.replaceInput(
+            { output: `ad_astra_giselle_addon:pneumatic_${upgrade}_upgrade` },
             "#pneumaticcraft:upgrade_components",
             "pneumaticcraft:upgrade_matrix"
         );
@@ -917,7 +928,7 @@ ServerEvents.recipes((event) => {
         A: "pneumaticcraft:upgrade_matrix",
         B: "pneumaticcraft:advanced_pressure_tube",
         C: "pneumaticcraft:vortex_cannon",
-        D: Item.of("ironjetpacks:thruster", '{ Id: "ironjetpacks:vibrant_alloy" }').weakNBT(),
+        D: "kubejs:vibrant_alloy_thruster",
     });
 
     event.remove({ output: "pneumaticcraft:jet_boots_upgrade_2" });
@@ -928,7 +939,7 @@ ServerEvents.recipes((event) => {
         C: "pneumaticcraft:vortex_cannon",
         D: "pneumaticcraft:jet_boots_upgrade_1",
         E: "pneumaticcraft:pneumatic_cylinder",
-        F: Item.of("ironjetpacks:thruster", '{ Id: "ironjetpacks:stainless_steel" }').weakNBT(),
+        F: "kubejs:stainless_steel_thruster",
     });
 
     // Magnet upgrade
@@ -982,5 +993,5 @@ ServerEvents.recipes((event) => {
     );
 
     // Remove pressure chamber etching acid
-    event.remove({id: "pneumaticcraft:pressure_chamber/etching_acid"});
+    event.remove({ id: "pneumaticcraft:pressure_chamber/etching_acid" });
 });

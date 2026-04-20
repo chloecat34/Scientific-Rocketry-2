@@ -125,4 +125,8 @@ ServerEvents.recipes((event) => {
     addPacking("kubejs:chromium_ingot", "kubejs:chromium_block");
     addPacking("kubejs:manganese_nugget", "kubejs:manganese_ingot");
     addPacking("kubejs:manganese_ingot", "kubejs:manganese_block");
+    addPacking("kubejs:titanium_nugget", "kubejs:titanium_ingot");
+    addPacking("kubejs:titanium_ingot", "kubejs:titanium_block");
+    addPacking("kubejs:mithril_nugget", "kubejs:mithril_ingot");
+    addPacking("kubejs:mithril_ingot", "kubejs:mithril_block");
 });

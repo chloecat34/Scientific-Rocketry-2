@@ -171,7 +171,6 @@ ItemEvents.tooltip((event) => {
     // Items that will have a custom recipe soon but not yet
     [
         "sophisticatedbackpacks:stack_upgrade_omega_tier",
-        "sophisticatedbackpacks:netherite_backpack",
         "sophisticatedstorage:stack_upgrade_omega_tier",
         "sophisticatedstorage:stack_upgrade_tier_5",
         "pneumaticcraft:elytra_upgrade",

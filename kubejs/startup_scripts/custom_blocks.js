@@ -228,6 +228,30 @@ StartupEvents.registry("block", (event) => {
         .tagBlock("minecraft:needs_iron_tool");
 
     event
+        .create("titanium_block")
+        .displayName("Titanium Block")
+        .material("metal")
+        .hardness(5.0)
+        .resistance(600.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/titanium")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
+
+    event
+        .create("mithril_block")
+        .displayName("§3Mithril Block")
+        .material("metal")
+        .hardness(1.0)
+        .resistance(60.0)
+        .tag("forge:storage_blocks")
+        .tag("forge:storage_blocks/mithril")
+        .requiresTool(true)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("minecraft:needs_diamond_tool");
+
+    event
         .create("glowing_brass_block")
         .displayName("§eGlowing Brass Block")
         .material("metal")

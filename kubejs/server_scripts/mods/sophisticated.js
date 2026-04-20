@@ -445,6 +445,28 @@ ServerEvents.recipes((event) => {
         },
     });
 
+    event.custom({
+        type: "sophisticatedbackpacks:backpack_upgrade",
+        pattern: ["ABA", "CDC", "ABA"],
+        key: {
+            A: {
+                tag: "forge:plates/titanium",
+            },
+            B: {
+                tag: "forge:gears/titanium",
+            },
+            C: {
+                item: "functionalstorage:netherite_upgrade",
+            },
+            D: {
+                item: "sophisticatedbackpacks:diamond_backpack",
+            },
+        },
+        result: {
+            item: "sophisticatedbackpacks:netherite_backpack",
+        },
+    });
+
     // Upgrade base
     event.remove({ output: "sophisticatedstorage:upgrade_base" });
     event.remove({ output: "sophisticatedbackpacks:upgrade_base" });

@@ -88,7 +88,9 @@ ServerEvents.recipes((event) => {
         "glowing_brass",
         "aluminum",
         "chromium",
-        "manganese"
+        "manganese",
+        "mithril",
+        "titanium"
     ];
     kubejsGears.forEach((ingot) => standardizeGears(ingot, `kubejs:${ingot}_gear`));
 
@@ -134,4 +136,6 @@ ServerEvents.recipes((event) => {
 
     mechcraftGears("thermal:iron_gear", "#forge:plates/iron");
     mechcraftGears("thermal:gold_gear", "#forge:plates/gold");
+
+    mechcraftGears("kubejs:titanium_gear", "kubejs:titanium_plate");
 });

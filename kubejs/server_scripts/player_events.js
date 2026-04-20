@@ -23,7 +23,9 @@ const molten = [
     "kubejs:molten_glowing_brass",
     "kubejs:molten_andesite_alloy",
     "kubejs:molten_chromium",
-    "kubejs:molten_manganese"
+    "kubejs:molten_manganese",
+    "kubejs:molten_titanium",
+    "kubejs:molten_mithril"
 ];
 
 // Acids still damage the player but don't cause fire damage
