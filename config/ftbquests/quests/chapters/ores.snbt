@@ -11,6 +11,7 @@
 		{
 			icon: "ad_astra:earth_globe"
 			id: "710F3D03BD119F51"
+			shape: "gear"
 			size: 2.0d
 			tasks: [{
 				id: "7B06BA8C176FA8BB"
@@ -223,6 +224,110 @@
 			title: "Bauxite"
 			x: -7.0d
 			y: -0.5d
+		}
+		{
+			icon: "minecraft:netherrack"
+			id: "40B45078253A278B"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "3E6525DCD7ECCBA3"
+				title: "Nether"
+				type: "checkmark"
+			}]
+			title: "Nether Ores"
+			x: 0.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "68EB9932B3963D9C"
+			subtitle: "Spawns uniformly from y=10 to y=118"
+			tasks: [{
+				id: "65928CF2F6923C63"
+				item: "minecraft:quartz"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "29EA45950494A9F8"
+			subtitle: "Spawns uniformly from y=10 to y=118"
+			tasks: [{
+				id: "1BA686A3F8DF0856"
+				item: "minecraft:raw_gold"
+				type: "item"
+			}]
+			title: "Gold"
+			x: -1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			icon: "minecraft:ancient_debris"
+			id: "06606B406A7A3CB3"
+			subtitle: "Spawns from y=8 to y=24, most common at y=16"
+			tasks: [{
+				id: "40B3CD06B352080A"
+				item: "minecraft:netherite_scrap"
+				type: "item"
+			}]
+			title: "Ancient Debris"
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "21C2CFA3147D9A44"
+			subtitle: "Spawns uniformly from y=8 to y=120"
+			tasks: [{
+				id: "755C048CBAE74B9D"
+				item: "thermal:sulfur"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "2CDD88CAFF8D20BC"
+			subtitle: "Spawns uniformly from y=8 to y=120"
+			tasks: [{
+				id: "5ABB6DFEFAAB4B0A"
+				item: "kubejs:raw_ardite"
+				type: "item"
+			}]
+			title: "Ardite"
+			x: 2.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "23FC558EE8D0B6EF"
+			subtitle: "Spawns from y=8 to y=120, but is most common at y=20"
+			tasks: [{
+				id: "036C3C38E27D4F36"
+				item: "tconstruct:raw_cobalt"
+				type: "item"
+			}]
+			title: "Cobalt"
+			x: 0.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["40B45078253A278B"]
+			id: "3EFCC74E6DFE3ABE"
+			subtitle: "Spawns uniformly from y=8 to y=50"
+			tasks: [{
+				id: "2E1FF657B6FC2046"
+				item: "kubejs:raw_pyrolusite"
+				type: "item"
+			}]
+			title: "Pyrolusite"
+			x: 2.5d
+			y: -3.0d
 		}
 	]
 	title: "Ore Generation"
