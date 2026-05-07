@@ -21,8 +21,8 @@ ServerEvents.recipes((event) => {
     ].forEach((material) => {
         event.remove({ output: `immersiveengineering:sheetmetal_${material}` });
 
-        event.shaped(`2x #forge:sheetmetals/${material}`, [" A ", "A A", " A "], {
-            A: `#forge:plates/${material}`,
+        event.shaped(`4x #forge:sheetmetals/${material}`, ["ABA", "B B", "ABA"], {
+            A: `#forge:plates/${material}`, B: `#forge:ingots/${material}`
         });
 
         // Add sheetmetal die recipe
